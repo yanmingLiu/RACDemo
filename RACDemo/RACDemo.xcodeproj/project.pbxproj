@@ -19,6 +19,8 @@
 		C29341441EC43D89003FB9A0 /* RACDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C29341431EC43D89003FB9A0 /* RACDemoTests.m */; };
 		C293414F1EC43D89003FB9A0 /* RACDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C293414E1EC43D89003FB9A0 /* RACDemoUITests.m */; };
 		C293415E1EC45997003FB9A0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C293415D1EC45997003FB9A0 /* User.m */; };
+		C29341631EC48233003FB9A0 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29341621EC48233003FB9A0 /* TableViewController.m */; };
+		C29341661EC482EB003FB9A0 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C29341651EC482EB003FB9A0 /* TableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,10 @@
 		C29341501EC43D89003FB9A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C293415C1EC45997003FB9A0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		C293415D1EC45997003FB9A0 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		C29341611EC48233003FB9A0 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		C29341621EC48233003FB9A0 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		C29341641EC482EB003FB9A0 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		C29341651EC482EB003FB9A0 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		D0FAD0F557F9F997798C3C77 /* Pods_RACDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF07DDA3E5186A0F647406F /* Pods_RACDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -150,6 +156,10 @@
 				C29341301EC43D89003FB9A0 /* ViewController.m */,
 				C293415C1EC45997003FB9A0 /* User.h */,
 				C293415D1EC45997003FB9A0 /* User.m */,
+				C29341611EC48233003FB9A0 /* TableViewController.h */,
+				C29341621EC48233003FB9A0 /* TableViewController.m */,
+				C29341641EC482EB003FB9A0 /* TableViewCell.h */,
+				C29341651EC482EB003FB9A0 /* TableViewCell.m */,
 				C29341321EC43D89003FB9A0 /* Main.storyboard */,
 				C29341351EC43D89003FB9A0 /* Assets.xcassets */,
 				C29341371EC43D89003FB9A0 /* LaunchScreen.storyboard */,
@@ -466,8 +476,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C293415E1EC45997003FB9A0 /* User.m in Sources */,
+				C29341661EC482EB003FB9A0 /* TableViewCell.m in Sources */,
 				C29341311EC43D89003FB9A0 /* ViewController.m in Sources */,
 				C293412E1EC43D89003FB9A0 /* AppDelegate.m in Sources */,
+				C29341631EC48233003FB9A0 /* TableViewController.m in Sources */,
 				C293412B1EC43D89003FB9A0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
