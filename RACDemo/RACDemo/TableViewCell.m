@@ -25,8 +25,12 @@
 
 - (IBAction)cellBtnAuction:(UIButton *)sender {
     
+    NSLog(@"%@  %zd", sender.titleLabel.text, sender.tag);
+}
+
+- (IBAction)cellCancelBtnAuction:(UIButton *)sender {
     
-    
+    NSLog(@"%@  %zd", sender.titleLabel.text, sender.tag);
 }
 
 @end

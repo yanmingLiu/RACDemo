@@ -11,5 +11,9 @@
 @interface TableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIButton *cellBtn;
+@property (weak, nonatomic) IBOutlet UIButton *cellCancelBtn;
+
+- (IBAction)cellBtnAuction:(UIButton *)sender;
+- (IBAction)cellCancelBtnAuction:(UIButton *)sender;
 
 @end

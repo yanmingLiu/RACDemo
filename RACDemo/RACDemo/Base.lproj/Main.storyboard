@@ -89,14 +89,29 @@
                                                 <action selector="cellBtnAuction:" destination="3o4-pT-itR" eventType="touchUpInside" id="Yez-Fe-4kn"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58C-eE-ta6">
+                                            <rect key="frame" x="204" y="12.5" width="60" height="35"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="35" id="ZbM-Hs-UVA"/>
+                                                <constraint firstAttribute="width" constant="60" id="umW-cp-hq2"/>
+                                            </constraints>
+                                            <state key="normal" title="取消"/>
+                                            <connections>
+                                                <action selector="cellCancelBtnAuction:" destination="3o4-pT-itR" eventType="touchUpInside" id="ShT-MJ-FEA"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="0yd-4B-AMi" firstAttribute="leading" secondItem="58C-eE-ta6" secondAttribute="trailing" constant="24" id="Ero-Is-gFR"/>
                                         <constraint firstAttribute="trailing" secondItem="0yd-4B-AMi" secondAttribute="trailing" constant="21" id="ksM-Nc-aaP"/>
+                                        <constraint firstItem="58C-eE-ta6" firstAttribute="centerY" secondItem="un0-NN-6IX" secondAttribute="centerY" id="lOE-mX-o4y"/>
                                         <constraint firstItem="0yd-4B-AMi" firstAttribute="centerY" secondItem="un0-NN-6IX" secondAttribute="centerY" id="yhG-Ao-hhu"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cellBtn" destination="0yd-4B-AMi" id="wOG-Ch-CKs"/>
+                                    <outlet property="cellCancelBtn" destination="58C-eE-ta6" id="mbX-gX-MKp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -108,7 +123,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iVo-oP-MYB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1540" y="136.28185907046478"/>
+            <point key="canvasLocation" x="1537" y="137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cmG-To-Xsc">

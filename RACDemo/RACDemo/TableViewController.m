@@ -46,10 +46,15 @@
     TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier" forIndexPath:indexPath];
     
     cell.cellBtn.tag = indexPath.row;
+    cell.cellCancelBtn.tag = indexPath.row;
     
-    [[cell.cellBtn rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+    [[cell rac_signalForSelector:@selector(cellBtnAuction:)] subscribeNext:^(id  _Nullable x) {
+       
         NSLog(@"%@", x);
-        NSLog(@"%zd", cell.cellBtn.tag);
+    }];
+    
+    [[cell rac_signalForSelector:@selector(cellCancelBtnAuction:)] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@", x);
     }];
     
     return cell;
