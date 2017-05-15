@@ -20,11 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,13 +44,30 @@
     cell.cellBtn.tag = indexPath.row;
     cell.cellCancelBtn.tag = indexPath.row;
     
+    
+    //takeUntil会接收一个signal,当signal触发后会把之前的信号释放掉
+    
+    // 如果不加takeUntil:cell.rac_prepareForReuseSignal，那么每次Cell被重用时，该button都会被addTarget:selector。
     [[cell rac_signalForSelector:@selector(cellBtnAuction:)] subscribeNext:^(id  _Nullable x) {
-       
+        
+    }];
+    
+    [[[cell.cellBtn rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id x) {
         NSLog(@"%@", x);
     }];
     
+    [[[cell rac_signalForSelector:@selector(cellBtnAuction:)] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id  _Nullable x) {
+        
+    }];
+    
+    /***/
+    
+    [[[cell.cellCancelBtn rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        
+    }];
+    
     [[cell rac_signalForSelector:@selector(cellCancelBtnAuction:)] subscribeNext:^(id  _Nullable x) {
-        NSLog(@"%@", x);
+        
     }];
     
     return cell;

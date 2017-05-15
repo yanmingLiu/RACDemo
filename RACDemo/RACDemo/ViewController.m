@@ -89,6 +89,16 @@
     }];
 }
 
+#pragma mark - KVO
+- (void)kvo {
+    //代替KVO
+//    [RACObserve(scrollView, contentOffset) subscribeNext:^(id x) {
+//        
+//        NSLog(@"%@",x);
+//        
+//    }];
+}
+
 #pragma mark - MVVM
 /**
  // 1.模型 (KVO 数据) ->  UI （控件  text属性）
