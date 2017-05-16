@@ -10,6 +10,9 @@
 		31B752FE692F08A60EB6F1A2 /* Pods_RACDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FC46EB993C5AF3997640B5 /* Pods_RACDemoTests.framework */; };
 		7F2C3ABB626F7453097BA82F /* Pods_RACDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF07DDA3E5186A0F647406F /* Pods_RACDemo.framework */; };
 		B87ED787B972497E3A2BD358 /* Pods_RACDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FAD0F557F9F997798C3C77 /* Pods_RACDemoUITests.framework */; };
+		C249F9051ECB38E60026349C /* InterfaceURLs.m in Sources */ = {isa = PBXBuildFile; fileRef = C249F8FF1ECB38E60026349C /* InterfaceURLs.m */; };
+		C249F9061ECB38E60026349C /* YMNetworkingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C249F9011ECB38E60026349C /* YMNetworkingTool.m */; };
+		C249F9071ECB38E60026349C /* YMUploadParam.m in Sources */ = {isa = PBXBuildFile; fileRef = C249F9031ECB38E60026349C /* YMUploadParam.m */; };
 		C293412B1EC43D89003FB9A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C293412A1EC43D89003FB9A0 /* main.m */; };
 		C293412E1EC43D89003FB9A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C293412D1EC43D89003FB9A0 /* AppDelegate.m */; };
 		C29341311EC43D89003FB9A0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29341301EC43D89003FB9A0 /* ViewController.m */; };
@@ -48,6 +51,14 @@
 		50C57BFC8857C536E0274D54 /* Pods-RACDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoUITests/Pods-RACDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5521038BDB566A569065065C /* Pods-RACDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoUITests/Pods-RACDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6FC46EB993C5AF3997640B5 /* Pods_RACDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C249F8FE1ECB38E60026349C /* InterfaceURLs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceURLs.h; sourceTree = "<group>"; };
+		C249F8FF1ECB38E60026349C /* InterfaceURLs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfaceURLs.m; sourceTree = "<group>"; };
+		C249F9001ECB38E60026349C /* YMNetworkingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMNetworkingTool.h; sourceTree = "<group>"; };
+		C249F9011ECB38E60026349C /* YMNetworkingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMNetworkingTool.m; sourceTree = "<group>"; };
+		C249F9021ECB38E60026349C /* YMUploadParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMUploadParam.h; sourceTree = "<group>"; };
+		C249F9031ECB38E60026349C /* YMUploadParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMUploadParam.m; sourceTree = "<group>"; };
+		C249F9081ECB39120026349C /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		C249F9091ECB39120026349C /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		C29341261EC43D89003FB9A0 /* RACDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C293412A1EC43D89003FB9A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C293412C1EC43D89003FB9A0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -125,6 +136,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C249F8FB1ECB38E60026349C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C249F9081ECB39120026349C /* Defines.h */,
+				C249F9091ECB39120026349C /* Header.h */,
+				C249F8FE1ECB38E60026349C /* InterfaceURLs.h */,
+				C249F8FF1ECB38E60026349C /* InterfaceURLs.m */,
+				C249F9001ECB38E60026349C /* YMNetworkingTool.h */,
+				C249F9011ECB38E60026349C /* YMNetworkingTool.m */,
+				C249F9021ECB38E60026349C /* YMUploadParam.h */,
+				C249F9031ECB38E60026349C /* YMUploadParam.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		C293411D1EC43D89003FB9A0 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +176,7 @@
 		C29341281EC43D89003FB9A0 /* RACDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C249F8FB1ECB38E60026349C /* Networking */,
 				C293412C1EC43D89003FB9A0 /* AppDelegate.h */,
 				C293412D1EC43D89003FB9A0 /* AppDelegate.m */,
 				C293412F1EC43D89003FB9A0 /* ViewController.h */,
@@ -475,12 +502,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C249F9071ECB38E60026349C /* YMUploadParam.m in Sources */,
 				C293415E1EC45997003FB9A0 /* User.m in Sources */,
+				C249F9051ECB38E60026349C /* InterfaceURLs.m in Sources */,
 				C29341661EC482EB003FB9A0 /* TableViewCell.m in Sources */,
 				C29341311EC43D89003FB9A0 /* ViewController.m in Sources */,
 				C293412E1EC43D89003FB9A0 /* AppDelegate.m in Sources */,
 				C29341631EC48233003FB9A0 /* TableViewController.m in Sources */,
 				C293412B1EC43D89003FB9A0 /* main.m in Sources */,
+				C249F9061ECB38E60026349C /* YMNetworkingTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

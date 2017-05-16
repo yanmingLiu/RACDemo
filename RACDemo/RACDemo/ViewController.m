@@ -28,12 +28,12 @@
     
 //    [self subscribeNext];
 //    [self combineLatest];
-//    [self reduce];
+    [self reduce];
     
 //    self.user = [[User alloc] init];
 //    [self MVVM_UI_model];
     
-    [self controlEvents];
+//    [self controlEvents];
 }
 
 #pragma mark - 单独信号
