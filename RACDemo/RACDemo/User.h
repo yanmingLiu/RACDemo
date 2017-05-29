@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "ReactiveObjC.h"
+
 @interface User : NSObject
 
 @property (nonatomic, strong) NSString *name;
@@ -15,6 +17,8 @@
 //@property (nonatomic, strong) NSString *pwd;
 
 @property (nonatomic, assign) NSInteger *pwd;
+
+- (RACSignal *)loadData;
 
 
 @end

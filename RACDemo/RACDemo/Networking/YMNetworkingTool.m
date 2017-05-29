@@ -20,13 +20,17 @@ singleton_implementation(YMNetworkingTool)
     if (self) {
         self.manager = [AFHTTPSessionManager manager];
         self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
-        self.manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-        self.manager.securityPolicy.allowInvalidCertificates = YES;
-        self.manager.requestSerializer.HTTPShouldHandleCookies = YES;
+
         self.manager.requestSerializer.timeoutInterval = 15;
         [self.manager.requestSerializer setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
         [self.manager.requestSerializer setValue:@"text/html;charset=UTF-8,application/json" forHTTPHeaderField:@"Accept"];
         self.manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/xml",@"text/plain",nil];
+        
+        // https证书问题
+        self.manager.securityPolicy.allowInvalidCertificates = YES;
+        self.manager.securityPolicy.validatesDomainName = NO;
+        
+        //self.manager.requestSerializer.HTTPShouldHandleCookies = YES;
     }
     return self;
 }
@@ -67,10 +71,6 @@ singleton_implementation(YMNetworkingTool)
     if (!urlStr || urlStr.length == 0) {
         return;
     }
-    if (!type) {
-        return;
-    }
-    
     urlStr = [urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     
     for (NSString *key in [headDic allKeys]) {
@@ -89,18 +89,14 @@ singleton_implementation(YMNetworkingTool)
     }
     
     NSLog(@"\n\n\n[-------headDic------]:%@-%@\n\n\n",urlStr,headDic);
-    if(params!=nil && [params count]>0){
-        NSLog(@"\n\n\n[-------Send------]:%@?%@\n\n\n",urlStr,body);
-    }else{
-        NSLog(@"\n\n\n[-------Send------]:%@\n\n\n",urlStr);
-    }
-    
+
     __weak typeof(self) weakself = self;
     if (type == NetworkRequestType_GET) {
         [weakself.manager GET:urlStr parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-            NSLog(@"返回的数据内容%@",responseObject);
+//            NSString *jsonStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+            NSLog(@"★★★★★★★★★★网络接口接收Json格式:%@",responseObject);
             if (success) {
                 success(responseObject);
             }
@@ -114,6 +110,8 @@ singleton_implementation(YMNetworkingTool)
         [weakself.manager POST:urlStr parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            NSString *jsonStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+            NSLog(@"★★★★★★★★★★网络接口接收Json格式:%@",jsonStr);
             if (success) {
                 success(responseObject);
             }
@@ -123,6 +121,45 @@ singleton_implementation(YMNetworkingTool)
             }
         }];
     }
+    else if (type == NetworkRequestType_PATCH) {
+        [weakself.manager PATCH:urlStr parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//            NSString *jsonStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+            NSLog(@"★★★★★★★★★★网络接口接收Json格式:%@",responseObject);
+            if (success) {
+                success(responseObject);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            if (failure) {
+                failure(error);
+            }
+        }];
+    }
+    else if (type == NetworkRequestType_PUT) {
+        [weakself.manager PUT:urlStr parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            NSLog(@"★★★★★★★★★★网络接口接收Json格式:%@",responseObject);
+            if (success) {
+                success(responseObject);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            if (failure) {
+                failure(error);
+            }
+        }];
+    }
+    else if (type == NetworkRequestType_DELETE) {
+        [weakself.manager DELETE:urlStr parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            NSLog(@"★★★★★★★★★★网络接口接收Json格式:%@",responseObject);
+            if (success) {
+                success(responseObject);
+            }
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            if (failure) {
+                failure(error);
+            }
+        }];
+    }
+    
+    [self.manager.operationQueue cancelAllOperations];
 }
 
 - (void)uploadingWithURL:(NSString *)urlStr header:(NSDictionary *)headDic parameters:(NSDictionary *)params pictureKey:(NSString *)pictureKey files:(NSArray *)imageArray success:(void (^)(id))success failure:(void (^)(NSError *))failure {
@@ -166,7 +203,8 @@ singleton_implementation(YMNetworkingTool)
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"返回的数据内容%@",responseObject);
+//        NSString *jsonStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSLog(@"★★★★★★★★★★网络接口接收Json格式:%@",responseObject);
         if (success) {
             success(responseObject);
         }
@@ -175,6 +213,8 @@ singleton_implementation(YMNetworkingTool)
             failure(error);
         }
     }];
+    
+    [[AFHTTPSessionManager manager].operationQueue cancelAllOperations];
 }
 
 @end

@@ -10,4 +10,21 @@
 
 @implementation User
 
+- (RACSignal *)loadData {
+    // 1.创建一个信号
+    return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        
+        BOOL isErro = YES;
+        
+        if (isErro) {
+            [subscriber sendError:[NSError errorWithDomain:@"错误" code:404 userInfo:@{@"msg" : @"发送了错误信息"}]];
+        }else {
+            [subscriber sendNext:@"发送成功的信号"];
+        }
+        [subscriber sendCompleted];
+        
+        return nil;
+    }];
+}
+
 @end

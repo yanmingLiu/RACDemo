@@ -26,10 +26,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    [self baseRac];
+    
 //    [self subscribeNext];
 //    [self combineLatest];
     [self reduce];
-    
+//
 //    self.user = [[User alloc] init];
 //    [self MVVM_UI_model];
     
@@ -73,6 +75,8 @@
 - (void)reduce {
     @weakify(self);
     [[RACSignal combineLatest:@[self.nameTF.rac_textSignal, self.pwdTF.rac_textSignal] reduce:^id(NSString *name, NSString *password) {
+        
+        NSLog(@"%@ -- %@", name, password);
         // 需要转换成 NSNumber：@(), 才能当做id 传递。
         return @(name.length > 0 && password.length >= 6);
         
@@ -84,7 +88,7 @@
         if (isShow) {
             self.button.backgroundColor = [UIColor redColor];
         } else {
-            self.button.backgroundColor = [UIColor whiteColor];
+            self.button.backgroundColor = [UIColor blueColor];
         }
     }];
 }
@@ -159,6 +163,20 @@
 
 - (void)observerNoti_Apple {
     
+}
+
+#pragma mark - 基本信号监听
+
+- (void)baseRac {
+    User *user = [[User alloc] init];
+    // 订阅信号
+    [[user loadData] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"%@", x);
+    } error:^(NSError * _Nullable error) {
+        NSLog(@"%@", error);
+    } completed:^{
+        NSLog(@"完成");
+    }];
 }
 
 @end
