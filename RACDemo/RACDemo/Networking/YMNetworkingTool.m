@@ -8,6 +8,12 @@
 
 #import "YMNetworkingTool.h"
 
+NSString * const kLoading = @"正在加载...";
+NSString * const kLoadError = @"加载失败";
+NSString * const kNetError = @"网络连接失败!";
+NSString * const kSuccessful = @"加载成功";
+NSString * const kNoMoreData = @"没有更多数据了";
+
 #define CODE @"code"
 
 @implementation YMNetworkingTool
@@ -31,6 +37,8 @@ singleton_implementation(YMNetworkingTool)
         self.manager.securityPolicy.validatesDomainName = NO;
         
         //self.manager.requestSerializer.HTTPShouldHandleCookies = YES;
+        
+        [self startMonitoring];
     }
     return self;
 }
@@ -68,9 +76,13 @@ singleton_implementation(YMNetworkingTool)
 
 - (void)requestWithType:(NetworkRequestType)type URL:(NSString *)urlStr header:(NSDictionary *)headDic parameters:(NSDictionary *)params success:(void (^)(id))success failure:(void (^)(NSError *))failure {
     
-    if (!urlStr || urlStr.length == 0) {
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    
+    if (self.networkError) {
+        [MBProgressHUD bwm_showTitle:kNetError toView:window hideAfter:HUDHideTime msgType:BWMMBProgressHUDMsgTypeError];
         return;
     }
+    
     urlStr = [urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     
     for (NSString *key in [headDic allKeys]) {
@@ -90,13 +102,16 @@ singleton_implementation(YMNetworkingTool)
     
     NSLog(@"\n\n\n[-------headDic------]:%@-%@\n\n\n",urlStr,headDic);
 
+    
     __weak typeof(self) weakself = self;
+    
     if (type == NetworkRequestType_GET) {
+        
         [weakself.manager GET:urlStr parameters:params progress:^(NSProgress * _Nonnull downloadProgress) {
             
         } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//            NSString *jsonStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
             NSLog(@"★★★★★★★★★★网络接口接收Json格式:%@",responseObject);
+            
             if (success) {
                 success(responseObject);
             }
@@ -123,7 +138,6 @@ singleton_implementation(YMNetworkingTool)
     }
     else if (type == NetworkRequestType_PATCH) {
         [weakself.manager PATCH:urlStr parameters:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//            NSString *jsonStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
             NSLog(@"★★★★★★★★★★网络接口接收Json格式:%@",responseObject);
             if (success) {
                 success(responseObject);
@@ -164,6 +178,12 @@ singleton_implementation(YMNetworkingTool)
 
 - (void)uploadingWithURL:(NSString *)urlStr header:(NSDictionary *)headDic parameters:(NSDictionary *)params pictureKey:(NSString *)pictureKey files:(NSArray *)imageArray success:(void (^)(id))success failure:(void (^)(NSError *))failure {
     
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    if (self.networkError) {
+        [MBProgressHUD bwm_showTitle:kNetError toView:window hideAfter:HUDHideTime msgType:BWMMBProgressHUDMsgTypeError];
+        return;
+    }
+    
     if (!urlStr || urlStr.length == 0) {
         return;
     }
@@ -203,8 +223,9 @@ singleton_implementation(YMNetworkingTool)
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        NSString *jsonStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+
         NSLog(@"★★★★★★★★★★网络接口接收Json格式:%@",responseObject);
+        
         if (success) {
             success(responseObject);
         }

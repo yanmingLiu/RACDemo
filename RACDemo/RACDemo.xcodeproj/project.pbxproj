@@ -22,8 +22,8 @@
 		C29341631EC48233003FB9A0 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29341621EC48233003FB9A0 /* TableViewController.m */; };
 		C29341661EC482EB003FB9A0 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C29341651EC482EB003FB9A0 /* TableViewCell.m */; };
 		C2DACC9C1EDBD32E00B1EC5F /* InterfaceURLs.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DACC971EDBD32E00B1EC5F /* InterfaceURLs.m */; };
-		C2DACC9D1EDBD32E00B1EC5F /* YMNetworkingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DACC991EDBD32E00B1EC5F /* YMNetworkingTool.m */; };
 		C2DACC9E1EDBD32E00B1EC5F /* YMUploadParam.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DACC9B1EDBD32E00B1EC5F /* YMUploadParam.m */; };
+		C2FD46F21EF8E63300990D17 /* YMNetworkingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FD46F11EF8E63300990D17 /* YMNetworkingTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,10 +77,10 @@
 		C29341651EC482EB003FB9A0 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		C2DACC961EDBD32E00B1EC5F /* InterfaceURLs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceURLs.h; sourceTree = "<group>"; };
 		C2DACC971EDBD32E00B1EC5F /* InterfaceURLs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfaceURLs.m; sourceTree = "<group>"; };
-		C2DACC981EDBD32E00B1EC5F /* YMNetworkingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMNetworkingTool.h; sourceTree = "<group>"; };
-		C2DACC991EDBD32E00B1EC5F /* YMNetworkingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMNetworkingTool.m; sourceTree = "<group>"; };
 		C2DACC9A1EDBD32E00B1EC5F /* YMUploadParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMUploadParam.h; sourceTree = "<group>"; };
 		C2DACC9B1EDBD32E00B1EC5F /* YMUploadParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMUploadParam.m; sourceTree = "<group>"; };
+		C2FD46F01EF8E63300990D17 /* YMNetworkingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMNetworkingTool.h; sourceTree = "<group>"; };
+		C2FD46F11EF8E63300990D17 /* YMNetworkingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMNetworkingTool.m; sourceTree = "<group>"; };
 		D0FAD0F557F9F997798C3C77 /* Pods_RACDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF07DDA3E5186A0F647406F /* Pods_RACDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,8 +143,8 @@
 				C249F9091ECB39120026349C /* Header.h */,
 				C2DACC961EDBD32E00B1EC5F /* InterfaceURLs.h */,
 				C2DACC971EDBD32E00B1EC5F /* InterfaceURLs.m */,
-				C2DACC981EDBD32E00B1EC5F /* YMNetworkingTool.h */,
-				C2DACC991EDBD32E00B1EC5F /* YMNetworkingTool.m */,
+				C2FD46F01EF8E63300990D17 /* YMNetworkingTool.h */,
+				C2FD46F11EF8E63300990D17 /* YMNetworkingTool.m */,
 				C2DACC9A1EDBD32E00B1EC5F /* YMUploadParam.h */,
 				C2DACC9B1EDBD32E00B1EC5F /* YMUploadParam.m */,
 			);
@@ -503,7 +503,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C293415E1EC45997003FB9A0 /* User.m in Sources */,
-				C2DACC9D1EDBD32E00B1EC5F /* YMNetworkingTool.m in Sources */,
 				C2DACC9E1EDBD32E00B1EC5F /* YMUploadParam.m in Sources */,
 				C29341661EC482EB003FB9A0 /* TableViewCell.m in Sources */,
 				C29341311EC43D89003FB9A0 /* ViewController.m in Sources */,
@@ -511,6 +510,7 @@
 				C29341631EC48233003FB9A0 /* TableViewController.m in Sources */,
 				C2DACC9C1EDBD32E00B1EC5F /* InterfaceURLs.m in Sources */,
 				C293412B1EC43D89003FB9A0 /* main.m in Sources */,
+				C2FD46F21EF8E63300990D17 /* YMNetworkingTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

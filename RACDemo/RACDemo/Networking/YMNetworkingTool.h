@@ -9,7 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
 #import "YMUploadParam.h"
-#import "Defines.h"
+#import "Headers.h"
+
+extern NSString * const kLoading ;
+extern NSString * const kLoadError;
+extern NSString * const kNetError;
+extern NSString * const kSuccessful;
+extern NSString * const kNoMoreData;
 
 typedef NS_ENUM(NSUInteger, NetworkRequestType) {
     NetworkRequestType_GET,
