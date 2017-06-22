@@ -23,7 +23,13 @@
 		C29341661EC482EB003FB9A0 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C29341651EC482EB003FB9A0 /* TableViewCell.m */; };
 		C2DACC9C1EDBD32E00B1EC5F /* InterfaceURLs.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DACC971EDBD32E00B1EC5F /* InterfaceURLs.m */; };
 		C2DACC9E1EDBD32E00B1EC5F /* YMUploadParam.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DACC9B1EDBD32E00B1EC5F /* YMUploadParam.m */; };
-		C2FD46F21EF8E63300990D17 /* YMNetworkingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FD46F11EF8E63300990D17 /* YMNetworkingTool.m */; };
+		C2FD46FC1EF8F6A900990D17 /* hud_error.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FD46F41EF8F6A900990D17 /* hud_error.png */; };
+		C2FD46FD1EF8F6A900990D17 /* hud_info.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FD46F51EF8F6A900990D17 /* hud_info.png */; };
+		C2FD46FE1EF8F6A900990D17 /* hud_success.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FD46F61EF8F6A900990D17 /* hud_success.png */; };
+		C2FD46FF1EF8F6A900990D17 /* hud_warning.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FD46F71EF8F6A900990D17 /* hud_warning.png */; };
+		C2FD47001EF8F6A900990D17 /* MBProgressHUD+BWMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FD46F91EF8F6A900990D17 /* MBProgressHUD+BWMExtension.m */; };
+		C2FD47011EF8F6A900990D17 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FD46FB1EF8F6A900990D17 /* MBProgressHUD.m */; };
+		C2FD47041EF8F6BF00990D17 /* YMNetworkingTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C2FD47031EF8F6BF00990D17 /* YMNetworkingTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,8 +85,16 @@
 		C2DACC971EDBD32E00B1EC5F /* InterfaceURLs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfaceURLs.m; sourceTree = "<group>"; };
 		C2DACC9A1EDBD32E00B1EC5F /* YMUploadParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMUploadParam.h; sourceTree = "<group>"; };
 		C2DACC9B1EDBD32E00B1EC5F /* YMUploadParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMUploadParam.m; sourceTree = "<group>"; };
-		C2FD46F01EF8E63300990D17 /* YMNetworkingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMNetworkingTool.h; sourceTree = "<group>"; };
-		C2FD46F11EF8E63300990D17 /* YMNetworkingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMNetworkingTool.m; sourceTree = "<group>"; };
+		C2FD46F41EF8F6A900990D17 /* hud_error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_error.png; sourceTree = "<group>"; };
+		C2FD46F51EF8F6A900990D17 /* hud_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_info.png; sourceTree = "<group>"; };
+		C2FD46F61EF8F6A900990D17 /* hud_success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_success.png; sourceTree = "<group>"; };
+		C2FD46F71EF8F6A900990D17 /* hud_warning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_warning.png; sourceTree = "<group>"; };
+		C2FD46F81EF8F6A900990D17 /* MBProgressHUD+BWMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+BWMExtension.h"; sourceTree = "<group>"; };
+		C2FD46F91EF8F6A900990D17 /* MBProgressHUD+BWMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+BWMExtension.m"; sourceTree = "<group>"; };
+		C2FD46FA1EF8F6A900990D17 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		C2FD46FB1EF8F6A900990D17 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		C2FD47021EF8F6BF00990D17 /* YMNetworkingTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMNetworkingTool.h; sourceTree = "<group>"; };
+		C2FD47031EF8F6BF00990D17 /* YMNetworkingTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMNetworkingTool.m; sourceTree = "<group>"; };
 		D0FAD0F557F9F997798C3C77 /* Pods_RACDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF07DDA3E5186A0F647406F /* Pods_RACDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -143,8 +157,8 @@
 				C249F9091ECB39120026349C /* Header.h */,
 				C2DACC961EDBD32E00B1EC5F /* InterfaceURLs.h */,
 				C2DACC971EDBD32E00B1EC5F /* InterfaceURLs.m */,
-				C2FD46F01EF8E63300990D17 /* YMNetworkingTool.h */,
-				C2FD46F11EF8E63300990D17 /* YMNetworkingTool.m */,
+				C2FD47021EF8F6BF00990D17 /* YMNetworkingTool.h */,
+				C2FD47031EF8F6BF00990D17 /* YMNetworkingTool.m */,
 				C2DACC9A1EDBD32E00B1EC5F /* YMUploadParam.h */,
 				C2DACC9B1EDBD32E00B1EC5F /* YMUploadParam.m */,
 			);
@@ -176,6 +190,7 @@
 		C29341281EC43D89003FB9A0 /* RACDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C2FD46F31EF8F6A900990D17 /* MBProgressHUD */,
 				C249F8FB1ECB38E60026349C /* Networking */,
 				C293412C1EC43D89003FB9A0 /* AppDelegate.h */,
 				C293412D1EC43D89003FB9A0 /* AppDelegate.m */,
@@ -220,6 +235,21 @@
 				C29341501EC43D89003FB9A0 /* Info.plist */,
 			);
 			path = RACDemoUITests;
+			sourceTree = "<group>";
+		};
+		C2FD46F31EF8F6A900990D17 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				C2FD46F41EF8F6A900990D17 /* hud_error.png */,
+				C2FD46F51EF8F6A900990D17 /* hud_info.png */,
+				C2FD46F61EF8F6A900990D17 /* hud_success.png */,
+				C2FD46F71EF8F6A900990D17 /* hud_warning.png */,
+				C2FD46F81EF8F6A900990D17 /* MBProgressHUD+BWMExtension.h */,
+				C2FD46F91EF8F6A900990D17 /* MBProgressHUD+BWMExtension.m */,
+				C2FD46FA1EF8F6A900990D17 /* MBProgressHUD.h */,
+				C2FD46FB1EF8F6A900990D17 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,7 +368,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C29341391EC43D89003FB9A0 /* LaunchScreen.storyboard in Resources */,
+				C2FD46FD1EF8F6A900990D17 /* hud_info.png in Resources */,
+				C2FD46FF1EF8F6A900990D17 /* hud_warning.png in Resources */,
 				C29341361EC43D89003FB9A0 /* Assets.xcassets in Resources */,
+				C2FD46FE1EF8F6A900990D17 /* hud_success.png in Resources */,
+				C2FD46FC1EF8F6A900990D17 /* hud_error.png in Resources */,
 				C29341341EC43D89003FB9A0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,8 +543,10 @@
 				C293412E1EC43D89003FB9A0 /* AppDelegate.m in Sources */,
 				C29341631EC48233003FB9A0 /* TableViewController.m in Sources */,
 				C2DACC9C1EDBD32E00B1EC5F /* InterfaceURLs.m in Sources */,
+				C2FD47011EF8F6A900990D17 /* MBProgressHUD.m in Sources */,
+				C2FD47001EF8F6A900990D17 /* MBProgressHUD+BWMExtension.m in Sources */,
 				C293412B1EC43D89003FB9A0 /* main.m in Sources */,
-				C2FD46F21EF8E63300990D17 /* YMNetworkingTool.m in Sources */,
+				C2FD47041EF8F6BF00990D17 /* YMNetworkingTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

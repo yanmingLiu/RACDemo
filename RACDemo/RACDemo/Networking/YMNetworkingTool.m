@@ -27,7 +27,7 @@ singleton_implementation(YMNetworkingTool)
         self.manager = [AFHTTPSessionManager manager];
         self.manager.responseSerializer = [AFJSONResponseSerializer serializer];
 
-        self.manager.requestSerializer.timeoutInterval = 15;
+        self.manager.requestSerializer.timeoutInterval = 10;
         [self.manager.requestSerializer setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
         [self.manager.requestSerializer setValue:@"text/html;charset=UTF-8,application/json" forHTTPHeaderField:@"Accept"];
         self.manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", @"text/xml",@"text/plain",nil];
@@ -49,6 +49,7 @@ singleton_implementation(YMNetworkingTool)
 {
     // 1.获得网络监控的管理者
     AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
+
     // 2.设置网络状态改变后的处理
     [mgr setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         // 当网络状态改变了, 就会调用这个block
@@ -56,7 +57,7 @@ singleton_implementation(YMNetworkingTool)
         {
             case AFNetworkReachabilityStatusUnknown: // 未知网络
                 NSLog(@"未知网络");
-                self.networkError = NO;
+                self.networkError = YES;
                 break;
             case AFNetworkReachabilityStatusNotReachable: // 没有网络(断网)
                 self.networkError = YES;
@@ -77,11 +78,11 @@ singleton_implementation(YMNetworkingTool)
 - (void)requestWithType:(NetworkRequestType)type URL:(NSString *)urlStr header:(NSDictionary *)headDic parameters:(NSDictionary *)params success:(void (^)(id))success failure:(void (^)(NSError *))failure {
     
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    
-    if (self.networkError) {
+    [MBProgressHUD showHUDAddedTo:window animated:YES];
+    void(^noNetworkBlock)() = ^() {
+        [MBProgressHUD hideAllHUDsForView:window animated:NO];
         [MBProgressHUD bwm_showTitle:kNetError toView:window hideAfter:HUDHideTime msgType:BWMMBProgressHUDMsgTypeError];
-        return;
-    }
+    };
     
     urlStr = [urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     
@@ -118,6 +119,7 @@ singleton_implementation(YMNetworkingTool)
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             if (failure) {
                 failure(error);
+                noNetworkBlock();
             }
         }];
     }
@@ -133,6 +135,7 @@ singleton_implementation(YMNetworkingTool)
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             if (failure) {
                 failure(error);
+                noNetworkBlock();
             }
         }];
     }
@@ -145,6 +148,7 @@ singleton_implementation(YMNetworkingTool)
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             if (failure) {
                 failure(error);
+                noNetworkBlock();
             }
         }];
     }
@@ -157,6 +161,7 @@ singleton_implementation(YMNetworkingTool)
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             if (failure) {
                 failure(error);
+                noNetworkBlock();
             }
         }];
     }
@@ -169,6 +174,7 @@ singleton_implementation(YMNetworkingTool)
         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
             if (failure) {
                 failure(error);
+                noNetworkBlock();
             }
         }];
     }
@@ -177,12 +183,6 @@ singleton_implementation(YMNetworkingTool)
 }
 
 - (void)uploadingWithURL:(NSString *)urlStr header:(NSDictionary *)headDic parameters:(NSDictionary *)params pictureKey:(NSString *)pictureKey files:(NSArray *)imageArray success:(void (^)(id))success failure:(void (^)(NSError *))failure {
-    
-    UIWindow *window = [UIApplication sharedApplication].keyWindow;
-    if (self.networkError) {
-        [MBProgressHUD bwm_showTitle:kNetError toView:window hideAfter:HUDHideTime msgType:BWMMBProgressHUDMsgTypeError];
-        return;
-    }
     
     if (!urlStr || urlStr.length == 0) {
         return;
