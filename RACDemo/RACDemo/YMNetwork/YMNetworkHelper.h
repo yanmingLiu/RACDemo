@@ -12,7 +12,7 @@
 @interface YMNetworkHelper : NSObject
 
 /// 获取关键字
-+ (NSURLSessionTask *)getKeywordsSuccess:(YMHttpRequestSuccess)success failure:(YMHttpRequestFailed)failure;
++ (NSURLSessionTask *)getKeywordsResponseCache:(YMHttpRequestCache)responseCache Success:(YMHttpRequestSuccess)success failure:(YMHttpRequestFailed)failure;
 
 
 

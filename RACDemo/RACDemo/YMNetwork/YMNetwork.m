@@ -10,6 +10,7 @@
 #import "YMNetwork.h"
 #import "AFNetworking.h"
 #import "AFNetworkActivityIndicatorManager.h"
+#import "YMNetworkCache.h"
 
 #ifdef DEBUG
 #define NSLog(...) printf("[%s] %s [第%d行]: %s\n", __TIME__ ,__PRETTY_FUNCTION__ ,__LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String])
@@ -63,19 +64,39 @@ static AFHTTPSessionManager *_manager;
 }
 
 #pragma mark - 网络请求
+
+/**
+ 无缓存
+ */
 + (NSURLSessionTask *)requestWithMethod:(YMNetworkMethod)method URL:(NSString *)urlStr parameters:(id)params success:(YMHttpRequestSuccess)success failure:(YMHttpRequestFailed)failure {
 
+    return [self requestWithMethod:method URL:urlStr parameters:params responseCache:nil success:success failure:failure];
+}
+
+
++ (NSURLSessionTask *)requestWithMethod:(YMNetworkMethod)method URL:(NSString *)urlStr parameters:(id)params responseCache:(YMHttpRequestCache)responseCache success:(YMHttpRequestSuccess)success failure:(YMHttpRequestFailed)failure {
+    
+    //读取缓存
+    responseCache!=nil ? responseCache([YMNetworkCache httpCacheForURL:urlStr parameters:params]) : nil;
+    NSLog(@"\n--------------------->>> responseCache : %@\n", [YMNetworkCache httpCacheForURL:urlStr parameters:params]);
+    
+    
     urlStr = [urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     
     NSLog(@"\n--------------------->>> urlString : %@\n", urlStr);
     NSLog(@"\n--------------------->>> body---> : %@\n", params);
     NSLog(@"\n--------------------->>> head---> : %@\n", _manager.requestSerializer.HTTPRequestHeaders);
-          
+    
     // 请求成功回调
     void(^responseSuccess)() = ^(NSURLSessionDataTask * task, id responseObject) {
+        
         if (_isOpenLog) {NSLog(@"responseObject = %@",[self jsonToString:responseObject]);}
         [[self allSessionTask] removeObject:task];
         success ? success(responseObject) : nil;
+        
+        //对数据进行异步缓存
+        responseCache!=nil ? [YMNetworkCache setHttpCache:responseObject URL:urlStr parameters:params] : nil;
+        
     };
     // 请求失败回调
     void(^responseFailure)() = ^(NSURLSessionDataTask * task, NSError * error) {
@@ -102,7 +123,7 @@ static AFHTTPSessionManager *_manager;
         case YMKRequestMethodPOST:
         {
             NSURLSessionTask *sessionTask = [_manager POST:urlStr parameters:params progress:^(NSProgress * _Nonnull uploadProgress) {
-                    
+                
             } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 responseSuccess(task, responseObject);
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

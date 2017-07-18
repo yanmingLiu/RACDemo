@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-NS_ASSUME_NONNULL_BEGIN
+//NS_ASSUME_NONNULL_BEGIN
 
 extern NSString * const kLoading ;
 extern NSString * const kLoadError;
@@ -47,6 +47,9 @@ typedef void(^YMHttpRequestSuccess)(id responseObject);
 /// 请求失败的Block
 typedef void(^YMHttpRequestFailed)(NSError *error);
 
+/// 缓存的Block
+typedef void(^YMHttpRequestCache)(id responseCache);
+
 /// 上传或者下载的进度, Progress.completedUnitCount:当前大小 - Progress.totalUnitCount:总大小
 typedef void (^YMHttpProgress)(NSProgress *progress);
 
@@ -64,9 +67,27 @@ typedef void (^YMHttpProgress)(NSProgress *progress);
 /// 关闭日志打印
 + (void)closeLog;
 
-//https request
-+ (__kindof NSURLSessionTask *)requestWithMethod:(YMNetworkMethod)method URL:(NSString *)urlStr parameters:(id)params  success:(YMHttpRequestSuccess)success failure:(YMHttpRequestFailed)failure;
 
+/**
+ *
+ * 无缓冲请求
+ */
++ (NSURLSessionTask *)requestWithMethod:(YMNetworkMethod)method 
+                                             URL:(NSString *)urlStr 
+                                      parameters:(id)params  
+                                         success:(YMHttpRequestSuccess)success 
+                                         failure:(YMHttpRequestFailed)failure;
+
+/**
+ *  请求,自动缓存
+ *  @return 返回的对象可取消请求,调用cancel方法
+ */
++ (NSURLSessionTask *)requestWithMethod:(YMNetworkMethod)method 
+                                             URL:(NSString *)urlStr 
+                                      parameters:(id)params 
+                                   responseCache:(YMHttpRequestCache)responseCache  
+                                         success:(YMHttpRequestSuccess)success 
+                                         failure:(YMHttpRequestFailed)failure;
 
 /**
  *  上传单/多张图片
@@ -84,7 +105,7 @@ typedef void (^YMHttpProgress)(NSProgress *progress);
  *
  *  @return 返回的对象可取消请求,调用cancel方法
  */
-+ (__kindof NSURLSessionTask *)uploadImagesWithURL:(NSString *)URL
++ ( NSURLSessionTask *)uploadImagesWithURL:(NSString *)URL
                                         parameters:(id)parameters
                                               name:(NSString *)name
                                             images:(NSArray<UIImage *> *)images
@@ -106,7 +127,7 @@ typedef void (^YMHttpProgress)(NSProgress *progress);
  *
  *  @return 返回NSURLSessionDownloadTask实例，可用于暂停继续，暂停调用suspend方法，开始下载调用resume方法
  */
-+ (__kindof NSURLSessionTask *)downloadWithURL:(NSString *)URL
++ (NSURLSessionTask *)downloadWithURL:(NSString *)URL
                                        fileDir:(NSString *)fileDir
                                       progress:(YMHttpProgress)progress
                                        success:(void(^)(NSString *filePath))success
@@ -144,4 +165,5 @@ typedef void (^YMHttpProgress)(NSProgress *progress);
 @end
 
 
-NS_ASSUME_NONNULL_END
+//NS_ASSUME_NONNULL_END
+//

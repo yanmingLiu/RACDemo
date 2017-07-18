@@ -25,6 +25,12 @@
 		C293415E1EC45997003FB9A0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C293415D1EC45997003FB9A0 /* User.m */; };
 		C29341631EC48233003FB9A0 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29341621EC48233003FB9A0 /* TableViewController.m */; };
 		C29341661EC482EB003FB9A0 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C29341651EC482EB003FB9A0 /* TableViewCell.m */; };
+		C2BB751A1F1D992F00723BB0 /* YYCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BB75131F1D992F00723BB0 /* YYCache.m */; };
+		C2BB751B1F1D992F00723BB0 /* YYDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BB75151F1D992F00723BB0 /* YYDiskCache.m */; };
+		C2BB751C1F1D992F00723BB0 /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BB75171F1D992F00723BB0 /* YYKVStorage.m */; };
+		C2BB751D1F1D992F00723BB0 /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BB75191F1D992F00723BB0 /* YYMemoryCache.m */; };
+		C2BB75201F1D9A2500723BB0 /* YMNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BB751F1F1D9A2500723BB0 /* YMNetworkCache.m */; };
+		C2BB75221F1DA8B200723BB0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BB75211F1DA8B200723BB0 /* libsqlite3.0.tbd */; };
 		C2FD46FC1EF8F6A900990D17 /* hud_error.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FD46F41EF8F6A900990D17 /* hud_error.png */; };
 		C2FD46FD1EF8F6A900990D17 /* hud_info.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FD46F51EF8F6A900990D17 /* hud_info.png */; };
 		C2FD46FE1EF8F6A900990D17 /* hud_success.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FD46F61EF8F6A900990D17 /* hud_success.png */; };
@@ -60,8 +66,8 @@
 		A6FC46EB993C5AF3997640B5 /* Pods_RACDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22510AB1F1C84120008773A /* YMNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMNetwork.h; sourceTree = "<group>"; };
 		C22510AC1F1C84120008773A /* YMNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMNetwork.m; sourceTree = "<group>"; };
-		C22510B41F1CF6430008773A /* NetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetController.h; sourceTree = "<group>"; };
-		C22510B51F1CF6430008773A /* NetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetController.m; sourceTree = "<group>"; };
+		C22510B41F1CF6430008773A /* NetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetController.h; path = Networking/NetController.h; sourceTree = "<group>"; };
+		C22510B51F1CF6430008773A /* NetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetController.m; path = Networking/NetController.m; sourceTree = "<group>"; };
 		C22510BD1F1CF74A0008773A /* YMInterfacedConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMInterfacedConst.h; sourceTree = "<group>"; };
 		C22510BE1F1CF74A0008773A /* YMInterfacedConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMInterfacedConst.m; sourceTree = "<group>"; };
 		C2503C691F1D02A600A88EE9 /* YMNetworkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMNetworkHelper.h; sourceTree = "<group>"; };
@@ -88,6 +94,17 @@
 		C29341621EC48233003FB9A0 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		C29341641EC482EB003FB9A0 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		C29341651EC482EB003FB9A0 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		C2BB75121F1D992F00723BB0 /* YYCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCache.h; sourceTree = "<group>"; };
+		C2BB75131F1D992F00723BB0 /* YYCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCache.m; sourceTree = "<group>"; };
+		C2BB75141F1D992F00723BB0 /* YYDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDiskCache.h; sourceTree = "<group>"; };
+		C2BB75151F1D992F00723BB0 /* YYDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDiskCache.m; sourceTree = "<group>"; };
+		C2BB75161F1D992F00723BB0 /* YYKVStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKVStorage.h; sourceTree = "<group>"; };
+		C2BB75171F1D992F00723BB0 /* YYKVStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKVStorage.m; sourceTree = "<group>"; };
+		C2BB75181F1D992F00723BB0 /* YYMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMemoryCache.h; sourceTree = "<group>"; };
+		C2BB75191F1D992F00723BB0 /* YYMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMemoryCache.m; sourceTree = "<group>"; };
+		C2BB751E1F1D9A2500723BB0 /* YMNetworkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMNetworkCache.h; sourceTree = "<group>"; };
+		C2BB751F1F1D9A2500723BB0 /* YMNetworkCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMNetworkCache.m; sourceTree = "<group>"; };
+		C2BB75211F1DA8B200723BB0 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		C2FD46F41EF8F6A900990D17 /* hud_error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_error.png; sourceTree = "<group>"; };
 		C2FD46F51EF8F6A900990D17 /* hud_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_info.png; sourceTree = "<group>"; };
 		C2FD46F61EF8F6A900990D17 /* hud_success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_success.png; sourceTree = "<group>"; };
@@ -105,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2BB75221F1DA8B200723BB0 /* libsqlite3.0.tbd in Frameworks */,
 				7F2C3ABB626F7453097BA82F /* Pods_RACDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +162,7 @@
 		980F8D9D61816E87469E565A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C2BB75211F1DA8B200723BB0 /* libsqlite3.0.tbd */,
 				EAF07DDA3E5186A0F647406F /* Pods_RACDemo.framework */,
 				A6FC46EB993C5AF3997640B5 /* Pods_RACDemoTests.framework */,
 				D0FAD0F557F9F997798C3C77 /* Pods_RACDemoUITests.framework */,
@@ -156,21 +175,14 @@
 			children = (
 				C22510AB1F1C84120008773A /* YMNetwork.h */,
 				C22510AC1F1C84120008773A /* YMNetwork.m */,
+				C2BB751E1F1D9A2500723BB0 /* YMNetworkCache.h */,
+				C2BB751F1F1D9A2500723BB0 /* YMNetworkCache.m */,
 				C2503C691F1D02A600A88EE9 /* YMNetworkHelper.h */,
 				C2503C6A1F1D02A600A88EE9 /* YMNetworkHelper.m */,
 				C22510BD1F1CF74A0008773A /* YMInterfacedConst.h */,
 				C22510BE1F1CF74A0008773A /* YMInterfacedConst.m */,
 			);
 			path = YMNetwork;
-			sourceTree = "<group>";
-		};
-		C22510B31F1CF6350008773A /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				C22510B41F1CF6430008773A /* NetController.h */,
-				C22510B51F1CF6430008773A /* NetController.m */,
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		C293411D1EC43D89003FB9A0 = {
@@ -198,7 +210,7 @@
 		C29341281EC43D89003FB9A0 /* RACDemo */ = {
 			isa = PBXGroup;
 			children = (
-				C22510B31F1CF6350008773A /* Networking */,
+				C2BB75111F1D992F00723BB0 /* YYCache */,
 				C22510A41F1C837A0008773A /* YMNetwork */,
 				C2FD46F31EF8F6A900990D17 /* MBProgressHUD */,
 				C293412C1EC43D89003FB9A0 /* AppDelegate.h */,
@@ -211,6 +223,8 @@
 				C29341621EC48233003FB9A0 /* TableViewController.m */,
 				C29341641EC482EB003FB9A0 /* TableViewCell.h */,
 				C29341651EC482EB003FB9A0 /* TableViewCell.m */,
+				C22510B41F1CF6430008773A /* NetController.h */,
+				C22510B51F1CF6430008773A /* NetController.m */,
 				C29341321EC43D89003FB9A0 /* Main.storyboard */,
 				C29341351EC43D89003FB9A0 /* Assets.xcassets */,
 				C29341371EC43D89003FB9A0 /* LaunchScreen.storyboard */,
@@ -244,6 +258,21 @@
 				C29341501EC43D89003FB9A0 /* Info.plist */,
 			);
 			path = RACDemoUITests;
+			sourceTree = "<group>";
+		};
+		C2BB75111F1D992F00723BB0 /* YYCache */ = {
+			isa = PBXGroup;
+			children = (
+				C2BB75121F1D992F00723BB0 /* YYCache.h */,
+				C2BB75131F1D992F00723BB0 /* YYCache.m */,
+				C2BB75141F1D992F00723BB0 /* YYDiskCache.h */,
+				C2BB75151F1D992F00723BB0 /* YYDiskCache.m */,
+				C2BB75161F1D992F00723BB0 /* YYKVStorage.h */,
+				C2BB75171F1D992F00723BB0 /* YYKVStorage.m */,
+				C2BB75181F1D992F00723BB0 /* YYMemoryCache.h */,
+				C2BB75191F1D992F00723BB0 /* YYMemoryCache.m */,
+			);
+			path = YYCache;
 			sourceTree = "<group>";
 		};
 		C2FD46F31EF8F6A900990D17 /* MBProgressHUD */ = {
@@ -546,12 +575,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C293415E1EC45997003FB9A0 /* User.m in Sources */,
+				C2BB751B1F1D992F00723BB0 /* YYDiskCache.m in Sources */,
 				C2503C6B1F1D02A600A88EE9 /* YMNetworkHelper.m in Sources */,
 				C29341661EC482EB003FB9A0 /* TableViewCell.m in Sources */,
 				C29341311EC43D89003FB9A0 /* ViewController.m in Sources */,
 				C293412E1EC43D89003FB9A0 /* AppDelegate.m in Sources */,
+				C2BB751A1F1D992F00723BB0 /* YYCache.m in Sources */,
 				C29341631EC48233003FB9A0 /* TableViewController.m in Sources */,
 				C2FD47011EF8F6A900990D17 /* MBProgressHUD.m in Sources */,
+				C2BB751D1F1D992F00723BB0 /* YYMemoryCache.m in Sources */,
+				C2BB751C1F1D992F00723BB0 /* YYKVStorage.m in Sources */,
+				C2BB75201F1D9A2500723BB0 /* YMNetworkCache.m in Sources */,
 				C2FD47001EF8F6A900990D17 /* MBProgressHUD+BWMExtension.m in Sources */,
 				C22510BF1F1CF74A0008773A /* YMInterfacedConst.m in Sources */,
 				C293412B1EC43D89003FB9A0 /* main.m in Sources */,
