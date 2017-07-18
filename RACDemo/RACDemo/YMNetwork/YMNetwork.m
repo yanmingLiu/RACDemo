@@ -73,7 +73,9 @@ static AFHTTPSessionManager *_manager;
     return [self requestWithMethod:method URL:urlStr parameters:params responseCache:nil success:success failure:failure];
 }
 
-
+/**
+ 有缓存
+ */
 + (NSURLSessionTask *)requestWithMethod:(YMNetworkMethod)method URL:(NSString *)urlStr parameters:(id)params responseCache:(YMHttpRequestCache)responseCache success:(YMHttpRequestSuccess)success failure:(YMHttpRequestFailed)failure {
     
     //读取缓存

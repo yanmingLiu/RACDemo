@@ -70,7 +70,7 @@ typedef void (^YMHttpProgress)(NSProgress *progress);
 
 /**
  *
- * 无缓冲请求
+ * 无缓存请求
  */
 + (NSURLSessionTask *)requestWithMethod:(YMNetworkMethod)method 
                                              URL:(NSString *)urlStr 
