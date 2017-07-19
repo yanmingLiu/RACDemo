@@ -12,7 +12,6 @@
 		B87ED787B972497E3A2BD358 /* Pods_RACDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FAD0F557F9F997798C3C77 /* Pods_RACDemoUITests.framework */; };
 		C22510AD1F1C84120008773A /* YMNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = C22510AC1F1C84120008773A /* YMNetwork.m */; };
 		C22510B61F1CF6430008773A /* NetController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22510B51F1CF6430008773A /* NetController.m */; };
-		C22510BF1F1CF74A0008773A /* YMInterfacedConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C22510BE1F1CF74A0008773A /* YMInterfacedConst.m */; };
 		C2503C6B1F1D02A600A88EE9 /* YMNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C2503C6A1F1D02A600A88EE9 /* YMNetworkHelper.m */; };
 		C293412B1EC43D89003FB9A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C293412A1EC43D89003FB9A0 /* main.m */; };
 		C293412E1EC43D89003FB9A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C293412D1EC43D89003FB9A0 /* AppDelegate.m */; };
@@ -31,6 +30,7 @@
 		C2BB751D1F1D992F00723BB0 /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BB75191F1D992F00723BB0 /* YYMemoryCache.m */; };
 		C2BB75201F1D9A2500723BB0 /* YMNetworkCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BB751F1F1D9A2500723BB0 /* YMNetworkCache.m */; };
 		C2BB75221F1DA8B200723BB0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BB75211F1DA8B200723BB0 /* libsqlite3.0.tbd */; };
+		C2CB69E31F1F8C88003DE0BE /* YMAPIConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CB69E21F1F8C88003DE0BE /* YMAPIConst.m */; };
 		C2FD46FC1EF8F6A900990D17 /* hud_error.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FD46F41EF8F6A900990D17 /* hud_error.png */; };
 		C2FD46FD1EF8F6A900990D17 /* hud_info.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FD46F51EF8F6A900990D17 /* hud_info.png */; };
 		C2FD46FE1EF8F6A900990D17 /* hud_success.png in Resources */ = {isa = PBXBuildFile; fileRef = C2FD46F61EF8F6A900990D17 /* hud_success.png */; };
@@ -68,8 +68,6 @@
 		C22510AC1F1C84120008773A /* YMNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMNetwork.m; sourceTree = "<group>"; };
 		C22510B41F1CF6430008773A /* NetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetController.h; path = Networking/NetController.h; sourceTree = "<group>"; };
 		C22510B51F1CF6430008773A /* NetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetController.m; path = Networking/NetController.m; sourceTree = "<group>"; };
-		C22510BD1F1CF74A0008773A /* YMInterfacedConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMInterfacedConst.h; sourceTree = "<group>"; };
-		C22510BE1F1CF74A0008773A /* YMInterfacedConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMInterfacedConst.m; sourceTree = "<group>"; };
 		C2503C691F1D02A600A88EE9 /* YMNetworkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMNetworkHelper.h; sourceTree = "<group>"; };
 		C2503C6A1F1D02A600A88EE9 /* YMNetworkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMNetworkHelper.m; sourceTree = "<group>"; };
 		C29341261EC43D89003FB9A0 /* RACDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +103,8 @@
 		C2BB751E1F1D9A2500723BB0 /* YMNetworkCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMNetworkCache.h; sourceTree = "<group>"; };
 		C2BB751F1F1D9A2500723BB0 /* YMNetworkCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMNetworkCache.m; sourceTree = "<group>"; };
 		C2BB75211F1DA8B200723BB0 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		C2CB69E11F1F8C88003DE0BE /* YMAPIConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMAPIConst.h; sourceTree = "<group>"; };
+		C2CB69E21F1F8C88003DE0BE /* YMAPIConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMAPIConst.m; sourceTree = "<group>"; };
 		C2FD46F41EF8F6A900990D17 /* hud_error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_error.png; sourceTree = "<group>"; };
 		C2FD46F51EF8F6A900990D17 /* hud_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_info.png; sourceTree = "<group>"; };
 		C2FD46F61EF8F6A900990D17 /* hud_success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hud_success.png; sourceTree = "<group>"; };
@@ -177,10 +177,10 @@
 				C22510AC1F1C84120008773A /* YMNetwork.m */,
 				C2BB751E1F1D9A2500723BB0 /* YMNetworkCache.h */,
 				C2BB751F1F1D9A2500723BB0 /* YMNetworkCache.m */,
+				C2CB69E11F1F8C88003DE0BE /* YMAPIConst.h */,
+				C2CB69E21F1F8C88003DE0BE /* YMAPIConst.m */,
 				C2503C691F1D02A600A88EE9 /* YMNetworkHelper.h */,
 				C2503C6A1F1D02A600A88EE9 /* YMNetworkHelper.m */,
-				C22510BD1F1CF74A0008773A /* YMInterfacedConst.h */,
-				C22510BE1F1CF74A0008773A /* YMInterfacedConst.m */,
 			);
 			path = YMNetwork;
 			sourceTree = "<group>";
@@ -587,7 +587,7 @@
 				C2BB751C1F1D992F00723BB0 /* YYKVStorage.m in Sources */,
 				C2BB75201F1D9A2500723BB0 /* YMNetworkCache.m in Sources */,
 				C2FD47001EF8F6A900990D17 /* MBProgressHUD+BWMExtension.m in Sources */,
-				C22510BF1F1CF74A0008773A /* YMInterfacedConst.m in Sources */,
+				C2CB69E31F1F8C88003DE0BE /* YMAPIConst.m in Sources */,
 				C293412B1EC43D89003FB9A0 /* main.m in Sources */,
 				C22510AD1F1C84120008773A /* YMNetwork.m in Sources */,
 				C22510B61F1CF6430008773A /* NetController.m in Sources */,

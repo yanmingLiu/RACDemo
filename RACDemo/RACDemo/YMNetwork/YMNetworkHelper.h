@@ -7,7 +7,7 @@
 //
 
 #import "YMNetwork.h"
-#import "YMInterfacedConst.h"
+#import "YMAPIConst.h"
 
 @interface YMNetworkHelper : NSObject
 
