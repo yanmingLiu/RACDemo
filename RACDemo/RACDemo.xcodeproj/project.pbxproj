@@ -12,6 +12,7 @@
 		B87ED787B972497E3A2BD358 /* Pods_RACDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FAD0F557F9F997798C3C77 /* Pods_RACDemoUITests.framework */; };
 		C22510AD1F1C84120008773A /* YMNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = C22510AC1F1C84120008773A /* YMNetwork.m */; };
 		C22510B61F1CF6430008773A /* NetController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22510B51F1CF6430008773A /* NetController.m */; };
+		C241EB881F27349E007A16E7 /* flags.plist in Resources */ = {isa = PBXBuildFile; fileRef = C241EB871F27349E007A16E7 /* flags.plist */; };
 		C2503C6B1F1D02A600A88EE9 /* YMNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C2503C6A1F1D02A600A88EE9 /* YMNetworkHelper.m */; };
 		C293412B1EC43D89003FB9A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C293412A1EC43D89003FB9A0 /* main.m */; };
 		C293412E1EC43D89003FB9A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C293412D1EC43D89003FB9A0 /* AppDelegate.m */; };
@@ -68,6 +69,7 @@
 		C22510AC1F1C84120008773A /* YMNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMNetwork.m; sourceTree = "<group>"; };
 		C22510B41F1CF6430008773A /* NetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetController.h; path = Networking/NetController.h; sourceTree = "<group>"; };
 		C22510B51F1CF6430008773A /* NetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetController.m; path = Networking/NetController.m; sourceTree = "<group>"; };
+		C241EB871F27349E007A16E7 /* flags.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = flags.plist; sourceTree = "<group>"; };
 		C2503C691F1D02A600A88EE9 /* YMNetworkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMNetworkHelper.h; sourceTree = "<group>"; };
 		C2503C6A1F1D02A600A88EE9 /* YMNetworkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMNetworkHelper.m; sourceTree = "<group>"; };
 		C29341261EC43D89003FB9A0 /* RACDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,6 +228,7 @@
 				C22510B41F1CF6430008773A /* NetController.h */,
 				C22510B51F1CF6430008773A /* NetController.m */,
 				C29341321EC43D89003FB9A0 /* Main.storyboard */,
+				C241EB871F27349E007A16E7 /* flags.plist */,
 				C29341351EC43D89003FB9A0 /* Assets.xcassets */,
 				C29341371EC43D89003FB9A0 /* LaunchScreen.storyboard */,
 				C293413A1EC43D89003FB9A0 /* Info.plist */,
@@ -407,6 +410,7 @@
 			files = (
 				C29341391EC43D89003FB9A0 /* LaunchScreen.storyboard in Resources */,
 				C2FD46FD1EF8F6A900990D17 /* hud_info.png in Resources */,
+				C241EB881F27349E007A16E7 /* flags.plist in Resources */,
 				C2FD46FF1EF8F6A900990D17 /* hud_warning.png in Resources */,
 				C29341361EC43D89003FB9A0 /* Assets.xcassets in Resources */,
 				C2FD46FE1EF8F6A900990D17 /* hud_success.png in Resources */,

@@ -44,7 +44,7 @@
     cell.cellBtn.tag = indexPath.row;
     cell.cellCancelBtn.tag = indexPath.row;
     
-    
+    /// 1.替换代理
     //takeUntil会接收一个signal,当signal触发后会把之前的信号释放掉
     
     // 如果不加takeUntil:cell.rac_prepareForReuseSignal，那么每次Cell被重用时，该button都会被addTarget:selector。
@@ -60,8 +60,7 @@
         
     }];
     
-    /***/
-    
+    /// 2.监听事件
     [[[cell.cellCancelBtn rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(__kindof UIControl * _Nullable x) {
         
     }];

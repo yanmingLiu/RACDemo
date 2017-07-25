@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
     
     [self baseRac];
     
@@ -36,12 +36,12 @@
 //    [self MVVM_UI_model];
     
 //    [self controlEvents];
+    
+    [self dicTomodel];
 }
 
 #pragma mark - 单独信号
-/**
- // 1.单独信号
- */
+
 - (void)subscribeNext {
     [self.nameTF.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
         NSLog(@"%@", x);
@@ -53,12 +53,9 @@
 }
 
 #pragma mark - RACTuple 组合信号
-/**
- // 2.组合信号
- */
+
+// RACTuple : 元祖，通过1，2，3，4，5取值
 - (void)combineLatest {
-    
-    // RACTuple : 元祖，通过1，2，3，4，5取值
     [[RACSignal combineLatest:@[self.nameTF.rac_textSignal, self.pwdTF.rac_textSignal]] subscribeNext:^(RACTuple *x) {
         NSString *name = x.first;
         NSString *pwd = x.second;
@@ -96,11 +93,10 @@
 #pragma mark - KVO
 - (void)kvo {
     //代替KVO
-//    [RACObserve(scrollView, contentOffset) subscribeNext:^(id x) {
-//        
-//        NSLog(@"%@",x);
-//        
-//    }];
+    [RACObserve(self.nameTF, text) subscribeNext:^(id x) {
+        
+        NSLog(@"%@",x);
+    }];
 }
 
 #pragma mark - MVVM
@@ -111,6 +107,7 @@
     
     // a) name (NSString) -> text (NSString)
     RAC(self.nameTF, text) = RACObserve(self.user, name);
+    
     
     // b) 纯数字的密码 pwd (NSNumber) -> text (NSSting)
     /*
@@ -125,7 +122,6 @@
 // 2.UI （控件  text属性）-> 模型 (KVO 数据)
 // 在RAC中出现 self _ 百分百循环引用
 // 解决办法使用 外部： @weakify(self); 内部： @strongify(self);
-
 - (void)MVVM_UI_model {
     @weakify(self)
     [[RACSignal combineLatest:@[self.nameTF.rac_textSignal, self.pwdTF.rac_textSignal]] subscribeNext:^(RACTuple *x) {
@@ -138,20 +134,17 @@
 }
 
 
-# pragma mark - 事件监听、通知监听
+# pragma mark - 事件监听、
 - (void)controlEvents {
-    
     // 事件监听
     [[self.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         
         NSLog(@"按钮点击了");
-        
     }];
 }
 
+#pragma mark - 通知监听
 - (void)ObserverNoti {
-    
-    // 通知监听
     // aplle
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(observerNoti_Apple) name:@"tongzhi" object:nil];
     
@@ -163,6 +156,84 @@
 
 - (void)observerNoti_Apple {
     
+}
+
+
+#pragma mark - RACSequence和RACTuple简单使用
+
+// 1.遍历数组
+- (void)enumArr {
+    NSArray *numbers = @[@1,@2,@3,@4];
+    // 这里其实是三步
+    // 第一步: 把数组转换成集合RACSequence numbers.rac_sequence
+    // 第二步: 把集合RACSequence转换RACSignal信号类,numbers.rac_sequence.signal
+    // 第三步: 订阅信号，激活信号，会自动把集合中的所有值，遍历出来。
+    [numbers.rac_sequence.signal subscribeNext:^(id x) {
+        
+        NSLog(@"%@",x);
+    }];
+}
+
+
+// 2.遍历字典,遍历出来的键值对会包装成RACTuple(元组对象)
+- (void)enumDic {
+    NSDictionary *dict = @{@"name":@"xmg",@"age":@18};
+    [dict.rac_sequence.signal subscribeNext:^(RACTuple *x) {
+        
+        // 解包元组，会把元组的值，按顺序给参数里面的变量赋值
+        RACTupleUnpack(NSString *key,NSString *value) = x;
+        
+        // 相当于以下写法
+        //        NSString *key = x[0];
+        //        NSString *value = x[1];
+        
+        NSLog(@"%@ %@",key,value);
+        
+    }];
+}
+// 3.字典转模型
+- (void)dicTomodel {
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flags.plist" ofType:nil];
+    
+    NSArray *dictArr = [NSArray arrayWithContentsOfFile:filePath];
+    // map:映射的意思，目的：把原始值value映射成一个新值
+    // array: 把集合转换成数组
+    // 底层实现：当信号被订阅，会遍历集合中的原始值，映射成新值，并且保存到新的数组里。
+    NSArray *flags = [[dictArr.rac_sequence map:^id(id value) {
+        
+        NSLog(@"%@", value);
+        return [User userWithDic:value];
+        
+    }] array];
+    
+    NSLog(@"%@", flags);
+}
+
+
+#pragma mark - // 6.处理多个请求，都返回结果的时候，统一做处理.
+- (void)moreRequest {
+    
+    RACSignal *request1 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        // 发送请求1
+        [subscriber sendNext:@"发送请求1"];
+        return nil;
+    }];
+    
+    RACSignal *request2 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        // 发送请求2
+        [subscriber sendNext:@"发送请求2"];
+        return nil;
+    }];
+    
+    // 使用注意：几个信号，参数一的方法就几个参数，每个参数对应信号发出的数据。
+    [self rac_liftSelector:@selector(updateUIWithR1:r2:) withSignalsFromArray:@[request1,request2]];
+
+}
+
+// 更新UI
+- (void)updateUIWithR1:(id)data r2:(id)data1
+{
+    NSLog(@"更新UI%@  %@",data,data1);
 }
 
 #pragma mark - 基本信号监听

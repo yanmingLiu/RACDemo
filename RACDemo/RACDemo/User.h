@@ -14,11 +14,12 @@
 
 @property (nonatomic, strong) NSString *name;
 
-//@property (nonatomic, strong) NSString *pwd;
+@property (nonatomic, strong) NSString *pwdStr;
 
-@property (nonatomic, assign) NSInteger *pwd;
+@property (nonatomic, assign) NSInteger pwd;
 
 - (RACSignal *)loadData;
 
++ (User *)userWithDic:(NSDictionary *)dic;
 
 @end

@@ -27,4 +27,13 @@
     }];
 }
 
+
++ (User *)userWithDic:(NSDictionary *)dic {
+    User *u = [[User alloc] init];
+    u.name = [dic objectForKey:@"name"];
+    u.pwdStr = [dic objectForKey:@"pwdStr"];
+    
+    return u;
+}
+
 @end
