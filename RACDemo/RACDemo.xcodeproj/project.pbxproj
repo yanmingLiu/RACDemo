@@ -10,6 +10,9 @@
 		31B752FE692F08A60EB6F1A2 /* Pods_RACDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FC46EB993C5AF3997640B5 /* Pods_RACDemoTests.framework */; };
 		7F2C3ABB626F7453097BA82F /* Pods_RACDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF07DDA3E5186A0F647406F /* Pods_RACDemo.framework */; };
 		B87ED787B972497E3A2BD358 /* Pods_RACDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FAD0F557F9F997798C3C77 /* Pods_RACDemoUITests.framework */; };
+		C210E7521F5D202E0059A8B7 /* AnimationContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = C210E74F1F5D202E0059A8B7 /* AnimationContoller.m */; };
+		C210E7531F5D202E0059A8B7 /* KLTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C210E7511F5D202E0059A8B7 /* KLTNavigationController.m */; };
+		C210E7551F5D20360059A8B7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C210E7541F5D20360059A8B7 /* README.md */; };
 		C22510AD1F1C84120008773A /* YMNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = C22510AC1F1C84120008773A /* YMNetwork.m */; };
 		C22510B61F1CF6430008773A /* NetController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22510B51F1CF6430008773A /* NetController.m */; };
 		C241EB881F27349E007A16E7 /* flags.plist in Resources */ = {isa = PBXBuildFile; fileRef = C241EB871F27349E007A16E7 /* flags.plist */; };
@@ -65,6 +68,11 @@
 		50C57BFC8857C536E0274D54 /* Pods-RACDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoUITests/Pods-RACDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5521038BDB566A569065065C /* Pods-RACDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoUITests/Pods-RACDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6FC46EB993C5AF3997640B5 /* Pods_RACDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C210E74E1F5D202E0059A8B7 /* AnimationContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationContoller.h; sourceTree = "<group>"; };
+		C210E74F1F5D202E0059A8B7 /* AnimationContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationContoller.m; sourceTree = "<group>"; };
+		C210E7501F5D202E0059A8B7 /* KLTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTNavigationController.h; sourceTree = "<group>"; };
+		C210E7511F5D202E0059A8B7 /* KLTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTNavigationController.m; sourceTree = "<group>"; };
+		C210E7541F5D20360059A8B7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C22510AB1F1C84120008773A /* YMNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMNetwork.h; sourceTree = "<group>"; };
 		C22510AC1F1C84120008773A /* YMNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMNetwork.m; sourceTree = "<group>"; };
 		C22510B41F1CF6430008773A /* NetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetController.h; path = Networking/NetController.h; sourceTree = "<group>"; };
@@ -172,6 +180,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C210E74D1F5D202E0059A8B7 /* KLTAnimateNav */ = {
+			isa = PBXGroup;
+			children = (
+				C210E7541F5D20360059A8B7 /* README.md */,
+				C210E74E1F5D202E0059A8B7 /* AnimationContoller.h */,
+				C210E74F1F5D202E0059A8B7 /* AnimationContoller.m */,
+				C210E7501F5D202E0059A8B7 /* KLTNavigationController.h */,
+				C210E7511F5D202E0059A8B7 /* KLTNavigationController.m */,
+			);
+			path = KLTAnimateNav;
+			sourceTree = "<group>";
+		};
 		C22510A41F1C837A0008773A /* YMNetwork */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +232,7 @@
 		C29341281EC43D89003FB9A0 /* RACDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C210E74D1F5D202E0059A8B7 /* KLTAnimateNav */,
 				C2BB75111F1D992F00723BB0 /* YYCache */,
 				C22510A41F1C837A0008773A /* YMNetwork */,
 				C2FD46F31EF8F6A900990D17 /* MBProgressHUD */,
@@ -578,7 +599,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C210E7531F5D202E0059A8B7 /* KLTNavigationController.m in Sources */,
 				C293415E1EC45997003FB9A0 /* User.m in Sources */,
+				C210E7551F5D20360059A8B7 /* README.md in Sources */,
 				C2BB751B1F1D992F00723BB0 /* YYDiskCache.m in Sources */,
 				C2503C6B1F1D02A600A88EE9 /* YMNetworkHelper.m in Sources */,
 				C29341661EC482EB003FB9A0 /* TableViewCell.m in Sources */,
@@ -587,6 +610,7 @@
 				C2BB751A1F1D992F00723BB0 /* YYCache.m in Sources */,
 				C29341631EC48233003FB9A0 /* TableViewController.m in Sources */,
 				C2FD47011EF8F6A900990D17 /* MBProgressHUD.m in Sources */,
+				C210E7521F5D202E0059A8B7 /* AnimationContoller.m in Sources */,
 				C2BB751D1F1D992F00723BB0 /* YYMemoryCache.m in Sources */,
 				C2BB751C1F1D992F00723BB0 /* YYKVStorage.m in Sources */,
 				C2BB75201F1D9A2500723BB0 /* YMNetworkCache.m in Sources */,

@@ -46,15 +46,18 @@
     
     /// 1.替换代理
     //takeUntil会接收一个signal,当signal触发后会把之前的信号释放掉
-    
     // 如果不加takeUntil:cell.rac_prepareForReuseSignal，那么每次Cell被重用时，该button都会被addTarget:selector。
+    
+    // 错误
     [[cell rac_signalForSelector:@selector(cellBtnAuction:)] subscribeNext:^(id  _Nullable x) {
         
     }];
     
+    // 正确
     [[[cell.cellBtn rac_signalForControlEvents:UIControlEventTouchUpInside] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id x) {
         NSLog(@"%@", x);
     }];
+    
     
     [[[cell rac_signalForSelector:@selector(cellBtnAuction:)] takeUntil:cell.rac_prepareForReuseSignal] subscribeNext:^(id  _Nullable x) {
         
