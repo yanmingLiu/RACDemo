@@ -12,11 +12,6 @@
 #import "AFNetworkActivityIndicatorManager.h"
 #import "YMNetworkCache.h"
 
-#ifdef DEBUG
-#define NSLog(...) printf("[%s] %s [第%d行]: %s\n", __TIME__ ,__PRETTY_FUNCTION__ ,__LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String])
-#else
-#define NSLog(...)
-#endif
 
 #define NSStringFormat(format,...) [NSString stringWithFormat:format,##__VA_ARGS__]
 
@@ -82,17 +77,17 @@ static AFHTTPSessionManager *_manager;
     responseCache!=nil ? responseCache([YMNetworkCache httpCacheForURL:urlStr parameters:params]) : nil;
     NSLog(@"\n--------------------->>> responseCache : %@\n", [YMNetworkCache httpCacheForURL:urlStr parameters:params]);
     
-    
     urlStr = [urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
-    
+
     NSLog(@"\n--------------------->>> urlString : %@\n", urlStr);
     NSLog(@"\n--------------------->>> body---> : %@\n", params);
     NSLog(@"\n--------------------->>> head---> : %@\n", _manager.requestSerializer.HTTPRequestHeaders);
     
     // 请求成功回调
     void(^responseSuccess)() = ^(NSURLSessionDataTask * task, id responseObject) {
-        
-        if (_isOpenLog) {NSLog(@"responseObject = %@",[self jsonToString:responseObject]);}
+        if (_isOpenLog) {
+            NSLog(@"responseObject = %@",[self jsonToString:responseObject]);
+        }
         [[self allSessionTask] removeObject:task];
         success ? success(responseObject) : nil;
         
@@ -216,7 +211,10 @@ static AFHTTPSessionManager *_manager;
         });
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        if (_isOpenLog) {NSLog(@"responseObject = %@",[self jsonToString:responseObject]);}
+        if (_isOpenLog) {
+//            NSLog(@"responseObject = %@",[self jsonToString:responseObject]);
+            NSLog(@"%@", responseObject);
+        }
         [[self allSessionTask] removeObject:task];
         success ? success(responseObject) : nil;
         
@@ -304,6 +302,13 @@ static AFHTTPSessionManager *_manager;
     _manager = [AFHTTPSessionManager manager];
     _manager.requestSerializer.timeoutInterval = 10.f;
     _manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/plain", @"text/javascript", @"text/xml", @"image/*", nil];
+    
+//    [_manager.requestSerializer setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
+//    [_manager.requestSerializer setValue:@"text/html;charset=UTF-8,application/json" forHTTPHeaderField:@"Accept"];
+//    [_manager.requestSerializer setValue:@"application/x-www-form-urlencoded; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+    
+    
+    
     // 打开状态栏的等待菊花
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
 }

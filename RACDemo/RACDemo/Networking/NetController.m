@@ -23,13 +23,7 @@
 
 - (IBAction)get:(UIButton *)sender {
     
-    [YMNetworkHelper getKeywordsResponseCache:^(id  _Nonnull responseCache) {
-        
-    } Success:^(id  _Nonnull responseObject) {
-        
-    } failure:^(NSError * _Nonnull error) {
-        
-    }];
+
     
 }
 
