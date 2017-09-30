@@ -30,15 +30,22 @@
     
 //    [self subscribeNext];
 //    [self combineLatest];
-    [self reduce];
+//    [self reduce];
 //
 //    self.user = [[User alloc] init];
 //    [self MVVM_UI_model];
     
 //    [self controlEvents];
     
-    [self dicTomodel];
+//    [self dicTomodel];
+    
+    [self filter];
 }
+
+#pragma flattenMap方法通过调用block（value）来创建一个新的方法，它可以灵活的定义新创建的信号。
+#pragma map方法，将会创建一个和原来一模一样的信号，只不过新的信号传递的值变为了block（value）。
+#pragma map创建一个新的信号，信号的value是block(value)，也就是说，如果block(value)是一个信号，那么就是信号的value仍然是信号。如果是flattenMap则会继续调用这个信号的value，作为新的信号的value。
+
 
 #pragma mark - 单独信号
 
@@ -49,6 +56,16 @@
     
     [self.pwdTF.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
         NSLog(@"%@", x);
+    }];
+}
+
+///filter:过滤- 控制事件流 
+- (void)filter {
+    [[self.nameTF.rac_textSignal filter:^BOOL(NSString * _Nullable value) {
+        NSString*text = value;
+        return text.length > 3;
+    }] subscribeNext:^(NSString * _Nullable x) {
+        NSLog(@"超过3个字符长度的");
     }];
 }
 
@@ -154,11 +171,6 @@
     }];
 }
 
-- (void)observerNoti_Apple {
-    
-}
-
-
 #pragma mark - RACSequence和RACTuple简单使用
 
 // 1.遍历数组
@@ -238,6 +250,7 @@
 
 #pragma mark - 基本信号监听
 
+/// 基本监听
 - (void)baseRac {
     User *user = [[User alloc] init];
     // 订阅信号
@@ -249,5 +262,7 @@
         NSLog(@"完成");
     }];
 }
+
+
 
 @end

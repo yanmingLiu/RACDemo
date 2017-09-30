@@ -18,7 +18,6 @@ extern NSString * const kBWMMBProgressHUDMsgLoadError;
 extern NSString * const kBWMMBProgressHUDMsgLoadSuccessful;
 extern NSString * const kBWMMBProgressHUDMsgNoMoreData;
 extern NSTimeInterval kBWMMBProgressHUDHideTimeInterval;
-extern NSTimeInterval HUDHideTime;
 
 typedef NS_ENUM(NSUInteger, BWMMBProgressHUDMsgType) {
     BWMMBProgressHUDMsgTypeSuccessful,
