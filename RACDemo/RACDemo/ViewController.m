@@ -40,11 +40,9 @@
 //    [self dicTomodel];
     
     [self filter];
+    
+//    [self enumArr];
 }
-
-#pragma flattenMap方法通过调用block（value）来创建一个新的方法，它可以灵活的定义新创建的信号。
-#pragma map方法，将会创建一个和原来一模一样的信号，只不过新的信号传递的值变为了block（value）。
-#pragma map创建一个新的信号，信号的value是block(value)，也就是说，如果block(value)是一个信号，那么就是信号的value仍然是信号。如果是flattenMap则会继续调用这个信号的value，作为新的信号的value。
 
 
 #pragma mark - 单独信号
@@ -56,16 +54,6 @@
     
     [self.pwdTF.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
         NSLog(@"%@", x);
-    }];
-}
-
-///filter:过滤- 控制事件流 
-- (void)filter {
-    [[self.nameTF.rac_textSignal filter:^BOOL(NSString * _Nullable value) {
-        NSString*text = value;
-        return text.length > 3;
-    }] subscribeNext:^(NSString * _Nullable x) {
-        NSLog(@"超过3个字符长度的");
     }];
 }
 
@@ -107,24 +95,13 @@
     }];
 }
 
-#pragma mark - KVO
-- (void)kvo {
-    //代替KVO
-    [RACObserve(self.nameTF, text) subscribeNext:^(id x) {
-        
-        NSLog(@"%@",x);
-    }];
-}
-
 #pragma mark - MVVM
 /**
  // 1.模型 (KVO 数据) ->  UI （控件  text属性）
  */
 - (void)MVVM_model_UI {
-    
     // a) name (NSString) -> text (NSString)
     RAC(self.nameTF, text) = RACObserve(self.user, name);
-    
     
     // b) 纯数字的密码 pwd (NSNumber) -> text (NSSting)
     /*
@@ -134,7 +111,6 @@
         return [value description];
     }];
 }
-
 
 // 2.UI （控件  text属性）-> 模型 (KVO 数据)
 // 在RAC中出现 self _ 百分百循环引用
@@ -150,27 +126,6 @@
     }];
 }
 
-
-# pragma mark - 事件监听、
-- (void)controlEvents {
-    // 事件监听
-    [[self.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
-        
-        NSLog(@"按钮点击了");
-    }];
-}
-
-#pragma mark - 通知监听
-- (void)ObserverNoti {
-    // aplle
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(observerNoti_Apple) name:@"tongzhi" object:nil];
-    
-    // RAC
-    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"tongzhi" object:nil] subscribeNext:^(NSNotification * _Nullable x) {
-        NSLog(@"按钮点击了发出了通知");
-    }];
-}
-
 #pragma mark - RACSequence和RACTuple简单使用
 
 // 1.遍历数组
@@ -181,11 +136,9 @@
     // 第二步: 把集合RACSequence转换RACSignal信号类,numbers.rac_sequence.signal
     // 第三步: 订阅信号，激活信号，会自动把集合中的所有值，遍历出来。
     [numbers.rac_sequence.signal subscribeNext:^(id x) {
-        
         NSLog(@"%@",x);
     }];
 }
-
 
 // 2.遍历字典,遍历出来的键值对会包装成RACTuple(元组对象)
 - (void)enumDic {
@@ -203,22 +156,54 @@
         
     }];
 }
-// 3.字典转模型
+/*
+#pragma flattenMap 方法通过调用block（value）来创建一个新的方法，它可以灵活的定义新创建的信号。
+#pragma map方法， 将会创建一个和原来一模一样的信号，只不过新的信号传递的值变为了block（value）。
+#pragma map创建一个新的信号，信号的value是block(value)，也就是说，如果block(value)是一个信号，那么就是信号的value仍然是信号。如果是flattenMap则会继续调用这个信号的value，作为新的信号的value。
+*/
+/// map 把原始值value映射成一个新值
 - (void)dicTomodel {
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"flags.plist" ofType:nil];
-    
     NSArray *dictArr = [NSArray arrayWithContentsOfFile:filePath];
-    // map:映射的意思，目的：把原始值value映射成一个新值
-    // array: 把集合转换成数组
-    // 底层实现：当信号被订阅，会遍历集合中的原始值，映射成新值，并且保存到新的数组里。
+    
     NSArray *flags = [[dictArr.rac_sequence map:^id(id value) {
         
         NSLog(@"%@", value);
         return [User userWithDic:value];
         
     }] array];
-    
     NSLog(@"%@", flags);
+    
+    /****************例子*****************************/
+    
+    NSArray *arr = @[@1,@2,@3,@4,@5];
+    RACSequence *seq = [arr rac_sequence];
+    NSArray *resultArr = [[seq map:^id _Nullable(id  _Nullable value) {
+        return @([value integerValue] + 1);
+    }] array];
+    NSLog(@"%@", resultArr);
+}
+/// flattenMap
+- (void)flattenMap {
+    /*
+     [1,2]
+     [3,4]
+     
+     = [1,2,3,4]
+     */
+    
+}
+
+///filter:过滤- 控制事件流 
+- (void)filter {
+    NSArray *arr = @[@1,@2,@3,@4,@5];
+    RACSequence *seq = [arr rac_sequence];
+    
+    NSArray *resultArr = [[seq filter:^BOOL(id  _Nullable value) {
+        return [value integerValue] % 2 == 1;
+    }] array];
+    
+    NSLog(@"%@", resultArr);
 }
 
 
@@ -230,22 +215,96 @@
         [subscriber sendNext:@"发送请求1"];
         return nil;
     }];
-    
     RACSignal *request2 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         // 发送请求2
         [subscriber sendNext:@"发送请求2"];
         return nil;
     }];
-    
     // 使用注意：几个信号，参数一的方法就几个参数，每个参数对应信号发出的数据。
     [self rac_liftSelector:@selector(updateUIWithR1:r2:) withSignalsFromArray:@[request1,request2]];
-
+}
+// 更新UI
+- (void)updateUIWithR1:(id)data r2:(id)data1 {
+    NSLog(@"更新UI%@  %@",data,data1);
 }
 
-// 更新UI
-- (void)updateUIWithR1:(id)data r2:(id)data1
-{
-    NSLog(@"更新UI%@  %@",data,data1);
+#pragma mark - network 顺序执行 同步执行 
+
+- (void)network {
+    RACSignal *s1 = [self session];
+    RACSignal *s2 = [self session];
+    RACSignal *s3 = [self session];
+    
+    /// 串行 - 顺序执行
+    // then 只会返回s3的结果
+    [[[s1 then:^RACSignal * _Nonnull{
+        return s2;
+    }] then:^RACSignal * _Nonnull{
+        return s3;
+    }] subscribeNext:^(id  _Nullable x) {
+        
+    }];
+    
+    // concat 订阅的话 s1,s2,s3的结果都会返回 
+    [[[s1 concat:s2] concat:s3] subscribeNext:^(id  _Nullable x) {
+        
+    }];
+    
+    
+    /// 同时执行，统一订阅
+    [[RACSignal combineLatest:@[s1,s2,s3]] subscribeNext:^(RACTuple * _Nullable x) {
+        
+    }];
+}
+
+- (RACSignal *)session {
+    return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+        NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
+        NSURLSessionDataTask *task = [session dataTaskWithURL:[NSURL URLWithString:@"www.baidu.com"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            if (error) {
+                NSLog(@"请求错误");
+                [subscriber sendError:error];
+            }else {
+                NSError *e;
+                NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&e];
+                if (e) {
+                    NSLog(@"解析失败");
+                }else {
+                    NSLog(@"%@", jsonDic);
+                    [subscriber sendNext:jsonDic];
+                    [subscriber sendCompleted];
+                }
+            }
+        }];
+        [task resume];
+        return [RACDisposable disposableWithBlock:^{
+        }];
+    }];
+}
+
+#pragma mark - KVO\事件监听\通知监听
+- (void)kvo {
+    //代替KVO
+    [RACObserve(self.nameTF, text) subscribeNext:^(id x) {
+        
+        NSLog(@"%@",x);
+    }];
+}
+
+- (void)controlEvents {
+    // 事件监听
+    [[self.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        
+        NSLog(@"按钮点击了");
+    }];
+}
+
+- (void)ObserverNoti {
+    // RAC
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"tongzhi" object:nil] subscribeNext:^(NSNotification * _Nullable x) {
+        NSLog(@"按钮点击了发出了通知");
+    }];
 }
 
 #pragma mark - 基本信号监听

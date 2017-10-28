@@ -14,6 +14,7 @@
 		C210E7531F5D202E0059A8B7 /* KLTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C210E7511F5D202E0059A8B7 /* KLTNavigationController.m */; };
 		C210E7551F5D20360059A8B7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C210E7541F5D20360059A8B7 /* README.md */; };
 		C22510B61F1CF6430008773A /* NetController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22510B51F1CF6430008773A /* NetController.m */; };
+		C23ED3441FA458D300832DE7 /* RGBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C23ED3431FA458D300832DE7 /* RGBViewController.m */; };
 		C241EB881F27349E007A16E7 /* flags.plist in Resources */ = {isa = PBXBuildFile; fileRef = C241EB871F27349E007A16E7 /* flags.plist */; };
 		C293412B1EC43D89003FB9A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C293412A1EC43D89003FB9A0 /* main.m */; };
 		C293412E1EC43D89003FB9A0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C293412D1EC43D89003FB9A0 /* AppDelegate.m */; };
@@ -75,6 +76,8 @@
 		C233EBF31F7CC28500D86AE9 /* YMNetworkHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMNetworkHelper.m; sourceTree = "<group>"; };
 		C233EBF41F7CC28600D86AE9 /* YMAPIConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMAPIConst.m; sourceTree = "<group>"; };
 		C233EBF51F7CC28600D86AE9 /* YMNetwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMNetwork.m; sourceTree = "<group>"; };
+		C23ED3421FA458D300832DE7 /* RGBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RGBViewController.h; sourceTree = "<group>"; };
+		C23ED3431FA458D300832DE7 /* RGBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RGBViewController.m; sourceTree = "<group>"; };
 		C241EB871F27349E007A16E7 /* flags.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = flags.plist; sourceTree = "<group>"; };
 		C29341261EC43D89003FB9A0 /* RACDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C293412A1EC43D89003FB9A0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -242,6 +245,8 @@
 				C29341651EC482EB003FB9A0 /* TableViewCell.m */,
 				C22510B41F1CF6430008773A /* NetController.h */,
 				C22510B51F1CF6430008773A /* NetController.m */,
+				C23ED3421FA458D300832DE7 /* RGBViewController.h */,
+				C23ED3431FA458D300832DE7 /* RGBViewController.m */,
 				C29341321EC43D89003FB9A0 /* Main.storyboard */,
 				C241EB871F27349E007A16E7 /* flags.plist */,
 				C29341351EC43D89003FB9A0 /* Assets.xcassets */,
@@ -597,6 +602,7 @@
 			files = (
 				C210E7531F5D202E0059A8B7 /* KLTNavigationController.m in Sources */,
 				C293415E1EC45997003FB9A0 /* User.m in Sources */,
+				C23ED3441FA458D300832DE7 /* RGBViewController.m in Sources */,
 				C210E7551F5D20360059A8B7 /* README.md in Sources */,
 				C2BB751B1F1D992F00723BB0 /* YYDiskCache.m in Sources */,
 				C29341661EC482EB003FB9A0 /* TableViewCell.m in Sources */,
