@@ -39,7 +39,9 @@
     
 //    [self dicTomodel];
     
-    [self filter];
+//    [self filter];
+    
+    [self flattenMap];
     
 //    [self enumArr];
 }
@@ -192,10 +194,16 @@
      = [1,2,3,4]
      */
     
-    NSArray *arr = @[@1,@2,@3,@4];
+    RACSequence *s1 = [@[@1,@2,@3] rac_sequence];
+    RACSequence *s2 = [@[@4,@5,@6] rac_sequence];
+
+    RACSequence *s3 = [[@[s1, s2] rac_sequence] flattenMap:^__kindof RACSequence * _Nullable(id  _Nullable value) {
+        return [value filter:^BOOL(id  _Nullable value) {
+            return [value integerValue] % 2 == 0; 
+        }];
+    }];
     
-    
-    
+    NSLog(@"%@", [s3 array]);
 }
 
 ///filter:过滤- 控制事件流 
@@ -208,6 +216,14 @@
     }] array];
     
     NSLog(@"%@", resultArr);
+    
+    
+    NSArray *resultArr1 = [[[[arr rac_sequence] map:^id _Nullable(id  _Nullable value) {
+        return @([value integerValue] - 1);
+    }] filter:^BOOL(id  _Nullable value) {
+        return @([value integerValue] > 3);
+    }] array];
+     NSLog(@"%@", resultArr1);
 }
 
 
@@ -239,8 +255,7 @@
     RACSignal *s2 = [self session];
     RACSignal *s3 = [self session];
     
-    /// 串行 - 顺序执行
-    // then 只会返回s3的结果
+    /// 串行 - 顺序执行 then 只会返回s3的结果
     [[[s1 then:^RACSignal * _Nonnull{
         return s2;
     }] then:^RACSignal * _Nonnull{
@@ -249,7 +264,7 @@
         
     }];
     
-    // concat 订阅的话 s1,s2,s3的结果都会返回 
+    /// concat 订阅的话 s1,s2,s3的结果都会返回 
     [[[s1 concat:s2] concat:s3] subscribeNext:^(id  _Nullable x) {
         
     }];

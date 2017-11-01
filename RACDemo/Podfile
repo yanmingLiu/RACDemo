@@ -7,6 +7,41 @@ target 'RACDemo' do
 
   pod 'ReactiveObjC';
   pod 'AFNetworking', '~> 3.1.0';
+  pod 'MBProgressHUD'
+  
+  pod 'MJRefresh'
+  #pod 'MJExtension'
+  
+  #pod 'YYCache'
+  
+  pod 'SDWebImage'
+  pod 'DACircularProgress'
+  pod 'FLAnimatedImage'
+  
+  #pod 'IQKeyboardManager'
+  
+  #pod 'SDCycleScrollView'
+  #pod 'UICountingLabel'
+  
+  #图片选择-裁切
+  #pod 'TZImagePickerController'
+  #pod 'TOCropViewController'
+  
+  
+  #验证码倒计时控件
+  #pod 'DBCountDownButton'
+  
+  #二维码扫描
+  #pod 'LBXScan/LBXNative'
+  #pod 'LBXScan/LBXZXing'
+  #pod 'LBXScan/UI'
+  
+  
+  pod 'Qiniu'
+  
+  
+  
+  
   
   target 'RACDemoTests' do
     inherit! :search_paths

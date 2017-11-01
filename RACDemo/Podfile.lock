@@ -14,16 +14,40 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - DACircularProgress (2.3.1)
+  - FLAnimatedImage (1.0.12)
+  - HappyDNS (0.3.12)
+  - MBProgressHUD (1.0.0)
+  - MJRefresh (3.1.15)
+  - Qiniu (7.1.8):
+    - AFNetworking (~> 3)
+    - HappyDNS (~> 0.3)
   - ReactiveObjC (3.0.0)
+  - SDWebImage (4.2.1):
+    - SDWebImage/Core (= 4.2.1)
+  - SDWebImage/Core (4.2.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - DACircularProgress
+  - FLAnimatedImage
+  - MBProgressHUD
+  - MJRefresh
+  - Qiniu
   - ReactiveObjC
+  - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  HappyDNS: 691a3041128055d09866f86e6e9ca90f24da1f18
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJRefresh: 9af70f5f9327a2cf87f0fb5929f35fcc2fa638ea
+  Qiniu: 2f1b9d13904b6a7608a66a2d02c5b7b24575622a
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
+  SDWebImage: 1fa4c9edf525b744f002db89f3f5a38b3cd4c541
 
-PODFILE CHECKSUM: f5d810cf607f5d43ac78843761512869e551292d
+PODFILE CHECKSUM: af086feaeb43bcaf3fd517ea5fcb706260e0d49e
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1
