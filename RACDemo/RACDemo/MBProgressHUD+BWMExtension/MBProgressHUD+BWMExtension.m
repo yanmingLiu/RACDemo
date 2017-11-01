@@ -17,6 +17,9 @@ NSTimeInterval kBWMMBProgressHUDHideTimeInterval = 1.2f;
 static CGFloat FONT_SIZE = 14.0f;
 static CGFloat OPACITY = 0.85;
 
+static NSInteger MBHiddenTime = 1.5;
+
+#define Keywindow  [UIApplication sharedApplication].keyWindow
 
 @implementation MBProgressHUD (BWMExtension)
 
@@ -116,5 +119,20 @@ static CGFloat OPACITY = 0.85;
     FONT_SIZE = fontSize;
     OPACITY = opacity;
 }
+
++ (void)showFailureText:(NSString *)text {
+    [self bwm_showTitle:text toView:Keywindow hideAfter:MBHiddenTime msgType:BWMMBProgressHUDMsgTypeError];
+}
+
++ (void)showSuccessText:(NSString *)text {
+    [self bwm_showTitle:text toView:Keywindow hideAfter:MBHiddenTime msgType:BWMMBProgressHUDMsgTypeSuccessful];
+}
+
++ (void)showToastText:(NSString *)text {
+    [self bwm_showTitle:text toView:Keywindow hideAfter:MBHiddenTime];
+}
+
+
+
 
 @end

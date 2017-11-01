@@ -14,6 +14,8 @@
 		C210E7531F5D202E0059A8B7 /* KLTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C210E7511F5D202E0059A8B7 /* KLTNavigationController.m */; };
 		C210E7551F5D20360059A8B7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C210E7541F5D20360059A8B7 /* README.md */; };
 		C22510B61F1CF6430008773A /* NetController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22510B51F1CF6430008773A /* NetController.m */; };
+		C22684A41FA85FF4003DF88F /* MBExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C22684A21FA85FF4003DF88F /* MBExtension.bundle */; };
+		C22684A51FA85FF4003DF88F /* MBProgressHUD+BWMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C22684A31FA85FF4003DF88F /* MBProgressHUD+BWMExtension.m */; };
 		C23ED3441FA458D300832DE7 /* RGBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C23ED3431FA458D300832DE7 /* RGBViewController.m */; };
 		C241EB881F27349E007A16E7 /* flags.plist in Resources */ = {isa = PBXBuildFile; fileRef = C241EB871F27349E007A16E7 /* flags.plist */; };
 		C293412B1EC43D89003FB9A0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C293412A1EC43D89003FB9A0 /* main.m */; };
@@ -66,6 +68,9 @@
 		C210E7541F5D20360059A8B7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C22510B41F1CF6430008773A /* NetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NetController.h; path = Networking/NetController.h; sourceTree = "<group>"; };
 		C22510B51F1CF6430008773A /* NetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NetController.m; path = Networking/NetController.m; sourceTree = "<group>"; };
+		C22684A11FA85FF4003DF88F /* MBProgressHUD+BWMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+BWMExtension.h"; sourceTree = "<group>"; };
+		C22684A21FA85FF4003DF88F /* MBExtension.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBExtension.bundle; sourceTree = "<group>"; };
+		C22684A31FA85FF4003DF88F /* MBProgressHUD+BWMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+BWMExtension.m"; sourceTree = "<group>"; };
 		C233EBEC1F7CC28500D86AE9 /* YMAPIConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAPIConst.h; sourceTree = "<group>"; };
 		C233EBED1F7CC28500D86AE9 /* YMNetworkCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMNetworkCache.m; sourceTree = "<group>"; };
 		C233EBEE1F7CC28500D86AE9 /* YMCacheHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMCacheHelper.h; sourceTree = "<group>"; };
@@ -110,9 +115,6 @@
 		C2BB75181F1D992F00723BB0 /* YYMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMemoryCache.h; sourceTree = "<group>"; };
 		C2BB75191F1D992F00723BB0 /* YYMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMemoryCache.m; sourceTree = "<group>"; };
 		C2BB75211F1DA8B200723BB0 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		C2EC0CB61F7F7A5A00642B39 /* MBProgressHUD+BWMExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+BWMExtension.h"; sourceTree = "<group>"; };
-		C2EC0CB71F7F7A5A00642B39 /* MBExtension.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBExtension.bundle; sourceTree = "<group>"; };
-		C2EC0CB81F7F7A5A00642B39 /* MBProgressHUD+BWMExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+BWMExtension.m"; sourceTree = "<group>"; };
 		C2EC0CBA1F7F7A7300642B39 /* MBProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		C2EC0CBB1F7F7A7300642B39 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C2EC0CBC1F7F7A7300642B39 /* MBProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -203,6 +205,16 @@
 			path = YMNetwork;
 			sourceTree = "<group>";
 		};
+		C22684A01FA85FF4003DF88F /* MBProgressHUD+BWMExtension */ = {
+			isa = PBXGroup;
+			children = (
+				C22684A11FA85FF4003DF88F /* MBProgressHUD+BWMExtension.h */,
+				C22684A21FA85FF4003DF88F /* MBExtension.bundle */,
+				C22684A31FA85FF4003DF88F /* MBProgressHUD+BWMExtension.m */,
+			);
+			path = "MBProgressHUD+BWMExtension";
+			sourceTree = "<group>";
+		};
 		C293411D1EC43D89003FB9A0 = {
 			isa = PBXGroup;
 			children = (
@@ -228,8 +240,8 @@
 		C29341281EC43D89003FB9A0 /* RACDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C22684A01FA85FF4003DF88F /* MBProgressHUD+BWMExtension */,
 				C2EC0CB91F7F7A7300642B39 /* MBProgressHUD */,
-				C2EC0CB51F7F7A5A00642B39 /* MBProgressHUD+BWMExtension */,
 				C210E74D1F5D202E0059A8B7 /* KLTAnimateNav */,
 				C2BB75111F1D992F00723BB0 /* YYCache */,
 				C22510A41F1C837A0008773A /* YMNetwork */,
@@ -247,11 +259,6 @@
 				C22510B51F1CF6430008773A /* NetController.m */,
 				C23ED3421FA458D300832DE7 /* RGBViewController.h */,
 				C23ED3431FA458D300832DE7 /* RGBViewController.m */,
-				C29341321EC43D89003FB9A0 /* Main.storyboard */,
-				C241EB871F27349E007A16E7 /* flags.plist */,
-				C29341351EC43D89003FB9A0 /* Assets.xcassets */,
-				C29341371EC43D89003FB9A0 /* LaunchScreen.storyboard */,
-				C293413A1EC43D89003FB9A0 /* Info.plist */,
 				C29341291EC43D89003FB9A0 /* Supporting Files */,
 			);
 			path = RACDemo;
@@ -260,6 +267,11 @@
 		C29341291EC43D89003FB9A0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C29341321EC43D89003FB9A0 /* Main.storyboard */,
+				C241EB871F27349E007A16E7 /* flags.plist */,
+				C29341351EC43D89003FB9A0 /* Assets.xcassets */,
+				C29341371EC43D89003FB9A0 /* LaunchScreen.storyboard */,
+				C293413A1EC43D89003FB9A0 /* Info.plist */,
 				C293412A1EC43D89003FB9A0 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -296,16 +308,6 @@
 				C2BB75191F1D992F00723BB0 /* YYMemoryCache.m */,
 			);
 			path = YYCache;
-			sourceTree = "<group>";
-		};
-		C2EC0CB51F7F7A5A00642B39 /* MBProgressHUD+BWMExtension */ = {
-			isa = PBXGroup;
-			children = (
-				C2EC0CB61F7F7A5A00642B39 /* MBProgressHUD+BWMExtension.h */,
-				C2EC0CB71F7F7A5A00642B39 /* MBExtension.bundle */,
-				C2EC0CB81F7F7A5A00642B39 /* MBProgressHUD+BWMExtension.m */,
-			);
-			path = "MBProgressHUD+BWMExtension";
 			sourceTree = "<group>";
 		};
 		C2EC0CB91F7F7A7300642B39 /* MBProgressHUD */ = {
@@ -437,6 +439,7 @@
 				C29341391EC43D89003FB9A0 /* LaunchScreen.storyboard in Resources */,
 				C241EB881F27349E007A16E7 /* flags.plist in Resources */,
 				C29341361EC43D89003FB9A0 /* Assets.xcassets in Resources */,
+				C22684A41FA85FF4003DF88F /* MBExtension.bundle in Resources */,
 				C29341341EC43D89003FB9A0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,6 +613,7 @@
 				C293412E1EC43D89003FB9A0 /* AppDelegate.m in Sources */,
 				C2BB751A1F1D992F00723BB0 /* YYCache.m in Sources */,
 				C29341631EC48233003FB9A0 /* TableViewController.m in Sources */,
+				C22684A51FA85FF4003DF88F /* MBProgressHUD+BWMExtension.m in Sources */,
 				C210E7521F5D202E0059A8B7 /* AnimationContoller.m in Sources */,
 				C2BB751D1F1D992F00723BB0 /* YYMemoryCache.m in Sources */,
 				C2BB751C1F1D992F00723BB0 /* YYKVStorage.m in Sources */,

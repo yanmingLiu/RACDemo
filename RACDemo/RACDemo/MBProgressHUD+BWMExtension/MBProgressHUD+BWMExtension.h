@@ -72,6 +72,7 @@ typedef NS_ENUM(NSUInteger, BWMMBProgressHUDMsgType) {
                    hideAfter:(NSTimeInterval)afterSecond
                      msgType:(BWMMBProgressHUDMsgType)msgType;
 
+
 /**
  *  @brief  显示一个渐进式的HUD
  *
@@ -83,5 +84,16 @@ typedef NS_ENUM(NSUInteger, BWMMBProgressHUDMsgType) {
 
 /** 配置本扩展的默认参数 */
 + (void)bwm_setHideTimeInterval:(NSTimeInterval)second fontSize:(CGFloat)fontSize opacity:(CGFloat)opacity;
+
+
+/// 显示失败信息
++ (void)showFailureText:(NSString *)text;
+/// 显示成功信息
++ (void)showSuccessText:(NSString *)text;
+/// 显示信息
++ (void)showToastText:(NSString *)text;
+
+
+
 
 @end
