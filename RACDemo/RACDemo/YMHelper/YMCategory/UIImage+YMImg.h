@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Photos/Photos.h>
 
 @interface UIImage (YMImg)
 
@@ -67,6 +68,19 @@
 + (UIImage *)qrImageForUrlStr:(NSString *)urlStr imageSize:(CGFloat)imagesize;
 
 
+/**
+ 保存图片到本地，并读取本地图片信息
+ 
+ 相当于 - (PHFetchResult<PHAsset *> *)saveImageToPhotoLibrary
+ */
+- (void)saveImageToPhotoLibraryFinish:(void(^)(PHAsset *asset))finish;
+
+/**
+ 获得刚才添加到【相机胶卷】中的图片 
+ 
+ 相当于 - (void)saveImageToPhotoLibraryFinish:(void(^)(PHAsset *asset))finish
+ */
+- (PHFetchResult<PHAsset *> *)saveImageToPhotoLibrary;
 
 
 

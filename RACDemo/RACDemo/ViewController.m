@@ -26,7 +26,8 @@
     [super viewDidLoad];
 
     
-    [self baseRac];
+    
+//    [self baseRac];
     
 //    [self subscribeNext];
 //    [self combineLatest];

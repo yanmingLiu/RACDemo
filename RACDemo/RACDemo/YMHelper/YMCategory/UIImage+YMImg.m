@@ -296,4 +296,42 @@
     return outputImage;
 }
 
+
+/**
+ 保存图片到本地，并读取本地图片信息
+ 
+ 相当于 - (PHFetchResult<PHAsset *> *)saveImageToPhotoLibrary
+ */
+- (void)saveImageToPhotoLibraryFinish:(void(^)(PHAsset *asset))finish {
+    NSMutableArray *imageIds = [NSMutableArray array];
+    [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+        //写入图片到相册
+        PHAssetChangeRequest *req = [PHAssetChangeRequest creationRequestForAssetFromImage:self];
+        //记录本地标识，等待完成后取到相册中的图片对象
+        [imageIds addObject:req.placeholderForCreatedAsset.localIdentifier];
+    } completionHandler:^(BOOL success, NSError * _Nullable error) {
+        if (success) {
+            //成功后取相册中的图片对象
+            PHFetchResult *result = [PHAsset fetchAssetsWithLocalIdentifiers:imageIds options:nil];
+            if (finish) finish([result firstObject]);
+        }
+    }];
+}
+
+/**
+ 获得刚才添加到【相机胶卷】中的图片 
+ 
+ 相当于 - (void)saveImageToPhotoLibraryFinish:(void(^)(PHAsset *asset))finish
+ */
+- (PHFetchResult<PHAsset *> *)saveImageToPhotoLibrary {
+    __block NSString *createdAssetId = nil;
+    // 添加图片到【相机胶卷】
+    [[PHPhotoLibrary sharedPhotoLibrary] performChangesAndWait:^{
+        createdAssetId = [PHAssetChangeRequest creationRequestForAssetFromImage:self].placeholderForCreatedAsset.localIdentifier;
+    } error:nil];
+    if (createdAssetId == nil) return nil;
+    // 在保存完毕后取出图片
+    return [PHAsset fetchAssetsWithLocalIdentifiers:@[createdAssetId] options:nil];
+}
+
 @end
