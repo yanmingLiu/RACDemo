@@ -111,7 +111,14 @@
     NSLog(@"请求前会先进入这个方法  webView:decidePolicyForNavigationActiondecisionHandler: %@   \n\n  ",navigationAction.request);
     
     if ([webView.URL.absoluteString hasPrefix:@"https://itunes.apple.com"]) {
-        [[UIApplication sharedApplication] openURL:navigationAction.request.URL];
+        if (@available(iOS 11.0, *)) {
+            [[UIApplication sharedApplication] openURL:navigationAction.request.URL options:@{} completionHandler:^(BOOL success) {
+                
+            }];
+        }else {
+            [[UIApplication sharedApplication] openURL:navigationAction.request.URL];
+        }
+        
         decisionHandler(WKNavigationActionPolicyCancel);
     }else {
         decisionHandler(WKNavigationActionPolicyAllow);
