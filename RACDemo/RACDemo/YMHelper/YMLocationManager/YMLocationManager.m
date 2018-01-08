@@ -41,34 +41,26 @@ static id _instance;
 
 /// 定位
 - (RACSignal *)autoLocationSignal {
-    
     return [[[self authorizationSignal] filter:^BOOL(id  _Nullable value) {
         return [value boolValue];
         
     }] flattenMap:^__kindof RACSignal * _Nullable(id  _Nullable value) {
-        
         return [[[[[[[self rac_signalForSelector:@selector(locationManager:didUpdateLocations:) fromProtocol:@protocol(CLLocationManagerDelegate)] map:^id _Nullable(RACTuple * _Nullable value) {
-
             return value[1];
             
         }] merge:[[self rac_signalForSelector:@selector(locationManager:didFailWithError:) fromProtocol:@protocol(CLLocationManagerDelegate)] map:^id _Nullable(RACTuple * _Nullable value) {
-
             return [RACSignal error:value[1]]; 
             
         }]] take:1] initially:^{
-            
             [self.manager startUpdatingLocation];
             
         }]  finally:^{
-            
             [self.manager stopUpdatingLocation];
             
         }] flattenMap:^__kindof RACSignal * _Nullable(id  _Nullable value) {
-            
             CLLocation *c = [value firstObject];
             return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
                 [self.geocoder reverseGeocodeLocation:c completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
-
                     if (error) {
                         [subscriber sendError:error];
                     }
@@ -82,7 +74,6 @@ static id _instance;
             }]; 
         }]; 
     }];
-    
 }
 
 /// 认证信号-是否授权位置访问

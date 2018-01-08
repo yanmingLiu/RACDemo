@@ -12,7 +12,7 @@ target 'RACDemo' do
   pod 'MJRefresh'
   #pod 'MJExtension'
   
-  #pod 'YYCache'
+  pod 'YYCache'
   
   pod 'SDWebImage'
   pod 'DACircularProgress'

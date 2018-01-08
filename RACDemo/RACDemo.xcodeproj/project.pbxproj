@@ -60,10 +60,6 @@
 		C28A23F01FA9DDA40035B5DF /* CALayer+Border.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A23E01FA9DDA40035B5DF /* CALayer+Border.m */; };
 		C28A23F11FA9DDA40035B5DF /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A23E11FA9DDA40035B5DF /* UIColor+Hex.m */; };
 		C28A23F21FA9DDA40035B5DF /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A23E21FA9DDA40035B5DF /* UIColor+Extension.m */; };
-		C28A23FD1FA9E73B0035B5DF /* YYDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A23F51FA9E73B0035B5DF /* YYDiskCache.m */; };
-		C28A23FE1FA9E73B0035B5DF /* YYCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A23F71FA9E73B0035B5DF /* YYCache.m */; };
-		C28A23FF1FA9E73B0035B5DF /* YYKVStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A23FB1FA9E73B0035B5DF /* YYKVStorage.m */; };
-		C28A24001FA9E73B0035B5DF /* YYMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A23FC1FA9E73B0035B5DF /* YYMemoryCache.m */; };
 		C28A24221FAB11DB0035B5DF /* YMCacheHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C233EBF11F7CC28500D86AE9 /* YMCacheHelper.m */; };
 		C28A24271FAB121D0035B5DF /* AnimationLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A24261FAB121D0035B5DF /* AnimationLoginController.m */; };
 		C28A242A1FAB1DBF0035B5DF /* PushNotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A24291FAB1DBF0035B5DF /* PushNotificationController.m */; };
@@ -219,14 +215,6 @@
 		C28A23E11FA9DDA40035B5DF /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		C28A23E21FA9DDA40035B5DF /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		C28A23F31FA9DE3A0035B5DF /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		C28A23F51FA9E73B0035B5DF /* YYDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDiskCache.m; sourceTree = "<group>"; };
-		C28A23F61FA9E73B0035B5DF /* YYKVStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKVStorage.h; sourceTree = "<group>"; };
-		C28A23F71FA9E73B0035B5DF /* YYCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYCache.m; sourceTree = "<group>"; };
-		C28A23F81FA9E73B0035B5DF /* YYMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYMemoryCache.h; sourceTree = "<group>"; };
-		C28A23F91FA9E73B0035B5DF /* YYDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDiskCache.h; sourceTree = "<group>"; };
-		C28A23FA1FA9E73B0035B5DF /* YYCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYCache.h; sourceTree = "<group>"; };
-		C28A23FB1FA9E73B0035B5DF /* YYKVStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKVStorage.m; sourceTree = "<group>"; };
-		C28A23FC1FA9E73B0035B5DF /* YYMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYMemoryCache.m; sourceTree = "<group>"; };
 		C28A24251FAB121D0035B5DF /* AnimationLoginController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationLoginController.h; sourceTree = "<group>"; };
 		C28A24261FAB121D0035B5DF /* AnimationLoginController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationLoginController.m; sourceTree = "<group>"; };
 		C28A24281FAB1DBF0035B5DF /* PushNotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushNotificationController.h; sourceTree = "<group>"; };
@@ -369,7 +357,6 @@
 			isa = PBXGroup;
 			children = (
 				C2A5F1C71FAC4E5000B96A75 /* LTNavigationBar */,
-				C28A23F41FA9E73B0035B5DF /* YYCache */,
 				C210E74D1F5D202E0059A8B7 /* KLTAnimateNav */,
 			);
 			path = LIb;
@@ -581,22 +568,6 @@
 				C28A23D11FA9DDA20035B5DF /* UIWindow+Extension.m */,
 			);
 			path = YMCategory;
-			sourceTree = "<group>";
-		};
-		C28A23F41FA9E73B0035B5DF /* YYCache */ = {
-			isa = PBXGroup;
-			children = (
-				C28A23F51FA9E73B0035B5DF /* YYDiskCache.m */,
-				C28A23F61FA9E73B0035B5DF /* YYKVStorage.h */,
-				C28A23F71FA9E73B0035B5DF /* YYCache.m */,
-				C28A23F81FA9E73B0035B5DF /* YYMemoryCache.h */,
-				C28A23F91FA9E73B0035B5DF /* YYDiskCache.h */,
-				C28A23FA1FA9E73B0035B5DF /* YYCache.h */,
-				C28A23FB1FA9E73B0035B5DF /* YYKVStorage.m */,
-				C28A23FC1FA9E73B0035B5DF /* YYMemoryCache.m */,
-			);
-			name = YYCache;
-			path = ../../../../../ykxB_2/ykxB/Pods/YYCache/YYCache;
 			sourceTree = "<group>";
 		};
 		C293411D1EC43D89003FB9A0 = {
@@ -1003,7 +974,6 @@
 				C28A242A1FAB1DBF0035B5DF /* PushNotificationController.m in Sources */,
 				C28A23661FA9D70E0035B5DF /* PYPhotosViewController.m in Sources */,
 				C28A22C31FA9A7F70035B5DF /* LoactionViewController.m in Sources */,
-				C28A23FF1FA9E73B0035B5DF /* YYKVStorage.m in Sources */,
 				C28A23E31FA9DDA40035B5DF /* UIImageView+YMWebCache.m in Sources */,
 				C28A23621FA9D70E0035B5DF /* UIView+PYExtension.m in Sources */,
 				C210E7531F5D202E0059A8B7 /* KLTNavigationController.m in Sources */,
@@ -1022,10 +992,8 @@
 				C28A23381FA9D6C60035B5DF /* YMTextView.m in Sources */,
 				C28A23E51FA9DDA40035B5DF /* NSString+Extension.m in Sources */,
 				C28A233F1FA9D6D00035B5DF /* pickerControl.m in Sources */,
-				C28A23FE1FA9E73B0035B5DF /* YYCache.m in Sources */,
 				C28A23771FA9D7180035B5DF /* MJDIYAutoFooter.m in Sources */,
 				C29341661EC482EB003FB9A0 /* TableViewCell.m in Sources */,
-				C28A24001FA9E73B0035B5DF /* YYMemoryCache.m in Sources */,
 				C2A5F1C01FAC40E800B96A75 /* YMBaseWebViewController.m in Sources */,
 				C2A5F1C51FAC40E800B96A75 /* YMNavigationController.m in Sources */,
 				C28A23F11FA9DDA40035B5DF /* UIColor+Hex.m in Sources */,
@@ -1042,7 +1010,6 @@
 				C28A23331FA9D5A30035B5DF /* YMAPIConst.m in Sources */,
 				C29341631EC48233003FB9A0 /* TableViewController.m in Sources */,
 				C22684A51FA85FF4003DF88F /* MBProgressHUD+BWMExtension.m in Sources */,
-				C28A23FD1FA9E73B0035B5DF /* YYDiskCache.m in Sources */,
 				C28A23641FA9D70E0035B5DF /* PYProgressView.m in Sources */,
 				C210E7521F5D202E0059A8B7 /* AnimationContoller.m in Sources */,
 				C28A233E1FA9D6D00035B5DF /* YMDatePickerView.m in Sources */,

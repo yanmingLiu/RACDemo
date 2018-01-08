@@ -16,7 +16,7 @@
 #import "MJDIYHeader.h"
 #import "MJDIYAutoFooter.h"
 #import "MJDIYBackFooter.h"
-#import "YYCache.h"
+//#import "YYCache.h"
 
 //#import "IQKeyboardManager.h"
 //#import "IQUIWindow+Hierarchy.h"
