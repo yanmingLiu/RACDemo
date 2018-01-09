@@ -44,8 +44,10 @@
      subscribeNext:^(RACSignal *x) {
          @strongify(self)
          self.loadingView.hidden = NO;
+         [self.loadingView startAnimating];
          [x subscribeNext:^(NSString *x) {
              self.loadingView.hidden = YES;
+             [self.loadingView stopAnimating];
              NSLog(@"%@",x);
          }];
      }];

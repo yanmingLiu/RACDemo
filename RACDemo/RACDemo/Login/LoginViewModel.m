@@ -14,7 +14,7 @@
         
         RACSignal *userNameLengthSig = [RACObserve(self, userName)
                                         map:^id(NSString *value) {
-                                            if (value.length > 6) return @(YES);
+                                            if (value.length >= 3) return @(YES);
                                             return @(NO);
                                         }];
         

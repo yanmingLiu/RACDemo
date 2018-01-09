@@ -324,8 +324,8 @@
 }
 
  
-/// concat：按一定顺序拼接信号，当多个信号发出的时候有顺序的接受信号。 
-- (void)concat {
+/// concat_then_combineLatest
+- (void)concat_then_combineLatest {
     RACSignal *s1 = [self session];
     RACSignal *s2 = [self session];
     RACSignal *s3 = [self session];
@@ -340,6 +340,7 @@
     }];
     
     /// concat 订阅的话 s1,s2,s3的结果都会返回 
+    /// concat：按一定顺序拼接信号，当多个信号发出的时候有顺序的接受信号。 
     [[[s1 concat:s2] concat:s3] subscribeNext:^(id  _Nullable x) {
         
     }];
