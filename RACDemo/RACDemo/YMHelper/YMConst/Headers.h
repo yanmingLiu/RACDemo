@@ -22,8 +22,6 @@
 //#import "IQUIWindow+Hierarchy.h"
 
 #import "UIImageView+WebCache.h"
-#import "MBProgressHUD+BWMExtension.h"
-#import "MBProgressHUD.h"
 
 
 #endif

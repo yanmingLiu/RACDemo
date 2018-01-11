@@ -8,6 +8,7 @@
 
 #import "YMBaseTextEditController.h"
 #import "UIBarButtonItem+Extension.h"
+#import "MBProgressHUD+YM.h"
 
 @interface YMBaseTextEditController () <UITextViewDelegate>
 
@@ -76,7 +77,7 @@
         }
         [self.navigationController popViewControllerAnimated:YES];
     }else {
-        [MBProgressHUD bwm_showTitle:@"请输入有效文字" toView:self.view hideAfter:MBHiddenTime];
+        [MBProgressHUD showFailureText:@"请输入有效文字!"];
     }
 }
 

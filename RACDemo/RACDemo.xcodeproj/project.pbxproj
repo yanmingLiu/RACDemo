@@ -13,10 +13,10 @@
 		C210E7521F5D202E0059A8B7 /* AnimationContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = C210E74F1F5D202E0059A8B7 /* AnimationContoller.m */; };
 		C210E7531F5D202E0059A8B7 /* KLTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C210E7511F5D202E0059A8B7 /* KLTNavigationController.m */; };
 		C210E7551F5D20360059A8B7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C210E7541F5D20360059A8B7 /* README.md */; };
-		C22684A41FA85FF4003DF88F /* MBExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C22684A21FA85FF4003DF88F /* MBExtension.bundle */; };
-		C22684A51FA85FF4003DF88F /* MBProgressHUD+BWMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C22684A31FA85FF4003DF88F /* MBProgressHUD+BWMExtension.m */; };
 		C2335B5120073C2A006A2B35 /* UIApplication+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C2335B4F20073C29006A2B35 /* UIApplication+Extension.m */; };
 		C2335B5420073C7F006A2B35 /* NSString+YMString.m in Sources */ = {isa = PBXBuildFile; fileRef = C2335B5220073C7E006A2B35 /* NSString+YMString.m */; };
+		C2335B632007467A006A2B35 /* MBProgressHUD+YM.m in Sources */ = {isa = PBXBuildFile; fileRef = C2335B602007467A006A2B35 /* MBProgressHUD+YM.m */; };
+		C2335B642007467A006A2B35 /* MBExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C2335B612007467A006A2B35 /* MBExtension.bundle */; };
 		C23ED3441FA458D300832DE7 /* RGBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C23ED3431FA458D300832DE7 /* RGBViewController.m */; };
 		C241EB881F27349E007A16E7 /* flags.plist in Resources */ = {isa = PBXBuildFile; fileRef = C241EB871F27349E007A16E7 /* flags.plist */; };
 		C24F936F2003780E00CD7015 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F936E2003780E00CD7015 /* LoginViewController.m */; };
@@ -92,13 +92,13 @@
 		C210E7501F5D202E0059A8B7 /* KLTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTNavigationController.h; sourceTree = "<group>"; };
 		C210E7511F5D202E0059A8B7 /* KLTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLTNavigationController.m; sourceTree = "<group>"; };
 		C210E7541F5D20360059A8B7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		C22684A11FA85FF4003DF88F /* MBProgressHUD+BWMExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+BWMExtension.h"; sourceTree = "<group>"; };
-		C22684A21FA85FF4003DF88F /* MBExtension.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBExtension.bundle; sourceTree = "<group>"; };
-		C22684A31FA85FF4003DF88F /* MBProgressHUD+BWMExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+BWMExtension.m"; sourceTree = "<group>"; };
 		C2335B4F20073C29006A2B35 /* UIApplication+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Extension.m"; sourceTree = "<group>"; };
 		C2335B5020073C29006A2B35 /* UIApplication+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Extension.h"; sourceTree = "<group>"; };
 		C2335B5220073C7E006A2B35 /* NSString+YMString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YMString.m"; sourceTree = "<group>"; };
 		C2335B5320073C7F006A2B35 /* NSString+YMString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YMString.h"; sourceTree = "<group>"; };
+		C2335B602007467A006A2B35 /* MBProgressHUD+YM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+YM.m"; sourceTree = "<group>"; };
+		C2335B612007467A006A2B35 /* MBExtension.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBExtension.bundle; sourceTree = "<group>"; };
+		C2335B622007467A006A2B35 /* MBProgressHUD+YM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+YM.h"; sourceTree = "<group>"; };
 		C23ED3421FA458D300832DE7 /* RGBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RGBViewController.h; sourceTree = "<group>"; };
 		C23ED3431FA458D300832DE7 /* RGBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RGBViewController.m; sourceTree = "<group>"; };
 		C241EB871F27349E007A16E7 /* flags.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = flags.plist; sourceTree = "<group>"; };
@@ -251,14 +251,14 @@
 			path = KLTAnimateNav;
 			sourceTree = "<group>";
 		};
-		C22684A01FA85FF4003DF88F /* MBProgressHUD+BWMExtension */ = {
+		C2335B5F2007467A006A2B35 /* MBProgressHUD+YM */ = {
 			isa = PBXGroup;
 			children = (
-				C22684A11FA85FF4003DF88F /* MBProgressHUD+BWMExtension.h */,
-				C22684A31FA85FF4003DF88F /* MBProgressHUD+BWMExtension.m */,
-				C22684A21FA85FF4003DF88F /* MBExtension.bundle */,
+				C2335B622007467A006A2B35 /* MBProgressHUD+YM.h */,
+				C2335B602007467A006A2B35 /* MBProgressHUD+YM.m */,
+				C2335B612007467A006A2B35 /* MBExtension.bundle */,
 			);
-			path = "MBProgressHUD+BWMExtension";
+			path = "MBProgressHUD+YM";
 			sourceTree = "<group>";
 		};
 		C24F936C2003778100CD7015 /* Login */ = {
@@ -357,8 +357,8 @@
 		C28A23C31FA9DD910035B5DF /* YMCategory */ = {
 			isa = PBXGroup;
 			children = (
+				C2335B5F2007467A006A2B35 /* MBProgressHUD+YM */,
 				C2A5F1C71FAC4E5000B96A75 /* LTNavigationBar */,
-				C22684A01FA85FF4003DF88F /* MBProgressHUD+BWMExtension */,
 				C2335B5320073C7F006A2B35 /* NSString+YMString.h */,
 				C2335B5220073C7E006A2B35 /* NSString+YMString.m */,
 				C2335B5020073C29006A2B35 /* UIApplication+Extension.h */,
@@ -614,8 +614,8 @@
 				C29341391EC43D89003FB9A0 /* LaunchScreen.storyboard in Resources */,
 				C241EB881F27349E007A16E7 /* flags.plist in Resources */,
 				C29341361EC43D89003FB9A0 /* Assets.xcassets in Resources */,
-				C22684A41FA85FF4003DF88F /* MBExtension.bundle in Resources */,
 				C28A23321FA9D55F0035B5DF /* areas.json in Resources */,
+				C2335B642007467A006A2B35 /* MBExtension.bundle in Resources */,
 				C29341341EC43D89003FB9A0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -790,6 +790,7 @@
 				C2A5F1BB1FAC40E800B96A75 /* YMBaseTextEditController.m in Sources */,
 				C28A23E61FA9DDA40035B5DF /* UITextView+Extension.m in Sources */,
 				C23ED3441FA458D300832DE7 /* RGBViewController.m in Sources */,
+				C2335B632007467A006A2B35 /* MBProgressHUD+YM.m in Sources */,
 				C28A23EF1FA9DDA40035B5DF /* NSDate+Extension.m in Sources */,
 				C210E7551F5D20360059A8B7 /* README.md in Sources */,
 				C28A23381FA9D6C60035B5DF /* YMTextView.m in Sources */,
@@ -810,7 +811,6 @@
 				C293412E1EC43D89003FB9A0 /* AppDelegate.m in Sources */,
 				C28A23E91FA9DDA40035B5DF /* UIBarButtonItem+Extension.m in Sources */,
 				C29341631EC48233003FB9A0 /* TableViewController.m in Sources */,
-				C22684A51FA85FF4003DF88F /* MBProgressHUD+BWMExtension.m in Sources */,
 				C210E7521F5D202E0059A8B7 /* AnimationContoller.m in Sources */,
 				C28A233E1FA9D6D00035B5DF /* YMDatePickerView.m in Sources */,
 				C2A5F1C31FAC40E800B96A75 /* YMBaseTextViewController.m in Sources */,
