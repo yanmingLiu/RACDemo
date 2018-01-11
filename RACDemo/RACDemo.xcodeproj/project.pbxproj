@@ -17,6 +17,9 @@
 		C2335B5420073C7F006A2B35 /* NSString+YMString.m in Sources */ = {isa = PBXBuildFile; fileRef = C2335B5220073C7E006A2B35 /* NSString+YMString.m */; };
 		C2335B632007467A006A2B35 /* MBProgressHUD+YM.m in Sources */ = {isa = PBXBuildFile; fileRef = C2335B602007467A006A2B35 /* MBProgressHUD+YM.m */; };
 		C2335B642007467A006A2B35 /* MBExtension.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C2335B612007467A006A2B35 /* MBExtension.bundle */; };
+		C2335B6920077456006A2B35 /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = C2335B6720077456006A2B35 /* UIButton+Badge.m */; };
+		C2335B6A20077456006A2B35 /* UIBarButtonItem+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = C2335B6820077456006A2B35 /* UIBarButtonItem+Badge.m */; };
+		C2335B6D200774C3006A2B35 /* UIButton+SGImagePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = C2335B6C200774C2006A2B35 /* UIButton+SGImagePosition.m */; };
 		C23ED3441FA458D300832DE7 /* RGBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C23ED3431FA458D300832DE7 /* RGBViewController.m */; };
 		C241EB881F27349E007A16E7 /* flags.plist in Resources */ = {isa = PBXBuildFile; fileRef = C241EB871F27349E007A16E7 /* flags.plist */; };
 		C24F936F2003780E00CD7015 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F936E2003780E00CD7015 /* LoginViewController.m */; };
@@ -99,6 +102,12 @@
 		C2335B602007467A006A2B35 /* MBProgressHUD+YM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+YM.m"; sourceTree = "<group>"; };
 		C2335B612007467A006A2B35 /* MBExtension.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBExtension.bundle; sourceTree = "<group>"; };
 		C2335B622007467A006A2B35 /* MBProgressHUD+YM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+YM.h"; sourceTree = "<group>"; };
+		C2335B6520077455006A2B35 /* UIButton+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Badge.h"; sourceTree = "<group>"; };
+		C2335B6620077456006A2B35 /* UIBarButtonItem+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Badge.h"; sourceTree = "<group>"; };
+		C2335B6720077456006A2B35 /* UIButton+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Badge.m"; sourceTree = "<group>"; };
+		C2335B6820077456006A2B35 /* UIBarButtonItem+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Badge.m"; sourceTree = "<group>"; };
+		C2335B6B200774C2006A2B35 /* UIButton+SGImagePosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SGImagePosition.h"; sourceTree = "<group>"; };
+		C2335B6C200774C2006A2B35 /* UIButton+SGImagePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SGImagePosition.m"; sourceTree = "<group>"; };
 		C23ED3421FA458D300832DE7 /* RGBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RGBViewController.h; sourceTree = "<group>"; };
 		C23ED3431FA458D300832DE7 /* RGBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RGBViewController.m; sourceTree = "<group>"; };
 		C241EB871F27349E007A16E7 /* flags.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = flags.plist; sourceTree = "<group>"; };
@@ -383,6 +392,12 @@
 				C28A23D51FA9DDA20035B5DF /* UIView+Frame.m */,
 				C28A23CA1FA9DDA10035B5DF /* UIWindow+Extension.h */,
 				C28A23D11FA9DDA20035B5DF /* UIWindow+Extension.m */,
+				C2335B6620077456006A2B35 /* UIBarButtonItem+Badge.h */,
+				C2335B6820077456006A2B35 /* UIBarButtonItem+Badge.m */,
+				C2335B6520077455006A2B35 /* UIButton+Badge.h */,
+				C2335B6720077456006A2B35 /* UIButton+Badge.m */,
+				C2335B6B200774C2006A2B35 /* UIButton+SGImagePosition.h */,
+				C2335B6C200774C2006A2B35 /* UIButton+SGImagePosition.m */,
 			);
 			path = YMCategory;
 			sourceTree = "<group>";
@@ -791,7 +806,9 @@
 				C28A23E61FA9DDA40035B5DF /* UITextView+Extension.m in Sources */,
 				C23ED3441FA458D300832DE7 /* RGBViewController.m in Sources */,
 				C2335B632007467A006A2B35 /* MBProgressHUD+YM.m in Sources */,
+				C2335B6A20077456006A2B35 /* UIBarButtonItem+Badge.m in Sources */,
 				C28A23EF1FA9DDA40035B5DF /* NSDate+Extension.m in Sources */,
+				C2335B6920077456006A2B35 /* UIButton+Badge.m in Sources */,
 				C210E7551F5D20360059A8B7 /* README.md in Sources */,
 				C28A23381FA9D6C60035B5DF /* YMTextView.m in Sources */,
 				C28A23E51FA9DDA40035B5DF /* NSString+Extension.m in Sources */,
@@ -817,6 +834,7 @@
 				C2A5F1C61FAC40E800B96A75 /* YMTabBarController.m in Sources */,
 				C24F93722003782300CD7015 /* LoginViewModel.m in Sources */,
 				C2335B5120073C2A006A2B35 /* UIApplication+Extension.m in Sources */,
+				C2335B6D200774C3006A2B35 /* UIButton+SGImagePosition.m in Sources */,
 				C293412B1EC43D89003FB9A0 /* main.m in Sources */,
 				C28A23EC1FA9DDA40035B5DF /* NSString+Emoji.m in Sources */,
 			);
