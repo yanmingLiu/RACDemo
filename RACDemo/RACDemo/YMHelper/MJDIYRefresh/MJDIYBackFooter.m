@@ -7,7 +7,6 @@
 //
 
 #import "MJDIYBackFooter.h"
-#import "Defines.h"
 
 @implementation MJDIYBackFooter
 #pragma mark - 重写方法

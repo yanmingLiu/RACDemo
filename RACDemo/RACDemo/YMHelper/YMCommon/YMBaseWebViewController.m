@@ -181,7 +181,10 @@
         // 添加一个名称，在JS通过这个名称发送消息
 //        [config.userContentController addScriptMessageHandler:self name:@"yichu"];
         
-        _myWebView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, CONTENT_HEIGHT) configuration:config];
+        CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+        CGFloat screenHeight = [UIScreen mainScreen].bounds.size.height;
+        
+        _myWebView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, screenWidth, screenHeight) configuration:config];
         _myWebView.autoresizingMask = UIViewAutoresizingFlexibleHeight; // 自动高度
         _myWebView.navigationDelegate = self;
         _myWebView.opaque = NO;

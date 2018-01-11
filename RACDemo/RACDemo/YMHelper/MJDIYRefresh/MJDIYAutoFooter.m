@@ -7,8 +7,6 @@
 //
 
 #import "MJDIYAutoFooter.h"
-#import "Defines.h"
-
 
 @interface MJDIYAutoFooter()
 

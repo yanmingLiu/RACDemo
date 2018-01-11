@@ -7,8 +7,6 @@
 //
 
 #import "MJDIYHeader.h"
-#import "Defines.h"
-
 
 @interface MJDIYHeader()
 

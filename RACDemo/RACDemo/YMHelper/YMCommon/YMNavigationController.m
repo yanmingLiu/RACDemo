@@ -1,13 +1,12 @@
 //
 //  YMNavigationController.m
-//  youkexueC
+//  YMNavigation
 //
-//  Created by 刘彦铭 on 2017/6/19.
-//  Copyright © 2017年 liuyanming. All rights reserved.
+//  Created by 刘彦铭 on 2016/6/19.
+//  Copyright © 2016年 liuyanming. All rights reserved.
 //
 
 #import "YMNavigationController.h"
-#import "Headers.h"
 #import "UIImage+YMImg.h"
 
 @interface YMNavigationController () <UIGestureRecognizerDelegate, UINavigationControllerDelegate>
@@ -22,7 +21,7 @@
     [super initialize];
     
     // 处理向上偏移64
-    [[UINavigationBar appearance] setTranslucent:NO];
+    //[[UINavigationBar appearance] setTranslucent:NO];
     
     //去掉导航条返回键带的title
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-100, 0) forBarMetrics:UIBarMetricsDefault];

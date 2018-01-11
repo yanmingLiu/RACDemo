@@ -7,10 +7,9 @@
 //
 
 #import "YMBaseTextEditController.h"
+#import "UIBarButtonItem+Extension.h"
 
 @interface YMBaseTextEditController () <UITextViewDelegate>
-
-
 
 @end
 
@@ -86,7 +85,9 @@
 - (void)setupUI {
     self.view.backgroundColor = [UIColor whiteColor];
     
-    YMTextView *textView = [[YMTextView alloc] initWithFrame:CGRectMake(20, 20, SCREEN_WIDTH-40, SCREEN_HEIGHT / 2)];
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    
+    YMTextView *textView = [[YMTextView alloc] initWithFrame:CGRectMake(20, 20, screenWidth-40, self.view.bounds.size.height / 2)];
     textView.delegate = self;
     textView.font = FONT(15);
     textView.tintColor = [UIColor grayColor];
@@ -96,7 +97,7 @@
     textView.returnKeyType = UIReturnKeyDone;
     _textView = textView;
    
-    UILabel *countLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(textView.frame)+10, SCREEN_WIDTH-40, 22)];
+    UILabel *countLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(textView.frame)+10, screenWidth-40, 22)];
     countLabel.textAlignment = NSTextAlignmentRight;
     countLabel.text = @"0/50";
     countLabel.textColor = [UIColor grayColor];
@@ -104,7 +105,7 @@
     [self.view addSubview:countLabel];
     _countLabel = countLabel;
     
-    UILabel *tipsLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(textView.frame)+10, SCREEN_WIDTH-80, 50)];
+    UILabel *tipsLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(textView.frame)+10, screenWidth-80, 50)];
     tipsLabel.text = [NSString stringWithFormat:@"最多可以填写%zd个汉字，\n标点符号、空格也会计算在内！", self.maxTextNum];
     tipsLabel.font = FONT(12);
     tipsLabel.textColor = [UIColor grayColor];

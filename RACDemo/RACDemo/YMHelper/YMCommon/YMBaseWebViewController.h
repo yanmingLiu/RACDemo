@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import<WebKit/WebKit.h>
 #import <JavaScriptCore/JavaScriptCore.h>
-#import "Defines.h"
 
 
 @interface YMBaseWebViewController : UIViewController <WKNavigationDelegate>

@@ -8,6 +8,9 @@
 
 #import "YMBaseTextViewController.h"
 
+#import "UIBarButtonItem+Extension.h"
+#import "UIView+Frame.h"
+
 @interface YMBaseTextViewController () <UITextViewDelegate>
 
 
@@ -48,18 +51,20 @@
 - (void)setupUI {
     self.view.backgroundColor = [UIColor whiteColor];
     
-    YMTextView *textView = [[YMTextView alloc] initWithFrame:CGRectMake(20, 20, SCREEN_WIDTH-40, 50)];
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    
+    YMTextView *textView = [[YMTextView alloc] initWithFrame:CGRectMake(20, 20, screenWidth-40, 50)];
     textView.delegate = self;
     textView.font = FONT(15);
     textView.tintColor = [UIColor grayColor];
     [self.view addSubview:textView];
     _textView = textView;
         
-    _line = [[UIView alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(textView.frame)+1, SCREEN_WIDTH-40, 1)];
+    _line = [[UIView alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(textView.frame)+1, screenWidth-40, 1)];
     _line.backgroundColor = RGB(8, 179, 129);
     [self.view addSubview:_line];
     
-    CGRect labelF = CGRectMake(20, CGRectGetMaxY(_line.frame)+20, SCREEN_WIDTH-40, 20);
+    CGRect labelF = CGRectMake(20, CGRectGetMaxY(_line.frame)+20, screenWidth-40, 20);
     _placeholderLabel = [[UILabel alloc] initWithFrame:labelF];
     _placeholderLabel.textColor = RGB(153, 153, 153);
     _placeholderLabel.font = FONT(13);

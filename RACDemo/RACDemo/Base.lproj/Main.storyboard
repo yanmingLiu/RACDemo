@@ -91,33 +91,8 @@
                                             <segue destination="9BI-p4-JEW" kind="show" id="2LW-tA-Qgf"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="niA-OY-Zhh" rowHeight="50" style="IBUITableViewCellStyleDefault" id="eVn-u1-auy">
-                                        <rect key="frame" x="0.0" y="164" width="375" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eVn-u1-auy" id="6NH-Xl-txO">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="49.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="PPNetworkHelper修改" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="niA-OY-Zhh">
-                                                    <rect key="frame" x="16" y="0.0" width="324" height="49.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="WFq-fW-MUN" kind="show" id="NTj-HB-xSa"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="0rh-sJ-NzS" rowHeight="50" style="IBUITableViewCellStyleDefault" id="5aX-4Q-mzX">
-                                        <rect key="frame" x="0.0" y="214" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="164" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5aX-4Q-mzX" id="mnw-yy-WZ1">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="49.5"/>
@@ -142,7 +117,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="rt7-WH-ecw" rowHeight="50" style="IBUITableViewCellStyleDefault" id="M7h-r3-0YI">
-                                        <rect key="frame" x="0.0" y="264" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="214" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M7h-r3-0YI" id="kHZ-Hq-kxv">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="49.5"/>
@@ -166,33 +141,8 @@
                                             <segue destination="0J8-yw-8zO" kind="show" id="l1y-W6-VIA"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="aSr-r5-IIv" rowHeight="50" style="IBUITableViewCellStyleDefault" id="PUo-8x-ZqS">
-                                        <rect key="frame" x="0.0" y="314" width="375" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PUo-8x-ZqS" id="Iam-OK-Jsi">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="49.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="AnimationLogin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aSr-r5-IIv">
-                                                    <rect key="frame" x="16" y="0.0" width="324" height="49.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="lxk-XJ-QJo" kind="show" id="QSq-oO-RqF"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="xch-fF-eG4" rowHeight="50" style="IBUITableViewCellStyleDefault" id="gMN-HV-azs">
-                                        <rect key="frame" x="0.0" y="364" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="264" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gMN-HV-azs" id="x0I-TU-YHf">
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="49.5"/>
@@ -706,49 +656,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rIC-qU-G4x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2510" y="975"/>
-        </scene>
-        <!--AF封装使用-->
-        <scene sceneID="wHh-qn-Ag4">
-            <objects>
-                <viewController title="AF封装使用" id="WFq-fW-MUN" customClass="NetController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5OO-GO-M6e"/>
-                        <viewControllerLayoutGuide type="bottom" id="z93-IQ-Dvt"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rgj-L1-JWt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Pmu-7c-9QL">
-                                <rect key="frame" x="167.5" y="293.5" width="40" height="80"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfD-iB-nBe">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="30"/>
-                                        <state key="normal" title="GET"/>
-                                        <connections>
-                                            <action selector="get:" destination="WFq-fW-MUN" eventType="touchUpInside" id="U0k-kB-kke"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grw-N8-bco">
-                                        <rect key="frame" x="0.0" y="50" width="40" height="30"/>
-                                        <state key="normal" title="POST"/>
-                                        <connections>
-                                            <action selector="post:" destination="WFq-fW-MUN" eventType="touchUpInside" id="lo8-z8-hel"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Pmu-7c-9QL" firstAttribute="centerX" secondItem="rgj-L1-JWt" secondAttribute="centerX" id="x8N-NM-nyV"/>
-                            <constraint firstItem="Pmu-7c-9QL" firstAttribute="centerY" secondItem="rgj-L1-JWt" secondAttribute="centerY" id="xYA-W2-zN1"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6s4-0M-p7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-199" y="971"/>
         </scene>
         <!--RAC在tableView中的使用-->
         <scene sceneID="Aej-Vy-ZNh">

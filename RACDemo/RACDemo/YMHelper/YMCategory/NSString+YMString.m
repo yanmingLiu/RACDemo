@@ -400,6 +400,7 @@
     }else{
         str = [NSString stringWithFormat:@"耗时%d秒",second];
     }
+    NSLog(@"%@",str);
     return str;
 }
 
@@ -433,33 +434,33 @@
 
 /**
  获取指定时间当月第一天和最后一天 
- 
  @param dateStr 调用格式（yyyy-MM-dd）
  @return 第一天和最后一天数组
  */
 + (NSArray *)getMonthFirstAndLastDayWith:(NSString *)dateStr{
     
-    NSDateFormatter *format=[[NSDateFormatter alloc] init];
-    [format setDateFormat:@"yyyy-MM-dd"];
-    NSDate *newDate=[format dateFromString:dateStr];
-    double interval = 0;
-    NSDate *firstDate = nil;
-    NSDate *lastDate = nil;
-    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateFormatter *format=[[NSDateFormatter alloc] init];    
+    [format setDateFormat:@"yyyy-MM-dd"];    
+    NSDate *newDate=[format dateFromString:dateStr];    
+    double interval = 0;    
+    NSDate *beginDate = nil;    
+    NSDate *endDate = nil;    
+    NSCalendar *calendar = [NSCalendar currentCalendar];    
     
-    BOOL OK = [calendar rangeOfUnit:NSCalendarUnitMonth startDate:& firstDate interval:&interval forDate:newDate];
+    [calendar setFirstWeekday:2];//设定周一为周首日    
+    BOOL ok = [calendar rangeOfUnit:NSCalendarUnitMonth startDate:&beginDate interval:&interval forDate:newDate];    
+    //分别修改为 NSDayCalendarUnit NSWeekCalendarUnit NSYearCalendarUnit    
+    if (ok) {    
+        endDate = [beginDate dateByAddingTimeInterval:interval-1];  
+    }else {    
+        return @[@"",@""];    
+    }    
+    NSDateFormatter *myDateFormatter = [[NSDateFormatter alloc] init];    
+    [myDateFormatter setDateFormat:@"yyyy-MM-dd"];    
+    NSString *beginString = [myDateFormatter stringFromDate:beginDate];    
+    NSString *endString = [myDateFormatter stringFromDate:endDate];    
     
-    if (OK) {
-        lastDate = [firstDate dateByAddingTimeInterval:interval - 1];
-    }else {
-        return @[@"",@""];
-    }
-    
-    NSDateFormatter *myDateFormatter = [[NSDateFormatter alloc] init];
-    [myDateFormatter setDateFormat:@"YYYY-MM-dd"];
-    NSString *firstString = [myDateFormatter stringFromDate: firstDate];
-    NSString *lastString = [myDateFormatter stringFromDate: lastDate];
-    return @[firstString, lastString];
+    return @[beginString,endString]; 
 }
 
 
@@ -469,7 +470,7 @@
  @param dateStr 时间
  @param month 正数是以后n个月，负数是前n个月；
  */
-+ (NSString *)getPriousorLaterDateFromDateStr:(NSString *)dateStr withMonth:(int)month {
++ (NSString *)getPriousorLaterDateFromDateStr:(NSString *)dateStr withMonth:(NSInteger)month {
     
     NSDateComponents *comps = [[NSDateComponents alloc] init];
     [comps setMonth:month];
@@ -489,8 +490,48 @@
     return firstString;
 }
 
+/**
+ * 判断2个时间是否在同一天内
+ **/
++ (BOOL)isEqualDayWithStartDate:(NSString*)startDate endDate:(NSString*)endDate
+{
+    BOOL isEqualDay = YES;
+    
+    NSDateFormatter *date = [[NSDateFormatter alloc]init];
+    [date setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *startD =[date dateFromString:startDate];
+    NSDate *endD = [date dateFromString:endDate];
+    NSTimeInterval start = [startD timeIntervalSince1970]*1;
+    NSTimeInterval end = [endD timeIntervalSince1970]*1;
+    NSTimeInterval value = end - start;
+    int second = (int)value %60;//秒
+    int minute = (int)value /60%60;
+    int house = (int)value / (24 * 3600)%3600;
+    int day = (int)value / (24 * 3600);
+    
+    NSString *str;
+    if (day != 0) {
+        str = [NSString stringWithFormat:@"耗时%d天%d小时%d分%d秒",day,house,minute,second];
+        isEqualDay = NO;
+    }else if (day==0 && house != 0) {
+        str = [NSString stringWithFormat:@"耗时%d小时%d分%d秒",house,minute,second];
+    }else if (day== 0 && house== 0 && minute!=0) {
+        str = [NSString stringWithFormat:@"耗时%d分%d秒",minute,second];
+    }else{
+        str = [NSString stringWithFormat:@"耗时%d秒",second];
+    }
+    NSLog(@"%@",str);
+    
+    return isEqualDay;
+}
 
-
+/**
+ 获得字符串的宽高
+ */
+- (CGSize) sizeWithFontSize:(UIFont *)font;
+{
+    return [self sizeWithAttributes:@{NSFontAttributeName: font}];
+}
 
 
 

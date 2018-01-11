@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "YMTextView.h"
-#import "UIBarButtonItem+Extension.h"
-#import "Defines.h"
-#import "UIView+Frame.h"
 
 @interface YMBaseTextViewController : UIViewController
 
