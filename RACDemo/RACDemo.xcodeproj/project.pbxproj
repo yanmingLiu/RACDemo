@@ -24,6 +24,7 @@
 		C241EB881F27349E007A16E7 /* flags.plist in Resources */ = {isa = PBXBuildFile; fileRef = C241EB871F27349E007A16E7 /* flags.plist */; };
 		C24F936F2003780E00CD7015 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F936E2003780E00CD7015 /* LoginViewController.m */; };
 		C24F93722003782300CD7015 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F93712003782300CD7015 /* LoginViewModel.m */; };
+		C276EAD42016C952007717A2 /* YMBottomPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = C276EAD32016C952007717A2 /* YMBottomPopView.m */; };
 		C28A22C31FA9A7F70035B5DF /* LoactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A22C21FA9A7F60035B5DF /* LoactionViewController.m */; };
 		C28A22C61FA9A9F10035B5DF /* YMLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A22C51FA9A9F10035B5DF /* YMLocationManager.m */; };
 		C28A23321FA9D55F0035B5DF /* areas.json in Resources */ = {isa = PBXBuildFile; fileRef = C28A23301FA9D55F0035B5DF /* areas.json */; };
@@ -115,6 +116,9 @@
 		C24F936E2003780E00CD7015 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C24F93702003782300CD7015 /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		C24F93712003782300CD7015 /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		C276EAD22016C952007717A2 /* YMBottomPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMBottomPopView.h; sourceTree = "<group>"; };
+		C276EAD32016C952007717A2 /* YMBottomPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMBottomPopView.m; sourceTree = "<group>"; };
+		C276EAD52016C95C007717A2 /* 葵花宝典.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "葵花宝典.h"; path = "RACDemo/葵花宝典.h"; sourceTree = SOURCE_ROOT; };
 		C28A22C11FA9A7F60035B5DF /* LoactionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoactionViewController.h; sourceTree = "<group>"; };
 		C28A22C21FA9A7F60035B5DF /* LoactionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoactionViewController.m; sourceTree = "<group>"; };
 		C28A22C41FA9A9F10035B5DF /* YMLocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMLocationManager.h; sourceTree = "<group>"; };
@@ -281,6 +285,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		C276EAD12016C952007717A2 /* YMBottomPopView */ = {
+			isa = PBXGroup;
+			children = (
+				C276EAD22016C952007717A2 /* YMBottomPopView.h */,
+				C276EAD32016C952007717A2 /* YMBottomPopView.m */,
+			);
+			path = YMBottomPopView;
+			sourceTree = "<group>";
+		};
 		C28A22C81FA9CF790035B5DF /* YMLocationManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +315,8 @@
 		C28A22FA1FA9D4680035B5DF /* YMHelper */ = {
 			isa = PBXGroup;
 			children = (
+				C276EAD52016C95C007717A2 /* 葵花宝典.h */,
+				C276EAD12016C952007717A2 /* YMBottomPopView */,
 				C2A5F1781FAC407400B96A75 /* YMCommon */,
 				C28A23C31FA9DD910035B5DF /* YMCategory */,
 				C28A23701FA9D7180035B5DF /* MJDIYRefresh */,
@@ -815,6 +830,7 @@
 				C28A233F1FA9D6D00035B5DF /* pickerControl.m in Sources */,
 				C28A23771FA9D7180035B5DF /* MJDIYAutoFooter.m in Sources */,
 				C29341661EC482EB003FB9A0 /* TableViewCell.m in Sources */,
+				C276EAD42016C952007717A2 /* YMBottomPopView.m in Sources */,
 				C2A5F1C01FAC40E800B96A75 /* YMBaseWebViewController.m in Sources */,
 				C2A5F1C51FAC40E800B96A75 /* YMNavigationController.m in Sources */,
 				C24F936F2003780E00CD7015 /* LoginViewController.m in Sources */,
