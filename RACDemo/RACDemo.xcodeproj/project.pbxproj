@@ -24,6 +24,11 @@
 		C241EB881F27349E007A16E7 /* flags.plist in Resources */ = {isa = PBXBuildFile; fileRef = C241EB871F27349E007A16E7 /* flags.plist */; };
 		C24F936F2003780E00CD7015 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F936E2003780E00CD7015 /* LoginViewController.m */; };
 		C24F93722003782300CD7015 /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C24F93712003782300CD7015 /* LoginViewModel.m */; };
+		C26B4682201D930900594BD4 /* NSDate+YMDate.m in Sources */ = {isa = PBXBuildFile; fileRef = C26B4681201D930900594BD4 /* NSDate+YMDate.m */; };
+		C26B4687201D941200594BD4 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C26B4685201D941100594BD4 /* NSData+Base64.m */; };
+		C26B4688201D941200594BD4 /* NSData+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = C26B4686201D941200594BD4 /* NSData+Encrypt.m */; };
+		C26B468E201D94A600594BD4 /* NSDictionary+Params.m in Sources */ = {isa = PBXBuildFile; fileRef = C26B468B201D94A600594BD4 /* NSDictionary+Params.m */; };
+		C26B468F201D94A600594BD4 /* NSURL+Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = C26B468D201D94A600594BD4 /* NSURL+Parameters.m */; };
 		C276EAD42016C952007717A2 /* YMBottomPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = C276EAD32016C952007717A2 /* YMBottomPopView.m */; };
 		C28A22C31FA9A7F70035B5DF /* LoactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A22C21FA9A7F60035B5DF /* LoactionViewController.m */; };
 		C28A22C61FA9A9F10035B5DF /* YMLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C28A22C51FA9A9F10035B5DF /* YMLocationManager.m */; };
@@ -90,7 +95,6 @@
 		50C57BFC8857C536E0274D54 /* Pods-RACDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoUITests/Pods-RACDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5521038BDB566A569065065C /* Pods-RACDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoUITests/Pods-RACDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6FC46EB993C5AF3997640B5 /* Pods_RACDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C20A8EE82007366800E9AE38 /* YMMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMMacro.h; sourceTree = "<group>"; };
 		C210E74E1F5D202E0059A8B7 /* AnimationContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationContoller.h; sourceTree = "<group>"; };
 		C210E74F1F5D202E0059A8B7 /* AnimationContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationContoller.m; sourceTree = "<group>"; };
 		C210E7501F5D202E0059A8B7 /* KLTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTNavigationController.h; sourceTree = "<group>"; };
@@ -116,6 +120,17 @@
 		C24F936E2003780E00CD7015 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		C24F93702003782300CD7015 /* LoginViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
 		C24F93712003782300CD7015 /* LoginViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		C26B467F201D8E1800594BD4 /* YMMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMMacro.h; sourceTree = "<group>"; };
+		C26B4680201D930900594BD4 /* NSDate+YMDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+YMDate.h"; sourceTree = "<group>"; };
+		C26B4681201D930900594BD4 /* NSDate+YMDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+YMDate.m"; sourceTree = "<group>"; };
+		C26B4683201D941100594BD4 /* NSData+Encrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Encrypt.h"; sourceTree = "<group>"; };
+		C26B4684201D941100594BD4 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		C26B4685201D941100594BD4 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		C26B4686201D941200594BD4 /* NSData+Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encrypt.m"; sourceTree = "<group>"; };
+		C26B468A201D94A600594BD4 /* NSURL+Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+Parameters.h"; sourceTree = "<group>"; };
+		C26B468B201D94A600594BD4 /* NSDictionary+Params.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Params.m"; sourceTree = "<group>"; };
+		C26B468C201D94A600594BD4 /* NSDictionary+Params.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Params.h"; sourceTree = "<group>"; };
+		C26B468D201D94A600594BD4 /* NSURL+Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+Parameters.m"; sourceTree = "<group>"; };
 		C276EAD22016C952007717A2 /* YMBottomPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMBottomPopView.h; sourceTree = "<group>"; };
 		C276EAD32016C952007717A2 /* YMBottomPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMBottomPopView.m; sourceTree = "<group>"; };
 		C276EAD52016C95C007717A2 /* 葵花宝典.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "葵花宝典.h"; path = "RACDemo/葵花宝典.h"; sourceTree = SOURCE_ROOT; };
@@ -285,6 +300,17 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		C26B4689201D94A600594BD4 /* NSURL */ = {
+			isa = PBXGroup;
+			children = (
+				C26B468A201D94A600594BD4 /* NSURL+Parameters.h */,
+				C26B468B201D94A600594BD4 /* NSDictionary+Params.m */,
+				C26B468C201D94A600594BD4 /* NSDictionary+Params.h */,
+				C26B468D201D94A600594BD4 /* NSURL+Parameters.m */,
+			);
+			path = NSURL;
+			sourceTree = "<group>";
+		};
 		C276EAD12016C952007717A2 /* YMBottomPopView */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,7 +355,7 @@
 		C28A232B1FA9D55F0035B5DF /* YMConst */ = {
 			isa = PBXGroup;
 			children = (
-				C20A8EE82007366800E9AE38 /* YMMacro.h */,
+				C26B467F201D8E1800594BD4 /* YMMacro.h */,
 				C28A232D1FA9D55F0035B5DF /* Headers.h */,
 				C28A23301FA9D55F0035B5DF /* areas.json */,
 			);
@@ -381,6 +407,7 @@
 		C28A23C31FA9DD910035B5DF /* YMCategory */ = {
 			isa = PBXGroup;
 			children = (
+				C26B4689201D94A600594BD4 /* NSURL */,
 				C2335B5F2007467A006A2B35 /* MBProgressHUD+YM */,
 				C2A5F1C71FAC4E5000B96A75 /* LTNavigationBar */,
 				C2335B5320073C7F006A2B35 /* NSString+YMString.h */,
@@ -389,6 +416,12 @@
 				C2335B4F20073C29006A2B35 /* UIApplication+Extension.m */,
 				C28A23D81FA9DDA20035B5DF /* NSDate+Extension.h */,
 				C28A23DD1FA9DDA30035B5DF /* NSDate+Extension.m */,
+				C26B4680201D930900594BD4 /* NSDate+YMDate.h */,
+				C26B4681201D930900594BD4 /* NSDate+YMDate.m */,
+				C26B4684201D941100594BD4 /* NSData+Base64.h */,
+				C26B4685201D941100594BD4 /* NSData+Base64.m */,
+				C26B4683201D941100594BD4 /* NSData+Encrypt.h */,
+				C26B4686201D941200594BD4 /* NSData+Encrypt.m */,
 				C28A23D31FA9DDA20035B5DF /* NSString+Emoji.h */,
 				C28A23D91FA9DDA30035B5DF /* NSString+Emoji.m */,
 				C28A23C91FA9DDA10035B5DF /* NSString+Extension.h */,
@@ -811,6 +844,7 @@
 			files = (
 				C28A23E71FA9DDA40035B5DF /* UIWindow+Extension.m in Sources */,
 				C2335B5420073C7F006A2B35 /* NSString+YMString.m in Sources */,
+				C26B4682201D930900594BD4 /* NSDate+YMDate.m in Sources */,
 				C28A23811FA9D7210035B5DF /* FLAnimatedImageView+WebCache.m in Sources */,
 				C28A23EA1FA9DDA40035B5DF /* UIView+Frame.m in Sources */,
 				C28A22C31FA9A7F70035B5DF /* LoactionViewController.m in Sources */,
@@ -820,15 +854,18 @@
 				C2A5F1BB1FAC40E800B96A75 /* YMBaseTextEditController.m in Sources */,
 				C28A23E61FA9DDA40035B5DF /* UITextView+Extension.m in Sources */,
 				C23ED3441FA458D300832DE7 /* RGBViewController.m in Sources */,
+				C26B4688201D941200594BD4 /* NSData+Encrypt.m in Sources */,
 				C2335B632007467A006A2B35 /* MBProgressHUD+YM.m in Sources */,
 				C2335B6A20077456006A2B35 /* UIBarButtonItem+Badge.m in Sources */,
 				C28A23EF1FA9DDA40035B5DF /* NSDate+Extension.m in Sources */,
 				C2335B6920077456006A2B35 /* UIButton+Badge.m in Sources */,
 				C210E7551F5D20360059A8B7 /* README.md in Sources */,
 				C28A23381FA9D6C60035B5DF /* YMTextView.m in Sources */,
+				C26B468F201D94A600594BD4 /* NSURL+Parameters.m in Sources */,
 				C28A23E51FA9DDA40035B5DF /* NSString+Extension.m in Sources */,
 				C28A233F1FA9D6D00035B5DF /* pickerControl.m in Sources */,
 				C28A23771FA9D7180035B5DF /* MJDIYAutoFooter.m in Sources */,
+				C26B468E201D94A600594BD4 /* NSDictionary+Params.m in Sources */,
 				C29341661EC482EB003FB9A0 /* TableViewCell.m in Sources */,
 				C276EAD42016C952007717A2 /* YMBottomPopView.m in Sources */,
 				C2A5F1C01FAC40E800B96A75 /* YMBaseWebViewController.m in Sources */,
@@ -849,6 +886,7 @@
 				C2A5F1C31FAC40E800B96A75 /* YMBaseTextViewController.m in Sources */,
 				C2A5F1C61FAC40E800B96A75 /* YMTabBarController.m in Sources */,
 				C24F93722003782300CD7015 /* LoginViewModel.m in Sources */,
+				C26B4687201D941200594BD4 /* NSData+Base64.m in Sources */,
 				C2335B5120073C2A006A2B35 /* UIApplication+Extension.m in Sources */,
 				C2335B6D200774C3006A2B35 /* UIButton+SGImagePosition.m in Sources */,
 				C293412B1EC43D89003FB9A0 /* main.m in Sources */,

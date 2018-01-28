@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 // MD5加密
 #import <CommonCrypto/CommonDigest.h>
 
@@ -122,16 +123,14 @@
  */
 + (NSString *)getPriousorLaterDateFromDateStr:(NSString *)dateStr withMonth:(NSInteger)month;
 
-
 /**
  * 判断2个时间是否在同一天内
  **/
 + (BOOL)isEqualDayWithStartDate:(NSString*)startDate endDate:(NSString*)endDate;
     
-
 /**
  获得字符串的宽高
  */
-- (CGSize) sizeWithFontSize:(UIFont *)font;
+- (CGSize)sizeWithFontSize:(UIFont *)font;
 
 @end

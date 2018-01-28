@@ -40,7 +40,15 @@ return _instance; \
 }
 
 // MARK: - 从storyboard中取出控制器
-#define ViewControllerFromSB(sbName,sbId) [[UIStoryboard storyboardWithName:sbName bundle:nil] instantiateViewControllerWithIdentifier:sbId]
+#define ViewControllerFromSB(sbName,sbId) [[UIStoryboard storyboardWithName:sbName bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:sbId]
+
+// MARK: - 屏幕尺寸相关
+
+#define KeyWindow  [UIApplication sharedApplication].keyWindow
+
+#define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
+
+#define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
 
 // MARK: - 导航栏\状态栏\TabBar高度
 /* 状态栏高度 */
@@ -58,17 +66,13 @@ return _instance; \
 /** TabBar距离屏幕底部距离 */
 #define kTabBarMargin (Is_iPhoneX ? 34.0 : 0.0) 
 
+/** 2级页面高度 */
+#define kContenViewH (kScreenHeight - kNavigationH - kTabBarMargin) 
 
-// MARK: - 屏幕尺寸相关
-
-#define KeyWindow  [UIApplication sharedApplication].keyWindow
-
-#define kScreenWidth ([UIScreen mainScreen].bounds.size.width)
-
-#define kScreenHeight ([UIScreen mainScreen].bounds.size.height)
 
 /** 比例宽 */
 #define LayoutW(w) (kScreenWidth / 375.0 * w)
+#define LayoutH(h) (kScreenWidth * h / 375.0)
 
 
 // MARK: - 颜色
@@ -94,7 +98,9 @@ alpha:__a]
 
 #define FONT(frontSize) [UIFont systemFontOfSize:frontSize]
 
-#define FONT_NAME(name,frontSize) [UIFont fontWithName:name size:frontSize]
+#define FONTWEIGHT(size, weight) [UIFont systemFontOfSize:size weight:weight]
+
+#define FONTNAME(name,frontSize) [UIFont fontWithName:name size:frontSize]
 
 // MARK: - 手机信息
 // 当前应用软件版本

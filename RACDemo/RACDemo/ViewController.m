@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ReactiveObjC.h"
 #import "User.h"
+#import "NSString+YMString.h"
 
 @interface ViewController ()
 
@@ -27,6 +28,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    NSString *timer = [NSString toolPublishDateWithDateString:@"2018-01-28 10:59:44"];
+    NSLog(@"%@",timer);
     
     [self Command];
     
@@ -496,10 +499,15 @@
         
         NSLog(@"按钮点击了");
     }];
-    // RAC
+    // 通知
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"tongzhi" object:nil] subscribeNext:^(NSNotification * _Nullable x) {
         NSLog(@"按钮点击了发出了通知");
     }];
+    // 代理
+//    [[self.tableView rac_signalForSelector:@selector(scrollViewDidScroll:) fromProtocol:@protocol(UIScrollViewDelegate)] subscribeNext:^(id x) {
+//        
+//    }];
+    
     // cocoa
     [self.nameTF.rac_textSignal subscribeNext:^(NSString * _Nullable x) {
         NSLog(@"%@", x);

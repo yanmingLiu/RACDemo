@@ -1,14 +1,14 @@
 //
-//  NSDate+Extension.m
-//  YMTextView
+//  NSDate+YMDate.m
+//  RACDemo
 //
-//  Created by apple on 14-10-18.
-//  Copyright (c) 2014年 heima. All rights reserved.
+//  Created by lym on 2017/1/28.
 //
 
-#import "NSDate+Extension.h"
+#import "NSDate+YMDate.h"
 
-@implementation NSDate (Extension)
+@implementation NSDate (YMDate)
+
 
 /**
  *  判断某个时间是否为今年
@@ -74,7 +74,7 @@
  *
  *  @return 多少(秒or分or天or月or年)+前(比如，3天前、10分钟前)
  */
-+(NSString *) compareCurrentTime:(NSDate*) compareDate
++(NSString *)compareCurrentTime:(NSDate*) compareDate
 {
     NSTimeInterval  timeInterval = [compareDate timeIntervalSinceNow];
     timeInterval = -timeInterval;
@@ -105,4 +105,5 @@
     
     return  result;
 }
+
 @end

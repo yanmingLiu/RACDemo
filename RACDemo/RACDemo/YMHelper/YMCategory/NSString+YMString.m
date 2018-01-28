@@ -270,58 +270,37 @@
     //实例化一个NSDateFormatter对象
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    
-    NSDate * nowDate = [NSDate date];
     //将需要转换的时间转换成 NSDate 对象
-    NSDate * needFormatDate = [dateFormatter dateFromString:dateString];
-    //取当前时间和转换时间两个日期对象的时间间隔
-    NSTimeInterval time = [nowDate timeIntervalSinceDate:needFormatDate];
-    //把间隔的秒数折算成天数和小时数：
-    NSString *dateStr = @"";
+    NSDate * compareDate = [dateFormatter dateFromString:dateString];
     
-    if (time <= 60) {  //1分钟以内的
-        dateStr = @"刚刚";
-    }else if(time <= 60*60){  //一个小时以内的
-        
-        int mins = time/60;
-        dateStr = [NSString stringWithFormat:@"%d分钟前",mins];
+    NSTimeInterval  timeInterval = [compareDate timeIntervalSinceNow];
+    timeInterval = -timeInterval;
+    int temp = 0;
+    NSString *result;
+    if (timeInterval < 60) {
+        result = [NSString stringWithFormat:@"刚刚"];
     }
-    else if(time <= 60*60*24){   //在两天内的
-        [dateFormatter setDateFormat:@"YYYY.MM.dd"];
-        NSString * need_yMd = [dateFormatter stringFromDate:needFormatDate];
-        NSString *now_yMd = [dateFormatter stringFromDate:nowDate];
-        
-        [dateFormatter setDateFormat:@"HH:mm"];
-        if ([need_yMd isEqualToString:now_yMd]) {
-            //在同一天
-            //            dateStr = [NSString stringWithFormat:@"今天 %@",[dateFormatter stringFromDate:needFormatDate]];
-            int hour = time/60/60;
-            dateStr = [NSString stringWithFormat:@"%d小时前",hour];
-            
-        }else{
-            ////  昨天
-            //            dateStr = [NSString stringWithFormat:@"昨天 %@",[dateFormatter stringFromDate:needFormatDate]];
-            dateStr = [NSString stringWithFormat:@"昨天"];
-        }
-    }
-    else {
-        
-        [dateFormatter setDateFormat:@"YYYY"];
-        NSString * yearStr = [dateFormatter stringFromDate:needFormatDate];
-        NSString *nowYear = [dateFormatter stringFromDate:nowDate];
-        
-        if ([yearStr isEqualToString:nowYear]) {
-            //在同一年
-            [dateFormatter setDateFormat:@"YYYY.MM.dd"];
-            dateStr = [dateFormatter stringFromDate:needFormatDate];
-        }
-        else{
-            dateStr = [NSString stringWithFormat:@"%@", @"很久以前"];
-            
-        }
+    else if((temp = timeInterval/60) <60){
+        result = [NSString stringWithFormat:@"%d分钟前",temp];
     }
     
-    return dateStr;
+    else if((temp = temp/60) <24){
+        result = [NSString stringWithFormat:@"%d小时前",temp];
+    }
+    
+    else if((temp = temp/24) <30){
+        result = [NSString stringWithFormat:@"%d天前",temp];
+    }
+    
+    else if((temp = temp/30) <12){
+        result = [NSString stringWithFormat:@"%d月前",temp];
+    }
+    else{
+        temp = temp/12;
+        result = [NSString stringWithFormat:@"%d年前",temp];
+    }
+    
+    return result;
 }
 
 /**
@@ -528,7 +507,7 @@
 /**
  获得字符串的宽高
  */
-- (CGSize) sizeWithFontSize:(UIFont *)font;
+- (CGSize)sizeWithFontSize:(UIFont *)font;
 {
     return [self sizeWithAttributes:@{NSFontAttributeName: font}];
 }

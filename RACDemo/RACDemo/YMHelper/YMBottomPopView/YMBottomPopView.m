@@ -19,6 +19,7 @@
 
 
 #import "YMBottomPopView.h"
+#import "YMMacro.h"
 
 static CGFloat titleH = 80;
 
@@ -38,13 +39,13 @@ static CGFloat titleH = 80;
 - (void)showItems:(NSArray *)items title:(NSString *)title tips:(NSString *)tips  rowCount:(NSInteger)rowCount selectedHandle:(selectItemBlock)selectedHandle {
     if (items == nil || items.count < 1) return;
     self.backgroundColor = [UIColor whiteColor];
-    [self addBackgroundView:Keywindow];
+    [self addBackgroundView:KeyWindow];
     
     // 标题
     if (title.length) {
-        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(kFirst, 0, SCREEN_WIDTH-kFirst*2, titleH)];
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(kFirst, 0, kScreenWidth-kFirst*2, titleH)];
         titleLabel.text = title;
-        titleLabel.textColor = main_blackColor;
+        titleLabel.textColor = [UIColor blackColor];
         titleLabel.font = FONT(14);
         titleLabel.textAlignment = NSTextAlignmentCenter;
         [self addSubview:titleLabel];
@@ -75,7 +76,7 @@ static CGFloat titleH = 80;
     }];
     
     if (tips.length) {
-        UILabel *tipsLabel = [[UILabel alloc] initWithFrame:CGRectMake(kFirst*2, self.btnViewH, SCREEN_WIDTH-kFirst*4, titleH)];
+        UILabel *tipsLabel = [[UILabel alloc] initWithFrame:CGRectMake(kFirst*2, self.btnViewH, kScreenWidth-kFirst*4, titleH)];
         tipsLabel.text = title;
         tipsLabel.numberOfLines = 2;
         tipsLabel.textColor = RGB(204, 204, 204);
@@ -87,7 +88,7 @@ static CGFloat titleH = 80;
     
     
     //计算frame
-    [Keywindow addSubview:self];
+    [KeyWindow addSubview:self];
     NSUInteger row = (items.count - 1) / rowCount;
     CGFloat height = kFirst + 50 + (row +1) * (kBtnH + kMarginY);
     
@@ -125,7 +126,7 @@ static CGFloat titleH = 80;
         if(selectedHandle) selectedHandle(tag, title);
     };
     //分割线
-    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMinY(canleBtn.frame), SCREEN_WIDTH, 0.5)];
+    UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, CGRectGetMinY(canleBtn.frame), kScreenWidth, 0.5)];
     line.backgroundColor = RGB(238, 238, 238);
     [self addSubview:line];
 }
@@ -139,7 +140,7 @@ static CGFloat titleH = 80;
     [super setFrame:frame];
 }
 - (void)addBackgroundView:(UIView *)view{
-    _backgroundView = [[UIView alloc] initWithFrame:SCREEN_RECT];
+    _backgroundView = [[UIView alloc] initWithFrame:KeyWindow.bounds];
     _backgroundView.backgroundColor = [UIColor blackColor];
     _backgroundView.alpha = 0.4;
     
