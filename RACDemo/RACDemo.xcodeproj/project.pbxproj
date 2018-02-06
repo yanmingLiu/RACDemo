@@ -67,6 +67,8 @@
 		C2A5F1C51FAC40E800B96A75 /* YMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A5F1B61FAC40E700B96A75 /* YMNavigationController.m */; };
 		C2A5F1C61FAC40E800B96A75 /* YMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A5F1B81FAC40E700B96A75 /* YMTabBarController.m */; };
 		C2A5F1CA1FAC4E6A00B96A75 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A5F1C81FAC4E6A00B96A75 /* UINavigationBar+Awesome.m */; };
+		C2BA7DF3201F85DC00B523E2 /* RACCommandController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BA7DF2201F85DC00B523E2 /* RACCommandController.m */; };
+		C2BA7DF7201F967500B523E2 /* CViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BA7DF6201F967500B523E2 /* CViewModel.m */; };
 		C2BB75221F1DA8B200723BB0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BB75211F1DA8B200723BB0 /* libsqlite3.0.tbd */; };
 /* End PBXBuildFile section */
 
@@ -209,6 +211,10 @@
 		C2A5F1B81FAC40E700B96A75 /* YMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMTabBarController.m; sourceTree = "<group>"; };
 		C2A5F1C81FAC4E6A00B96A75 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		C2A5F1C91FAC4E6A00B96A75 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		C2BA7DF1201F85DC00B523E2 /* RACCommandController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACCommandController.h; sourceTree = "<group>"; };
+		C2BA7DF2201F85DC00B523E2 /* RACCommandController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACCommandController.m; sourceTree = "<group>"; };
+		C2BA7DF5201F967500B523E2 /* CViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CViewModel.h; sourceTree = "<group>"; };
+		C2BA7DF6201F967500B523E2 /* CViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CViewModel.m; sourceTree = "<group>"; };
 		C2BB75211F1DA8B200723BB0 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		D0FAD0F557F9F997798C3C77 /* Pods_RACDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF07DDA3E5186A0F647406F /* Pods_RACDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -475,6 +481,7 @@
 		C29341281EC43D89003FB9A0 /* RACDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C2BA7DF4201F964500B523E2 /* RACCommandDemo */,
 				C28A22FA1FA9D4680035B5DF /* YMHelper */,
 				C24F936C2003778100CD7015 /* Login */,
 				C28A22F91FA9D1E20035B5DF /* LIb */,
@@ -555,6 +562,17 @@
 				C2A5F1C81FAC4E6A00B96A75 /* UINavigationBar+Awesome.m */,
 			);
 			path = LTNavigationBar;
+			sourceTree = "<group>";
+		};
+		C2BA7DF4201F964500B523E2 /* RACCommandDemo */ = {
+			isa = PBXGroup;
+			children = (
+				C2BA7DF1201F85DC00B523E2 /* RACCommandController.h */,
+				C2BA7DF2201F85DC00B523E2 /* RACCommandController.m */,
+				C2BA7DF5201F967500B523E2 /* CViewModel.h */,
+				C2BA7DF6201F967500B523E2 /* CViewModel.m */,
+			);
+			path = RACCommandDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -842,6 +860,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2BA7DF7201F967500B523E2 /* CViewModel.m in Sources */,
 				C28A23E71FA9DDA40035B5DF /* UIWindow+Extension.m in Sources */,
 				C2335B5420073C7F006A2B35 /* NSString+YMString.m in Sources */,
 				C26B4682201D930900594BD4 /* NSDate+YMDate.m in Sources */,
@@ -890,6 +909,7 @@
 				C2335B5120073C2A006A2B35 /* UIApplication+Extension.m in Sources */,
 				C2335B6D200774C3006A2B35 /* UIButton+SGImagePosition.m in Sources */,
 				C293412B1EC43D89003FB9A0 /* main.m in Sources */,
+				C2BA7DF3201F85DC00B523E2 /* RACCommandController.m in Sources */,
 				C28A23EC1FA9DDA40035B5DF /* NSString+Emoji.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,10 +22,6 @@
     [super viewDidLoad];
     
     
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:@selector(ssss)];
-    
-    
-    NSLog(@"%@",[NSString toolPublishDateWithDateString:@"2017-11-23 12:00:00"]);
 }
 
 

@@ -7,6 +7,7 @@
 
 #import "LoginViewController.h"
 #import "LoginViewModel.h"
+#import "NSString+YMString.h"
 
 @interface LoginViewController ()
 
@@ -28,6 +29,13 @@
     self.loadingView.hidden = YES;
     self.viewModel = [[LoginViewModel alloc]init];
     
+    if ([@"1" isNill]) {
+        NSLog(@"空");
+    }else {
+        NSLog(@"不空");
+    }
+    
+   
     [self bindViewModel];
 }
 
@@ -51,6 +59,8 @@
              NSLog(@"%@",x);
          }];
      }];
+
+    
 }
 
 @end

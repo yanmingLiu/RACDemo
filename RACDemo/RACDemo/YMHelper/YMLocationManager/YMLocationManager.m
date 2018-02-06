@@ -51,14 +51,16 @@ static id _instance;
         }] merge:[[self rac_signalForSelector:@selector(locationManager:didFailWithError:) fromProtocol:@protocol(CLLocationManagerDelegate)] map:^id _Nullable(RACTuple * _Nullable value) {
             return [RACSignal error:value[1]]; 
             
-        }]] take:1] initially:^{
+           
+        }]] take:1] initially:^{  // initially是信号量开始时候调用的block，
             [self.manager startUpdatingLocation];
             
-        }]  finally:^{
+        }]  finally:^{ // finally则是信号量结束了调用的block。
             [self.manager stopUpdatingLocation];
             
         }] flattenMap:^__kindof RACSignal * _Nullable(id  _Nullable value) {
             CLLocation *c = [value firstObject];
+            
             return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
                 [self.geocoder reverseGeocodeLocation:c completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
                     if (error) {

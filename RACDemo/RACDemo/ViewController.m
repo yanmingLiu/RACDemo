@@ -27,11 +27,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    NSString *timer = [NSString toolPublishDateWithDateString:@"2018-01-28 10:59:44"];
-    NSLog(@"%@",timer);
     
-    [self Command];
+    [self map];
     
 }
 
@@ -345,7 +342,7 @@
     /// concat 订阅的话 s1,s2,s3的结果都会返回 
     /// concat：按一定顺序拼接信号，当多个信号发出的时候有顺序的接受信号。 
     [[[s1 concat:s2] concat:s3] subscribeNext:^(id  _Nullable x) {
-        
+        NSLog(@"%@",x);
     }];
     
     /// 同时执行，统一订阅
@@ -358,6 +355,8 @@
     return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
         NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
         NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
+        
+        
         NSURLSessionDataTask *task = [session dataTaskWithURL:[NSURL URLWithString:@"www.baidu.com"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
             if (error) {
                 NSLog(@"请求错误");
