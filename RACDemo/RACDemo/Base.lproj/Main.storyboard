@@ -238,6 +238,31 @@
                                             <segue destination="r2t-Qt-BPX" kind="show" id="9Pa-TR-pmX"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="GST-If-R4A" rowHeight="50" style="IBUITableViewCellStyleDefault" id="btI-dI-bac">
+                                        <rect key="frame" x="0.0" y="464" width="375" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="btI-dI-bac" id="2i2-ts-FOa">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="上下滚动的跑马灯" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GST-If-R4A">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="49.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="0HM-Kk-0rs" kind="show" id="s1s-If-mWz"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -269,6 +294,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whj-Cp-G3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2166" y="-365"/>
+        </scene>
+        <!--上下滚动的scrollView-->
+        <scene sceneID="9vs-tp-V7M">
+            <objects>
+                <viewController title="上下滚动的scrollView" id="0HM-Kk-0rs" customClass="ScrollViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oj7-pR-bTr"/>
+                        <viewControllerLayoutGuide type="bottom" id="4IG-Mf-Oq4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c99-4I-TGh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UyN-gj-Paq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1001" y="296"/>
         </scene>
         <!--RACCommand-->
         <scene sceneID="i2x-xK-xeE">

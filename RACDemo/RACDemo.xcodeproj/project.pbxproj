@@ -19,6 +19,10 @@
 		C2036F96202C321300187160 /* DropdownItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C2036F8A202C321300187160 /* DropdownItem.m */; };
 		C2036F97202C321300187160 /* mark2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2036F8B202C321300187160 /* mark2@2x.png */; };
 		C2036F9B202C32CC00187160 /* DropdownMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2036F9A202C32CC00187160 /* DropdownMenuViewController.m */; };
+		C2036FA7202C7CFB00187160 /* YMScrollViewUpDown.m in Sources */ = {isa = PBXBuildFile; fileRef = C2036FA2202C7CFA00187160 /* YMScrollViewUpDown.m */; };
+		C2036FA8202C7CFB00187160 /* NSTimer+forYMScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2036FA3202C7CFA00187160 /* NSTimer+forYMScrollerView.m */; };
+		C2036FA9202C7CFB00187160 /* UIView+forYMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2036FA4202C7CFA00187160 /* UIView+forYMScrollView.m */; };
+		C2036FAD202C7DB800187160 /* ScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2036FAC202C7DB800187160 /* ScrollViewController.m */; };
 		C210E7521F5D202E0059A8B7 /* AnimationContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = C210E74F1F5D202E0059A8B7 /* AnimationContoller.m */; };
 		C210E7531F5D202E0059A8B7 /* KLTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C210E7511F5D202E0059A8B7 /* KLTNavigationController.m */; };
 		C210E7551F5D20360059A8B7 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C210E7541F5D20360059A8B7 /* README.md */; };
@@ -121,6 +125,14 @@
 		C2036F8F202C321300187160 /* DropdownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropdownMenu.h; sourceTree = "<group>"; };
 		C2036F99202C32CC00187160 /* DropdownMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropdownMenuViewController.h; sourceTree = "<group>"; };
 		C2036F9A202C32CC00187160 /* DropdownMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropdownMenuViewController.m; sourceTree = "<group>"; };
+		C2036FA1202C7CFA00187160 /* YMScrollViewUpDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMScrollViewUpDown.h; sourceTree = "<group>"; };
+		C2036FA2202C7CFA00187160 /* YMScrollViewUpDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMScrollViewUpDown.m; sourceTree = "<group>"; };
+		C2036FA3202C7CFA00187160 /* NSTimer+forYMScrollerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+forYMScrollerView.m"; sourceTree = "<group>"; };
+		C2036FA4202C7CFA00187160 /* UIView+forYMScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+forYMScrollView.m"; sourceTree = "<group>"; };
+		C2036FA5202C7CFA00187160 /* NSTimer+forYMScrollerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+forYMScrollerView.h"; sourceTree = "<group>"; };
+		C2036FA6202C7CFB00187160 /* UIView+forYMScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+forYMScrollView.h"; sourceTree = "<group>"; };
+		C2036FAB202C7DB800187160 /* ScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollViewController.h; sourceTree = "<group>"; };
+		C2036FAC202C7DB800187160 /* ScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollViewController.m; sourceTree = "<group>"; };
 		C210E74E1F5D202E0059A8B7 /* AnimationContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationContoller.h; sourceTree = "<group>"; };
 		C210E74F1F5D202E0059A8B7 /* AnimationContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationContoller.m; sourceTree = "<group>"; };
 		C210E7501F5D202E0059A8B7 /* KLTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLTNavigationController.h; sourceTree = "<group>"; };
@@ -326,6 +338,28 @@
 			path = "DropdownMenu(下拉筛选)";
 			sourceTree = "<group>";
 		};
+		C2036FA0202C7CDE00187160 /* 上下循环滚动View */ = {
+			isa = PBXGroup;
+			children = (
+				C2036FAB202C7DB800187160 /* ScrollViewController.h */,
+				C2036FAC202C7DB800187160 /* ScrollViewController.m */,
+			);
+			path = "上下循环滚动View";
+			sourceTree = "<group>";
+		};
+		C2036FAA202C7D7300187160 /* YMScrollViewUpDown */ = {
+			isa = PBXGroup;
+			children = (
+				C2036FA5202C7CFA00187160 /* NSTimer+forYMScrollerView.h */,
+				C2036FA3202C7CFA00187160 /* NSTimer+forYMScrollerView.m */,
+				C2036FA6202C7CFB00187160 /* UIView+forYMScrollView.h */,
+				C2036FA4202C7CFA00187160 /* UIView+forYMScrollView.m */,
+				C2036FA1202C7CFA00187160 /* YMScrollViewUpDown.h */,
+				C2036FA2202C7CFA00187160 /* YMScrollViewUpDown.m */,
+			);
+			path = YMScrollViewUpDown;
+			sourceTree = "<group>";
+		};
 		C210E74D1F5D202E0059A8B7 /* KLTAnimateNav */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,6 +434,7 @@
 		C28A22FA1FA9D4680035B5DF /* YMHelper */ = {
 			isa = PBXGroup;
 			children = (
+				C2036FAA202C7D7300187160 /* YMScrollViewUpDown */,
 				C2036F82202C321300187160 /* DropdownMenu */,
 				C276EAD52016C95C007717A2 /* 葵花宝典.h */,
 				C276EAD12016C952007717A2 /* YMBottomPopView */,
@@ -535,6 +570,7 @@
 		C29341281EC43D89003FB9A0 /* RACDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C2036FA0202C7CDE00187160 /* 上下循环滚动View */,
 				C2036F98202C32B700187160 /* DropdownMenu(下拉筛选) */,
 				C2BA7DF4201F964500B523E2 /* RACCommandDemo */,
 				C28A22FA1FA9D4680035B5DF /* YMHelper */,
@@ -929,10 +965,12 @@
 				C28A22C31FA9A7F70035B5DF /* LoactionViewController.m in Sources */,
 				C28A23E31FA9DDA40035B5DF /* UIImageView+YMWebCache.m in Sources */,
 				C210E7531F5D202E0059A8B7 /* KLTNavigationController.m in Sources */,
+				C2036FA9202C7CFB00187160 /* UIView+forYMScrollView.m in Sources */,
 				C293415E1EC45997003FB9A0 /* User.m in Sources */,
 				C2A5F1BB1FAC40E800B96A75 /* YMBaseTextEditController.m in Sources */,
 				C28A23E61FA9DDA40035B5DF /* UITextView+Extension.m in Sources */,
 				C23ED3441FA458D300832DE7 /* RGBViewController.m in Sources */,
+				C2036FAD202C7DB800187160 /* ScrollViewController.m in Sources */,
 				C26B4688201D941200594BD4 /* NSData+Encrypt.m in Sources */,
 				C2335B632007467A006A2B35 /* MBProgressHUD+YM.m in Sources */,
 				C2036F9B202C32CC00187160 /* DropdownMenuViewController.m in Sources */,
@@ -947,12 +985,14 @@
 				C28A233F1FA9D6D00035B5DF /* pickerControl.m in Sources */,
 				C28A23771FA9D7180035B5DF /* MJDIYAutoFooter.m in Sources */,
 				C26B468E201D94A600594BD4 /* NSDictionary+Params.m in Sources */,
+				C2036FA7202C7CFB00187160 /* YMScrollViewUpDown.m in Sources */,
 				C29341661EC482EB003FB9A0 /* TableViewCell.m in Sources */,
 				C276EAD42016C952007717A2 /* YMBottomPopView.m in Sources */,
 				C2A5F1C01FAC40E800B96A75 /* YMBaseWebViewController.m in Sources */,
 				C2A5F1C51FAC40E800B96A75 /* YMNavigationController.m in Sources */,
 				C24F936F2003780E00CD7015 /* LoginViewController.m in Sources */,
 				C28A23F11FA9DDA40035B5DF /* UIColor+Hex.m in Sources */,
+				C2036FA8202C7CFB00187160 /* NSTimer+forYMScrollerView.m in Sources */,
 				C29341311EC43D89003FB9A0 /* ViewController.m in Sources */,
 				C28A22C61FA9A9F10035B5DF /* YMLocationManager.m in Sources */,
 				C28A23ED1FA9DDA40035B5DF /* UIImage+YMImg.m in Sources */,

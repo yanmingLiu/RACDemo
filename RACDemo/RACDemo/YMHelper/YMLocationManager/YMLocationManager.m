@@ -78,6 +78,38 @@ static id _instance;
     }];
 }
 
+/// 自动定位到当前位置 - 返回经纬度
+- (RACSignal *)autoCoordinateSignal {
+    return [[[self authorizationSignal] filter:^BOOL(id  _Nullable value) {
+        return [value boolValue];
+        
+    }] flattenMap:^__kindof RACSignal * _Nullable(id  _Nullable value) {
+        return [[[[[[[self rac_signalForSelector:@selector(locationManager:didUpdateLocations:) fromProtocol:@protocol(CLLocationManagerDelegate)] map:^id _Nullable(RACTuple * _Nullable value) {
+            return value[1];
+            
+        }] merge:[[self rac_signalForSelector:@selector(locationManager:didFailWithError:) fromProtocol:@protocol(CLLocationManagerDelegate)] map:^id _Nullable(RACTuple * _Nullable value) {
+            return [RACSignal error:value[1]]; 
+            
+            
+        }]] take:1] initially:^{  // initially是信号量开始时候调用的block，
+            [self.manager startUpdatingLocation];
+            
+        }]  finally:^{ // finally则是信号量结束了调用的block。
+            [self.manager stopUpdatingLocation];
+            
+        }] flattenMap:^__kindof RACSignal * _Nullable(id  _Nullable value) {
+            CLLocation *c = [value firstObject];
+            
+            return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+                [subscriber sendNext:c];
+                [subscriber sendCompleted];
+                return [RACDisposable disposableWithBlock:^{
+                }];
+            }]; 
+        }]; 
+    }];
+}
+
 /// 认证信号-是否授权位置访问
 - (RACSignal *)authorizationSignal {
     
