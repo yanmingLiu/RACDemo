@@ -277,7 +277,14 @@
     return [phonepredicate evaluateWithObject:mobileNum];
 }
 
-
+/**
+ 处理json float double 精度丢失问题
+ */
+- (NSString *)decimalNumber {
+    NSString *doubleString  = [NSString stringWithFormat:@"%lf", self.doubleValue]; 
+    NSDecimalNumber *decNumber    = [NSDecimalNumber decimalNumberWithString:doubleString];
+    return [decNumber stringValue];
+}
 
 
 @end

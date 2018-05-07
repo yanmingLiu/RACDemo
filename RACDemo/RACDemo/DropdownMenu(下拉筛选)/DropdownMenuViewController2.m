@@ -1,38 +1,23 @@
 //
-//  DropdownMenuViewController.m
+//  DropdownMenuViewController2.m
 //  RACDemo
 //
-//  Created by lym on 2018/2/8.
+//  Created by lym on 2018/2/11.
 //
 
-#import "DropdownMenuViewController.h"
-#import "DropdownMenu.h"
 #import "DropdownMenuViewController2.h"
+#import "DropdownMenu.h"
 
-
-@interface DropdownMenuViewController ()<DropdownMenuDelegate>
-
+@interface DropdownMenuViewController2 ()
 @property (nonatomic, strong) DropdownMenu *dropdownMenu;
-
-
 @end
 
-@implementation DropdownMenuViewController
-
+@implementation DropdownMenuViewController2
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"下一个" style:(UIBarButtonItemStylePlain) target:self action:@selector(xxx)];
-    
     [self setupDropdownMenu];
-}
-
-
-- (void)xxx {
-    DropdownMenuViewController2 *vc2 = [[DropdownMenuViewController2 alloc] init];
-    [self.navigationController pushViewController:vc2 animated:YES];
 }
 
 
@@ -70,10 +55,13 @@
 
 // MARK: - DropdownMenuDelegate
 - (void)dropdownSelectedBtnIndex:(NSInteger)btnIndex leftIndex:(NSInteger)left rightIndex:(NSInteger)right text:(NSString *)text {
-    NSLog(@"%zd --%zd, %zd, %@", btnIndex, left, right, text);
+    NSLog(@"%zd, %zd, %@", left, right, text);
 }
 
 
+- (void)dropdownSelectedLeftIndex:(NSString *)left RightIndex:(NSString *)right {
+    NSLog(@"%@, %@", left, right);
+}
 
 
 @end

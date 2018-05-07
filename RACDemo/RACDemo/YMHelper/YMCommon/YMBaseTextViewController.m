@@ -43,7 +43,7 @@
         self.editBlock(self.textView.text);
         [self.navigationController popViewControllerAnimated:YES];
     }else {
-        [MBProgressHUD showToastText:[NSString stringWithFormat:@"请输入%@", self.placeholderLabelText]];
+        [MBProgressHUD ym_showToastText:[NSString stringWithFormat:@"请输入%@", self.placeholderLabelText]];
     }
 }
 

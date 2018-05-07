@@ -41,8 +41,14 @@
  * 时间转成字符串
  **/
 + (NSString *)dateTransformToString:(NSDate *)date;
+
 /**
- * iso时间转成字符串
+ 时间戳转化为字符串 自定义时间格式
+ */
++ (NSString *)timestampTransformToString:(NSString *)timestamp format:(NSString *)format;
+
+/**
+ * 字符串转成iso时间
  **/
 + (NSDate *)dateStringTransformDate:(NSString *)dateString;
 
@@ -58,19 +64,17 @@
 + (double)differenceSecondBetweenStartDate:(NSDate *)startDate endDate:(NSDate *)endDate;
 
 /**
+ * 开始到结束的时间差 转换成 %i天%i小时%i分%i秒
+ **/
++ (NSString *)differenceStart:(NSDate *)start end:(NSDate *)end;
+
+/**
  * 字符串时间转成发布状态日期
  **/
 + (NSString *)toolPublishDateWithDateString:(NSString *)dateString;
 
-
 /// 比较两个日期大小 formatStyle---> 1: @"yyyy-MM-dd HH:mm:ss"  0 : @"yyyy-MM-dd"
 + (int)compareStartDate:(NSString*)startDate endDate:(NSString*)endDate formatStyle:(NSInteger)formatStyle;
-
-
-/**
- * 开始到结束的时间差
- */
-+ (NSString *)dateTimeDifferenceWithStartTime:(NSString *)startTime endTime:(NSString *)endTime;
 
 /**
  * 获取到日的时间 2017-09-23

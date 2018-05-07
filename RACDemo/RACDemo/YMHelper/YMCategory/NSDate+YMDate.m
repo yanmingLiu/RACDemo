@@ -9,7 +9,6 @@
 
 @implementation NSDate (YMDate)
 
-
 /**
  *  判断某个时间是否为今年
  */
@@ -74,7 +73,7 @@
 + (NSDate *)timestampTransformToDate:(NSString *)timestamp {
     // 格式化时间
     NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
-    formatter.timeZone = [NSTimeZone timeZoneWithName:@"GMT"];
+    formatter.timeZone = [NSTimeZone systemTimeZone];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
     [formatter setTimeStyle:NSDateFormatterShortStyle];
     [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
@@ -89,7 +88,7 @@
 - (NSString *)timestampTransformToString:(NSString *)timestamp {
     // 格式化时间
     NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
-    formatter.timeZone = [NSTimeZone timeZoneWithName:@"GMT"];
+    formatter.timeZone = [NSTimeZone systemTimeZone];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
     [formatter setTimeStyle:NSDateFormatterShortStyle];
     [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
@@ -104,8 +103,9 @@
  **/
 + (int)dateStringTransformToTimestamp:(NSString *)dateString {
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.timeZone = [NSTimeZone systemTimeZone];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    [dateFormatter setTimeZone:[NSTimeZone timeZoneWithName:@"GMT"]];
+    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
     
     NSDate *date =[dateFormatter dateFromString:dateString];
     [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
@@ -121,9 +121,26 @@
  **/
 + (NSString *)dateTransformToString:(NSDate *)date {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.timeZone = [NSTimeZone systemTimeZone];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSString *strDate = [dateFormatter stringFromDate:date];
     return strDate;
+}
+
+/**
+ 时间戳转化为字符串 自定义格式
+ */
++ (NSString *)timestampTransformToString:(NSString *)timestamp format:(NSString *)format {
+    // 格式化时间
+    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
+    formatter.timeZone = [NSTimeZone systemTimeZone];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:format];
+    // 毫秒值转化为秒
+    NSDate* date = [NSDate dateWithTimeIntervalSince1970:[timestamp doubleValue]/ 1000.0];
+    NSString* dateString = [formatter stringFromDate:date];
+    return dateString;
 }
 
 /**
@@ -131,6 +148,7 @@
  **/
 + (NSDate *)dateStringTransformDate:(NSString *)dateString {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.timeZone = [NSTimeZone systemTimeZone];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     
     NSDate *date = [dateFormatter dateFromString:dateString];
@@ -163,15 +181,53 @@
     
     // 时间2与时间1之间的时间差（秒）
     double seconds = fabs([localDate2 timeIntervalSinceReferenceDate] - [localDate1 timeIntervalSinceReferenceDate]);
-    
-    //    NSInteger seconds = lTime % 60;
-    //    NSInteger minutes = (lTime / 60) % 60;
-    //    NSInteger hours = (lTime / 3600);
-    //    NSInteger days = lTime/60/60/24;
-    //    NSInteger month = lTime/60/60/24/12;
-    //    NSInteger years = lTime/60/60/24/365;
-    
+
     return seconds;
+}
+
+
+/**
+ * 开始到结束的时间差 返回0天0时0分
+ **/
++ (NSString *)differenceStart:(NSDate *)start end:(NSDate *)end {
+    
+    // 时间1
+    NSDate *date1 = start;
+    NSTimeZone *zone1 = [NSTimeZone systemTimeZone];
+    NSInteger interval1 = [zone1 secondsFromGMTForDate:date1];
+    NSDate *localDate1 = [date1 dateByAddingTimeInterval:interval1];
+    
+    // 时间2
+    NSDate *date2 = end;
+    NSTimeZone *zone2 = [NSTimeZone systemTimeZone];
+    NSInteger interval2 = [zone2 secondsFromGMTForDate:date2];
+    NSDate *localDate2 = [date2 dateByAddingTimeInterval:interval2];
+    
+    // 时间2与时间1之间的时间差（秒）
+    long ms = [localDate2 timeIntervalSinceReferenceDate] - [localDate1 timeIntervalSinceReferenceDate];
+    
+    if (ms <= 0) {
+        return @"0天0时0分";
+    }
+    ms = ms * 1000;
+    
+    int day = (int) (ms / (1000 * 60 * 60 * 24));
+    int house = (int) (ms % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60);
+    int minute = (int) ((ms % (1000 * 60 * 60)) / (1000 * 60));
+    int second = (int) ((ms % (1000 * 60)) / 1000);
+    
+    NSString *str;
+    if (day != 0) {
+        str = [NSString stringWithFormat:@"%ld天%ld小时%ld分",(long)day,(long)house,(long)minute];
+    }else if (day==0 && house !=0) {
+        str = [NSString stringWithFormat:@"%ld小时%ld分",(long)house,(long)minute];
+    }else if (day==0 && house==0 && minute!=0) {
+        str = [NSString stringWithFormat:@"%ld分",(long)minute];
+    }else{
+        str = [NSString stringWithFormat:@"%ld秒",(long)second];
+    }
+    
+    return str;
 }
 
 /**
@@ -181,6 +237,7 @@
     
     //实例化一个NSDateFormatter对象
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.timeZone = [NSTimeZone systemTimeZone];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     //将需要转换的时间转换成 NSDate 对象
     NSDate * compareDate = [dateFormatter dateFromString:dateString];
@@ -219,6 +276,7 @@
     
     int comparisonResult;
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    
     if (formatStyle) {
         [formatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     }else {
@@ -251,34 +309,6 @@
     }
     return comparisonResult;
 }
-
-/// 开始到结束的时间差
-+ (NSString *)dateTimeDifferenceWithStartTime:(NSString *)startTime endTime:(NSString *)endTime{
-    NSDateFormatter *date = [[NSDateFormatter alloc]init];
-    [date setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSDate *startD =[date dateFromString:startTime];
-    NSDate *endD = [date dateFromString:endTime];
-    NSTimeInterval start = [startD timeIntervalSince1970]*1;
-    NSTimeInterval end = [endD timeIntervalSince1970]*1;
-    NSTimeInterval value = end - start;
-    int second = (int)value %60;//秒
-    int minute = (int)value /60%60;
-    int house = (int)value / (24 * 3600)%3600;
-    int day = (int)value / (24 * 3600);
-    NSString *str;
-    if (day != 0) {
-        str = [NSString stringWithFormat:@"耗时%d天%d小时%d分%d秒",day,house,minute,second];
-    }else if (day==0 && house != 0) {
-        str = [NSString stringWithFormat:@"耗时%d小时%d分%d秒",house,minute,second];
-    }else if (day== 0 && house== 0 && minute!=0) {
-        str = [NSString stringWithFormat:@"耗时%d分%d秒",minute,second];
-    }else{
-        str = [NSString stringWithFormat:@"耗时%d秒",second];
-    }
-    NSLog(@"%@",str);
-    return str;
-}
-
 
 /// 获取到日的时间 2017-09-23
 + (NSString *)getDayWithString:(NSString *)str {

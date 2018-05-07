@@ -228,7 +228,7 @@
 /*
  #pragma flattenMap 方法通过调用block（value）来创建一个新的方法，它可以灵活的定义新创建的信号。
  #pragma map方法， 将会创建一个和原来一模一样的信号，只不过新的信号传递的值变为了block（value）。
-
+ 
  FlatternMap和Map的区别：
  1.FlatternMap中的Block返回信号
  2.Map中的Block返回对象
@@ -301,7 +301,6 @@
 
 #pragma mark - concat reduce combineLatest
 
-
 /// rac_liftSelector:withSignalsFromArray:
 - (void)moreRequest {
     
@@ -323,7 +322,7 @@
     NSLog(@"更新UI%@  %@",data,data1);
 }
 
- 
+
 /// concat_then_combineLatest
 - (void)concat_then_combineLatest {
     RACSignal *s1 = [self session];
@@ -404,7 +403,7 @@
     }];
 }
 
-/// merge：把多个信号合并为一个信号，任何一个信号有新值时就会调用
+/// merge：m，任何一个信号有新值时就会调用
 - (void)merge {
     /*
      底层实现：1.合并信号被订阅的时候就会遍历所有信号，并且发出这些信号
@@ -456,8 +455,6 @@
         NSLog(@"name=%@   pwd=%@", name, pwd);
     }];
 }
-
-
 /**
  reduce：合并多个信号的数据，进行汇总计算，并返回需要的值
  subscribeNext ： 订阅这个返回值
@@ -486,7 +483,7 @@
 }
 
 
-#pragma mark - KVO\事件监听\通知监听
+#pragma mark - KVO\事件监听\通知监听\代理
 - (void)replaceFunc {
     //代替KVO
     [RACObserve(self.nameTF, text) subscribeNext:^(id x) {

@@ -6,15 +6,14 @@
 
 // MARK: - DEBUG模式下打印日志
 #ifndef __OPTIMIZE__
-#define NSLog(fmt,...) NSLog((@"<%s:%d>" fmt), strrchr(__FILE__,'/'), __LINE__, ##__VA_ARGS__);
+#define NSLog(...) printf("%f %s\n",[[NSDate date]timeIntervalSince1970],[[NSString stringWithFormat:__VA_ARGS__]UTF8String]);
 #else
 #define NSLog(...) {}
 #endif
 
-
 // MARK: - 单利宏
 // .h
-#define SingletonH + (instancetype)sharedInstance;
+#define SingletonH + (instancetype)shared;
 // .m
 #define SingletonM \
 static id _instance; \
@@ -26,7 +25,7 @@ _instance = [super allocWithZone:zone]; \
 }); \
 return _instance; \
 } \
-+ (instancetype)sharedInstance \
++ (instancetype)shared \
 { \
 static dispatch_once_t onceToken; \
 dispatch_once(&onceToken, ^{ \

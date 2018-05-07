@@ -19,10 +19,8 @@
 
 + (void)initialize {
     [super initialize];
-    
     // 处理向上偏移64
     //[[UINavigationBar appearance] setTranslucent:NO];
-    
     //去掉导航条返回键带的title
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-100, 0) forBarMetrics:UIBarMetricsDefault];
     

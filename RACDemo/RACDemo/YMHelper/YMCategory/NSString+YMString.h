@@ -77,12 +77,14 @@
  */
 + (BOOL)isMobileNumber:(NSString *)mobileNum;
 
-
 /**
  格式化手机号 131****1234
  */
 + (NSString *)formatPhoneNum:(NSString *)phoneNum;
 
-
+/**
+ 处理json float double 精度丢失问题
+ */
+- (NSString *)decimalNumber;
 
 @end

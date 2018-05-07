@@ -96,9 +96,10 @@
 - (void)selectedFirstValues:(NSArray *)values withTitle:(NSString *)title {
     
     [_dropdownButton selectedItemIndex:_btnSelectedIndex title:title];
+//    NSString *index = [NSString stringWithFormat:@"%@-%@", values[0], values[1]];
     
-    NSString *index = [NSString stringWithFormat:@"%@-%@", values[0], values[1]];
-    [_btnIndexArray setObject:index atIndexedSubscript:_btnSelectedIndex];
+    // FIXME: 处理直接选最后一列崩溃
+//    [_btnIndexArray setObject:index atIndexedSubscript:_btnSelectedIndex];
     
     if (_delegate && [_delegate respondsToSelector:@selector(dropdownSelectedLeftIndex:RightIndex:)]) {
         [_delegate performSelector:@selector(dropdownSelectedLeftIndex:RightIndex:) withObject:values[0] withObject:values[1]];

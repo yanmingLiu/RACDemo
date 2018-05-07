@@ -11,8 +11,10 @@
 
 @interface ScrollViewController ()<YMScrollViewUpDownDelegate>
 
-/** <#注释#> */
+
 @property (nonatomic, strong) NSArray * news; 
+
+@property (nonatomic, strong) YMScrollViewUpDown * scrollLabelView; 
 
 @end
 
@@ -28,6 +30,7 @@
     scrollLabelView.delegate        = self;
     scrollLabelView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:scrollLabelView];
+    _scrollLabelView = scrollLabelView;
 }
 
 
@@ -53,9 +56,9 @@
     
 }
 
-- (void)loopScrollView:(YMScrollViewUpDown *)loopScrollView currentContentViewAtIndex:(NSInteger)index{
-    //NSLog(@"----当前-----%ld",index);
-}
 
+- (void)dealloc {
+    [_scrollLabelView invalidate];
+}
 
 @end

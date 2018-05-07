@@ -28,11 +28,14 @@
 
 @interface YMScrollViewUpDown : UIView
 
-@property (nonatomic,assign) id<YMScrollViewUpDownDelegate> delegate;
+@property (nonatomic,weak) id<YMScrollViewUpDownDelegate> delegate;
 
 // 当duration<=0时，默认不自动滚动
 - (id)initWithFrame:(CGRect)frame animationScrollDuration:(NSTimeInterval)duration;
 
 - (void)reloadData;
+
+/// 销毁时间
+- (void)invalidate;
 
 @end

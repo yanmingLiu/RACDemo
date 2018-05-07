@@ -20,7 +20,7 @@
 /// 自动定位到当前位置 - 返回检索结果
 - (RACSignal *)autoLocationSignal;
 
-/// 自动定位到当前位置 - 返回经纬度
-- (RACSignal *)autoCoordinateSignal;
+/// 根据地址得到经纬度 - 返回编码结果 CLLocation
+- (RACSignal *)geocodeSignal:(NSString *)address;
 
 @end

@@ -77,7 +77,7 @@
         }
         [self.navigationController popViewControllerAnimated:YES];
     }else {
-        [MBProgressHUD showFailureText:@"请输入有效文字!"];
+        [MBProgressHUD ym_showFailureText:@"请输入有效文字!"];
     }
 }
 

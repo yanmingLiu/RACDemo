@@ -55,6 +55,7 @@
     _animationDuration = duration;
     
     if (duration > 0) {
+        
         _animationTimer = [NSTimer scheduledTimerWithTimeInterval:duration
                                                            target:self
                                                          selector:@selector(startScroll:)
@@ -131,16 +132,13 @@
     
     int contentOffsetY = scrollView.contentOffset.y;
     
-    
-    
     if(contentOffsetY >= (2 * kHeight)) {
         _currentPageIndex = [self getNextPageIndexWithCurrentPageIndex:_currentPageIndex];
         
         // 调用代理函数 当前页面序号
-        if ([self.delegate respondsToSelector:@selector(loopScrollView:currentContentViewAtIndex:)]) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(loopScrollView:currentContentViewAtIndex:)]) {
             [self.delegate loopScrollView:self currentContentViewAtIndex:_currentPageIndex];
         }
-        
         [self resetContentViews];
     }
     
@@ -149,10 +147,9 @@
         _currentPageIndex = [self getPreviousPageIndexWithCurrentPageIndex:_currentPageIndex];
         
         // 调用代理函数 当前页面序号
-        if ([self.delegate respondsToSelector:@selector(loopScrollView:currentContentViewAtIndex:)]) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(loopScrollView:currentContentViewAtIndex:)]) {
             [self.delegate loopScrollView:self currentContentViewAtIndex:_currentPageIndex];
         }
-        
         [self resetContentViews];
     }
     
@@ -230,6 +227,15 @@
     }
 }
 
+
+- (void)invalidate {
+    
+    [_animationTimer invalidate];
+    _animationTimer = nil;
+}
+
+- (void)dealloc {
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.
