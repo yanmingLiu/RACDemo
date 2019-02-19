@@ -7,113 +7,141 @@
 //
 
 #import "YMTextView.h"
-#import "UIView+Frame.h"
 
 @interface YMTextView ()
 
-@property (nonatomic, weak) UILabel *placeHolderLabel;
+
+@property(nonatomic, strong) UILabel *placeholderLabel;
 
 @end
 
 @implementation YMTextView
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    if ([super initWithFrame:frame]) {
-        
-        self.placeholderColor = [UIColor lightGrayColor];
-        
-        self.selectedRange = NSMakeRange(0, 8);
-        
-    }
-    
-    // 监听文本框的输入
-    /**
-     *  Observer:谁需要监听通知
-     *  name：监听的通知的名称
-     *  object：监听谁发送的通知，nil:表示谁发送我都监听
-     *
-     */
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textChange) name:UITextViewTextDidChangeNotification object:self];
-    
-    return self;
+
+@synthesize placeholder = _placeholder;
+@synthesize placeholderLabel = _placeholderLabel;
+@synthesize placeholderTextColor = _placeholderTextColor;
+
+-(void)initialize
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshPlaceholder) name:UITextViewTextDidChangeNotification object:self];
 }
 
-- (void)dealloc {
+-(void)dealloc
+{
+    [_placeholderLabel removeFromSuperview];
+    _placeholderLabel = nil;
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-// 监听文本框的输入
-- (void)textChange {
-    // 判断下textView有木有内容
-    if (self.hasText) { // 有内容
-        self.hidePlaceholder = YES;
-    }else{
-        self.hidePlaceholder = NO;
-    }
-}
-
-
-- (UILabel *)placeHolderLabel
+- (instancetype)init
 {
-    if (_placeHolderLabel == nil) {
-        
-        UILabel *label = [[UILabel alloc] init];
-        label.numberOfLines = 0;
-        
-        [self addSubview:label];
-        
-        _placeHolderLabel = label;
-        
+    self = [super init];
+    if (self) {
+        [self initialize];
     }
-    
-    return _placeHolderLabel;
+    return self;
 }
 
-
-#pragma mark - setter
-
-- (void)setPlaceholder:(NSString *)placeholder {
-    _placeholder = placeholder;
-    
-    self.placeHolderLabel.text = placeholder;
-    // label的尺寸跟文字一样
-    [self.placeHolderLabel sizeToFit];
-}
-
-- (void)setHidePlaceholder:(BOOL)hidePlaceholder
+-(void)awakeFromNib
 {
-    _hidePlaceholder = hidePlaceholder;
-    
-    self.placeHolderLabel.hidden = hidePlaceholder;
-    
+    [super awakeFromNib];
+    [self initialize];
 }
 
-- (void)setPlaceholderColor:(UIColor *)placeholderColor {
-    _placeholderColor = placeholderColor;
-    
-    self.placeHolderLabel.textColor = placeholderColor;
+-(void)refreshPlaceholder
+{
+    if([[self text] length])
+        {
+        [_placeholderLabel setAlpha:0];
+        }
+    else
+        {
+        [_placeholderLabel setAlpha:1];
+        }
+
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
 }
 
-- (void)setFont:(UIFont *)font
+- (void)setText:(NSString *)text
+{
+    [super setText:text];
+    [self refreshPlaceholder];
+}
+
+-(void)setFont:(UIFont *)font
 {
     [super setFont:font];
-    
-    self.placeHolderLabel.font = font;
-    [self.placeHolderLabel sizeToFit];
+    self.placeholderLabel.font = self.font;
+
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
 }
 
+-(void)setTextAlignment:(NSTextAlignment)textAlignment
+{
+    [super setTextAlignment:textAlignment];
+    self.placeholderLabel.textAlignment = textAlignment;
 
-#pragma mark - 布局
-- (void)layoutSubviews
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
+}
+
+-(void)layoutSubviews
 {
     [super layoutSubviews];
-    
-    self.placeHolderLabel.left = 5;
-    self.placeHolderLabel.top = 8;
-    self.placeHolderLabel.width = self.width - 2 * self.placeHolderLabel.left;
-    
-    //    NSLog(@"%@",self.font);
-    //    self.placeHolderLabel.font = self.font;
+
+    CGFloat offsetLeft = self.textContainerInset.left + self.textContainer.lineFragmentPadding;
+    CGFloat offsetRight = self.textContainerInset.right + self.textContainer.lineFragmentPadding;
+    CGFloat offsetTop = self.textContainerInset.top;
+    CGFloat offsetBottom = self.textContainerInset.bottom;
+
+    CGSize expectedSize = [self.placeholderLabel sizeThatFits:CGSizeMake(CGRectGetWidth(self.frame)-offsetLeft-offsetRight, CGRectGetHeight(self.frame)-offsetTop-offsetBottom)];
+//    self.placeholderLabel.frame = CGRectMake(offsetLeft, offsetTop, expectedSize.width, expectedSize.height);
+    self.placeholderLabel.frame = CGRectMake(offsetLeft, offsetTop, CGRectGetWidth(self.frame)-offsetLeft-offsetRight, expectedSize.height);
+
 }
+
+-(void)setPlaceholder:(NSString *)placeholder
+{
+    _placeholder = placeholder;
+
+    self.placeholderLabel.text = placeholder;
+    [self refreshPlaceholder];
+}
+
+-(void)setPlaceholderTextColor:(UIColor*)placeholderTextColor
+{
+    _placeholderTextColor = placeholderTextColor;
+    self.placeholderLabel.textColor = placeholderTextColor;
+}
+
+-(UILabel*)placeholderLabel
+{
+    if (_placeholderLabel == nil)
+        {
+        _placeholderLabel = [[UILabel alloc] init];
+        _placeholderLabel.autoresizingMask = (UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight);
+        _placeholderLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        _placeholderLabel.numberOfLines = 0;
+        _placeholderLabel.font = self.font;
+        _placeholderLabel.textAlignment = self.textAlignment;
+        _placeholderLabel.backgroundColor = [UIColor redColor];
+        _placeholderLabel.textColor = [UIColor colorWithWhite:0.7 alpha:1.0];
+        _placeholderLabel.alpha = 0;
+        [self addSubview:_placeholderLabel];
+        }
+
+    return _placeholderLabel;
+}
+
+//When any text changes on textField, the delegate getter is called. At this time we refresh the textView's placeholder
+-(id<UITextViewDelegate>)delegate
+{
+    [self refreshPlaceholder];
+    return [super delegate];
+}
+
 
 @end

@@ -16,6 +16,7 @@
 
 #import "Headers.h"
 #import "YMMacro.h"
+#import "UIView+Toast.h"
 
 #endif
 

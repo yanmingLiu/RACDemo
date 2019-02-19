@@ -7,16 +7,14 @@
 
 @interface YMTextView : UITextView
 
-/** 占位符 */
-@property (nonatomic, copy) NSString *placeholder;
+/**
+ Set textView's placeholder text. Default is nil.
+ */
+@property(nullable, nonatomic,copy) IBInspectable NSString    *placeholder;
 
-/** 是否显示占位符 */
-@property (nonatomic, assign) BOOL hidePlaceholder;
-
-/** 是否显示占位符 */
-@property (nonatomic, strong) UIColor *placeholderColor;
-
-@property (nonatomic, assign) NSInteger maxTextNum;
-
+/**
+ To set textView's placeholder text color. Default is nil.
+ */
+@property(nullable, nonatomic,copy) IBInspectable UIColor    *placeholderTextColor;
 
 @end

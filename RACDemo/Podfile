@@ -13,10 +13,15 @@ target 'RACDemo' do
   #pod 'MJExtension'
   
   pod 'YYCache'
+  pod 'YYModel'
   
   pod 'SDWebImage'
   pod 'DACircularProgress'
   pod 'FLAnimatedImage'
+
+  pod 'Toast'
+
+  pod 'DZNEmptyDataSet'
   
   #pod 'IQKeyboardManager'
   
@@ -35,6 +40,9 @@ target 'RACDemo' do
   #pod 'LBXScan/LBXNative'
   #pod 'LBXScan/LBXZXing'
   #pod 'LBXScan/UI'
+
+  pod 'TZScrollViewPopGesture'
+  pod 'FDFullscreenPopGesture'
   
   
   pod 'Qiniu'

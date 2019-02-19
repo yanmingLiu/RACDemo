@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "ReactiveObjC.h"
 #import "User.h"
-#import "NSString+YMString.h"
+
 
 @interface ViewController ()
 
@@ -251,8 +251,8 @@
     /****************例子*****************************/
     
     NSArray *arr = @[@1,@2,@3,@4,@5];
-    RACSequence *seq = [arr rac_sequence];
-    NSArray *resultArr = [[seq map:^id _Nullable(id  _Nullable value) {
+
+    NSArray *resultArr = [[[arr rac_sequence] map:^id _Nullable(id  _Nullable value) {
         return @([value integerValue] + 1);
     }] array];
     NSLog(@"%@", resultArr);

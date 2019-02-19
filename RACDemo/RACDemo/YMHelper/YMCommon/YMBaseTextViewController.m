@@ -9,8 +9,7 @@
 #import "YMBaseTextViewController.h"
 
 #import "UIBarButtonItem+Extension.h"
-#import "UIView+Frame.h"
-#import "MBProgressHUD+YM.h"
+#import "UIView+YMFrame.h"
 
 @interface YMBaseTextViewController () <UITextViewDelegate>
 
@@ -43,7 +42,7 @@
         self.editBlock(self.textView.text);
         [self.navigationController popViewControllerAnimated:YES];
     }else {
-        [MBProgressHUD ym_showToastText:[NSString stringWithFormat:@"请输入%@", self.placeholderLabelText]];
+        [self.view makeToast:[NSString stringWithFormat:@"请输入%@", self.placeholderLabelText]];
     }
 }
 

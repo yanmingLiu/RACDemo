@@ -1,0 +1,6 @@
+framework module TZScrollViewPopGesture {
+  umbrella header "TZScrollViewPopGesture-umbrella.h"
+
+  export *
+  module * { export * }
+}
