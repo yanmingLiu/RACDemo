@@ -1,38 +1,28 @@
 //
-//  YMEmptyHelper.m
-//  RACDemo
+//  YMBlankPageStyle.m
+//  AihujuP
 //
-//  Created by lym on 2019/2/19.
+//  Created by lym on 2019/3/7.
+//  Copyright © 2019 HUJU. All rights reserved.
 //
 
-#import "YMEmptyHelper.h"
+#import "YMBlankPageStyleHelper.h"
 
-@implementation YMEmptyHelper
 
-+ (NSBundle *)ym_emptyBundle {
-    static NSBundle *refreshBundle = nil;
-    if (refreshBundle == nil) {
-        refreshBundle = [NSBundle bundleWithPath:[[NSBundle bundleForClass:[YMEmptyHelper class]] pathForResource:@"YMEmptyHelper" ofType:@"bundle"]];
-    }
-    return refreshBundle;
-}
+@implementation YMBlankPageStyleHelper
 
-+ (UIImage *)ym_loadImage:(NSString *)imageName {
-    return [[UIImage imageWithContentsOfFile:[[self ym_emptyBundle] pathForResource:imageName ofType:@"png"]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];;
-}
 
 /// 空白页显示图片
-+ (UIImage *)imageForEmptyDataSet:(YMEmptyHelperStyle)style {
-
++ (UIImage *)imageForEmptyDataSet:(YMBlankPageStyle)style {
     switch (style) {
-        case YMEmptyHelperStyleLoading:
+        case YMBlankPageStyleLoading:
             return [UIImage imageNamed:@"loading_imgBlue"];
-
-        case YMEmptyHelperStyleNotDatas:
-            return [UIImage imageNamed:@"not_network"];
-
-        case YMEmptyHelperStyleNotNetwork:
-            return [UIImage imageNamed:@"not_network"];
+        case YMBlankPageStyleNoDatas:
+            return [UIImage imageNamed:@"noData"];
+        case YMBlankPageStyleNoNetwork:
+            return [UIImage imageNamed:@"noNetwork"];
+        case YMBlankPageStyleNoServer:
+            return [UIImage imageNamed:@"noServer"];
 
         default:
             return nil;
@@ -42,14 +32,14 @@
 
 
 /// 空白页显示详细描述
-+ (NSAttributedString *)descriptionForEmptyDataSet:(YMEmptyHelperStyle)style {
-    if (style == YMEmptyHelperStyleSuccess) {
++ (NSAttributedString *)descriptionForEmptyDataSet:(YMBlankPageStyle)style {
+    if (style == YMBlankPageStyleSuccess) {
         return nil;
     }
     NSString *text = @"";
-    if (style == YMEmptyHelperStyleLoading) {
+    if (style == YMBlankPageStyleLoading) {
         text = @"正在加载...";
-    }else if (style == YMEmptyHelperStyleNotNetwork) {
+    }else if (style == YMBlankPageStyleNoNetwork) {
         text = @"连接服务器失败！";
     }else {
         text = @"sorry~什么也没有找到";
@@ -69,14 +59,15 @@
 
 
 /// 空白页按钮
-+ (NSAttributedString *)buttonTitleForEmptyDataSet:(YMEmptyHelperStyle)style {
++ (NSAttributedString *)buttonTitleForEmptyDataSet:(YMBlankPageStyle)style {
     switch (style) {
-        case YMEmptyHelperStyleSuccess:
-        case YMEmptyHelperStyleLoading:
-        case YMEmptyHelperStyleNotDatas:
+        case YMBlankPageStyleSuccess:
+        case YMBlankPageStyleLoading:
             return nil;
 
-        case YMEmptyHelperStyleNotNetwork:
+        case YMBlankPageStyleNoNetwork:
+        case YMBlankPageStyleNoDatas:
+        case YMBlankPageStyleNoServer:
         {
         NSString *text = @"请点击重试哦~";
         NSMutableAttributedString *attStr = [[NSMutableAttributedString alloc] initWithString:text];
@@ -94,8 +85,11 @@
     return nil;
 }
 
-/// 空白页加载动画
-+ (CAAnimation *)imageAnimation {
+
+
+/// 动画
++ (CAAnimation *)imageAnimationForEmptyDataSet {
+    
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform"];
     animation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
     animation.toValue = [NSValue valueWithCATransform3D: CATransform3DMakeRotation(M_PI_2, 0.0, 0.0, 1.0) ];

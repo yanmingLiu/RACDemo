@@ -10,6 +10,10 @@
 
 @interface TestTabelViewController () <UITableViewDelegate, UITableViewDataSource>
 
+@property (nonatomic, assign) NSInteger page;
+@property (nonatomic, strong) NSMutableArray * dataArray;
+
+
 @end
 
 @implementation TestTabelViewController
@@ -17,17 +21,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self setupMJRefresh];
-
-    
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    [self setupTableViewWithStyle:(UITableViewStyleGrouped)];
 
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
 
-    self.emptyStyle = YMEmptyHelperStyleLoading;
+    [self setupMJRefresh];
+
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
+
+    self.page = 1;
+    self.dataArray = [NSMutableArray array];
+    self.blankPageStyle = YMBlankPageStyleLoading;
     [self loadData];
 }
+
+
+- (void)setupMJRefresh {
+    self.tableView.mj_header = [MJDIYHeader headerWithRefreshingBlock:^{
+        self.page = 1;
+        [self loadData];
+    }];
+
+    self.tableView.mj_footer = [MJDIYAutoFooter footerWithRefreshingBlock:^{
+        self.page += 1;
+        [self loadData];
+    }];
+}
+
 
 
 - (void)loadData {
@@ -46,7 +68,7 @@
 
         [self.tableView.mj_footer endRefreshing];
 
-        self.emptyStyle = YMEmptyHelperStyleSuccess;
+        self.blankPageStyle = YMBlankPageStyleSuccess;
         [self.tableView reloadData];
 
     });
@@ -85,15 +107,5 @@
 
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
