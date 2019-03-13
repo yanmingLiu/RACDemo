@@ -65,28 +65,6 @@
 		C2BA7DF3201F85DC00B523E2 /* RACCommandController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BA7DF2201F85DC00B523E2 /* RACCommandController.m */; };
 		C2BA7DF7201F967500B523E2 /* CViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BA7DF6201F967500B523E2 /* CViewModel.m */; };
 		C2BB75221F1DA8B200723BB0 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BB75211F1DA8B200723BB0 /* libsqlite3.0.tbd */; };
-		C2E36F67221B9102001CA758 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F3B221B9102001CA758 /* UIAlertController+Blocks.m */; };
-		C2E36F68221B9102001CA758 /* UIApplication+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F3D221B9102001CA758 /* UIApplication+Extension.m */; };
-		C2E36F69221B9102001CA758 /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F3E221B9102001CA758 /* NSObject+Swizzle.m */; };
-		C2E36F6A221B9102001CA758 /* UIImageView+YMWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F40221B9102001CA758 /* UIImageView+YMWebCache.m */; };
-		C2E36F6B221B9102001CA758 /* NSArray+YMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F42221B9102001CA758 /* NSArray+YMAdd.m */; };
-		C2E36F6C221B9102001CA758 /* UIButton+SGImagePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F49221B9102001CA758 /* UIButton+SGImagePosition.m */; };
-		C2E36F6D221B9102001CA758 /* NSObject+YMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F4E221B9102001CA758 /* NSObject+YMAdd.m */; };
-		C2E36F6E221B9102001CA758 /* UIView+YMFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F53221B9102001CA758 /* UIView+YMFrame.m */; };
-		C2E36F6F221B9102001CA758 /* UITableView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F56221B9102001CA758 /* UITableView+CornerRadius.m */; };
-		C2E36F70221B9102001CA758 /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F58221B9102001CA758 /* UIButton+Badge.m */; };
-		C2E36F71221B9102001CA758 /* NSString+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F59221B9102001CA758 /* NSString+YYAdd.m */; };
-		C2E36F72221B9102001CA758 /* UIWindow+YMWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F5B221B9102001CA758 /* UIWindow+YMWindow.m */; };
-		C2E36F73221B9102001CA758 /* UINavigationController+statusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F5C221B9102001CA758 /* UINavigationController+statusBar.m */; };
-		C2E36F74221B9102001CA758 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F5D221B9102001CA758 /* UIBarButtonItem+Extension.m */; };
-		C2E36F75221B9102001CA758 /* NSDate+YMDate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F5E221B9102001CA758 /* NSDate+YMDate.m */; };
-		C2E36F76221B9102001CA758 /* UIColor+YMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F5F221B9102001CA758 /* UIColor+YMColor.m */; };
-		C2E36F77221B9102001CA758 /* UIImage+YMImg.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F60221B9102001CA758 /* UIImage+YMImg.m */; };
-		C2E36F78221B9102001CA758 /* NSDictionary+YMDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F61221B9102001CA758 /* NSDictionary+YMDictionary.m */; };
-		C2E36F79221B9102001CA758 /* UIViewController+YMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F62221B9102001CA758 /* UIViewController+YMAdd.m */; };
-		C2E36F7A221B9102001CA758 /* NSString+YMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F63221B9102001CA758 /* NSString+YMAdd.m */; };
-		C2E36F7B221B9102001CA758 /* UIView+Radius.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F65221B9102001CA758 /* UIView+Radius.m */; };
-		C2E36F7C221B9102001CA758 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F66221B9102001CA758 /* UINavigationBar+Awesome.m */; };
 		C2E36F7F221B94CB001CA758 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E36F7E221B94CB001CA758 /* Storyboard.storyboard */; };
 		C2E36F91221BADE0001CA758 /* TestTabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F90221BADE0001CA758 /* TestTabelViewController.m */; };
 		C2E36F96221BB249001CA758 /* not_network.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E36F93221BB248001CA758 /* not_network.png */; };
@@ -101,6 +79,30 @@
 		C2E36FBE221BE91A001CA758 /* MVPView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36FBD221BE91A001CA758 /* MVPView.m */; };
 		C2E36FC1221BF21E001CA758 /* MVPAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36FC0221BF21E001CA758 /* MVPAdapter.m */; };
 		C2E8608C2046ACFF001E4746 /* CombiningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E8608B2046ACFF001E4746 /* CombiningViewController.m */; };
+		C2F44C1F2236403500A1195F /* YMBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F44C1E2236403500A1195F /* YMBaseCollectionViewController.m */; };
+		C2F44C222236445D00A1195F /* TestCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F44C212236445D00A1195F /* TestCollectionViewController.m */; };
+		C2F832BC22388E0000D8AF90 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F8329022388E0000D8AF90 /* UIAlertController+Blocks.m */; };
+		C2F832BD22388E0000D8AF90 /* UIApplication+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F8329222388E0000D8AF90 /* UIApplication+Extension.m */; };
+		C2F832BE22388E0000D8AF90 /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F8329322388E0000D8AF90 /* NSObject+Swizzle.m */; };
+		C2F832BF22388E0000D8AF90 /* UIImageView+YMWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F8329522388E0000D8AF90 /* UIImageView+YMWebCache.m */; };
+		C2F832C022388E0000D8AF90 /* NSArray+YMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F8329722388E0000D8AF90 /* NSArray+YMAdd.m */; };
+		C2F832C122388E0000D8AF90 /* UIButton+SGImagePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F8329E22388E0000D8AF90 /* UIButton+SGImagePosition.m */; };
+		C2F832C222388E0000D8AF90 /* NSObject+YMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F832A322388E0000D8AF90 /* NSObject+YMAdd.m */; };
+		C2F832C322388E0000D8AF90 /* UIView+YMFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F832A822388E0000D8AF90 /* UIView+YMFrame.m */; };
+		C2F832C422388E0000D8AF90 /* UITableView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F832AB22388E0000D8AF90 /* UITableView+CornerRadius.m */; };
+		C2F832C522388E0000D8AF90 /* UIButton+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F832AD22388E0000D8AF90 /* UIButton+Badge.m */; };
+		C2F832C622388E0000D8AF90 /* NSString+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F832AE22388E0000D8AF90 /* NSString+YYAdd.m */; };
+		C2F832C722388E0000D8AF90 /* UIWindow+YMWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F832B022388E0000D8AF90 /* UIWindow+YMWindow.m */; };
+		C2F832C822388E0000D8AF90 /* UINavigationController+statusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F832B122388E0000D8AF90 /* UINavigationController+statusBar.m */; };
+		C2F832C922388E0000D8AF90 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F832B222388E0000D8AF90 /* UIBarButtonItem+Extension.m */; };
+		C2F832CA22388E0000D8AF90 /* NSDate+YMDate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F832B322388E0000D8AF90 /* NSDate+YMDate.m */; };
+		C2F832CB22388E0000D8AF90 /* UIColor+YMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F832B422388E0000D8AF90 /* UIColor+YMColor.m */; };
+		C2F832CC22388E0000D8AF90 /* UIImage+YMImg.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F832B522388E0000D8AF90 /* UIImage+YMImg.m */; };
+		C2F832CD22388E0000D8AF90 /* NSDictionary+YMDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F832B622388E0000D8AF90 /* NSDictionary+YMDictionary.m */; };
+		C2F832CE22388E0000D8AF90 /* UIViewController+YMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F832B722388E0000D8AF90 /* UIViewController+YMAdd.m */; };
+		C2F832CF22388E0000D8AF90 /* NSString+YMAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F832B822388E0000D8AF90 /* NSString+YMAdd.m */; };
+		C2F832D022388E0000D8AF90 /* UIView+Radius.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F832BA22388E0000D8AF90 /* UIView+Radius.m */; };
+		C2F832D122388E0000D8AF90 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F832BB22388E0000D8AF90 /* UINavigationBar+Awesome.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -235,50 +237,6 @@
 		C2BA7DF5201F967500B523E2 /* CViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CViewModel.h; sourceTree = "<group>"; };
 		C2BA7DF6201F967500B523E2 /* CViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CViewModel.m; sourceTree = "<group>"; };
 		C2BB75211F1DA8B200723BB0 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		C2E36F3B221B9102001CA758 /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
-		C2E36F3C221B9102001CA758 /* UIView+YMFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YMFrame.h"; sourceTree = "<group>"; };
-		C2E36F3D221B9102001CA758 /* UIApplication+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Extension.m"; sourceTree = "<group>"; };
-		C2E36F3E221B9102001CA758 /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
-		C2E36F3F221B9102001CA758 /* UIButton+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Badge.h"; sourceTree = "<group>"; };
-		C2E36F40221B9102001CA758 /* UIImageView+YMWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+YMWebCache.m"; sourceTree = "<group>"; };
-		C2E36F41221B9102001CA758 /* UITableView+CornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+CornerRadius.h"; sourceTree = "<group>"; };
-		C2E36F42221B9102001CA758 /* NSArray+YMAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YMAdd.m"; sourceTree = "<group>"; };
-		C2E36F43221B9102001CA758 /* UIImage+YMImg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YMImg.h"; sourceTree = "<group>"; };
-		C2E36F44221B9102001CA758 /* UIColor+YMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YMColor.h"; sourceTree = "<group>"; };
-		C2E36F45221B9102001CA758 /* NSDate+YMDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YMDate.h"; sourceTree = "<group>"; };
-		C2E36F46221B9102001CA758 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
-		C2E36F47221B9102001CA758 /* UINavigationController+statusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+statusBar.h"; sourceTree = "<group>"; };
-		C2E36F48221B9102001CA758 /* UIWindow+YMWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+YMWindow.h"; sourceTree = "<group>"; };
-		C2E36F49221B9102001CA758 /* UIButton+SGImagePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SGImagePosition.m"; sourceTree = "<group>"; };
-		C2E36F4A221B9102001CA758 /* NSString+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YYAdd.h"; sourceTree = "<group>"; };
-		C2E36F4B221B9102001CA758 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
-		C2E36F4C221B9102001CA758 /* UIView+Radius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Radius.h"; sourceTree = "<group>"; };
-		C2E36F4D221B9102001CA758 /* NSString+YMAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YMAdd.h"; sourceTree = "<group>"; };
-		C2E36F4E221B9102001CA758 /* NSObject+YMAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YMAdd.m"; sourceTree = "<group>"; };
-		C2E36F4F221B9102001CA758 /* UIViewController+YMAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YMAdd.h"; sourceTree = "<group>"; };
-		C2E36F50221B9102001CA758 /* NSDictionary+YMDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YMDictionary.h"; sourceTree = "<group>"; };
-		C2E36F51221B9102001CA758 /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
-		C2E36F52221B9102001CA758 /* UIApplication+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Extension.h"; sourceTree = "<group>"; };
-		C2E36F53221B9102001CA758 /* UIView+YMFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YMFrame.m"; sourceTree = "<group>"; };
-		C2E36F54221B9102001CA758 /* UIAlertController+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Blocks.h"; sourceTree = "<group>"; };
-		C2E36F55221B9102001CA758 /* NSArray+YMAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YMAdd.h"; sourceTree = "<group>"; };
-		C2E36F56221B9102001CA758 /* UITableView+CornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CornerRadius.m"; sourceTree = "<group>"; };
-		C2E36F57221B9102001CA758 /* UIImageView+YMWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+YMWebCache.h"; sourceTree = "<group>"; };
-		C2E36F58221B9102001CA758 /* UIButton+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Badge.m"; sourceTree = "<group>"; };
-		C2E36F59221B9102001CA758 /* NSString+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYAdd.m"; sourceTree = "<group>"; };
-		C2E36F5A221B9102001CA758 /* UIButton+SGImagePosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SGImagePosition.h"; sourceTree = "<group>"; };
-		C2E36F5B221B9102001CA758 /* UIWindow+YMWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+YMWindow.m"; sourceTree = "<group>"; };
-		C2E36F5C221B9102001CA758 /* UINavigationController+statusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+statusBar.m"; sourceTree = "<group>"; };
-		C2E36F5D221B9102001CA758 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
-		C2E36F5E221B9102001CA758 /* NSDate+YMDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+YMDate.m"; sourceTree = "<group>"; };
-		C2E36F5F221B9102001CA758 /* UIColor+YMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YMColor.m"; sourceTree = "<group>"; };
-		C2E36F60221B9102001CA758 /* UIImage+YMImg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YMImg.m"; sourceTree = "<group>"; };
-		C2E36F61221B9102001CA758 /* NSDictionary+YMDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YMDictionary.m"; sourceTree = "<group>"; };
-		C2E36F62221B9102001CA758 /* UIViewController+YMAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YMAdd.m"; sourceTree = "<group>"; };
-		C2E36F63221B9102001CA758 /* NSString+YMAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YMAdd.m"; sourceTree = "<group>"; };
-		C2E36F64221B9102001CA758 /* NSObject+YMAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YMAdd.h"; sourceTree = "<group>"; };
-		C2E36F65221B9102001CA758 /* UIView+Radius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Radius.m"; sourceTree = "<group>"; };
-		C2E36F66221B9102001CA758 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		C2E36F7E221B94CB001CA758 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		C2E36F8F221BADE0001CA758 /* TestTabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTabelViewController.h; sourceTree = "<group>"; };
 		C2E36F90221BADE0001CA758 /* TestTabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTabelViewController.m; sourceTree = "<group>"; };
@@ -303,6 +261,54 @@
 		C2E36FC0221BF21E001CA758 /* MVPAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVPAdapter.m; sourceTree = "<group>"; };
 		C2E8608A2046ACFF001E4746 /* CombiningViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CombiningViewController.h; sourceTree = "<group>"; };
 		C2E8608B2046ACFF001E4746 /* CombiningViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CombiningViewController.m; sourceTree = "<group>"; };
+		C2F44C1D2236403500A1195F /* YMBaseCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMBaseCollectionViewController.h; sourceTree = "<group>"; };
+		C2F44C1E2236403500A1195F /* YMBaseCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMBaseCollectionViewController.m; sourceTree = "<group>"; };
+		C2F44C202236445D00A1195F /* TestCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCollectionViewController.h; sourceTree = "<group>"; };
+		C2F44C212236445D00A1195F /* TestCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCollectionViewController.m; sourceTree = "<group>"; };
+		C2F8329022388E0000D8AF90 /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
+		C2F8329122388E0000D8AF90 /* UIView+YMFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YMFrame.h"; sourceTree = "<group>"; };
+		C2F8329222388E0000D8AF90 /* UIApplication+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Extension.m"; sourceTree = "<group>"; };
+		C2F8329322388E0000D8AF90 /* NSObject+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
+		C2F8329422388E0000D8AF90 /* UIButton+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Badge.h"; sourceTree = "<group>"; };
+		C2F8329522388E0000D8AF90 /* UIImageView+YMWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+YMWebCache.m"; sourceTree = "<group>"; };
+		C2F8329622388E0000D8AF90 /* UITableView+CornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+CornerRadius.h"; sourceTree = "<group>"; };
+		C2F8329722388E0000D8AF90 /* NSArray+YMAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YMAdd.m"; sourceTree = "<group>"; };
+		C2F8329822388E0000D8AF90 /* UIImage+YMImg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YMImg.h"; sourceTree = "<group>"; };
+		C2F8329922388E0000D8AF90 /* UIColor+YMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YMColor.h"; sourceTree = "<group>"; };
+		C2F8329A22388E0000D8AF90 /* NSDate+YMDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+YMDate.h"; sourceTree = "<group>"; };
+		C2F8329B22388E0000D8AF90 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		C2F8329C22388E0000D8AF90 /* UINavigationController+statusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+statusBar.h"; sourceTree = "<group>"; };
+		C2F8329D22388E0000D8AF90 /* UIWindow+YMWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+YMWindow.h"; sourceTree = "<group>"; };
+		C2F8329E22388E0000D8AF90 /* UIButton+SGImagePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SGImagePosition.m"; sourceTree = "<group>"; };
+		C2F8329F22388E0000D8AF90 /* NSString+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YYAdd.h"; sourceTree = "<group>"; };
+		C2F832A022388E0000D8AF90 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		C2F832A122388E0000D8AF90 /* UIView+Radius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Radius.h"; sourceTree = "<group>"; };
+		C2F832A222388E0000D8AF90 /* NSString+YMAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YMAdd.h"; sourceTree = "<group>"; };
+		C2F832A322388E0000D8AF90 /* NSObject+YMAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YMAdd.m"; sourceTree = "<group>"; };
+		C2F832A422388E0000D8AF90 /* UIViewController+YMAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+YMAdd.h"; sourceTree = "<group>"; };
+		C2F832A522388E0000D8AF90 /* NSDictionary+YMDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+YMDictionary.h"; sourceTree = "<group>"; };
+		C2F832A622388E0000D8AF90 /* NSObject+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
+		C2F832A722388E0000D8AF90 /* UIApplication+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Extension.h"; sourceTree = "<group>"; };
+		C2F832A822388E0000D8AF90 /* UIView+YMFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YMFrame.m"; sourceTree = "<group>"; };
+		C2F832A922388E0000D8AF90 /* UIAlertController+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Blocks.h"; sourceTree = "<group>"; };
+		C2F832AA22388E0000D8AF90 /* NSArray+YMAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YMAdd.h"; sourceTree = "<group>"; };
+		C2F832AB22388E0000D8AF90 /* UITableView+CornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CornerRadius.m"; sourceTree = "<group>"; };
+		C2F832AC22388E0000D8AF90 /* UIImageView+YMWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+YMWebCache.h"; sourceTree = "<group>"; };
+		C2F832AD22388E0000D8AF90 /* UIButton+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Badge.m"; sourceTree = "<group>"; };
+		C2F832AE22388E0000D8AF90 /* NSString+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YYAdd.m"; sourceTree = "<group>"; };
+		C2F832AF22388E0000D8AF90 /* UIButton+SGImagePosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+SGImagePosition.h"; sourceTree = "<group>"; };
+		C2F832B022388E0000D8AF90 /* UIWindow+YMWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+YMWindow.m"; sourceTree = "<group>"; };
+		C2F832B122388E0000D8AF90 /* UINavigationController+statusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+statusBar.m"; sourceTree = "<group>"; };
+		C2F832B222388E0000D8AF90 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		C2F832B322388E0000D8AF90 /* NSDate+YMDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+YMDate.m"; sourceTree = "<group>"; };
+		C2F832B422388E0000D8AF90 /* UIColor+YMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YMColor.m"; sourceTree = "<group>"; };
+		C2F832B522388E0000D8AF90 /* UIImage+YMImg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YMImg.m"; sourceTree = "<group>"; };
+		C2F832B622388E0000D8AF90 /* NSDictionary+YMDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+YMDictionary.m"; sourceTree = "<group>"; };
+		C2F832B722388E0000D8AF90 /* UIViewController+YMAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+YMAdd.m"; sourceTree = "<group>"; };
+		C2F832B822388E0000D8AF90 /* NSString+YMAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YMAdd.m"; sourceTree = "<group>"; };
+		C2F832B922388E0000D8AF90 /* NSObject+YMAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YMAdd.h"; sourceTree = "<group>"; };
+		C2F832BA22388E0000D8AF90 /* UIView+Radius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Radius.m"; sourceTree = "<group>"; };
+		C2F832BB22388E0000D8AF90 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
 		D0FAD0F557F9F997798C3C77 /* Pods_RACDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF07DDA3E5186A0F647406F /* Pods_RACDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -491,6 +497,8 @@
 				C28804A4223107D200B79D23 /* YMBaseTableViewController.m */,
 				C28804A5223107D200B79D23 /* YMBlankPageStyleHelper.h */,
 				C28804A6223107D200B79D23 /* YMBlankPageStyleHelper.m */,
+				C2F44C1D2236403500A1195F /* YMBaseCollectionViewController.h */,
+				C2F44C1E2236403500A1195F /* YMBaseCollectionViewController.m */,
 			);
 			path = YMBaseView;
 			sourceTree = "<group>";
@@ -516,9 +524,9 @@
 		C28A22FA1FA9D4680035B5DF /* YMHelper */ = {
 			isa = PBXGroup;
 			children = (
+				C2F8328F22388E0000D8AF90 /* YMCategory */,
 				C2E36F99221BB3E6001CA758 /* TopNewView */,
 				C28804A22231077F00B79D23 /* YMBaseView */,
-				C2E36F3A221B9102001CA758 /* YMCategory */,
 				C2A5F1781FAC407400B96A75 /* YMCommon */,
 				C28A23701FA9D7180035B5DF /* MJDIYRefresh */,
 				C28A232B1FA9D55F0035B5DF /* YMConst */,
@@ -696,58 +704,6 @@
 			path = RACCommandDemo;
 			sourceTree = "<group>";
 		};
-		C2E36F3A221B9102001CA758 /* YMCategory */ = {
-			isa = PBXGroup;
-			children = (
-				C2E36F55221B9102001CA758 /* NSArray+YMAdd.h */,
-				C2E36F42221B9102001CA758 /* NSArray+YMAdd.m */,
-				C2E36F45221B9102001CA758 /* NSDate+YMDate.h */,
-				C2E36F5E221B9102001CA758 /* NSDate+YMDate.m */,
-				C2E36F50221B9102001CA758 /* NSDictionary+YMDictionary.h */,
-				C2E36F61221B9102001CA758 /* NSDictionary+YMDictionary.m */,
-				C2E36F51221B9102001CA758 /* NSObject+Swizzle.h */,
-				C2E36F3E221B9102001CA758 /* NSObject+Swizzle.m */,
-				C2E36F64221B9102001CA758 /* NSObject+YMAdd.h */,
-				C2E36F4E221B9102001CA758 /* NSObject+YMAdd.m */,
-				C2E36F4D221B9102001CA758 /* NSString+YMAdd.h */,
-				C2E36F63221B9102001CA758 /* NSString+YMAdd.m */,
-				C2E36F4A221B9102001CA758 /* NSString+YYAdd.h */,
-				C2E36F59221B9102001CA758 /* NSString+YYAdd.m */,
-				C2E36F54221B9102001CA758 /* UIAlertController+Blocks.h */,
-				C2E36F3B221B9102001CA758 /* UIAlertController+Blocks.m */,
-				C2E36F52221B9102001CA758 /* UIApplication+Extension.h */,
-				C2E36F3D221B9102001CA758 /* UIApplication+Extension.m */,
-				C2E36F46221B9102001CA758 /* UIBarButtonItem+Extension.h */,
-				C2E36F5D221B9102001CA758 /* UIBarButtonItem+Extension.m */,
-				C2E36F3F221B9102001CA758 /* UIButton+Badge.h */,
-				C2E36F58221B9102001CA758 /* UIButton+Badge.m */,
-				C2E36F5A221B9102001CA758 /* UIButton+SGImagePosition.h */,
-				C2E36F49221B9102001CA758 /* UIButton+SGImagePosition.m */,
-				C2E36F44221B9102001CA758 /* UIColor+YMColor.h */,
-				C2E36F5F221B9102001CA758 /* UIColor+YMColor.m */,
-				C2E36F43221B9102001CA758 /* UIImage+YMImg.h */,
-				C2E36F60221B9102001CA758 /* UIImage+YMImg.m */,
-				C2E36F57221B9102001CA758 /* UIImageView+YMWebCache.h */,
-				C2E36F40221B9102001CA758 /* UIImageView+YMWebCache.m */,
-				C2E36F4B221B9102001CA758 /* UINavigationBar+Awesome.h */,
-				C2E36F66221B9102001CA758 /* UINavigationBar+Awesome.m */,
-				C2E36F47221B9102001CA758 /* UINavigationController+statusBar.h */,
-				C2E36F5C221B9102001CA758 /* UINavigationController+statusBar.m */,
-				C2E36F41221B9102001CA758 /* UITableView+CornerRadius.h */,
-				C2E36F56221B9102001CA758 /* UITableView+CornerRadius.m */,
-				C2E36F4C221B9102001CA758 /* UIView+Radius.h */,
-				C2E36F65221B9102001CA758 /* UIView+Radius.m */,
-				C2E36F3C221B9102001CA758 /* UIView+YMFrame.h */,
-				C2E36F53221B9102001CA758 /* UIView+YMFrame.m */,
-				C2E36F4F221B9102001CA758 /* UIViewController+YMAdd.h */,
-				C2E36F62221B9102001CA758 /* UIViewController+YMAdd.m */,
-				C2E36F48221B9102001CA758 /* UIWindow+YMWindow.h */,
-				C2E36F5B221B9102001CA758 /* UIWindow+YMWindow.m */,
-			);
-			name = YMCategory;
-			path = ../../../../../HUJU/HJStoreB/HJStoreB/HJStoreB/Classes/YMHelpers/YMCategory;
-			sourceTree = "<group>";
-		};
 		C2E36F7D221B936F001CA758 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -764,6 +720,8 @@
 				C2E36F90221BADE0001CA758 /* TestTabelViewController.m */,
 				C2E36FAC221BD62F001CA758 /* Tabbar1ViewController.h */,
 				C2E36FAD221BD62F001CA758 /* Tabbar1ViewController.m */,
+				C2F44C202236445D00A1195F /* TestCollectionViewController.h */,
+				C2F44C212236445D00A1195F /* TestCollectionViewController.m */,
 			);
 			path = Tabbar1;
 			sourceTree = "<group>";
@@ -813,6 +771,57 @@
 				C2E8608B2046ACFF001E4746 /* CombiningViewController.m */,
 			);
 			path = "RAC-Combining";
+			sourceTree = "<group>";
+		};
+		C2F8328F22388E0000D8AF90 /* YMCategory */ = {
+			isa = PBXGroup;
+			children = (
+				C2F8329022388E0000D8AF90 /* UIAlertController+Blocks.m */,
+				C2F8329122388E0000D8AF90 /* UIView+YMFrame.h */,
+				C2F8329222388E0000D8AF90 /* UIApplication+Extension.m */,
+				C2F8329322388E0000D8AF90 /* NSObject+Swizzle.m */,
+				C2F8329422388E0000D8AF90 /* UIButton+Badge.h */,
+				C2F8329522388E0000D8AF90 /* UIImageView+YMWebCache.m */,
+				C2F8329622388E0000D8AF90 /* UITableView+CornerRadius.h */,
+				C2F8329722388E0000D8AF90 /* NSArray+YMAdd.m */,
+				C2F8329822388E0000D8AF90 /* UIImage+YMImg.h */,
+				C2F8329922388E0000D8AF90 /* UIColor+YMColor.h */,
+				C2F8329A22388E0000D8AF90 /* NSDate+YMDate.h */,
+				C2F8329B22388E0000D8AF90 /* UIBarButtonItem+Extension.h */,
+				C2F8329C22388E0000D8AF90 /* UINavigationController+statusBar.h */,
+				C2F8329D22388E0000D8AF90 /* UIWindow+YMWindow.h */,
+				C2F8329E22388E0000D8AF90 /* UIButton+SGImagePosition.m */,
+				C2F8329F22388E0000D8AF90 /* NSString+YYAdd.h */,
+				C2F832A022388E0000D8AF90 /* UINavigationBar+Awesome.h */,
+				C2F832A122388E0000D8AF90 /* UIView+Radius.h */,
+				C2F832A222388E0000D8AF90 /* NSString+YMAdd.h */,
+				C2F832A322388E0000D8AF90 /* NSObject+YMAdd.m */,
+				C2F832A422388E0000D8AF90 /* UIViewController+YMAdd.h */,
+				C2F832A522388E0000D8AF90 /* NSDictionary+YMDictionary.h */,
+				C2F832A622388E0000D8AF90 /* NSObject+Swizzle.h */,
+				C2F832A722388E0000D8AF90 /* UIApplication+Extension.h */,
+				C2F832A822388E0000D8AF90 /* UIView+YMFrame.m */,
+				C2F832A922388E0000D8AF90 /* UIAlertController+Blocks.h */,
+				C2F832AA22388E0000D8AF90 /* NSArray+YMAdd.h */,
+				C2F832AB22388E0000D8AF90 /* UITableView+CornerRadius.m */,
+				C2F832AC22388E0000D8AF90 /* UIImageView+YMWebCache.h */,
+				C2F832AD22388E0000D8AF90 /* UIButton+Badge.m */,
+				C2F832AE22388E0000D8AF90 /* NSString+YYAdd.m */,
+				C2F832AF22388E0000D8AF90 /* UIButton+SGImagePosition.h */,
+				C2F832B022388E0000D8AF90 /* UIWindow+YMWindow.m */,
+				C2F832B122388E0000D8AF90 /* UINavigationController+statusBar.m */,
+				C2F832B222388E0000D8AF90 /* UIBarButtonItem+Extension.m */,
+				C2F832B322388E0000D8AF90 /* NSDate+YMDate.m */,
+				C2F832B422388E0000D8AF90 /* UIColor+YMColor.m */,
+				C2F832B522388E0000D8AF90 /* UIImage+YMImg.m */,
+				C2F832B622388E0000D8AF90 /* NSDictionary+YMDictionary.m */,
+				C2F832B722388E0000D8AF90 /* UIViewController+YMAdd.m */,
+				C2F832B822388E0000D8AF90 /* NSString+YMAdd.m */,
+				C2F832B922388E0000D8AF90 /* NSObject+YMAdd.h */,
+				C2F832BA22388E0000D8AF90 /* UIView+Radius.m */,
+				C2F832BB22388E0000D8AF90 /* UINavigationBar+Awesome.m */,
+			);
+			path = YMCategory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1067,14 +1076,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2F832BC22388E0000D8AF90 /* UIAlertController+Blocks.m in Sources */,
+				C2F832CC22388E0000D8AF90 /* UIImage+YMImg.m in Sources */,
+				C2F832C122388E0000D8AF90 /* UIButton+SGImagePosition.m in Sources */,
+				C2F832CA22388E0000D8AF90 /* NSDate+YMDate.m in Sources */,
 				C2E36FAE221BD62F001CA758 /* Tabbar1ViewController.m in Sources */,
 				C2BA7DF7201F967500B523E2 /* CViewModel.m in Sources */,
 				C2036F96202C321300187160 /* DropdownItem.m in Sources */,
-				C2E36F71221B9102001CA758 /* NSString+YYAdd.m in Sources */,
+				C2F44C222236445D00A1195F /* TestCollectionViewController.m in Sources */,
 				C28A23811FA9D7210035B5DF /* FLAnimatedImageView+WebCache.m in Sources */,
 				C2E36FBB221BE4F8001CA758 /* MVPPresent.m in Sources */,
 				C28804A7223107D200B79D23 /* YMBaseTableViewController.m in Sources */,
-				C2E36F67221B9102001CA758 /* UIAlertController+Blocks.m in Sources */,
 				C2E36F9C221BB3E6001CA758 /* TopNewView.m in Sources */,
 				C28A22C31FA9A7F70035B5DF /* LoactionViewController.m in Sources */,
 				C20B3A37213781D100EC7447 /* TableViewController_nav.m in Sources */,
@@ -1082,26 +1094,27 @@
 				C2E36FC1221BF21E001CA758 /* MVPAdapter.m in Sources */,
 				C210E7531F5D202E0059A8B7 /* KLTNavigationController.m in Sources */,
 				C2E36FBE221BE91A001CA758 /* MVPView.m in Sources */,
+				C2F832BF22388E0000D8AF90 /* UIImageView+YMWebCache.m in Sources */,
 				C2036FA9202C7CFB00187160 /* UIView+forYMScrollView.m in Sources */,
-				C2E36F76221B9102001CA758 /* UIColor+YMColor.m in Sources */,
-				C2E36F77221B9102001CA758 /* UIImage+YMImg.m in Sources */,
-				C2E36F79221B9102001CA758 /* UIViewController+YMAdd.m in Sources */,
+				C2F832C422388E0000D8AF90 /* UITableView+CornerRadius.m in Sources */,
 				C293415E1EC45997003FB9A0 /* User.m in Sources */,
+				C2F832C222388E0000D8AF90 /* NSObject+YMAdd.m in Sources */,
 				C2A5F1BB1FAC40E800B96A75 /* YMBaseTextEditController.m in Sources */,
 				C23ED3441FA458D300832DE7 /* RGBViewController.m in Sources */,
+				C2F832C622388E0000D8AF90 /* NSString+YYAdd.m in Sources */,
 				C2036FAD202C7DB800187160 /* ScrollViewController.m in Sources */,
 				C2036F9B202C32CC00187160 /* DropdownMenuViewController.m in Sources */,
 				C2E36FB8221BE42B001CA758 /* MVPCell.m in Sources */,
 				C210E7551F5D20360059A8B7 /* README.md in Sources */,
 				C28A23381FA9D6C60035B5DF /* YMTextView.m in Sources */,
 				C2036F94202C321300187160 /* ConditionDoubleTableView.m in Sources */,
-				C2E36F75221B9102001CA758 /* NSDate+YMDate.m in Sources */,
 				C28A233F1FA9D6D00035B5DF /* pickerControl.m in Sources */,
 				C28A23771FA9D7180035B5DF /* MJDIYAutoFooter.m in Sources */,
 				C2642AA820302D670016009D /* DropdownMenuViewController2.m in Sources */,
 				C2036FA7202C7CFB00187160 /* YMScrollViewUpDown.m in Sources */,
-				C2E36F78221B9102001CA758 /* NSDictionary+YMDictionary.m in Sources */,
-				C2E36F6F221B9102001CA758 /* UITableView+CornerRadius.m in Sources */,
+				C2F44C1F2236403500A1195F /* YMBaseCollectionViewController.m in Sources */,
+				C2F832C722388E0000D8AF90 /* UIWindow+YMWindow.m in Sources */,
+				C2F832C922388E0000D8AF90 /* UIBarButtonItem+Extension.m in Sources */,
 				C29341661EC482EB003FB9A0 /* TableViewCell.m in Sources */,
 				C276EAD42016C952007717A2 /* YMBottomPopView.m in Sources */,
 				C2A5F1C01FAC40E800B96A75 /* YMBaseWebViewController.m in Sources */,
@@ -1109,38 +1122,36 @@
 				C24F936F2003780E00CD7015 /* LoginViewController.m in Sources */,
 				C2036FA8202C7CFB00187160 /* NSTimer+forYMScrollerView.m in Sources */,
 				C29341311EC43D89003FB9A0 /* ViewController.m in Sources */,
+				C2F832D022388E0000D8AF90 /* UIView+Radius.m in Sources */,
 				C28A22C61FA9A9F10035B5DF /* YMLocationManager.m in Sources */,
-				C2E36F6C221B9102001CA758 /* UIButton+SGImagePosition.m in Sources */,
-				C2E36F6A221B9102001CA758 /* UIImageView+YMWebCache.m in Sources */,
 				C28A23781FA9D7180035B5DF /* MJDIYHeader.m in Sources */,
 				C2E8608C2046ACFF001E4746 /* CombiningViewController.m in Sources */,
-				C2E36F6D221B9102001CA758 /* NSObject+YMAdd.m in Sources */,
-				C2E36F73221B9102001CA758 /* UINavigationController+statusBar.m in Sources */,
-				C2E36F74221B9102001CA758 /* UIBarButtonItem+Extension.m in Sources */,
+				C2F832BE22388E0000D8AF90 /* NSObject+Swizzle.m in Sources */,
+				C2F832C822388E0000D8AF90 /* UINavigationController+statusBar.m in Sources */,
+				C2F832D122388E0000D8AF90 /* UINavigationBar+Awesome.m in Sources */,
 				C2036F92202C321300187160 /* DropdownMenu.m in Sources */,
 				C28A23791FA9D7180035B5DF /* MJDIYBackFooter.m in Sources */,
-				C2E36F6B221B9102001CA758 /* NSArray+YMAdd.m in Sources */,
 				C293412E1EC43D89003FB9A0 /* AppDelegate.m in Sources */,
 				C2E36F91221BADE0001CA758 /* TestTabelViewController.m in Sources */,
+				C2F832C322388E0000D8AF90 /* UIView+YMFrame.m in Sources */,
 				C2036F93202C321300187160 /* DropdownButton.m in Sources */,
-				C2E36F70221B9102001CA758 /* UIButton+Badge.m in Sources */,
 				C28804A8223107D200B79D23 /* YMBlankPageStyleHelper.m in Sources */,
-				C2E36F68221B9102001CA758 /* UIApplication+Extension.m in Sources */,
+				C2F832C522388E0000D8AF90 /* UIButton+Badge.m in Sources */,
+				C2F832CF22388E0000D8AF90 /* NSString+YMAdd.m in Sources */,
 				C2E36FB2221BE19A001CA758 /* MVPTableViewController.m in Sources */,
+				C2F832CD22388E0000D8AF90 /* NSDictionary+YMDictionary.m in Sources */,
+				C2F832BD22388E0000D8AF90 /* UIApplication+Extension.m in Sources */,
 				C29341631EC48233003FB9A0 /* TableViewController.m in Sources */,
 				C210E7521F5D202E0059A8B7 /* AnimationContoller.m in Sources */,
-				C2E36F7C221B9102001CA758 /* UINavigationBar+Awesome.m in Sources */,
-				C2E36F7A221B9102001CA758 /* NSString+YMAdd.m in Sources */,
+				C2F832C022388E0000D8AF90 /* NSArray+YMAdd.m in Sources */,
 				C28A233E1FA9D6D00035B5DF /* YMDatePickerView.m in Sources */,
 				C23F434A20DB666A00E9EF2C /* TextViewController.m in Sources */,
-				C2E36F69221B9102001CA758 /* NSObject+Swizzle.m in Sources */,
-				C2E36F72221B9102001CA758 /* UIWindow+YMWindow.m in Sources */,
-				C2E36F7B221B9102001CA758 /* UIView+Radius.m in Sources */,
-				C2E36F6E221B9102001CA758 /* UIView+YMFrame.m in Sources */,
+				C2F832CB22388E0000D8AF90 /* UIColor+YMColor.m in Sources */,
 				C2A5F1C31FAC40E800B96A75 /* YMBaseTextViewController.m in Sources */,
 				C2A5F1C61FAC40E800B96A75 /* YMTabBarController.m in Sources */,
 				C24F93722003782300CD7015 /* LoginViewModel.m in Sources */,
 				C293412B1EC43D89003FB9A0 /* main.m in Sources */,
+				C2F832CE22388E0000D8AF90 /* UIViewController+YMAdd.m in Sources */,
 				C2BA7DF3201F85DC00B523E2 /* RACCommandController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

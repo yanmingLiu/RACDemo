@@ -20,6 +20,7 @@
     [super viewDidLoad];
 
     _dataArray = [NSMutableArray arrayWithObjects:@"TestTabelViewController",
+                  @"TestCollectionViewController",
                   @"MVPTableViewController",
                   nil];
 

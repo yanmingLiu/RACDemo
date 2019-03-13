@@ -1,22 +1,21 @@
 //
-//  YMBaseTableViewController.m
-//  Example
+//  YMBaseCollectionViewController.m
+//  RACDemo
 //
-//  Created by lym on 2017/11/29.
-//  Copyright © 2017年 liuyanming. All rights reserved.
+//  Created by lym on 2019/3/11.
 //
 
-#import "YMBaseTableViewController.h"
+#import "YMBaseCollectionViewController.h"
 
-@interface YMBaseTableViewController ()
+@interface YMBaseCollectionViewController ()
 
 @end
 
-@implementation YMBaseTableViewController
+@implementation YMBaseCollectionViewController
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -27,7 +26,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     self.view.backgroundColor = [UIColor whiteColor];
 
     if (@available(iOS 11.0, *)) {
@@ -37,46 +35,37 @@
     }
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
 
 
 }
 
-// MARK: - 初始化tableview
 
-- (void)setupTableView {
-    return [self setupTableViewWithStyle:UITableViewStylePlain];
+// MARK: - 初始化collectionView
+
+- (void)setupFlowLayoutCollectionView {
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    //设置滚动方向
+    [layout setScrollDirection:UICollectionViewScrollDirectionVertical];
+
+    [self setupCollectionViewWithLayout:layout];
 }
 
-- (void)setupTableViewWithStyle:(UITableViewStyle)tableViewStyle{
+- (void)setupCollectionViewWithLayout:(UICollectionViewLayout *)layout {
+    _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+    _collectionView.backgroundColor = [UIColor whiteColor];
+    _collectionView.showsVerticalScrollIndicator = NO;
+    _collectionView.showsHorizontalScrollIndicator = NO;
 
-    _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:tableViewStyle];
-    _tableView.backgroundColor = [UIColor colorWithRed:242.0/255 green:242.0/255 blue:242.0/255 alpha:1];
+    _collectionView.emptyDataSetSource = self;
+    _collectionView.emptyDataSetDelegate = self;
 
-    _tableView.separatorStyle = UITableViewCellSelectionStyleNone;
-    _tableView.separatorColor = [UIColor colorWithRed:242.0/255 green:242.0/255 blue:242.0/255 alpha:1];
-
-    // 空白页代理
-    _tableView.emptyDataSetSource = self;
-    _tableView.emptyDataSetDelegate = self;
-
-
-    // 去掉Grouped 第一个分区多余的头部
-    if (tableViewStyle == UITableViewStyleGrouped) {
-        _tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, CGFLOAT_MIN)];
-    }
-    // 去掉多余分割线
-    _tableView.tableFooterView = [[UIView alloc] init];
-
-    // 预估高度
-    // 问题1.不设置为0的时候  可能会出现高度过高 刷新有跳动
-    // 问题2.设置了的时候，如果是UITableViewStyleGrouped 直接写sectionHeaderHeight=10 第一个分区没有头部，必须在代理返回高度
-    _tableView.estimatedSectionFooterHeight = 0;
-    _tableView.estimatedSectionHeaderHeight = 0;
-    _tableView.estimatedRowHeight = 0;
-
-    [self.view addSubview:self.tableView];
+    [self.view addSubview:_collectionView];
 }
 
 
@@ -85,7 +74,7 @@
 - (void)setBlankPageStyle:(YMBlankPageStyle)blankPageStyle {
     _blankPageStyle = blankPageStyle;
 
-    [self.tableView reloadEmptyDataSet];
+    [self.collectionView reloadEmptyDataSet];
 }
 
 /// 空白页显示图片
@@ -138,6 +127,8 @@
 
 
 }
+
+// MARK: - getter
 
 // MARK: - dealloc
 
