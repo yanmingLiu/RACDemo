@@ -198,38 +198,60 @@
 
 
 /**
- *  计算指定时间与当前的时间差
- *
- *  @param compareDate 某一指定时间
- *
- *  @return 多少(秒or分or天or月or年)+前(比如，3天前、10分钟前)
+ *   发布时间(秒or分or天or月or年)+前(比如，3天前、10分钟前)
  */
-+(NSString *)compareCurrentTime:(NSDate*) compareDate
-{
-    NSTimeInterval  timeInterval = [compareDate timeIntervalSinceNow];
-    timeInterval = -timeInterval;
-    int temp = 0;
-    NSString *result;
-    if (timeInterval < 60) {
-        result = [NSString stringWithFormat:@"刚刚"];
++(NSString *)ym_pushTime:(NSString*) pushTime {
+
+    if (!pushTime || !pushTime.length) {
+        return @"";
     }
-    else if((temp = timeInterval/60) <60){
-        result = [NSString stringWithFormat:@"%d分钟前",temp];
+
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    // 如果是真机调试，转换这种欧美时间，需要设置locale
+    fmt.timeZone = [NSTimeZone systemTimeZone];
+
+    // 设置日期格式（声明字符串里面每个数字和单词的含义）
+    // E:星期几
+    // M:月份
+    // d:几号(这个月的第几天)
+    // H:24小时制的小时
+    // m:分钟
+    // s:秒
+    // y:年
+    fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+
+    // 微博的创建日期
+    NSDate *createDate = [fmt dateFromString:pushTime];
+    // 当前时间
+    NSDate *now = [NSDate date];
+
+    // 日历对象（方便比较两个日期之间的差距）
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    // NSCalendarUnit枚举代表想获得哪些差值
+    NSCalendarUnit unit = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+    // 计算两个日期之间的差值
+    NSDateComponents *cmps = [calendar components:unit fromDate:createDate toDate:now options:0];
+
+    if ([createDate isThisYear]) { // 今年
+        if ([createDate isYesterday]) { // 昨天
+            fmt.dateFormat = @"昨天 HH:mm";
+            return [fmt stringFromDate:createDate];
+        } else if ([createDate isToday]) { // 今天
+            if (cmps.hour >= 1) {
+                return [NSString stringWithFormat:@"%d小时前", (int)cmps.hour];
+            } else if (cmps.minute >= 1) {
+                return [NSString stringWithFormat:@"%d分钟前", (int)cmps.minute];
+            } else {
+                return @"刚刚";
+            }
+        } else { // 今年的其他日子
+            fmt.dateFormat = @"MM-dd HH:mm";
+            return [fmt stringFromDate:createDate];
+        }
+    } else { // 非今年
+        fmt.dateFormat = @"yyyy-MM-dd HH:mm";
+        return [fmt stringFromDate:createDate];
     }
-    else if((temp = temp/60) <24){
-        result = [NSString stringWithFormat:@"%d小时前",temp];
-    }
-    else if((temp = temp/24) <30){
-        result = [NSString stringWithFormat:@"%d天前",temp];
-    }
-    else if((temp = temp/30) <12){
-        result = [NSString stringWithFormat:@"%d月前",temp];
-    }
-    else{
-        temp = temp/12;
-        result = [NSString stringWithFormat:@"%d年前",temp];
-    }
-    return  result;
 }
 
 // MARK: - getter ----------------------------------
