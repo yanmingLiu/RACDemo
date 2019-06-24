@@ -1,0 +1,33 @@
+[
+    {
+        "title" : "首页",
+        "image" : "tabbar_home",
+        "selectedImage" : "tabbar_homeHighlight",
+        "viewController" : "HomeController"
+    },
+    {
+        "title" : "消息",
+        "image" : "tabbar_msg",
+        "selectedImage" : "tabbar_msgHighlight",
+        "viewController" : "IMController"
+    },
+    {
+        "title" : "运营管理",
+        "image" : "tabbar_manager",
+        "selectedImage" : "tabbar_managerHighlight",
+        "viewController" : "ManagerController"
+    },
+    {
+        "title" : "商家市场",
+        "image" : "tabbar_store",
+        "selectedImage" : "tabbar_storeHighlight",
+        "viewController" : "SupermarketController"
+    },
+    {
+        "title" : "我的",
+        "image" : "tabbar_mine",
+        "selectedImage" : "tabbar_mineHighlight",
+        "viewController" : "MineController"
+    },
+]
+

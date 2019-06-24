@@ -8,8 +8,6 @@
 
 #import "YMBaseTextViewController.h"
 
-#import "UIBarButtonItem+Extension.h"
-#import "UIView+YMFrame.h"
 
 @interface YMBaseTextViewController () <UITextViewDelegate>
 
@@ -33,7 +31,7 @@
     _textView.text = self.text;
 //    _textView.placeholder = self.placeholder;
     
-    _rightItem = [UIBarButtonItem itemWithTarget:self action:@selector(saveAction) title:@"保存" titleColor:[UIColor grayColor]];
+    _rightItem = [[UIBarButtonItem alloc] initWithTitle:@"保存"  style:(UIBarButtonItemStylePlain) target:self action:@selector(saveAction)];
     self.navigationItem.rightBarButtonItem  = _rightItem;
 }
 
