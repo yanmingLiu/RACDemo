@@ -21,7 +21,7 @@ typedef NS_ENUM(NSInteger, AdaptScreenWidthType) {
     AdaptScreenWidthTypeAll = 1<<3, /**< 对现有支持的属性等比例 */
 };
 
-@interface UIView (YMFrame)
+@interface UIView (YMAdd)
 
 
 @property (nonatomic, assign) CGFloat x;

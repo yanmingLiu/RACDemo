@@ -6,9 +6,9 @@
 //  Copyright © 2018年 HShare. All rights reserved.
 //
 
-#import "UIView+YMFrame.h"
+#import "UIView+YMAdd.h"
 
-@implementation UIView (YMFrame)
+@implementation UIView (YMAdd)
 
 
 - (void)setX:(CGFloat)x

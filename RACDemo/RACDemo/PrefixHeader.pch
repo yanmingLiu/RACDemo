@@ -33,7 +33,7 @@
 
 
 #import "YMMacro.h"
-#import "UIView+YMFrame.h"
+#import "UIView+YMAdd.h"
 
 
 #endif
