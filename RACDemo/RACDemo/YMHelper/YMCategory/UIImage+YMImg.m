@@ -298,24 +298,62 @@
 
 
 /**
- 保存图片到本地，并读取本地图片信息
- 
- 相当于 - (PHFetchResult<PHAsset *> *)saveImageToPhotoLibrary
+ 保存图片到本地，并读取本地图片信息(名字+路径)
  */
-- (void)saveImageToPhotoLibraryFinish:(void(^)(PHAsset *asset))finish {
-    NSMutableArray *imageIds = [NSMutableArray array];
-    [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
-        //写入图片到相册
-        PHAssetChangeRequest *req = [PHAssetChangeRequest creationRequestForAssetFromImage:self];
-        //记录本地标识，等待完成后取到相册中的图片对象
-        [imageIds addObject:req.placeholderForCreatedAsset.localIdentifier];
-    } completionHandler:^(BOOL success, NSError * _Nullable error) {
-        if (success) {
-            //成功后取相册中的图片对象
-            PHFetchResult *result = [PHAsset fetchAssetsWithLocalIdentifiers:imageIds options:nil];
-            if (finish) finish([result firstObject]);
+- (void)saveImageToPhotoLibraryCompleted:(void(^)(PHAsset *asset, NSString *imgePath))completed {
+
+    // 1. 获取当前App的相册授权状态
+    PHAuthorizationStatus authorizationStatus = [PHPhotoLibrary authorizationStatus];
+    // 2. 判断授权状态
+    if (authorizationStatus == PHAuthorizationStatusAuthorized) {
+        __block NSString *createdAssetId = nil;
+        // 添加图片到【相机胶卷】
+        [[PHPhotoLibrary sharedPhotoLibrary] performChangesAndWait:^{
+            createdAssetId = [PHAssetChangeRequest creationRequestForAssetFromImage:self].placeholderForCreatedAsset.localIdentifier;
+        } error:nil];
+
+        if (createdAssetId == nil) {
+            !completed ? : completed(nil, nil);
         }
-    }];
+
+        // 在保存完毕后取出图片信息
+        PHFetchResult * result = [PHAsset fetchAssetsWithLocalIdentifiers:@[createdAssetId] options:nil];
+        PHAsset *asset = [result firstObject];
+
+        [result enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+
+            NSString *fileName = [obj valueForKey:@"filename"];
+            NSLog(@"%@", fileName); // 能得到名字 IMG_3301.JPG
+        }];
+
+        [asset requestContentEditingInputWithOptions:nil completionHandler:^(PHContentEditingInput * _Nullable contentEditingInput, NSDictionary * _Nonnull info) {
+
+            NSLog(@"URL: %@",  contentEditingInput.fullSizeImageURL.absoluteString);
+            NSString* path = [contentEditingInput.fullSizeImageURL.absoluteString substringFromIndex:7];//screw all the crap of file://
+            NSLog(@"path: %@", path);
+            NSFileManager *fileManager = [NSFileManager defaultManager];
+            BOOL isExist = [fileManager fileExistsAtPath:path];
+            if (isExist) {
+                NSLog(@"oh yeah");
+                !completed ? : completed(asset, path);
+            }
+            else {
+                NSLog(@"damn");
+                !completed ? : completed(asset, nil);
+            }
+        }];
+    }
+    else if (authorizationStatus == PHAuthorizationStatusNotDetermined) { // 如果没决定, 弹出指示框, 让用户选择
+        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+            // 如果用户选择授权, 则保存图片
+            if (status == PHAuthorizationStatusAuthorized) {
+                [self saveImageToPhotoLibraryCompleted:completed];
+            }
+        }];
+    } else {
+        NSLog(@"请在设置界面, 授权访问相册");
+        completed(nil, nil);
+    }
 }
 
 /**
