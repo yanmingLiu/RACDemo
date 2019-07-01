@@ -20,6 +20,11 @@
 
 @implementation ScrollViewController
 
+- (instancetype)init
+{
+    return ViewControllerFromSB(@"Main", @"ScrollViewController");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     

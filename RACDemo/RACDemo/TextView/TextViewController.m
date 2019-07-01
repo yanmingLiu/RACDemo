@@ -15,9 +15,15 @@
 
 @implementation TextViewController
 
+- (instancetype)init {
+    return ViewControllerFromSB(@"Main", @"TextViewController");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    self.view.backgroundColor = [UIColor whiteColor];
 
     _tv.textAlignment = NSTextAlignmentRight;
     _tv.text = nil;

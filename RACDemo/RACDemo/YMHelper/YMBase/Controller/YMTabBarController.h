@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YMNavigationController.h"
 
 @interface YMTabBarController : UITabBarController
 

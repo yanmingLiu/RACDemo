@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import <UserNotifications/UserNotifications.h>
+#import "YMTabBarController.h"
+
 
 @interface AppDelegate ()
 
@@ -19,38 +21,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application 
     
-    [self registerAPN];
+//    [self registerAPN];
 
-//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//
-//    self.window.rootViewController = [self setupTabbar];
-//
-//    [self.window makeKeyAndVisible];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+
+    YMTabBarController *tabbar = [[YMTabBarController alloc] init];
+    self.window.rootViewController = tabbar;
+
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
-
-- (UITabBarController *)setupTabbar {
-
-    UITabBarController *tabbar = [[UITabBarController alloc] init];
-
-    NSArray *vcs = @[@"TableViewControllerTabbar0",@"TableViewControllerTabbar1"];
-
-    for (int i = 0; i < vcs.count; i++) {
-
-        NSString *str = [NSString stringWithFormat:@"%d", i];
-        UITabBarItem* item = [[UITabBarItem alloc] initWithTitle:str image:nil tag:i];
-
-        Class cls = NSClassFromString(vcs[i]);
-        UIViewController *vc = [[cls alloc] init];
-        vc.tabBarItem = item;
-        vc.title = str;
-
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-        [tabbar addChildViewController:nav];
-    }
-    return tabbar;
-}
 
 
 - (void)registerAPN {

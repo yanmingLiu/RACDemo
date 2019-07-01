@@ -19,8 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    self.view.backgroundColor = [UIColor whiteColor];
+
+    self.title = @"多个请求顺序执行";
+
     [self listRequest];
 }
+
 
 // MARK: - 实例：多个请求顺序执行
 - (void)listRequest {

@@ -7,7 +7,6 @@
 //
 
 #import "YMTabBarController.h"
-#import "YMNavigationController.h"
 #import "TabbarModel.h"
 
 @interface YMTabBarController ()
@@ -18,13 +17,11 @@
 
 @implementation YMTabBarController
 
-
-/*
 + (void)initialize
 {
     if (self == [self class]) {
         // 设置tabBar选中颜色
-//        [[UITabBar appearance] setTintColor:ThemeColor];
+        [[UITabBar appearance] setTintColor:[UIColor orangeColor]];
 
         [[UITabBar appearance] setTranslucent:NO];
     }
@@ -37,9 +34,28 @@
 
     [self setupChildViewController:[TabbarModel tabbarItems]];
 
-    [self addNotification];
+//    [self addNotification];
 }
 
+
+- (void)setupChildViewController:(NSArray *)models {
+
+    for (TabbarModel *model in models) {
+
+        UITabBarItem* item = [[UITabBarItem alloc] initWithTitle:model.title
+                                                           image:[UIImage imageNamed:model.image]
+                                                   selectedImage:[UIImage imageNamed:model.selectedImage]];
+
+        Class cls = NSClassFromString(model.viewController);
+        UIViewController *vc = [[cls alloc] init];
+        vc.tabBarItem = item;
+        vc.title = model.title;
+        YMNavigationController *nav = [[YMNavigationController alloc] initWithRootViewController:vc];
+        [self addChildViewController:nav];
+    }
+}
+
+/*
 - (void)addNotification {
     @weakify(self);
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:kLoginSuccessNotification object:nil] subscribeNext:^(NSNotification * _Nullable x) {
@@ -78,28 +94,9 @@
         msgItem.badgeValue = nil;
     }
 }
-
-
-- (void)setupChildViewController:(NSArray *)models {
-
-    for (TabbarModel *model in models) {
-
-        UITabBarItem* item = [[UITabBarItem alloc] initWithTitle:model.title
-                                                           image:[UIImage imageWithOriginalName:model.image]
-                                                   selectedImage:[UIImage imageWithOriginalName:model.selectedImage]];
-
-        Class cls = NSClassFromString(model.viewController);
-        UIViewController *vc = [[cls alloc] init];
-
-        vc.tabBarItem = item;
-        vc.title = model.title;
-
-        YMNavigationController *nav = [[YMNavigationController alloc] initWithRootViewController:vc];
-
-        [self addChildViewController:nav];
-    }
-}
-
 */
 
+
+
 @end
+

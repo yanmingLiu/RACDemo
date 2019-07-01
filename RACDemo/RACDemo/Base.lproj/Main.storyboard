@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4UH-uX-C2P">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4UH-uX-C2P">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -973,7 +973,7 @@
         <!--上下滚动的scrollView-->
         <scene sceneID="9vs-tp-V7M">
             <objects>
-                <viewController title="上下滚动的scrollView" id="0HM-Kk-0rs" customClass="ScrollViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScrollViewController" title="上下滚动的scrollView" id="0HM-Kk-0rs" customClass="ScrollViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oj7-pR-bTr"/>
                         <viewControllerLayoutGuide type="bottom" id="4IG-Mf-Oq4"/>
@@ -1303,7 +1303,7 @@
         <!--LoginMVVM-->
         <scene sceneID="QM5-OX-Ssw">
             <objects>
-                <viewController title="LoginMVVM" id="0V0-Ji-Zp3" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" title="LoginMVVM" id="0V0-Ji-Zp3" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cfr-2p-Slb"/>
                         <viewControllerLayoutGuide type="bottom" id="a8Q-P6-3ki"/>
@@ -1469,7 +1469,7 @@
         <!--基本RAC使用-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -1627,7 +1627,7 @@
         <!--RAC定位-->
         <scene sceneID="GtA-rO-xkv">
             <objects>
-                <viewController title="RAC定位" id="0J8-yw-8zO" customClass="LoactionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoactionViewController" title="RAC定位" id="0J8-yw-8zO" customClass="LoactionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KVT-zb-VJU"/>
                         <viewControllerLayoutGuide type="bottom" id="Gd5-D3-z5e"/>
@@ -1662,7 +1662,7 @@
         <!--RAC在tableView中的使用-->
         <scene sceneID="Aej-Vy-ZNh">
             <objects>
-                <tableViewController id="9BI-p4-JEW" customClass="TableViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TableViewController" id="9BI-p4-JEW" customClass="TableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" id="q3j-U0-vDQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

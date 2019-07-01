@@ -24,8 +24,15 @@
 
 @implementation RGBViewController
 
+- (instancetype)init
+{
+    return ViewControllerFromSB(@"Main", @"RGBViewController");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.view.backgroundColor = [UIColor whiteColor];
     
     RACSignal *redSignal = [self blindSlider:self.redSlider textField:self.redTextField];
     RACSignal *greenSignal = [self blindSlider:self.greenSlider textField:self.greenTextField];

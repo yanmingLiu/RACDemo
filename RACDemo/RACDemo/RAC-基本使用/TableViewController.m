@@ -16,9 +16,16 @@
 
 @implementation TableViewController
 
+
+- (instancetype)init
+{
+    return ViewControllerFromSB(@"Main", @"TableViewController");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
+    self.view.backgroundColor = [UIColor whiteColor];
     
 }
 
