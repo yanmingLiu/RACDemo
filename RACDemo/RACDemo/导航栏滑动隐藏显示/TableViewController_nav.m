@@ -13,12 +13,25 @@
 
 @implementation TableViewController_nav
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    // 1.直接使用 hidesBarsOnSwipe
+    self.navigationController.hidesBarsOnSwipe = YES;
+
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+
+    // 1.直接使用 hidesBarsOnSwipe
+    self.navigationController.hidesBarsOnSwipe = NO;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
 
-    // 1.直接使用 hidesBarsOnSwipe
-    self.navigationController.hidesBarsOnSwipe = YES;
 }
 
 // 2.使用UIScrollViewDelegate一个代理方法

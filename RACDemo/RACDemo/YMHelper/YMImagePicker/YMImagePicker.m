@@ -28,22 +28,33 @@
         [[_sendMediaSignal throttle:1] subscribeNext:^(NSDictionary *info) {
             @strongify(self)
             NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
+
             if([mediaType isEqualToString:(NSString *)kUTTypeImage]) {
+
                 UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
-                UIImageOrientation imageOrientation=  image.imageOrientation;
-                if(imageOrientation != UIImageOrientationUp)
-                    {
-                    CGFloat aspectRatio = MIN ( 1920 / image.size.width, 1920 / image.size.height );
-                    CGFloat aspectWidth = image.size.width * aspectRatio;
-                    CGFloat aspectHeight = image.size.height * aspectRatio;
+                UIImageOrientation imageOrientation =  image.imageOrientation;
 
-                    UIGraphicsBeginImageContext(CGSizeMake(aspectWidth, aspectHeight));
-                    [image drawInRect:CGRectMake(0, 0, aspectWidth, aspectHeight)];
-                    image = UIGraphicsGetImageFromCurrentImageContext();
-                    UIGraphicsEndImageContext();
-                    }
+                NSString *imagePath = [info objectForKey:UIImagePickerControllerImageURL];
+                NSLog(@"imagePath---%@",imagePath);
 
-                [self sendImageMessage:image];
+                if (imagePath) { // 选相片
+                    !self.callback ? : self.callback(NO, imagePath, image);
+                }
+                else { // 拍照
+                    if(imageOrientation != UIImageOrientationUp)
+                        {
+                        CGFloat aspectRatio = MIN ( 1920 / image.size.width, 1920 / image.size.height );
+                        CGFloat aspectWidth = image.size.width * aspectRatio;
+                        CGFloat aspectHeight = image.size.height * aspectRatio;
+
+                        UIGraphicsBeginImageContext(CGSizeMake(aspectWidth, aspectHeight));
+                        [image drawInRect:CGRectMake(0, 0, aspectWidth, aspectHeight)];
+                        image = UIGraphicsGetImageFromCurrentImageContext();
+                        UIGraphicsEndImageContext();
+                        }
+
+                    [self sendImageMessage:image];
+                }
             }
             else if([mediaType isEqualToString:(NSString *)kUTTypeMovie]){
                 NSURL *url = [info objectForKey:UIImagePickerControllerMediaURL];
