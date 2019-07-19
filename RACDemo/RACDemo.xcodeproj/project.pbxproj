@@ -74,7 +74,6 @@
 		C2DE2309225CA30600556B2C /* Tabbar.json in Resources */ = {isa = PBXBuildFile; fileRef = C2DE2307225CA30600556B2C /* Tabbar.json */; };
 		C2DE230C225CA33E00556B2C /* YMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DE230B225CA33E00556B2C /* YMTabBarController.m */; };
 		C2DE230F225CA46200556B2C /* TableViewControllerTabbar0.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DE230E225CA46200556B2C /* TableViewControllerTabbar0.m */; };
-		C2DE2312225CA47A00556B2C /* TableViewControllerTabbar1.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DE2311225CA47A00556B2C /* TableViewControllerTabbar1.m */; };
 		C2E36F7F221B94CB001CA758 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E36F7E221B94CB001CA758 /* Storyboard.storyboard */; };
 		C2E36F91221BADE0001CA758 /* TestTabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F90221BADE0001CA758 /* TestTabelViewController.m */; };
 		C2E36F96221BB249001CA758 /* not_network.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E36F93221BB248001CA758 /* not_network.png */; };
@@ -85,6 +84,8 @@
 		C2E8608C2046ACFF001E4746 /* CombiningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E8608B2046ACFF001E4746 /* CombiningViewController.m */; };
 		C2F44C1F2236403500A1195F /* YMBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F44C1E2236403500A1195F /* YMBaseCollectionViewController.m */; };
 		C2F44C222236445D00A1195F /* TestCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F44C212236445D00A1195F /* TestCollectionViewController.m */; };
+		C2F662E222E16591004039B3 /* UIImage+Group.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F662E022E16591004039B3 /* UIImage+Group.m */; };
+		C2F662E822E16682004039B3 /* GroupIconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F662E722E16682004039B3 /* GroupIconViewController.m */; };
 		C2F832BC22388E0000D8AF90 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F8329022388E0000D8AF90 /* UIAlertController+Blocks.m */; };
 		C2F832BD22388E0000D8AF90 /* UIApplication+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F8329222388E0000D8AF90 /* UIApplication+Extension.m */; };
 		C2F832BE22388E0000D8AF90 /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F8329322388E0000D8AF90 /* NSObject+Swizzle.m */; };
@@ -237,7 +238,7 @@
 		C2BFF9D822C9F4BB00FC2629 /* YMImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMImagePicker.m; sourceTree = "<group>"; };
 		C2BFF9D922C9F4BB00FC2629 /* YMImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMImagePicker.h; sourceTree = "<group>"; };
 		C2BFF9DB22C9F4DE00FC2629 /* YMImagePickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMImagePickerViewController.h; sourceTree = "<group>"; };
-		C2BFF9DC22C9F4DE00FC2629 /* YMImagePickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = YMImagePickerViewController.m; path = ../Tabbar0/YMImagePickerViewController.m; sourceTree = "<group>"; };
+		C2BFF9DC22C9F4DE00FC2629 /* YMImagePickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMImagePickerViewController.m; sourceTree = "<group>"; };
 		C2BFF9DD22C9F4DE00FC2629 /* YMImagePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YMImagePickerViewController.xib; sourceTree = "<group>"; };
 		C2DE22FD225C8EB700556B2C /* YMBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMBaseWebViewController.m; sourceTree = "<group>"; };
 		C2DE22FE225C8EB700556B2C /* YMBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMBaseWebViewController.h; sourceTree = "<group>"; };
@@ -248,8 +249,6 @@
 		C2DE230B225CA33E00556B2C /* YMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMTabBarController.m; sourceTree = "<group>"; };
 		C2DE230D225CA46200556B2C /* TableViewControllerTabbar0.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewControllerTabbar0.h; sourceTree = "<group>"; };
 		C2DE230E225CA46200556B2C /* TableViewControllerTabbar0.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerTabbar0.m; sourceTree = "<group>"; };
-		C2DE2310225CA47A00556B2C /* TableViewControllerTabbar1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewControllerTabbar1.h; sourceTree = "<group>"; };
-		C2DE2311225CA47A00556B2C /* TableViewControllerTabbar1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewControllerTabbar1.m; sourceTree = "<group>"; };
 		C2E36F7E221B94CB001CA758 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		C2E36F8F221BADE0001CA758 /* TestTabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTabelViewController.h; sourceTree = "<group>"; };
 		C2E36F90221BADE0001CA758 /* TestTabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTabelViewController.m; sourceTree = "<group>"; };
@@ -266,6 +265,10 @@
 		C2F44C1E2236403500A1195F /* YMBaseCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMBaseCollectionViewController.m; sourceTree = "<group>"; };
 		C2F44C202236445D00A1195F /* TestCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCollectionViewController.h; sourceTree = "<group>"; };
 		C2F44C212236445D00A1195F /* TestCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCollectionViewController.m; sourceTree = "<group>"; };
+		C2F662E022E16591004039B3 /* UIImage+Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Group.m"; sourceTree = "<group>"; };
+		C2F662E122E16591004039B3 /* UIImage+Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Group.h"; sourceTree = "<group>"; };
+		C2F662E622E16682004039B3 /* GroupIconViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroupIconViewController.h; sourceTree = "<group>"; };
+		C2F662E722E16682004039B3 /* GroupIconViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroupIconViewController.m; sourceTree = "<group>"; };
 		C2F8329022388E0000D8AF90 /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
 		C2F8329122388E0000D8AF90 /* UIView+YMAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YMAdd.h"; sourceTree = "<group>"; };
 		C2F8329222388E0000D8AF90 /* UIApplication+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Extension.m"; sourceTree = "<group>"; };
@@ -576,16 +579,9 @@
 			children = (
 				C293412C1EC43D89003FB9A0 /* AppDelegate.h */,
 				C293412D1EC43D89003FB9A0 /* AppDelegate.m */,
-				C2B14CFD22C0A2B400102BB0 /* RAC-基本使用 */,
 				C2DE2301225CA14600556B2C /* Tabbar0 */,
 				C2E36F8A221BAB09001CA758 /* Tabbar1 */,
 				C2E36F7D221B936F001CA758 /* Resource */,
-				C20B3A34213781B700EC7447 /* 导航栏滑动隐藏显示 */,
-				C23F434720DB665300E9EF2C /* TextView */,
-				C2E860892046ACE7001E4746 /* RAC-Combining */,
-				C2642A8E203028FC0016009D /* 分享view */,
-				C2036FA0202C7CDE00187160 /* 上下循环滚动View */,
-				C2BA7DF4201F964500B523E2 /* RACCommandDemo */,
 				C28A22FA1FA9D4680035B5DF /* YMHelper */,
 				C28A22F91FA9D1E20035B5DF /* LIb */,
 				C29341291EC43D89003FB9A0 /* Supporting Files */,
@@ -698,6 +694,9 @@
 		C2DE2301225CA14600556B2C /* Tabbar0 */ = {
 			isa = PBXGroup;
 			children = (
+				C2B14CFD22C0A2B400102BB0 /* RAC-基本使用 */,
+				C2E860892046ACE7001E4746 /* RAC-Combining */,
+				C2BA7DF4201F964500B523E2 /* RACCommandDemo */,
 				C2DE230D225CA46200556B2C /* TableViewControllerTabbar0.h */,
 				C2DE230E225CA46200556B2C /* TableViewControllerTabbar0.m */,
 			);
@@ -757,17 +756,15 @@
 		C2E36F8A221BAB09001CA758 /* Tabbar1 */ = {
 			isa = PBXGroup;
 			children = (
-				C2BFF9DB22C9F4DE00FC2629 /* YMImagePickerViewController.h */,
-				C2BFF9DC22C9F4DE00FC2629 /* YMImagePickerViewController.m */,
-				C2BFF9DD22C9F4DE00FC2629 /* YMImagePickerViewController.xib */,
-				C2E36F8F221BADE0001CA758 /* TestTabelViewController.h */,
-				C2E36F90221BADE0001CA758 /* TestTabelViewController.m */,
+				C2642A8E203028FC0016009D /* 分享view */,
+				C2036FA0202C7CDE00187160 /* 上下循环滚动View */,
+				C23F434720DB665300E9EF2C /* TextView */,
+				C2F662E522E1666E004039B3 /* 微信群头像生成 */,
+				C2F662E422E1665A004039B3 /* tableview加载 */,
+				C2F662E322E1664A004039B3 /* 相册拍照拍视频 */,
+				C20B3A34213781B700EC7447 /* 导航栏滑动隐藏显示 */,
 				C2E36FAC221BD62F001CA758 /* Tabbar1ViewController.h */,
 				C2E36FAD221BD62F001CA758 /* Tabbar1ViewController.m */,
-				C2F44C202236445D00A1195F /* TestCollectionViewController.h */,
-				C2F44C212236445D00A1195F /* TestCollectionViewController.m */,
-				C2DE2310225CA47A00556B2C /* TableViewControllerTabbar1.h */,
-				C2DE2311225CA47A00556B2C /* TableViewControllerTabbar1.m */,
 			);
 			path = Tabbar1;
 			sourceTree = "<group>";
@@ -800,9 +797,41 @@
 			path = "RAC-Combining";
 			sourceTree = "<group>";
 		};
+		C2F662E322E1664A004039B3 /* 相册拍照拍视频 */ = {
+			isa = PBXGroup;
+			children = (
+				C2BFF9DB22C9F4DE00FC2629 /* YMImagePickerViewController.h */,
+				C2BFF9DC22C9F4DE00FC2629 /* YMImagePickerViewController.m */,
+				C2BFF9DD22C9F4DE00FC2629 /* YMImagePickerViewController.xib */,
+			);
+			path = "相册拍照拍视频";
+			sourceTree = "<group>";
+		};
+		C2F662E422E1665A004039B3 /* tableview加载 */ = {
+			isa = PBXGroup;
+			children = (
+				C2F44C202236445D00A1195F /* TestCollectionViewController.h */,
+				C2F44C212236445D00A1195F /* TestCollectionViewController.m */,
+				C2E36F8F221BADE0001CA758 /* TestTabelViewController.h */,
+				C2E36F90221BADE0001CA758 /* TestTabelViewController.m */,
+			);
+			path = "tableview加载";
+			sourceTree = "<group>";
+		};
+		C2F662E522E1666E004039B3 /* 微信群头像生成 */ = {
+			isa = PBXGroup;
+			children = (
+				C2F662E622E16682004039B3 /* GroupIconViewController.h */,
+				C2F662E722E16682004039B3 /* GroupIconViewController.m */,
+			);
+			path = "微信群头像生成";
+			sourceTree = "<group>";
+		};
 		C2F8328F22388E0000D8AF90 /* YMCategory */ = {
 			isa = PBXGroup;
 			children = (
+				C2F662E122E16591004039B3 /* UIImage+Group.h */,
+				C2F662E022E16591004039B3 /* UIImage+Group.m */,
 				C2F832AA22388E0000D8AF90 /* NSArray+YMAdd.h */,
 				C2F8329722388E0000D8AF90 /* NSArray+YMAdd.m */,
 				C2F8329A22388E0000D8AF90 /* NSDate+YMDate.h */,
@@ -1146,6 +1175,7 @@
 				C2036FA7202C7CFB00187160 /* YMScrollViewUpDown.m in Sources */,
 				C2F44C1F2236403500A1195F /* YMBaseCollectionViewController.m in Sources */,
 				C2DE230C225CA33E00556B2C /* YMTabBarController.m in Sources */,
+				C2F662E822E16682004039B3 /* GroupIconViewController.m in Sources */,
 				C2F832C722388E0000D8AF90 /* UIWindow+YMWindow.m in Sources */,
 				C29341661EC482EB003FB9A0 /* TableViewCell.m in Sources */,
 				C276EAD42016C952007717A2 /* YMBottomPopView.m in Sources */,
@@ -1159,7 +1189,6 @@
 				C28A23781FA9D7180035B5DF /* MJDIYHeader.m in Sources */,
 				C2E8608C2046ACFF001E4746 /* CombiningViewController.m in Sources */,
 				C2F832BE22388E0000D8AF90 /* NSObject+Swizzle.m in Sources */,
-				C2DE2312225CA47A00556B2C /* TableViewControllerTabbar1.m in Sources */,
 				C2F832C822388E0000D8AF90 /* UINavigationController+statusBar.m in Sources */,
 				C2F832D122388E0000D8AF90 /* UINavigationBar+Awesome.m in Sources */,
 				C28A23791FA9D7180035B5DF /* MJDIYBackFooter.m in Sources */,
@@ -1170,6 +1199,7 @@
 				C28804A8223107D200B79D23 /* YMBlankPageStyleHelper.m in Sources */,
 				C2F832C522388E0000D8AF90 /* UIButton+Badge.m in Sources */,
 				C2F832CF22388E0000D8AF90 /* NSString+YMAdd.m in Sources */,
+				C2F662E222E16591004039B3 /* UIImage+Group.m in Sources */,
 				C2F832CD22388E0000D8AF90 /* NSDictionary+YMDictionary.m in Sources */,
 				C2F832BD22388E0000D8AF90 /* UIApplication+Extension.m in Sources */,
 				C29341631EC48233003FB9A0 /* TableViewController.m in Sources */,

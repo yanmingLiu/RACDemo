@@ -53,8 +53,10 @@ static id _instance;
         }]  finally:^{ // finally则是信号量结束了调用的block。
             [self.manager stopUpdatingLocation];
         }] flattenMap:^__kindof RACSignal * _Nullable(id  _Nullable value) {
-            CLLocation *c = [value firstObject];
+
             return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+
+                CLLocation *c = [value firstObject];
                 [self.geocoder reverseGeocodeLocation:c completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
                     if (error) {
                         [subscriber sendError:error];
@@ -98,16 +100,17 @@ static id _instance;
 
 /// 认证信号-是否授权位置访问
 - (RACSignal *)authorizationSignal {
-    
-    if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusNotDetermined) {
+
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+
+    if (status == kCLAuthorizationStatusNotDetermined) {
         [self.manager requestAlwaysAuthorization];
         
         return [[self rac_signalForSelector:@selector(locationManager:didChangeAuthorizationStatus:) fromProtocol:@protocol(CLLocationManagerDelegate)] map:^id _Nullable(RACTuple * _Nullable value) {
-
-            return @([value[1] integerValue] == kCLAuthorizationStatusAuthorizedAlways || [value[1] integerValue] == kCLAuthorizationStatusAuthorizedWhenInUse);
+            NSInteger authState = [value[1] integerValue];
+            return @(authState == kCLAuthorizationStatusAuthorizedAlways || authState == kCLAuthorizationStatusAuthorizedWhenInUse);
         }];    
     }
-    
     return [RACSignal return:@([CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedAlways || [CLLocationManager authorizationStatus] == kCLAuthorizationStatusAuthorizedWhenInUse)];
 }
 
@@ -126,8 +129,6 @@ static id _instance;
     
     // 仅被允许在使用应用程序的时候。
     kCLAuthorizationStatusAuthorizedWhenInUse NS_ENUM_AVAILABLE(NA, 8_0),
-    
-    kCLAuthorizationStatusAuthorized NS_ENUM_DEPRECATED(10_6, NA, 2_0, 8_0, "Use kCLAuthorizationStatusAuthorizedAlways") __TVOS_PROHIBITED __WATCHOS_PROHIBITED = kCLAuthorizationStatusAuthorizedAlways
 
 */
 
