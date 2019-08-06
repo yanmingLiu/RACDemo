@@ -58,6 +58,9 @@ firstCannotBeDigtal:(BOOL)firstCannotBeDigtal;
 /// 格式化银行卡号
 + (NSString *)ym_formatBankNumber:(NSString *)number;
 
+/// 是否是url
++ (BOOL)ym_checkUrl:(NSString *)urlStr;
+
 #pragma makr ----
 
 /// 编码url

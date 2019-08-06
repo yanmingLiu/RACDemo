@@ -10,32 +10,53 @@
 
 @implementation UIImage (Group)
 
-+ (UIImage *)groupIconWithURLArray:(NSArray *)URLArray finalSize:(CGSize)finalSize padding:(CGFloat)padding bgColor:(UIColor *)bgColor
++ (void)groupIconWithUrls:(NSArray *)urls size:(CGSize)size padding:(CGFloat)padding bgColor:(UIColor *)bgColor defaultImg:(UIImage *)defaultImg callback:(void(^)(UIImage *image))callback
 {
-    UIImageView *imageView = [[UIImageView alloc] init];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
 
-    NSMutableArray *imageArray = [NSMutableArray array];
+        NSInteger avatarCount = urls.count > 9 ? 9 : urls.count;
 
-    for (int i = 0; i<URLArray.count;  i++) {
-        NSData * data = [[NSData alloc]initWithContentsOfURL:URLArray[i]];
-        UIImage *image = [[UIImage alloc]initWithData:data];
-        [imageArray addObject:image];
-    }
+        __block NSMutableArray *imageArray = [NSMutableArray array];
+        __block NSInteger count = 0;    //下载图片完成的计数
 
-    imageView.image = [UIImage groupIconWithImageArray:imageArray finalSize:finalSize padding:padding bgColor:bgColor];
+        for (NSInteger i = avatarCount - 1; i >= 0; i--) {
 
-    return imageView.image;
+            NSString *avatarUrl = [urls objectAtIndex:i];
+            NSURL *URL = [NSURL URLWithString:avatarUrl];
+            
+            [[SDWebImageDownloader sharedDownloader] downloadImageWithURL:URL options:(SDWebImageDownloaderLowPriority) progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+
+            } completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
+                count ++ ;
+                NSLog(@"---%@", error);
+                if (finished && image) {
+                    [imageArray addObject:image];
+                }else {
+                    [imageArray addObject:defaultImg];
+                }
+                if (count == avatarCount) {     //图片全部下载完成
+                    UIImage *image = [UIImage groupIconWithImages:imageArray size:size padding:padding bgColor:bgColor];
+
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        if (callback) {
+                            callback(image);
+                        }
+                    });
+                }
+            }];
+        }
+    });
 }
 
-+ (UIImage *)groupIconWithImageArray:(NSArray *)imageArray finalSize:(CGSize)finalSize padding:(CGFloat)padding bgColor:(UIColor *)bgColor
++ (UIImage *)groupIconWithImages:(NSArray *)images size:(CGSize)size padding:(CGFloat)padding bgColor:(UIColor *)bgColor
 {
     CGRect rect = CGRectZero;
-    rect.size = finalSize;
+    rect.size = size;
 
     // 图片会模糊
 //    UIGraphicsBeginImageContext(finalSize);
 
-    UIGraphicsBeginImageContextWithOptions(finalSize, NO, [[UIScreen mainScreen]scale]);
+    UIGraphicsBeginImageContextWithOptions(size, NO, [[UIScreen mainScreen]scale]);
 
     if (bgColor) {
 
@@ -52,12 +73,11 @@
         CGContextDrawPath(context, kCGPathFillStroke);
     }
 
-    if (imageArray.count >= 2) {
+    if (images.count >= 2) {
 
-        NSArray *rects = [self eachRectInGroupWithCount2:imageArray.count sizeValue:finalSize.width padding:padding];
+        NSArray *rects = [self eachRectInGroupWithCount2:images.count sizeValue:size.width padding:padding];
         int count = 0;
-        for (id obj in imageArray) {
-
+        for (id obj in images) {
             if (count > rects.count-1) {
                 break;
             }

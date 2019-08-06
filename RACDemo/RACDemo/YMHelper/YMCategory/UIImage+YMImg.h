@@ -87,7 +87,10 @@
 + (UIImage *)getmakeImageWithView:(UIView *)view andWithSize:(CGSize)size;
 
 
-
+/**
+ UIImage - 生成钉钉名字头像
+ */
++ (UIImage *)ym_nameIconWithText:(NSString *)text bgColor:(UIColor *)bgColor size:(CGSize)size;
 
 
 @end

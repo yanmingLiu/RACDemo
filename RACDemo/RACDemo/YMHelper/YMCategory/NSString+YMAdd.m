@@ -32,7 +32,7 @@
 }
 
 /// 验证手机号
-+ (BOOL)ym_checkPhone:(NSString *)phone {
++ (BOOL)ym_isPhone:(NSString *)phone {
     NSString * regex = @"^[1][3-8]\\d{9}$";
     return [self ym_predicateWithFormat:regex str:phone];
 }
@@ -139,6 +139,23 @@ firstCannotBeDigtal:(BOOL)firstCannotBeDigtal;
     return number;
 }
 
+
+/// 是否是url
++ (BOOL)ym_checkUrl:(NSString *)urlStr {
+    if(urlStr == nil) {
+        return NO;
+    }
+    urlStr = [urlStr lowercaseString];
+    NSString *url;
+    if (urlStr.length>4 && [[urlStr substringToIndex:4] isEqualToString:@"www."]) {
+        url = [NSString stringWithFormat:@"http://%@",self];
+    }else{
+        url = urlStr;
+    }
+    NSString *urlRegex = @"\\bhttps?://[a-zA-Z0-9\\-.]+(?::(\\d+))?(?:(?:/[a-zA-Z0-9\\-._?,'+\\&%$=~*!():@\\\\]*)+)?";
+    NSPredicate* urlTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", urlRegex];
+    return [urlTest evaluateWithObject:url];
+}
 
 #pragma makr ----
 

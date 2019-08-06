@@ -387,4 +387,44 @@
 
 }
 
+/**
+ UIImage - 生成钉钉名字头像
+ */
++ (UIImage *)ym_nameIconWithText:(NSString *)text bgColor:(UIColor *)bgColor size:(CGSize)size{
+
+    if (text== nil || text.length == 0) {
+        return nil;
+    }
+    if (text.length >= 3) {
+        if (text.length == 4) {
+            text = [text substringWithRange:NSMakeRange(2, 2)];
+        }else {
+            text = [text substringWithRange:NSMakeRange(1, 2)];
+        }
+    }
+
+    NSDictionary *fontAttributes = @{NSFontAttributeName: [UIFont systemFontOfSize:30], NSForegroundColorAttributeName: [UIColor whiteColor]};
+
+    CGSize textSize = [text sizeWithAttributes:fontAttributes];
+
+    CGPoint drawPoint = CGPointMake((size.width - textSize.width)/2, (size.height - textSize.height)/2);
+
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0.0);
+
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, size.width, size.height)];
+
+    CGContextSetFillColorWithColor(ctx, bgColor.CGColor);
+
+    [path fill];
+
+    [text drawAtPoint:drawPoint withAttributes:fontAttributes];
+
+    UIImage *resultImg = UIGraphicsGetImageFromCurrentImageContext();
+
+    UIGraphicsEndImageContext();
+
+    return resultImg;
+}
+
 @end

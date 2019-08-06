@@ -8,14 +8,16 @@
 // 类似微信群头像处理
 
 #import <UIKit/UIKit.h>
+#import "NSString+YMAdd.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIImage (Group)
 
-+ (UIImage *)groupIconWithURLArray:(NSArray *)URLArray finalSize:(CGSize)finalSize padding:(CGFloat)padding bgColor:(UIColor *)bgColor;
 
-+ (UIImage *)groupIconWithImageArray:(NSArray *)imageArray finalSize:(CGSize)finalSize padding:(CGFloat)padding bgColor:(UIColor *)bgColor;
++ (void)groupIconWithUrls:(NSArray *)urls size:(CGSize)size padding:(CGFloat)padding bgColor:(UIColor *)bgColor defaultImg:(UIImage *)defaultImg callback:(void(^)(UIImage *image))callback;
+
++ (UIImage *)groupIconWithImages:(NSArray *)images size:(CGSize)size padding:(CGFloat)padding bgColor:(UIColor *)bgColor;
 
 
 @end

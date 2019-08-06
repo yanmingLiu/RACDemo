@@ -42,14 +42,16 @@
     NSMutableArray * iconItemsArr = [NSMutableArray array];
 
     for (NSString *url in urls) {
-        [iconItemsArr addObject:[NSURL URLWithString:url]];
+        [iconItemsArr addObject:url];
     }
 
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(150, 150, 100, 100)];
     [self.view addSubview:imageView];
 
-    imageView.image = [UIImage groupIconWithURLArray:iconItemsArr finalSize:imageView.bounds.size padding:5 bgColor:[UIColor groupTableViewBackgroundColor]];
 
+    [UIImage groupIconWithUrls:iconItemsArr size:imageView.bounds.size padding:5 bgColor:[UIColor groupTableViewBackgroundColor] defaultImg:[UIImage new] callback:^(UIImage * _Nonnull image) {
+        imageView.image = image;
+    }];
 }
 
 /*
