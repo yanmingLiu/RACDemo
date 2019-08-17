@@ -26,6 +26,7 @@
                    @{@"text" : @"上下循环滚动View", @"vc" : @"ScrollViewController"},
                    @{@"text" : @"相册拍照拍视频", @"vc" : @"YMImagePickerViewController"},
                    @{@"text" : @"微信群头像生成", @"vc" : @"GroupIconViewController"},
+                   @{@"text" : @"日期转换", @"vc" : @"DateTableViewController"},
 
                    ];
 

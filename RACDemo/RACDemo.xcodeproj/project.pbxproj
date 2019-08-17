@@ -82,6 +82,8 @@
 		C2E36F9C221BB3E6001CA758 /* TopNewView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36F9B221BB3E6001CA758 /* TopNewView.m */; };
 		C2E36FAE221BD62F001CA758 /* Tabbar1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E36FAD221BD62F001CA758 /* Tabbar1ViewController.m */; };
 		C2E8608C2046ACFF001E4746 /* CombiningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E8608B2046ACFF001E4746 /* CombiningViewController.m */; };
+		C2E9B7A62307B95100F6AA71 /* YMDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E9B7A52307B95100F6AA71 /* YMDateFormatter.m */; };
+		C2E9B7AA2307C82500F6AA71 /* DateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E9B7A92307C82500F6AA71 /* DateTableViewController.m */; };
 		C2F44C1F2236403500A1195F /* YMBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F44C1E2236403500A1195F /* YMBaseCollectionViewController.m */; };
 		C2F44C222236445D00A1195F /* TestCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F44C212236445D00A1195F /* TestCollectionViewController.m */; };
 		C2F662E222E16591004039B3 /* UIImage+Group.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F662E022E16591004039B3 /* UIImage+Group.m */; };
@@ -261,6 +263,10 @@
 		C2E36FAD221BD62F001CA758 /* Tabbar1ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tabbar1ViewController.m; sourceTree = "<group>"; };
 		C2E8608A2046ACFF001E4746 /* CombiningViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CombiningViewController.h; sourceTree = "<group>"; };
 		C2E8608B2046ACFF001E4746 /* CombiningViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CombiningViewController.m; sourceTree = "<group>"; };
+		C2E9B7A42307B95100F6AA71 /* YMDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMDateFormatter.h; sourceTree = "<group>"; };
+		C2E9B7A52307B95100F6AA71 /* YMDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMDateFormatter.m; sourceTree = "<group>"; };
+		C2E9B7A82307C82500F6AA71 /* DateTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateTableViewController.h; sourceTree = "<group>"; };
+		C2E9B7A92307C82500F6AA71 /* DateTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateTableViewController.m; sourceTree = "<group>"; };
 		C2F44C1D2236403500A1195F /* YMBaseCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMBaseCollectionViewController.h; sourceTree = "<group>"; };
 		C2F44C1E2236403500A1195F /* YMBaseCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMBaseCollectionViewController.m; sourceTree = "<group>"; };
 		C2F44C202236445D00A1195F /* TestCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCollectionViewController.h; sourceTree = "<group>"; };
@@ -756,6 +762,7 @@
 		C2E36F8A221BAB09001CA758 /* Tabbar1 */ = {
 			isa = PBXGroup;
 			children = (
+				C2E9B7A72307C81000F6AA71 /* 日期转换 */,
 				C2642A8E203028FC0016009D /* 分享view */,
 				C2036FA0202C7CDE00187160 /* 上下循环滚动View */,
 				C23F434720DB665300E9EF2C /* TextView */,
@@ -797,6 +804,15 @@
 			path = "RAC-Combining";
 			sourceTree = "<group>";
 		};
+		C2E9B7A72307C81000F6AA71 /* 日期转换 */ = {
+			isa = PBXGroup;
+			children = (
+				C2E9B7A82307C82500F6AA71 /* DateTableViewController.h */,
+				C2E9B7A92307C82500F6AA71 /* DateTableViewController.m */,
+			);
+			path = "日期转换";
+			sourceTree = "<group>";
+		};
 		C2F662E322E1664A004039B3 /* 相册拍照拍视频 */ = {
 			isa = PBXGroup;
 			children = (
@@ -830,12 +846,14 @@
 		C2F8328F22388E0000D8AF90 /* YMCategory */ = {
 			isa = PBXGroup;
 			children = (
+				C2E9B7A42307B95100F6AA71 /* YMDateFormatter.h */,
+				C2E9B7A52307B95100F6AA71 /* YMDateFormatter.m */,
+				C2F8329A22388E0000D8AF90 /* NSDate+YMDate.h */,
+				C2F832B322388E0000D8AF90 /* NSDate+YMDate.m */,
 				C2F662E122E16591004039B3 /* UIImage+Group.h */,
 				C2F662E022E16591004039B3 /* UIImage+Group.m */,
 				C2F832AA22388E0000D8AF90 /* NSArray+YMAdd.h */,
 				C2F8329722388E0000D8AF90 /* NSArray+YMAdd.m */,
-				C2F8329A22388E0000D8AF90 /* NSDate+YMDate.h */,
-				C2F832B322388E0000D8AF90 /* NSDate+YMDate.m */,
 				C2F832A522388E0000D8AF90 /* NSDictionary+YMDictionary.h */,
 				C2F832B622388E0000D8AF90 /* NSDictionary+YMDictionary.m */,
 				C2F832A622388E0000D8AF90 /* NSObject+Swizzle.h */,
@@ -1154,6 +1172,7 @@
 				C28804A7223107D200B79D23 /* YMBaseTableViewController.m in Sources */,
 				C2E36F9C221BB3E6001CA758 /* TopNewView.m in Sources */,
 				C28A22C31FA9A7F70035B5DF /* LoactionViewController.m in Sources */,
+				C2E9B7A62307B95100F6AA71 /* YMDateFormatter.m in Sources */,
 				C20B3A37213781D100EC7447 /* TableViewController_nav.m in Sources */,
 				C210E7531F5D202E0059A8B7 /* KLTNavigationController.m in Sources */,
 				C2DE230F225CA46200556B2C /* TableViewControllerTabbar0.m in Sources */,
@@ -1191,6 +1210,7 @@
 				C2F832BE22388E0000D8AF90 /* NSObject+Swizzle.m in Sources */,
 				C2F832C822388E0000D8AF90 /* UINavigationController+statusBar.m in Sources */,
 				C2F832D122388E0000D8AF90 /* UINavigationBar+Awesome.m in Sources */,
+				C2E9B7AA2307C82500F6AA71 /* DateTableViewController.m in Sources */,
 				C28A23791FA9D7180035B5DF /* MJDIYBackFooter.m in Sources */,
 				C2DE2308225CA30600556B2C /* TabbarModel.m in Sources */,
 				C293412E1EC43D89003FB9A0 /* AppDelegate.m in Sources */,
