@@ -20,6 +20,8 @@ static NSString *YMDateFormtyMd = @"yyyy-MM-dd";
 /**
  * 时间转成字符串
  **/
++ (NSString *)ym_dateToString:(NSDate *)date format:(NSString *)format;
+
 + (NSString *)ym_dateToString:(NSDate *)date;
 
 /**
@@ -27,10 +29,6 @@ static NSString *YMDateFormtyMd = @"yyyy-MM-dd";
  **/
 + (NSDate *)ym_stringToDate:(NSString *)dateString format:(NSString *)format;
 
-
-/**
- * 字符串转换为Date @"yyyy-MM-dd HH:mm:ss"
- **/
 + (NSDate *)ym_dateStringToDate:(NSString *)dateString;
 
 

@@ -14,9 +14,13 @@
 /**
  * 时间转成字符串
  **/
-+ (NSString *)ym_dateToString:(NSDate *)date {
-    NSDateFormatter *fm = [[YMDateFormatter shared] formatter:YMDateFormtyMdHms];
++ (NSString *)ym_dateToString:(NSDate *)date format:(NSString *)format {
+    NSDateFormatter *fm = [[YMDateFormatter shared] formatter:format];
     return [fm stringFromDate:date];
+}
+
++ (NSString *)ym_dateToString:(NSDate *)date {
+    return [self ym_dateToString:date format:YMDateFormtyMdHms];
 }
 
 /**
@@ -27,9 +31,6 @@
     return [fm dateFromString:dateString];
 }
 
-/**
- * 字符串转换为Date
- **/
 + (NSDate *)ym_dateStringToDate:(NSString *)dateString {
     return [self ym_stringToDate:dateString format:YMDateFormtyMdHms];
 }
