@@ -108,9 +108,9 @@
 
         case 6:
         {
-        NSDate *d = [NSDate ym_dateStringToDate:s1];
+        NSDate *d = [NSDate ym_stringToDate:s1];
 
-        cell.detailTextLabel.text = [NSDate ym_DateToTimestamp:d format:YMDateFormtyMdHms];
+        cell.detailTextLabel.text = [NSDate ym_dateToTimestamp:d format:YMDateFormtyMdHms];
         break;
         }
         default:

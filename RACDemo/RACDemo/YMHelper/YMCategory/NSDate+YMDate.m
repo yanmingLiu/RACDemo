@@ -31,7 +31,7 @@
     return [fm dateFromString:dateString];
 }
 
-+ (NSDate *)ym_dateStringToDate:(NSString *)dateString {
++ (NSDate *)ym_stringToDate:(NSString *)dateString {
     return [self ym_stringToDate:dateString format:YMDateFormtyMdHms];
 }
 
@@ -62,7 +62,7 @@
 /**
  时间 戳转化 时间戳
  */
-+ (NSString *)ym_DateToTimestamp:(NSDate *)date format:(NSString *)format {
++ (NSString *)ym_dateToTimestamp:(NSDate *)date format:(NSString *)format {
     NSString *timeSp = [NSString stringWithFormat:@"%ld", (long)[date timeIntervalSince1970]];
     return timeSp;
 }
@@ -91,8 +91,8 @@
 }
 
 + (double)ym_differenceDateStr1:(NSString *)dateStr1 dateStr2:(NSString *)dateStr2 {
-    NSDate *date1 = [self ym_dateStringToDate:dateStr1];
-    NSDate *date2 = [self ym_dateStringToDate:dateStr2];
+    NSDate *date1 = [self ym_stringToDate:dateStr1];
+    NSDate *date2 = [self ym_stringToDate:dateStr2];
     return [self ym_differenceDate1:date1 date2:date2];
 }
 
@@ -135,8 +135,8 @@
 /// 比较两个日期大小
 + (NSComparisonResult)ym_compareDateStr1:(NSString *)dateStr1 dateStr2:(NSString *)dateStr2
 {
-    NSDate *date1 = [self ym_dateStringToDate:dateStr1];
-    NSDate *date2 = [self ym_dateStringToDate:dateStr2];
+    NSDate *date1 = [self ym_stringToDate:dateStr1];
+    NSDate *date2 = [self ym_stringToDate:dateStr2];
 
     NSComparisonResult result = [date1 compare:date2];
     return result;

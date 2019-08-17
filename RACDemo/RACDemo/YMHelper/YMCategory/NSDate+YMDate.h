@@ -29,7 +29,7 @@ static NSString *YMDateFormtyMd = @"yyyy-MM-dd";
  **/
 + (NSDate *)ym_stringToDate:(NSString *)dateString format:(NSString *)format;
 
-+ (NSDate *)ym_dateStringToDate:(NSString *)dateString;
++ (NSDate *)ym_stringToDate:(NSString *)dateString;
 
 
 /**
@@ -45,7 +45,7 @@ static NSString *YMDateFormtyMd = @"yyyy-MM-dd";
 /**
  时间 戳转化 时间戳
  */
-+ (NSString *)ym_DateToTimestamp:(NSDate *)date format:(NSString *)format;
++ (NSString *)ym_dateToTimestamp:(NSDate *)date format:(NSString *)format;
 
 // MARK: - Calculation --------------------------------------
 
