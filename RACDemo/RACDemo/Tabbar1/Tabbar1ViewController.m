@@ -27,6 +27,7 @@
                    @{@"text" : @"相册拍照拍视频", @"vc" : @"YMImagePickerViewController"},
                    @{@"text" : @"微信群头像生成", @"vc" : @"GroupIconViewController"},
                    @{@"text" : @"日期转换", @"vc" : @"DateTableViewController"},
+                   @{@"text" : @"金钱显示", @"vc" : @"PriceViewController"},
 
                    ];
 

@@ -73,10 +73,22 @@ firstCannotBeDigtal:(BOOL)firstCannotBeDigtal;
 - (instancetype)ym_deleteHeaderFooterSpace;
 
 #pragma makr - 金钱显示
+
 /// 处理json float double 精度丢失问题
 - (NSString *)ym_decimalNumber;
 
-/// 金钱显示
-- (NSString *)ym_formatDecimalNumber:(NSString *)string;
+/// 金钱显示 100,000.00
++ (NSString *)ym_formatDecimalNumber:(NSString *)string;
+
+/**
+ 金钱显示 0.00 小数点后2位 & 符号 变小
+ */
++ (NSAttributedString *)ym_priceString:(NSString *)text textColor:(UIColor *)textColor smallFont:(UIFont *)smallFont bigFont:(UIFont *)bigFont symbol:(NSString *)symbol;
+
+/**
+ * 中划线
+ */
++ (NSAttributedString *)ym_strikethroughString:(NSString *)text textColor:(UIColor *)textColor font:(UIFont *)font symbol:(NSString *)symbol;
+
 
 @end

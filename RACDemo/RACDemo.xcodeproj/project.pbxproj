@@ -69,6 +69,8 @@
 		C2BFF9DA22C9F4BB00FC2629 /* YMImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BFF9D822C9F4BB00FC2629 /* YMImagePicker.m */; };
 		C2BFF9DE22C9F4DE00FC2629 /* YMImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BFF9DC22C9F4DE00FC2629 /* YMImagePickerViewController.m */; };
 		C2BFF9DF22C9F4DE00FC2629 /* YMImagePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2BFF9DD22C9F4DE00FC2629 /* YMImagePickerViewController.xib */; };
+		C2CF3836230EA84A007EE86A /* PriceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CF3834230EA84A007EE86A /* PriceViewController.m */; };
+		C2CF3837230EA84A007EE86A /* PriceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2CF3835230EA84A007EE86A /* PriceViewController.xib */; };
 		C2DE22FF225C8EB800556B2C /* YMBaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DE22FD225C8EB700556B2C /* YMBaseWebViewController.m */; };
 		C2DE2308225CA30600556B2C /* TabbarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DE2305225CA30600556B2C /* TabbarModel.m */; };
 		C2DE2309225CA30600556B2C /* Tabbar.json in Resources */ = {isa = PBXBuildFile; fileRef = C2DE2307225CA30600556B2C /* Tabbar.json */; };
@@ -242,6 +244,9 @@
 		C2BFF9DB22C9F4DE00FC2629 /* YMImagePickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMImagePickerViewController.h; sourceTree = "<group>"; };
 		C2BFF9DC22C9F4DE00FC2629 /* YMImagePickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMImagePickerViewController.m; sourceTree = "<group>"; };
 		C2BFF9DD22C9F4DE00FC2629 /* YMImagePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YMImagePickerViewController.xib; sourceTree = "<group>"; };
+		C2CF3833230EA84A007EE86A /* PriceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PriceViewController.h; sourceTree = "<group>"; };
+		C2CF3834230EA84A007EE86A /* PriceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PriceViewController.m; sourceTree = "<group>"; };
+		C2CF3835230EA84A007EE86A /* PriceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceViewController.xib; sourceTree = "<group>"; };
 		C2DE22FD225C8EB700556B2C /* YMBaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMBaseWebViewController.m; sourceTree = "<group>"; };
 		C2DE22FE225C8EB700556B2C /* YMBaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMBaseWebViewController.h; sourceTree = "<group>"; };
 		C2DE2305225CA30600556B2C /* TabbarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabbarModel.m; sourceTree = "<group>"; };
@@ -697,6 +702,16 @@
 			path = YMImagePicker;
 			sourceTree = "<group>";
 		};
+		C2CF3832230EA828007EE86A /* 金钱显示 */ = {
+			isa = PBXGroup;
+			children = (
+				C2CF3833230EA84A007EE86A /* PriceViewController.h */,
+				C2CF3834230EA84A007EE86A /* PriceViewController.m */,
+				C2CF3835230EA84A007EE86A /* PriceViewController.xib */,
+			);
+			path = "金钱显示";
+			sourceTree = "<group>";
+		};
 		C2DE2301225CA14600556B2C /* Tabbar0 */ = {
 			isa = PBXGroup;
 			children = (
@@ -762,6 +777,7 @@
 		C2E36F8A221BAB09001CA758 /* Tabbar1 */ = {
 			isa = PBXGroup;
 			children = (
+				C2CF3832230EA828007EE86A /* 金钱显示 */,
 				C2E9B7A72307C81000F6AA71 /* 日期转换 */,
 				C2642A8E203028FC0016009D /* 分享view */,
 				C2036FA0202C7CDE00187160 /* 上下循环滚动View */,
@@ -1012,6 +1028,7 @@
 			files = (
 				C2BF508B22C33EEE0014E913 /* 6@2x.png in Resources */,
 				C2BF508C22C33EEE0014E913 /* 8@2x.png in Resources */,
+				C2CF3837230EA84A007EE86A /* PriceViewController.xib in Resources */,
 				C2BFF9DF22C9F4DE00FC2629 /* YMImagePickerViewController.xib in Resources */,
 				C2BF508822C33EEE0014E913 /* 5@2x.png in Resources */,
 				C2E36F96221BB249001CA758 /* not_network.png in Resources */,
@@ -1170,6 +1187,7 @@
 				C2F44C222236445D00A1195F /* TestCollectionViewController.m in Sources */,
 				C28A23811FA9D7210035B5DF /* FLAnimatedImageView+WebCache.m in Sources */,
 				C28804A7223107D200B79D23 /* YMBaseTableViewController.m in Sources */,
+				C2CF3836230EA84A007EE86A /* PriceViewController.m in Sources */,
 				C2E36F9C221BB3E6001CA758 /* TopNewView.m in Sources */,
 				C28A22C31FA9A7F70035B5DF /* LoactionViewController.m in Sources */,
 				C2E9B7A62307B95100F6AA71 /* YMDateFormatter.m in Sources */,

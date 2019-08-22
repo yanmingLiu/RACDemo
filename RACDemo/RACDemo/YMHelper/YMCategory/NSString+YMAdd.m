@@ -187,12 +187,12 @@ firstCannotBeDigtal:(BOOL)firstCannotBeDigtal;
 /// 处理json float double 精度丢失问题
 - (NSString *)ym_decimalNumber {
     NSString *doubleString  = [NSString stringWithFormat:@"%f", self.doubleValue];
-    NSDecimalNumber *decNumber    = [NSDecimalNumber decimalNumberWithString:doubleString];
+    NSDecimalNumber *decNumber = [NSDecimalNumber decimalNumberWithString:doubleString];
     return [decNumber stringValue];
 }
 
 /// 金钱显示
-- (NSString *)ym_formatDecimalNumber:(NSString *)string {
++ (NSString *)ym_formatDecimalNumber:(NSString *)string {
     if (!string || string.length == 0) {
         return string;
     }
@@ -205,4 +205,52 @@ firstCannotBeDigtal:(BOOL)firstCannotBeDigtal;
     NSString *amountString = [formatter stringFromNumber:number];
     return amountString;
 }
+
+
+/**
+ 金钱显示 0.00 小数点后2位 & 符号 变小
+ */
++ (NSAttributedString *)ym_priceString:(NSString *)text textColor:(UIColor *)textColor smallFont:(UIFont *)smallFont bigFont:(UIFont *)bigFont symbol:(NSString *)symbol
+{
+    if (!text || text.length == 0) {
+        text = @"0.00";
+    }
+    NSRange range = [text rangeOfString:@"."];
+
+    if (range.length == 0) {
+        return [[NSAttributedString alloc] initWithString:@""];
+    }
+
+    NSArray *texts = [text componentsSeparatedByString:@"."];
+
+    NSMutableAttributedString *mStr = [[NSMutableAttributedString alloc]initWithString:symbol.length ? symbol : @"" attributes:@{NSFontAttributeName:smallFont,NSForegroundColorAttributeName:textColor}];
+
+    NSAttributedString *bigStr = [[NSAttributedString alloc]initWithString:texts[0] attributes:@{NSFontAttributeName:bigFont,NSForegroundColorAttributeName:textColor}];
+
+    NSAttributedString *pointStr = [[NSAttributedString alloc]initWithString:@"." attributes:@{NSFontAttributeName:smallFont,NSForegroundColorAttributeName:textColor}];
+
+    NSAttributedString *smallStr = [[NSAttributedString alloc]initWithString:texts[1] attributes:@{NSFontAttributeName:smallFont,NSForegroundColorAttributeName:textColor}];
+
+    [mStr appendAttributedString:bigStr];
+    [mStr appendAttributedString:pointStr];
+    [mStr appendAttributedString:smallStr];
+    return mStr;
+}
+
+/**
+ * 中划线
+ */
++ (NSAttributedString *)ym_strikethroughString:(NSString *)text textColor:(UIColor *)textColor font:(UIFont *)font symbol:(NSString *)symbol
+{
+    if (!text || text.length == 0) {
+        return [[NSAttributedString alloc] initWithString:@""];
+    }
+    NSDictionary *dic = @{NSFontAttributeName:font,NSForegroundColorAttributeName:textColor,NSStrikethroughStyleAttributeName: [NSNumber numberWithInt:NSUnderlineStyleSingle]};
+
+    NSAttributedString *astr = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@%@", symbol,text] attributes:dic];
+    return astr;
+}
+
+
+
 @end

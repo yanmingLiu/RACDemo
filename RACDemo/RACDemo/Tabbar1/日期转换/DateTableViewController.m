@@ -122,18 +122,6 @@
 }
 
 
-- (NSString *)timestampTransformToString:(NSString *)timestamp format:(NSString *)format {
-    // 格式化时间
-    NSDateFormatter* formatter = [[NSDateFormatter alloc] init];
-    formatter.timeZone = [NSTimeZone systemTimeZone];
-    [formatter setDateStyle:NSDateFormatterMediumStyle];
-    [formatter setTimeStyle:NSDateFormatterShortStyle];
-    [formatter setDateFormat:format];
-    // 毫秒值转化为秒
-    NSDate* date = [NSDate dateWithTimeIntervalSince1970:[timestamp doubleValue]/ 1000.0];
-    NSString* dateString = [formatter stringFromDate:date];
-    return dateString;
-}
 
 
 @end
