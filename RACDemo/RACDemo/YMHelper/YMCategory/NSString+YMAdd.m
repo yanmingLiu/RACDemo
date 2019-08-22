@@ -191,7 +191,7 @@ firstCannotBeDigtal:(BOOL)firstCannotBeDigtal;
     return [decNumber stringValue];
 }
 
-/// 金钱显示
+/// 金钱显示 100,000.00
 + (NSString *)ym_formatDecimalNumber:(NSString *)string {
     if (!string || string.length == 0) {
         return string;
