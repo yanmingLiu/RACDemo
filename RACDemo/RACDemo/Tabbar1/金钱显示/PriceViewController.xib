@@ -113,7 +113,7 @@
                 <constraint firstItem="Pg7-Ck-gad" firstAttribute="top" secondItem="MKU-0y-63j" secondAttribute="bottom" constant="8" id="vUN-lx-8hK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="-649" y="109"/>
+            <point key="canvasLocation" x="-1000" y="104"/>
         </view>
     </objects>
 </document>

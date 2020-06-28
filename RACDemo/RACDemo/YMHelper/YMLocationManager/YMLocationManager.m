@@ -41,13 +41,19 @@ static id _instance;
 
 /// 定位
 - (RACSignal *)autoLocationSignal {
+    
+#if TARGET_IPHONE_SIMULATOR  //模拟器
+    NSLog(@"模拟器不使用定位");
+    return [RACSignal empty];
+
+#elif TARGET_OS_IPHONE      //真机
     return [[[self authorizationSignal] filter:^BOOL(id  _Nullable value) {
         return [value boolValue];
     }] flattenMap:^__kindof RACSignal * _Nullable(id  _Nullable value) {
         return [[[[[[[self rac_signalForSelector:@selector(locationManager:didUpdateLocations:) fromProtocol:@protocol(CLLocationManagerDelegate)] map:^id _Nullable(RACTuple * _Nullable value) {
             return value[1];
         }] merge:[[self rac_signalForSelector:@selector(locationManager:didFailWithError:) fromProtocol:@protocol(CLLocationManagerDelegate)] map:^id _Nullable(RACTuple * _Nullable value) {
-            return [RACSignal error:value[1]]; 
+            return [RACSignal error:value[1]];
         }]] take:1] initially:^{  // initially是信号量开始时候调用的block，
             [self.manager startUpdatingLocation];
         }]  finally:^{ // finally则是信号量结束了调用的block。
@@ -68,11 +74,12 @@ static id _instance;
                 }];
                 return [RACDisposable disposableWithBlock:^{
                 }];
-            }]; 
-        }]; 
+            }];
+        }];
     }];
-}
 
+#endif
+}
 
 /// 根据地址得到经纬度
 - (RACSignal *)geocodeSignal:(NSString *)address {
