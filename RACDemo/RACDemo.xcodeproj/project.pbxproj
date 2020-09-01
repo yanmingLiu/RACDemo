@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		31B752FE692F08A60EB6F1A2 /* Pods_RACDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FC46EB993C5AF3997640B5 /* Pods_RACDemoTests.framework */; };
 		7F2C3ABB626F7453097BA82F /* Pods_RACDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF07DDA3E5186A0F647406F /* Pods_RACDemo.framework */; };
+		B5A29BC724FE9CD500933437 /* RippleAnimatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A29BC624FE9CD500933437 /* RippleAnimatViewController.m */; };
+		B5A29BCA24FEA11700933437 /* RippleAnimatView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A29BC924FEA11700933437 /* RippleAnimatView.m */; };
 		B87ED787B972497E3A2BD358 /* Pods_RACDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FAD0F557F9F997798C3C77 /* Pods_RACDemoUITests.framework */; };
 		C2036FA7202C7CFB00187160 /* YMScrollViewUpDown.m in Sources */ = {isa = PBXBuildFile; fileRef = C2036FA2202C7CFA00187160 /* YMScrollViewUpDown.m */; };
 		C2036FA8202C7CFB00187160 /* NSTimer+forYMScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2036FA3202C7CFA00187160 /* NSTimer+forYMScrollerView.m */; };
@@ -138,6 +140,10 @@
 		50C57BFC8857C536E0274D54 /* Pods-RACDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoUITests/Pods-RACDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5521038BDB566A569065065C /* Pods-RACDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoUITests/Pods-RACDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6FC46EB993C5AF3997640B5 /* Pods_RACDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5A29BC524FE9CD500933437 /* RippleAnimatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RippleAnimatViewController.h; sourceTree = "<group>"; };
+		B5A29BC624FE9CD500933437 /* RippleAnimatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RippleAnimatViewController.m; sourceTree = "<group>"; };
+		B5A29BC824FEA11700933437 /* RippleAnimatView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RippleAnimatView.h; sourceTree = "<group>"; };
+		B5A29BC924FEA11700933437 /* RippleAnimatView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RippleAnimatView.m; sourceTree = "<group>"; };
 		C2036FA1202C7CFA00187160 /* YMScrollViewUpDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMScrollViewUpDown.h; sourceTree = "<group>"; };
 		C2036FA2202C7CFA00187160 /* YMScrollViewUpDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMScrollViewUpDown.m; sourceTree = "<group>"; };
 		C2036FA3202C7CFA00187160 /* NSTimer+forYMScrollerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+forYMScrollerView.m"; sourceTree = "<group>"; };
@@ -377,6 +383,17 @@
 				D0FAD0F557F9F997798C3C77 /* Pods_RACDemoUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5A29BC424FE9C5600933437 /* 水波纹动画 */ = {
+			isa = PBXGroup;
+			children = (
+				B5A29BC524FE9CD500933437 /* RippleAnimatViewController.h */,
+				B5A29BC624FE9CD500933437 /* RippleAnimatViewController.m */,
+				B5A29BC824FEA11700933437 /* RippleAnimatView.h */,
+				B5A29BC924FEA11700933437 /* RippleAnimatView.m */,
+			);
+			path = "水波纹动画";
 			sourceTree = "<group>";
 		};
 		C2036FA0202C7CDE00187160 /* 上下循环滚动View */ = {
@@ -777,6 +794,7 @@
 		C2E36F8A221BAB09001CA758 /* Tabbar1 */ = {
 			isa = PBXGroup;
 			children = (
+				B5A29BC424FE9C5600933437 /* 水波纹动画 */,
 				C2CF3832230EA828007EE86A /* 金钱显示 */,
 				C2E9B7A72307C81000F6AA71 /* 日期转换 */,
 				C2642A8E203028FC0016009D /* 分享view */,
@@ -1231,6 +1249,7 @@
 				C2E9B7AA2307C82500F6AA71 /* DateTableViewController.m in Sources */,
 				C28A23791FA9D7180035B5DF /* MJDIYBackFooter.m in Sources */,
 				C2DE2308225CA30600556B2C /* TabbarModel.m in Sources */,
+				B5A29BC724FE9CD500933437 /* RippleAnimatViewController.m in Sources */,
 				C293412E1EC43D89003FB9A0 /* AppDelegate.m in Sources */,
 				C2E36F91221BADE0001CA758 /* TestTabelViewController.m in Sources */,
 				C2F832C322388E0000D8AF90 /* UIView+YMAdd.m in Sources */,
@@ -1242,6 +1261,7 @@
 				C2F832BD22388E0000D8AF90 /* UIApplication+Extension.m in Sources */,
 				C29341631EC48233003FB9A0 /* TableViewController.m in Sources */,
 				C210E7521F5D202E0059A8B7 /* AnimationContoller.m in Sources */,
+				B5A29BCA24FEA11700933437 /* RippleAnimatView.m in Sources */,
 				C2F832C022388E0000D8AF90 /* NSArray+YMAdd.m in Sources */,
 				C28A233E1FA9D6D00035B5DF /* YMDatePickerView.m in Sources */,
 				C23F434A20DB666A00E9EF2C /* TextViewController.m in Sources */,
@@ -1407,7 +1427,7 @@
 				DEVELOPMENT_TEAM = LDKJZW2PUN;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/liuyanming/Desktop/github/RACDemo/RACDemo/RACDemo/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/RACDemo/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = RACDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1432,7 +1452,7 @@
 				DEVELOPMENT_TEAM = LDKJZW2PUN;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/liuyanming/Desktop/github/RACDemo/RACDemo/RACDemo/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/RACDemo/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = RACDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;

@@ -28,6 +28,7 @@
                    @{@"text" : @"微信群头像生成", @"vc" : @"GroupIconViewController"},
                    @{@"text" : @"日期转换", @"vc" : @"DateTableViewController"},
                    @{@"text" : @"金钱显示", @"vc" : @"PriceViewController"},
+                   @{@"text" : @"水波纹动画", @"vc" : @"RippleAnimatViewController"},
 
                    ];
 
@@ -57,6 +58,7 @@
     NSString *str = dic[@"vc"];
     Class cls = NSClassFromString(str);
     UIViewController *vc = [[cls alloc] init];
+    vc.title = dic[@"text"];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
