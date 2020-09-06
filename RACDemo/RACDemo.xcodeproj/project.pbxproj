@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		31B752FE692F08A60EB6F1A2 /* Pods_RACDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FC46EB993C5AF3997640B5 /* Pods_RACDemoTests.framework */; };
+		385B1219250542B80060B2BB /* InputBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 385B1218250542B80060B2BB /* InputBoxView.m */; };
 		7F2C3ABB626F7453097BA82F /* Pods_RACDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF07DDA3E5186A0F647406F /* Pods_RACDemo.framework */; };
 		B5A29BC724FE9CD500933437 /* RippleAnimatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A29BC624FE9CD500933437 /* RippleAnimatViewController.m */; };
 		B5A29BCA24FEA11700933437 /* RippleAnimatView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A29BC924FEA11700933437 /* RippleAnimatView.m */; };
@@ -136,6 +137,8 @@
 		01816198F46A0327060007C5 /* Pods-RACDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemo/Pods-RACDemo.release.xcconfig"; sourceTree = "<group>"; };
 		2C5BCF6198C82C33066F310A /* Pods-RACDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemo/Pods-RACDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		350573A3A5F2F375E62F26D3 /* Pods-RACDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoTests/Pods-RACDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		385B1217250542B80060B2BB /* InputBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputBoxView.h; sourceTree = "<group>"; };
+		385B1218250542B80060B2BB /* InputBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputBoxView.m; sourceTree = "<group>"; };
 		4FB2C8991F4A39CBC22E01E8 /* Pods-RACDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoTests/Pods-RACDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		50C57BFC8857C536E0274D54 /* Pods-RACDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoUITests/Pods-RACDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5521038BDB566A569065065C /* Pods-RACDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoUITests/Pods-RACDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -361,6 +364,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		385B12162505429E0060B2BB /* 密码输入框 */ = {
+			isa = PBXGroup;
+			children = (
+				385B1217250542B80060B2BB /* InputBoxView.h */,
+				385B1218250542B80060B2BB /* InputBoxView.m */,
+			);
+			path = "密码输入框";
+			sourceTree = "<group>";
+		};
 		527085D9434AF236BCCAB67D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -794,6 +806,7 @@
 		C2E36F8A221BAB09001CA758 /* Tabbar1 */ = {
 			isa = PBXGroup;
 			children = (
+				385B12162505429E0060B2BB /* 密码输入框 */,
 				B5A29BC424FE9C5600933437 /* 水波纹动画 */,
 				C2CF3832230EA828007EE86A /* 金钱显示 */,
 				C2E9B7A72307C81000F6AA71 /* 日期转换 */,
@@ -1204,6 +1217,7 @@
 				C2DE22FF225C8EB800556B2C /* YMBaseWebViewController.m in Sources */,
 				C2F44C222236445D00A1195F /* TestCollectionViewController.m in Sources */,
 				C28A23811FA9D7210035B5DF /* FLAnimatedImageView+WebCache.m in Sources */,
+				385B1219250542B80060B2BB /* InputBoxView.m in Sources */,
 				C28804A7223107D200B79D23 /* YMBaseTableViewController.m in Sources */,
 				C2CF3836230EA84A007EE86A /* PriceViewController.m in Sources */,
 				C2E36F9C221BB3E6001CA758 /* TopNewView.m in Sources */,

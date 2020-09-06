@@ -23,7 +23,7 @@ target 'RACDemo' do
 
   pod 'DZNEmptyDataSet'
   
-  #pod 'IQKeyboardManager'
+  pod 'IQKeyboardManager'
   
   #pod 'SDCycleScrollView'
   #pod 'UICountingLabel'
@@ -44,6 +44,9 @@ target 'RACDemo' do
   pod 'TZScrollViewPopGesture'
   pod 'FDFullscreenPopGesture'
   
+  # 交互式转场
+  pod "ZFDragableModalTransition"
+
   
   pod 'Qiniu'
   
