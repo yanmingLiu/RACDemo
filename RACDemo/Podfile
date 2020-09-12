@@ -1,67 +1,63 @@
 # Uncomment the next line to define a global platform for your project
- platform :ios, '9.0'
+platform :ios, '9.0'
 
 target 'RACDemo' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-   use_frameworks!
-
-  pod 'ReactiveObjC';
-  pod 'AFNetworking', '~> 3.1.0';
-  pod 'MBProgressHUD'
-  
-  pod 'MJRefresh'
-  #pod 'MJExtension'
-  
-  pod 'YYCache'
-  pod 'YYModel'
-  
-  pod 'SDWebImage'
-  pod 'DACircularProgress'
-  pod 'FLAnimatedImage'
-
-  pod 'Toast'
-
-  pod 'DZNEmptyDataSet'
-  
-  pod 'IQKeyboardManager'
-  
-  #pod 'SDCycleScrollView'
-  #pod 'UICountingLabel'
-  
-  #图片选择-裁切
-  #pod 'TZImagePickerController'
-  #pod 'TOCropViewController'
-  
-  
-  #验证码倒计时控件
-  #pod 'DBCountDownButton'
-  
-  #二维码扫描
-  #pod 'LBXScan/LBXNative'
-  #pod 'LBXScan/LBXZXing'
-  #pod 'LBXScan/UI'
-
-  pod 'TZScrollViewPopGesture'
-  pod 'FDFullscreenPopGesture'
-  
-  # 交互式转场
-  pod "ZFDragableModalTransition"
-
-  
-  pod 'Qiniu'
-  
-  
-  
-  
-  
-  target 'RACDemoTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'RACDemoUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+    # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+    use_frameworks!
+    
+    pod 'ReactiveObjC';
+    pod 'AFNetworking', '~> 3.1.0';
+    pod 'MBProgressHUD'
+    pod 'Masonry'
+    
+    pod 'MJRefresh'
+    #pod 'MJExtension'
+    
+    pod 'YYCache'
+    pod 'YYModel'
+    
+    pod 'SDWebImage'
+    pod 'DACircularProgress'
+    pod 'FLAnimatedImage'
+    
+    pod 'Toast'
+    
+    pod 'DZNEmptyDataSet'
+    
+    pod 'IQKeyboardManager'
+    
+    #pod 'SDCycleScrollView'
+    #pod 'UICountingLabel'
+    
+    #图片选择-裁切
+    #pod 'TZImagePickerController'
+    #pod 'TOCropViewController'
+    
+    #验证码倒计时控件
+    #pod 'DBCountDownButton'
+    
+    #二维码扫描
+    #pod 'LBXScan/LBXNative'
+    #pod 'LBXScan/LBXZXing'
+    #pod 'LBXScan/UI'
+    
+    pod 'TZScrollViewPopGesture'
+    pod 'FDFullscreenPopGesture'
+    
+    # 交互式转场
+    pod "ZFDragableModalTransition"
+    
+    
+    pod 'Qiniu'
+    
+    target 'RACDemoTests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
+    
+    target 'RACDemoUITests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
+    
 end

@@ -6,7 +6,7 @@
 //
 
 #import "Tabbar1ViewController.h"
-
+#import "InputPwdController.h"
 
 @interface Tabbar1ViewController ()
 
@@ -29,6 +29,7 @@
                    @{@"text" : @"日期转换", @"vc" : @"DateTableViewController"},
                    @{@"text" : @"金钱显示", @"vc" : @"PriceViewController"},
                    @{@"text" : @"水波纹动画", @"vc" : @"RippleAnimatViewController"},
+                   @{@"text" : @"密码输入弹窗", @"vc" : @"InputPwdController"},
 
                    ];
 
@@ -56,6 +57,13 @@
 
     NSDictionary *dic = self.dataArray[indexPath.row];
     NSString *str = dic[@"vc"];
+    
+    if ([str isEqualToString:@"InputPwdController"]) {
+        InputPwdController *vc = [[InputPwdController alloc] init];
+        [vc show];
+        return;
+    }
+    
     Class cls = NSClassFromString(str);
     UIViewController *vc = [[cls alloc] init];
     vc.title = dic[@"text"];
