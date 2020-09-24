@@ -44,6 +44,8 @@ target 'RACDemo' do
   pod 'TZScrollViewPopGesture'
   pod 'FDFullscreenPopGesture'
   
+  pod 'M80AttributedLabel'
+
   
   pod 'Qiniu'
   

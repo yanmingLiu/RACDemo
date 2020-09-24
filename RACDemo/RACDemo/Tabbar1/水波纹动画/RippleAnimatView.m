@@ -8,7 +8,7 @@
 
 #import "RippleAnimatView.h"
 
-@interface RippleAnimatView ()
+@interface RippleAnimatView ()<CAAnimationDelegate>
 
 @property (nonatomic, strong) CALayer *animationLayer;
 
@@ -34,7 +34,16 @@
     self.animationLayer = nil;
 }
 
+
 - (void)startAnimation {
+    if (!self.animationLayer) {
+        [self makeAnimationLayer];
+    }
+    [self.layer addSublayer:self.animationLayer];
+}
+
+
+- (void)makeAnimationLayer {
     CALayer *animationLayer = [CALayer layer];
     for (int i = 0; i < _rippleCount; i++) {
         CALayer *pulsingLayer = [CALayer layer];
@@ -54,8 +63,9 @@
         animationGroup.fillMode = kCAFillModeBackwards;
         animationGroup.beginTime = CACurrentMediaTime() + i * _rippleDuration / _rippleCount;
         animationGroup.duration = _rippleDuration;
-        animationGroup.repeatCount = HUGE;
+        animationGroup.repeatCount = 0;
         animationGroup.timingFunction = defaultCurve;
+        animationGroup.delegate = self;
 
         CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
         scaleAnimation.fromValue = @(_minRadius / _maxRadius);
@@ -79,5 +89,16 @@
 
     self.layer.cornerRadius = self.bounds.size.width / 2;
 }
+
+- (void)animationDidStart:(CAAnimation *)anim {
+    
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    if (flag) {
+        [self stopAnimation];
+    }
+}
+
 
 @end

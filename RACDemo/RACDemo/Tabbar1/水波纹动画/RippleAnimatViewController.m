@@ -30,9 +30,9 @@
     
     RippleAnimatView *rv = [[RippleAnimatView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
     rv.minRadius = 40;
-    rv.maxRadius = 70;
+    rv.maxRadius = 60;
     rv.rippleCount = 4;
-    rv.rippleDuration = 3;
+    rv.rippleDuration = 1.0;
     rv.rippleColor = [UIColor clearColor];
     rv.borderWidth = 1;
     rv.borderColor = [UIColor blueColor];
@@ -45,7 +45,8 @@
     self.rv = rv;
 }
 
-- (void)cirAction{
+- (void)cirAction
+{
     CAShapeLayer *sharLayer = [CAShapeLayer layer];
     sharLayer.backgroundColor = [UIColor redColor].CGColor;
     sharLayer.bounds = CGRectMake(0, 0, 20, 20);
@@ -63,7 +64,7 @@
     
     CAAnimationGroup *group = [CAAnimationGroup animation];
     group.animations = @[ani,ani1];
-    group.duration = 2;
+    group.duration = 4;
     group.repeatCount = HUGE;
     [sharLayer addAnimation:group forKey:nil];
     
@@ -77,14 +78,15 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+
+    [self.rv startAnimation];
+    
     _isStop = !_isStop;
     if (_isStop) {
         [self.replayer removeFromSuperlayer];
         self.replayer = nil;
-        [self.rv stopAnimation];
     }else {
         [self cirAction];
-        [self.rv startAnimation];
     }
 }
 
