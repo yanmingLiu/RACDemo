@@ -30,7 +30,7 @@
                    @{@"text" : @"金钱显示", @"vc" : @"PriceViewController"},
                    @{@"text" : @"水波纹动画", @"vc" : @"RippleAnimatViewController"},
                    @{@"text" : @"密码输入弹窗", @"vc" : @"InputPwdController"},
-
+                   @{@"text" : @"自定义UISlider", @"vc" : @"CustomSliderViewController"},
                    ];
 
 

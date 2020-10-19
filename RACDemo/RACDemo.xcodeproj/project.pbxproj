@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		31B752FE692F08A60EB6F1A2 /* Pods_RACDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FC46EB993C5AF3997640B5 /* Pods_RACDemoTests.framework */; };
+		383A8B712536BCEB0011D928 /* CustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A8B702536BCEB0011D928 /* CustomSlider.m */; };
+		383A8B772536BD190011D928 /* CustomSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A8B762536BD190011D928 /* CustomSliderViewController.m */; };
 		385B1219250542B80060B2BB /* InputBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 385B1218250542B80060B2BB /* InputBoxView.m */; };
 		38643193250CADA8005E058C /* InputPwdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38643192250CADA8005E058C /* InputPwdController.m */; };
 		7F2C3ABB626F7453097BA82F /* Pods_RACDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF07DDA3E5186A0F647406F /* Pods_RACDemo.framework */; };
@@ -138,6 +140,10 @@
 		01816198F46A0327060007C5 /* Pods-RACDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemo/Pods-RACDemo.release.xcconfig"; sourceTree = "<group>"; };
 		2C5BCF6198C82C33066F310A /* Pods-RACDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemo/Pods-RACDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		350573A3A5F2F375E62F26D3 /* Pods-RACDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoTests/Pods-RACDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		383A8B6F2536BCEB0011D928 /* CustomSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSlider.h; sourceTree = "<group>"; };
+		383A8B702536BCEB0011D928 /* CustomSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSlider.m; sourceTree = "<group>"; };
+		383A8B752536BD190011D928 /* CustomSliderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSliderViewController.h; sourceTree = "<group>"; };
+		383A8B762536BD190011D928 /* CustomSliderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSliderViewController.m; sourceTree = "<group>"; };
 		385B1217250542B80060B2BB /* InputBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputBoxView.h; sourceTree = "<group>"; };
 		385B1218250542B80060B2BB /* InputBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputBoxView.m; sourceTree = "<group>"; };
 		38643191250CADA8005E058C /* InputPwdController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputPwdController.h; sourceTree = "<group>"; };
@@ -367,6 +373,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		383A8B6B2536BCB50011D928 /* UISlider */ = {
+			isa = PBXGroup;
+			children = (
+				383A8B6F2536BCEB0011D928 /* CustomSlider.h */,
+				383A8B702536BCEB0011D928 /* CustomSlider.m */,
+				383A8B752536BD190011D928 /* CustomSliderViewController.h */,
+				383A8B762536BD190011D928 /* CustomSliderViewController.m */,
+			);
+			path = UISlider;
+			sourceTree = "<group>";
+		};
 		385B12162505429E0060B2BB /* 密码输入框 */ = {
 			isa = PBXGroup;
 			children = (
@@ -811,6 +828,7 @@
 		C2E36F8A221BAB09001CA758 /* Tabbar1 */ = {
 			isa = PBXGroup;
 			children = (
+				383A8B6B2536BCB50011D928 /* UISlider */,
 				385B12162505429E0060B2BB /* 密码输入框 */,
 				B5A29BC424FE9C5600933437 /* 水波纹动画 */,
 				C2CF3832230EA828007EE86A /* 金钱显示 */,
@@ -1254,6 +1272,7 @@
 				C28A23771FA9D7180035B5DF /* MJDIYAutoFooter.m in Sources */,
 				C2BFF9DA22C9F4BB00FC2629 /* YMImagePicker.m in Sources */,
 				C2036FA7202C7CFB00187160 /* YMScrollViewUpDown.m in Sources */,
+				383A8B712536BCEB0011D928 /* CustomSlider.m in Sources */,
 				C2F44C1F2236403500A1195F /* YMBaseCollectionViewController.m in Sources */,
 				C2DE230C225CA33E00556B2C /* YMTabBarController.m in Sources */,
 				C2F662E822E16682004039B3 /* GroupIconViewController.m in Sources */,
@@ -1286,6 +1305,7 @@
 				C2F832CD22388E0000D8AF90 /* NSDictionary+YMDictionary.m in Sources */,
 				C2F832BD22388E0000D8AF90 /* UIApplication+Extension.m in Sources */,
 				C29341631EC48233003FB9A0 /* TableViewController.m in Sources */,
+				383A8B772536BD190011D928 /* CustomSliderViewController.m in Sources */,
 				C210E7521F5D202E0059A8B7 /* AnimationContoller.m in Sources */,
 				B5A29BCA24FEA11700933437 /* RippleAnimatView.m in Sources */,
 				C2F832C022388E0000D8AF90 /* NSArray+YMAdd.m in Sources */,
