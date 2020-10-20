@@ -31,6 +31,7 @@
                    @{@"text" : @"水波纹动画", @"vc" : @"RippleAnimatViewController"},
                    @{@"text" : @"密码输入弹窗", @"vc" : @"InputPwdController"},
                    @{@"text" : @"自定义UISlider", @"vc" : @"CustomSliderViewController"},
+                   @{@"text" : @"渐变字体label", @"vc" : @"GradientLabelViewController"},
                    ];
 
 
@@ -66,6 +67,7 @@
     
     Class cls = NSClassFromString(str);
     UIViewController *vc = [[cls alloc] init];
+    vc.view.backgroundColor = [UIColor whiteColor];
     vc.title = dic[@"text"];
     [self.navigationController pushViewController:vc animated:YES];
 }
