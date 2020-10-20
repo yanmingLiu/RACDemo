@@ -15,6 +15,8 @@
 		7F2C3ABB626F7453097BA82F /* Pods_RACDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF07DDA3E5186A0F647406F /* Pods_RACDemo.framework */; };
 		B59CDFC7253F22A600503D67 /* GradientLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B59CDFC6253F22A600503D67 /* GradientLabelViewController.m */; };
 		B59CDFD1253F290000503D67 /* ASGradientLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B59CDFCF253F290000503D67 /* ASGradientLabel.m */; };
+		B59CDFE6253F30B500503D67 /* ScrollTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = B59CDFE5253F30B500503D67 /* ScrollTextView.m */; };
+		B59CDFEC253F327900503D67 /* ScrollTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B59CDFEB253F327900503D67 /* ScrollTextViewController.m */; };
 		B5A29BC724FE9CD500933437 /* RippleAnimatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A29BC624FE9CD500933437 /* RippleAnimatViewController.m */; };
 		B5A29BCA24FEA11700933437 /* RippleAnimatView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A29BC924FEA11700933437 /* RippleAnimatView.m */; };
 		B87ED787B972497E3A2BD358 /* Pods_RACDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FAD0F557F9F997798C3C77 /* Pods_RACDemoUITests.framework */; };
@@ -158,6 +160,10 @@
 		B59CDFC6253F22A600503D67 /* GradientLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientLabelViewController.m; sourceTree = "<group>"; };
 		B59CDFCF253F290000503D67 /* ASGradientLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASGradientLabel.m; sourceTree = "<group>"; };
 		B59CDFD0253F290000503D67 /* ASGradientLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASGradientLabel.h; sourceTree = "<group>"; };
+		B59CDFE4253F30B500503D67 /* ScrollTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollTextView.h; sourceTree = "<group>"; };
+		B59CDFE5253F30B500503D67 /* ScrollTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollTextView.m; sourceTree = "<group>"; };
+		B59CDFEA253F327900503D67 /* ScrollTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollTextViewController.h; sourceTree = "<group>"; };
+		B59CDFEB253F327900503D67 /* ScrollTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollTextViewController.m; sourceTree = "<group>"; };
 		B5A29BC524FE9CD500933437 /* RippleAnimatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RippleAnimatViewController.h; sourceTree = "<group>"; };
 		B5A29BC624FE9CD500933437 /* RippleAnimatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RippleAnimatViewController.m; sourceTree = "<group>"; };
 		B5A29BC824FEA11700933437 /* RippleAnimatView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RippleAnimatView.h; sourceTree = "<group>"; };
@@ -434,6 +440,17 @@
 				B59CDFC6253F22A600503D67 /* GradientLabelViewController.m */,
 			);
 			path = "渐变字体";
+			sourceTree = "<group>";
+		};
+		B59CDFE3253F300F00503D67 /* 跑马灯 */ = {
+			isa = PBXGroup;
+			children = (
+				B59CDFE4253F30B500503D67 /* ScrollTextView.h */,
+				B59CDFE5253F30B500503D67 /* ScrollTextView.m */,
+				B59CDFEA253F327900503D67 /* ScrollTextViewController.h */,
+				B59CDFEB253F327900503D67 /* ScrollTextViewController.m */,
+			);
+			path = "跑马灯";
 			sourceTree = "<group>";
 		};
 		B5A29BC424FE9C5600933437 /* 水波纹动画 */ = {
@@ -845,6 +862,7 @@
 		C2E36F8A221BAB09001CA758 /* Tabbar1 */ = {
 			isa = PBXGroup;
 			children = (
+				B59CDFE3253F300F00503D67 /* 跑马灯 */,
 				B59CDFB8253F221F00503D67 /* 渐变字体 */,
 				383A8B6B2536BCB50011D928 /* UISlider */,
 				385B12162505429E0060B2BB /* 密码输入框 */,
@@ -1299,6 +1317,7 @@
 				C276EAD42016C952007717A2 /* YMBottomPopView.m in Sources */,
 				B59CDFD1253F290000503D67 /* ASGradientLabel.m in Sources */,
 				C2A5F1C51FAC40E800B96A75 /* YMNavigationController.m in Sources */,
+				B59CDFEC253F327900503D67 /* ScrollTextViewController.m in Sources */,
 				C24F936F2003780E00CD7015 /* LoginViewController.m in Sources */,
 				C2036FA8202C7CFB00187160 /* NSTimer+forYMScrollerView.m in Sources */,
 				C29341311EC43D89003FB9A0 /* ViewController.m in Sources */,
@@ -1318,6 +1337,7 @@
 				C293412E1EC43D89003FB9A0 /* AppDelegate.m in Sources */,
 				C2E36F91221BADE0001CA758 /* TestTabelViewController.m in Sources */,
 				C2F832C322388E0000D8AF90 /* UIView+YMAdd.m in Sources */,
+				B59CDFE6253F30B500503D67 /* ScrollTextView.m in Sources */,
 				C28804A8223107D200B79D23 /* YMBlankPageStyleHelper.m in Sources */,
 				C2F832C522388E0000D8AF90 /* UIButton+Badge.m in Sources */,
 				C2F832CF22388E0000D8AF90 /* NSString+YMAdd.m in Sources */,

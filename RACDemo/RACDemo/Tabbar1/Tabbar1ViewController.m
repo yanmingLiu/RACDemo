@@ -32,6 +32,8 @@
                    @{@"text" : @"密码输入弹窗", @"vc" : @"InputPwdController"},
                    @{@"text" : @"自定义UISlider", @"vc" : @"CustomSliderViewController"},
                    @{@"text" : @"渐变字体label", @"vc" : @"GradientLabelViewController"},
+                   @{@"text" : @"水平滚动textView-跑马灯", @"vc" : @"ScrollTextViewController"},
+
                    ];
 
 
