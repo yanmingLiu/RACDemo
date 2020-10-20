@@ -35,6 +35,7 @@
 #import "YMMacro.h"
 #import "UIView+YMAdd.h"
 #import "UIWindow+YMWindow.h"
+#import "UIColor+YMColor.h"
 
 
 #endif
