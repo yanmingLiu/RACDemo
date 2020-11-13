@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		31B752FE692F08A60EB6F1A2 /* Pods_RACDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FC46EB993C5AF3997640B5 /* Pods_RACDemoTests.framework */; };
+		38195542255EAC91007E1200 /* NOViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38195541255EAC91007E1200 /* NOViewModel.m */; };
 		383A8B712536BCEB0011D928 /* CustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A8B702536BCEB0011D928 /* CustomSlider.m */; };
 		383A8B772536BD190011D928 /* CustomSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A8B762536BD190011D928 /* CustomSliderViewController.m */; };
 		385B1219250542B80060B2BB /* InputBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 385B1218250542B80060B2BB /* InputBoxView.m */; };
 		38643193250CADA8005E058C /* InputPwdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38643192250CADA8005E058C /* InputPwdController.m */; };
+		38E7B43A255E90F900FB0DC6 /* NOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B439255E90F900FB0DC6 /* NOViewController.m */; };
+		38E7B443255E910700FB0DC6 /* NOView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B442255E910700FB0DC6 /* NOView.m */; };
 		7F2C3ABB626F7453097BA82F /* Pods_RACDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF07DDA3E5186A0F647406F /* Pods_RACDemo.framework */; };
 		B59CDFC7253F22A600503D67 /* GradientLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B59CDFC6253F22A600503D67 /* GradientLabelViewController.m */; };
 		B59CDFD1253F290000503D67 /* ASGradientLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B59CDFCF253F290000503D67 /* ASGradientLabel.m */; };
@@ -144,6 +147,8 @@
 		01816198F46A0327060007C5 /* Pods-RACDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemo/Pods-RACDemo.release.xcconfig"; sourceTree = "<group>"; };
 		2C5BCF6198C82C33066F310A /* Pods-RACDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemo/Pods-RACDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		350573A3A5F2F375E62F26D3 /* Pods-RACDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoTests/Pods-RACDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		38195540255EAC91007E1200 /* NOViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NOViewModel.h; sourceTree = "<group>"; };
+		38195541255EAC91007E1200 /* NOViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NOViewModel.m; sourceTree = "<group>"; };
 		383A8B6F2536BCEB0011D928 /* CustomSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSlider.h; sourceTree = "<group>"; };
 		383A8B702536BCEB0011D928 /* CustomSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSlider.m; sourceTree = "<group>"; };
 		383A8B752536BD190011D928 /* CustomSliderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSliderViewController.h; sourceTree = "<group>"; };
@@ -152,6 +157,10 @@
 		385B1218250542B80060B2BB /* InputBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputBoxView.m; sourceTree = "<group>"; };
 		38643191250CADA8005E058C /* InputPwdController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputPwdController.h; sourceTree = "<group>"; };
 		38643192250CADA8005E058C /* InputPwdController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputPwdController.m; sourceTree = "<group>"; };
+		38E7B438255E90F900FB0DC6 /* NOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NOViewController.h; sourceTree = "<group>"; };
+		38E7B439255E90F900FB0DC6 /* NOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NOViewController.m; sourceTree = "<group>"; };
+		38E7B441255E910700FB0DC6 /* NOView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NOView.h; sourceTree = "<group>"; };
+		38E7B442255E910700FB0DC6 /* NOView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NOView.m; sourceTree = "<group>"; };
 		4FB2C8991F4A39CBC22E01E8 /* Pods-RACDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoTests/Pods-RACDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		50C57BFC8857C536E0274D54 /* Pods-RACDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoUITests/Pods-RACDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5521038BDB566A569065065C /* Pods-RACDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoUITests/Pods-RACDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -405,6 +414,19 @@
 				38643192250CADA8005E058C /* InputPwdController.m */,
 			);
 			path = "密码输入框";
+			sourceTree = "<group>";
+		};
+		38E7B437255E90EC00FB0DC6 /* NOViewController */ = {
+			isa = PBXGroup;
+			children = (
+				38E7B438255E90F900FB0DC6 /* NOViewController.h */,
+				38E7B439255E90F900FB0DC6 /* NOViewController.m */,
+				38E7B441255E910700FB0DC6 /* NOView.h */,
+				38E7B442255E910700FB0DC6 /* NOView.m */,
+				38195540255EAC91007E1200 /* NOViewModel.h */,
+				38195541255EAC91007E1200 /* NOViewModel.m */,
+			);
+			path = NOViewController;
 			sourceTree = "<group>";
 		};
 		527085D9434AF236BCCAB67D /* Pods */ = {
@@ -862,6 +884,7 @@
 		C2E36F8A221BAB09001CA758 /* Tabbar1 */ = {
 			isa = PBXGroup;
 			children = (
+				38E7B437255E90EC00FB0DC6 /* NOViewController */,
 				B59CDFE3253F300F00503D67 /* 跑马灯 */,
 				B59CDFB8253F221F00503D67 /* 渐变字体 */,
 				383A8B6B2536BCB50011D928 /* UISlider */,
@@ -1321,12 +1344,14 @@
 				C24F936F2003780E00CD7015 /* LoginViewController.m in Sources */,
 				C2036FA8202C7CFB00187160 /* NSTimer+forYMScrollerView.m in Sources */,
 				C29341311EC43D89003FB9A0 /* ViewController.m in Sources */,
+				38E7B43A255E90F900FB0DC6 /* NOViewController.m in Sources */,
 				C2F832D022388E0000D8AF90 /* UIView+Radius.m in Sources */,
 				C28A22C61FA9A9F10035B5DF /* YMLocationManager.m in Sources */,
 				C2BF507422C33E4A0014E913 /* YMClearCacheTool.m in Sources */,
 				C28A23781FA9D7180035B5DF /* MJDIYHeader.m in Sources */,
 				C2E8608C2046ACFF001E4746 /* CombiningViewController.m in Sources */,
 				C2F832BE22388E0000D8AF90 /* NSObject+Swizzle.m in Sources */,
+				38E7B443255E910700FB0DC6 /* NOView.m in Sources */,
 				C2F832C822388E0000D8AF90 /* UINavigationController+statusBar.m in Sources */,
 				C2F832D122388E0000D8AF90 /* UINavigationBar+Awesome.m in Sources */,
 				C2E9B7AA2307C82500F6AA71 /* DateTableViewController.m in Sources */,
@@ -1343,6 +1368,7 @@
 				C2F832CF22388E0000D8AF90 /* NSString+YMAdd.m in Sources */,
 				C2F662E222E16591004039B3 /* UIImage+Group.m in Sources */,
 				C2F832CD22388E0000D8AF90 /* NSDictionary+YMDictionary.m in Sources */,
+				38195542255EAC91007E1200 /* NOViewModel.m in Sources */,
 				C2F832BD22388E0000D8AF90 /* UIApplication+Extension.m in Sources */,
 				C29341631EC48233003FB9A0 /* TableViewController.m in Sources */,
 				383A8B772536BD190011D928 /* CustomSliderViewController.m in Sources */,

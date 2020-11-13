@@ -31,6 +31,16 @@
     [label sizeToFit];
 }
 
+- (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    if (@available(iOS 12.0, *)) {
+        if (previousTraitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
+            
+        }
+    } else {
+        // Fallback on earlier versions
+    }
+}
+
 /*
 #pragma mark - Navigation
 

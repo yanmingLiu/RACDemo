@@ -33,6 +33,7 @@
                    @{@"text" : @"自定义UISlider", @"vc" : @"CustomSliderViewController"},
                    @{@"text" : @"渐变字体label", @"vc" : @"GradientLabelViewController"},
                    @{@"text" : @"水平滚动textView-跑马灯", @"vc" : @"ScrollTextViewController"},
+                   @{@"text" : @"MVVM模式，vc的view彻底分离", @"vc" : @"NOViewController"},
 
                    ];
 
