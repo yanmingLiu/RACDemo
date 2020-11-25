@@ -34,6 +34,7 @@
                    @{@"text" : @"渐变字体label", @"vc" : @"GradientLabelViewController"},
                    @{@"text" : @"水平滚动textView-跑马灯", @"vc" : @"ScrollTextViewController"},
                    @{@"text" : @"MVVM模式，vc的view彻底分离", @"vc" : @"NOViewController"},
+                   @{@"text" : @"监听键盘高度", @"vc" : @"KeyboardViewController"},
 
                    ];
 
@@ -59,6 +60,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
+    UINavigationBar *bar = self.navigationController.navigationBar;
+    NSLog(@"bar : %@", NSStringFromCGRect(bar.frame));
+
+    
     NSDictionary *dic = self.dataArray[indexPath.row];
     NSString *str = dic[@"vc"];
     

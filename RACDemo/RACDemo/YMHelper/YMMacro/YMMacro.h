@@ -73,7 +73,7 @@ dispatch_async(dispatch_get_main_queue(), block);\
 /* 状态栏高度 */
 #define kStatusBarH     CGRectGetHeight([UIApplication sharedApplication].statusBarFrame)
 /* NavBar高度 */
-#define kNavigationBarH CGRectGetHeight(self.navigationController.navigationBar.frame)
+#define kNavigationBarH CGRectGetHeight([[UINavigationBar appearance] frame])
 /* 导航栏 高度 */
 #define kNavigationH    (kStatusBarH + kNavigationBarH)
 

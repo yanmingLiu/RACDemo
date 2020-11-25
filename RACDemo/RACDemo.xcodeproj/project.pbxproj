@@ -11,6 +11,7 @@
 		38195542255EAC91007E1200 /* NOViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38195541255EAC91007E1200 /* NOViewModel.m */; };
 		383A8B712536BCEB0011D928 /* CustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A8B702536BCEB0011D928 /* CustomSlider.m */; };
 		383A8B772536BD190011D928 /* CustomSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A8B762536BD190011D928 /* CustomSliderViewController.m */; };
+		3851B58E256E51B900CE39BF /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3851B58D256E51B900CE39BF /* KeyboardViewController.m */; };
 		385B1219250542B80060B2BB /* InputBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 385B1218250542B80060B2BB /* InputBoxView.m */; };
 		38643193250CADA8005E058C /* InputPwdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38643192250CADA8005E058C /* InputPwdController.m */; };
 		38E7B43A255E90F900FB0DC6 /* NOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B439255E90F900FB0DC6 /* NOViewController.m */; };
@@ -153,6 +154,8 @@
 		383A8B702536BCEB0011D928 /* CustomSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSlider.m; sourceTree = "<group>"; };
 		383A8B752536BD190011D928 /* CustomSliderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSliderViewController.h; sourceTree = "<group>"; };
 		383A8B762536BD190011D928 /* CustomSliderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSliderViewController.m; sourceTree = "<group>"; };
+		3851B58C256E51B900CE39BF /* KeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardViewController.h; sourceTree = "<group>"; };
+		3851B58D256E51B900CE39BF /* KeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
 		385B1217250542B80060B2BB /* InputBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputBoxView.h; sourceTree = "<group>"; };
 		385B1218250542B80060B2BB /* InputBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputBoxView.m; sourceTree = "<group>"; };
 		38643191250CADA8005E058C /* InputPwdController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputPwdController.h; sourceTree = "<group>"; };
@@ -403,6 +406,15 @@
 				383A8B762536BD190011D928 /* CustomSliderViewController.m */,
 			);
 			path = UISlider;
+			sourceTree = "<group>";
+		};
+		3851B58B256E51A700CE39BF /* 监听键盘高度 */ = {
+			isa = PBXGroup;
+			children = (
+				3851B58C256E51B900CE39BF /* KeyboardViewController.h */,
+				3851B58D256E51B900CE39BF /* KeyboardViewController.m */,
+			);
+			path = "监听键盘高度";
 			sourceTree = "<group>";
 		};
 		385B12162505429E0060B2BB /* 密码输入框 */ = {
@@ -884,6 +896,7 @@
 		C2E36F8A221BAB09001CA758 /* Tabbar1 */ = {
 			isa = PBXGroup;
 			children = (
+				3851B58B256E51A700CE39BF /* 监听键盘高度 */,
 				38E7B437255E90EC00FB0DC6 /* NOViewController */,
 				B59CDFE3253F300F00503D67 /* 跑马灯 */,
 				B59CDFB8253F221F00503D67 /* 渐变字体 */,
@@ -1307,6 +1320,7 @@
 				C2F44C222236445D00A1195F /* TestCollectionViewController.m in Sources */,
 				C28A23811FA9D7210035B5DF /* FLAnimatedImageView+WebCache.m in Sources */,
 				385B1219250542B80060B2BB /* InputBoxView.m in Sources */,
+				3851B58E256E51B900CE39BF /* KeyboardViewController.m in Sources */,
 				C28804A7223107D200B79D23 /* YMBaseTableViewController.m in Sources */,
 				C2CF3836230EA84A007EE86A /* PriceViewController.m in Sources */,
 				C2E36F9C221BB3E6001CA758 /* TopNewView.m in Sources */,
