@@ -20,8 +20,8 @@
 // 改变滑块的触摸范围
 - (CGRect)thumbRectForBounds:(CGRect)bounds trackRect:(CGRect)rect value:(float)value
 {
-    rect.origin.x = rect.origin.x - 5;
-    rect.size.width = rect.size.width + 10;
+    rect.origin.y = rect.origin.y - 10;
+    rect.size.height = rect.size.height + 20;
     return CGRectInset([super thumbRectForBounds:bounds trackRect:rect value:value], 5, 5);
 }
 
