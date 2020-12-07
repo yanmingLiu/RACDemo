@@ -148,6 +148,13 @@ alpha:__a]
 // 字符串不为空
 #define NOTNULL(_str) _str.length ? _str : @""
 
+// MARK: - 弧度角度
+///1度
+#define kRadian (M_PI / 180)
+/// 弧度转角度
+#define RADIANS_TO_DEGREES(x) ((x) / kRadian)
+/// 角度转弧度
+#define DEGREES_TO_RADIANS(x) ((x) * kRadian)
 
 // MARK: - 手机信息
 // 当前应用软件版本

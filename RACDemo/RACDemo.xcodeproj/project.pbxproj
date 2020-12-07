@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		31B752FE692F08A60EB6F1A2 /* Pods_RACDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FC46EB993C5AF3997640B5 /* Pods_RACDemoTests.framework */; };
 		38195542255EAC91007E1200 /* NOViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38195541255EAC91007E1200 /* NOViewModel.m */; };
+		38200495257A2E4500194497 /* GiftListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38200494257A2E4500194497 /* GiftListViewController.m */; };
+		3820049E257A2E5500194497 /* GiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3820049D257A2E5500194497 /* GiftViewController.m */; };
+		382004A4257A2E6400194497 /* GiftPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 382004A3257A2E6400194497 /* GiftPopViewController.m */; };
+		382004AA257A2EB500194497 /* Gift.m in Sources */ = {isa = PBXBuildFile; fileRef = 382004A9257A2EB500194497 /* Gift.m */; };
 		383A8B712536BCEB0011D928 /* CustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A8B702536BCEB0011D928 /* CustomSlider.m */; };
 		383A8B772536BD190011D928 /* CustomSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A8B762536BD190011D928 /* CustomSliderViewController.m */; };
 		3851B58E256E51B900CE39BF /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3851B58D256E51B900CE39BF /* KeyboardViewController.m */; };
@@ -150,6 +154,14 @@
 		350573A3A5F2F375E62F26D3 /* Pods-RACDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoTests/Pods-RACDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		38195540255EAC91007E1200 /* NOViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NOViewModel.h; sourceTree = "<group>"; };
 		38195541255EAC91007E1200 /* NOViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NOViewModel.m; sourceTree = "<group>"; };
+		38200493257A2E4500194497 /* GiftListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GiftListViewController.h; sourceTree = "<group>"; };
+		38200494257A2E4500194497 /* GiftListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiftListViewController.m; sourceTree = "<group>"; };
+		3820049C257A2E5500194497 /* GiftViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GiftViewController.h; sourceTree = "<group>"; };
+		3820049D257A2E5500194497 /* GiftViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiftViewController.m; sourceTree = "<group>"; };
+		382004A2257A2E6400194497 /* GiftPopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GiftPopViewController.h; sourceTree = "<group>"; };
+		382004A3257A2E6400194497 /* GiftPopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiftPopViewController.m; sourceTree = "<group>"; };
+		382004A8257A2EB500194497 /* Gift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gift.h; sourceTree = "<group>"; };
+		382004A9257A2EB500194497 /* Gift.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Gift.m; sourceTree = "<group>"; };
 		383A8B6F2536BCEB0011D928 /* CustomSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSlider.h; sourceTree = "<group>"; };
 		383A8B702536BCEB0011D928 /* CustomSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSlider.m; sourceTree = "<group>"; };
 		383A8B752536BD190011D928 /* CustomSliderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSliderViewController.h; sourceTree = "<group>"; };
@@ -397,6 +409,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38200492257A2E2C00194497 /* 礼物选择 */ = {
+			isa = PBXGroup;
+			children = (
+				38200493257A2E4500194497 /* GiftListViewController.h */,
+				38200494257A2E4500194497 /* GiftListViewController.m */,
+				3820049C257A2E5500194497 /* GiftViewController.h */,
+				3820049D257A2E5500194497 /* GiftViewController.m */,
+				382004A2257A2E6400194497 /* GiftPopViewController.h */,
+				382004A3257A2E6400194497 /* GiftPopViewController.m */,
+				382004A8257A2EB500194497 /* Gift.h */,
+				382004A9257A2EB500194497 /* Gift.m */,
+			);
+			path = "礼物选择";
+			sourceTree = "<group>";
+		};
 		383A8B6B2536BCB50011D928 /* UISlider */ = {
 			isa = PBXGroup;
 			children = (
@@ -896,6 +923,7 @@
 		C2E36F8A221BAB09001CA758 /* Tabbar1 */ = {
 			isa = PBXGroup;
 			children = (
+				38200492257A2E2C00194497 /* 礼物选择 */,
 				3851B58B256E51A700CE39BF /* 监听键盘高度 */,
 				38E7B437255E90EC00FB0DC6 /* NOViewController */,
 				B59CDFE3253F300F00503D67 /* 跑马灯 */,
@@ -1349,6 +1377,7 @@
 				C2F44C1F2236403500A1195F /* YMBaseCollectionViewController.m in Sources */,
 				C2DE230C225CA33E00556B2C /* YMTabBarController.m in Sources */,
 				C2F662E822E16682004039B3 /* GroupIconViewController.m in Sources */,
+				38200495257A2E4500194497 /* GiftListViewController.m in Sources */,
 				C2F832C722388E0000D8AF90 /* UIWindow+YMWindow.m in Sources */,
 				C29341661EC482EB003FB9A0 /* TableViewCell.m in Sources */,
 				C276EAD42016C952007717A2 /* YMBottomPopView.m in Sources */,
@@ -1366,6 +1395,7 @@
 				C2E8608C2046ACFF001E4746 /* CombiningViewController.m in Sources */,
 				C2F832BE22388E0000D8AF90 /* NSObject+Swizzle.m in Sources */,
 				38E7B443255E910700FB0DC6 /* NOView.m in Sources */,
+				382004A4257A2E6400194497 /* GiftPopViewController.m in Sources */,
 				C2F832C822388E0000D8AF90 /* UINavigationController+statusBar.m in Sources */,
 				C2F832D122388E0000D8AF90 /* UINavigationBar+Awesome.m in Sources */,
 				C2E9B7AA2307C82500F6AA71 /* DateTableViewController.m in Sources */,
@@ -1382,12 +1412,14 @@
 				C2F832CF22388E0000D8AF90 /* NSString+YMAdd.m in Sources */,
 				C2F662E222E16591004039B3 /* UIImage+Group.m in Sources */,
 				C2F832CD22388E0000D8AF90 /* NSDictionary+YMDictionary.m in Sources */,
+				382004AA257A2EB500194497 /* Gift.m in Sources */,
 				38195542255EAC91007E1200 /* NOViewModel.m in Sources */,
 				C2F832BD22388E0000D8AF90 /* UIApplication+Extension.m in Sources */,
 				C29341631EC48233003FB9A0 /* TableViewController.m in Sources */,
 				383A8B772536BD190011D928 /* CustomSliderViewController.m in Sources */,
 				C210E7521F5D202E0059A8B7 /* AnimationContoller.m in Sources */,
 				B5A29BCA24FEA11700933437 /* RippleAnimatView.m in Sources */,
+				3820049E257A2E5500194497 /* GiftViewController.m in Sources */,
 				C2F832C022388E0000D8AF90 /* NSArray+YMAdd.m in Sources */,
 				C28A233E1FA9D6D00035B5DF /* YMDatePickerView.m in Sources */,
 				C23F434A20DB666A00E9EF2C /* TextViewController.m in Sources */,

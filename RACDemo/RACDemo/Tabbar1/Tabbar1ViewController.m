@@ -35,6 +35,7 @@
                    @{@"text" : @"水平滚动textView-跑马灯", @"vc" : @"ScrollTextViewController"},
                    @{@"text" : @"MVVM模式，vc的view彻底分离", @"vc" : @"NOViewController"},
                    @{@"text" : @"监听键盘高度", @"vc" : @"KeyboardViewController"},
+                   @{@"text" : @"礼物选择", @"vc" : @"GiftPopViewController"},
 
                    ];
 
