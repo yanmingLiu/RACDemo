@@ -7,6 +7,7 @@
 
 #import "Tabbar1ViewController.h"
 #import "InputPwdController.h"
+#import "AvatarsViewController.h"
 
 @interface Tabbar1ViewController ()
 
@@ -36,7 +37,8 @@
                    @{@"text" : @"MVVM模式，vc的view彻底分离", @"vc" : @"NOViewController"},
                    @{@"text" : @"监听键盘高度", @"vc" : @"KeyboardViewController"},
                    @{@"text" : @"礼物选择", @"vc" : @"GiftPopViewController"},
-
+                   @{@"text" : @"头像重叠", @"vc" : @"AvatarsViewController"},
+                   
                    ];
 
 

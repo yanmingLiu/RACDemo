@@ -20,6 +20,8 @@
 		38643193250CADA8005E058C /* InputPwdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38643192250CADA8005E058C /* InputPwdController.m */; };
 		38E7B43A255E90F900FB0DC6 /* NOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B439255E90F900FB0DC6 /* NOViewController.m */; };
 		38E7B443255E910700FB0DC6 /* NOView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B442255E910700FB0DC6 /* NOView.m */; };
+		38FD4C0D2590A0DF00291BEE /* AvatarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FD4C0C2590A0DF00291BEE /* AvatarsViewController.m */; };
+		38FD4C162590A81F00291BEE /* AvatarsOverlapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FD4C152590A81F00291BEE /* AvatarsOverlapView.m */; };
 		7F2C3ABB626F7453097BA82F /* Pods_RACDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF07DDA3E5186A0F647406F /* Pods_RACDemo.framework */; };
 		B59CDFC7253F22A600503D67 /* GradientLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B59CDFC6253F22A600503D67 /* GradientLabelViewController.m */; };
 		B59CDFD1253F290000503D67 /* ASGradientLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = B59CDFCF253F290000503D67 /* ASGradientLabel.m */; };
@@ -176,6 +178,10 @@
 		38E7B439255E90F900FB0DC6 /* NOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NOViewController.m; sourceTree = "<group>"; };
 		38E7B441255E910700FB0DC6 /* NOView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NOView.h; sourceTree = "<group>"; };
 		38E7B442255E910700FB0DC6 /* NOView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NOView.m; sourceTree = "<group>"; };
+		38FD4C0B2590A0DF00291BEE /* AvatarsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AvatarsViewController.h; sourceTree = "<group>"; };
+		38FD4C0C2590A0DF00291BEE /* AvatarsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AvatarsViewController.m; sourceTree = "<group>"; };
+		38FD4C142590A81F00291BEE /* AvatarsOverlapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AvatarsOverlapView.h; sourceTree = "<group>"; };
+		38FD4C152590A81F00291BEE /* AvatarsOverlapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AvatarsOverlapView.m; sourceTree = "<group>"; };
 		4FB2C8991F4A39CBC22E01E8 /* Pods-RACDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoTests/Pods-RACDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		50C57BFC8857C536E0274D54 /* Pods-RACDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoUITests/Pods-RACDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5521038BDB566A569065065C /* Pods-RACDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoUITests/Pods-RACDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -466,6 +472,17 @@
 				38195541255EAC91007E1200 /* NOViewModel.m */,
 			);
 			path = NOViewController;
+			sourceTree = "<group>";
+		};
+		38FD4C0A2590A0C400291BEE /* 头像重叠 */ = {
+			isa = PBXGroup;
+			children = (
+				38FD4C0B2590A0DF00291BEE /* AvatarsViewController.h */,
+				38FD4C0C2590A0DF00291BEE /* AvatarsViewController.m */,
+				38FD4C142590A81F00291BEE /* AvatarsOverlapView.h */,
+				38FD4C152590A81F00291BEE /* AvatarsOverlapView.m */,
+			);
+			path = "头像重叠";
 			sourceTree = "<group>";
 		};
 		527085D9434AF236BCCAB67D /* Pods */ = {
@@ -923,6 +940,7 @@
 		C2E36F8A221BAB09001CA758 /* Tabbar1 */ = {
 			isa = PBXGroup;
 			children = (
+				38FD4C0A2590A0C400291BEE /* 头像重叠 */,
 				38200492257A2E2C00194497 /* 礼物选择 */,
 				3851B58B256E51A700CE39BF /* 监听键盘高度 */,
 				38E7B437255E90EC00FB0DC6 /* NOViewController */,
@@ -1362,6 +1380,7 @@
 				C2F832C422388E0000D8AF90 /* UITableView+CornerRadius.m in Sources */,
 				C2BFF9DE22C9F4DE00FC2629 /* YMImagePickerViewController.m in Sources */,
 				C2BF507722C33EC40014E913 /* MJDIYGifHeader.m in Sources */,
+				38FD4C162590A81F00291BEE /* AvatarsOverlapView.m in Sources */,
 				C293415E1EC45997003FB9A0 /* User.m in Sources */,
 				C2F832C222388E0000D8AF90 /* NSObject+YMAdd.m in Sources */,
 				C23ED3441FA458D300832DE7 /* RGBViewController.m in Sources */,
@@ -1417,6 +1436,7 @@
 				C2F832BD22388E0000D8AF90 /* UIApplication+Extension.m in Sources */,
 				C29341631EC48233003FB9A0 /* TableViewController.m in Sources */,
 				383A8B772536BD190011D928 /* CustomSliderViewController.m in Sources */,
+				38FD4C0D2590A0DF00291BEE /* AvatarsViewController.m in Sources */,
 				C210E7521F5D202E0059A8B7 /* AnimationContoller.m in Sources */,
 				B5A29BCA24FEA11700933437 /* RippleAnimatView.m in Sources */,
 				3820049E257A2E5500194497 /* GiftViewController.m in Sources */,
