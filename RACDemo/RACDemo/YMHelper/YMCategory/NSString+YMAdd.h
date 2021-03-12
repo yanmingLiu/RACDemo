@@ -4,6 +4,8 @@
 
 @interface NSString (YMAdd)
 
+-(NSString*)firstPinYin;
+
 /// 随机字符串
 + (NSString *)ym_randomStringWithLength:(NSInteger)len;
 
