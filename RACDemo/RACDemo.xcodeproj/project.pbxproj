@@ -18,6 +18,7 @@
 		3851B58E256E51B900CE39BF /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3851B58D256E51B900CE39BF /* KeyboardViewController.m */; };
 		385B1219250542B80060B2BB /* InputBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 385B1218250542B80060B2BB /* InputBoxView.m */; };
 		38643193250CADA8005E058C /* InputPwdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38643192250CADA8005E058C /* InputPwdController.m */; };
+		38BD6301260C27F70053F16F /* UIView+Guide.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BD62FF260C27F70053F16F /* UIView+Guide.m */; };
 		38E7B43A255E90F900FB0DC6 /* NOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B439255E90F900FB0DC6 /* NOViewController.m */; };
 		38E7B443255E910700FB0DC6 /* NOView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B442255E910700FB0DC6 /* NOView.m */; };
 		38FD4C0D2590A0DF00291BEE /* AvatarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FD4C0C2590A0DF00291BEE /* AvatarsViewController.m */; };
@@ -174,6 +175,8 @@
 		385B1218250542B80060B2BB /* InputBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputBoxView.m; sourceTree = "<group>"; };
 		38643191250CADA8005E058C /* InputPwdController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputPwdController.h; sourceTree = "<group>"; };
 		38643192250CADA8005E058C /* InputPwdController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputPwdController.m; sourceTree = "<group>"; };
+		38BD62FF260C27F70053F16F /* UIView+Guide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Guide.m"; sourceTree = "<group>"; };
+		38BD6300260C27F70053F16F /* UIView+Guide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Guide.h"; sourceTree = "<group>"; };
 		38E7B438255E90F900FB0DC6 /* NOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NOViewController.h; sourceTree = "<group>"; };
 		38E7B439255E90F900FB0DC6 /* NOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NOViewController.m; sourceTree = "<group>"; };
 		38E7B441255E910700FB0DC6 /* NOView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NOView.h; sourceTree = "<group>"; };
@@ -1057,6 +1060,8 @@
 				C2F832A722388E0000D8AF90 /* UIApplication+Extension.h */,
 				C2F8329222388E0000D8AF90 /* UIApplication+Extension.m */,
 				C2F8329422388E0000D8AF90 /* UIButton+Badge.h */,
+				38BD6300260C27F70053F16F /* UIView+Guide.h */,
+				38BD62FF260C27F70053F16F /* UIView+Guide.m */,
 				C2F832AD22388E0000D8AF90 /* UIButton+Badge.m */,
 				C2F832AF22388E0000D8AF90 /* UIButton+SGImagePosition.h */,
 				C2F8329E22388E0000D8AF90 /* UIButton+SGImagePosition.m */,
@@ -1388,6 +1393,7 @@
 				C2036FAD202C7DB800187160 /* ScrollViewController.m in Sources */,
 				C210E7551F5D20360059A8B7 /* README.md in Sources */,
 				C28A23381FA9D6C60035B5DF /* YMTextView.m in Sources */,
+				38BD6301260C27F70053F16F /* UIView+Guide.m in Sources */,
 				C28A233F1FA9D6D00035B5DF /* pickerControl.m in Sources */,
 				C28A23771FA9D7180035B5DF /* MJDIYAutoFooter.m in Sources */,
 				C2BFF9DA22C9F4BB00FC2629 /* YMImagePicker.m in Sources */,
