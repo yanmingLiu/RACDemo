@@ -18,6 +18,7 @@
 		3851B58E256E51B900CE39BF /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3851B58D256E51B900CE39BF /* KeyboardViewController.m */; };
 		385B1219250542B80060B2BB /* InputBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 385B1218250542B80060B2BB /* InputBoxView.m */; };
 		38643193250CADA8005E058C /* InputPwdController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38643192250CADA8005E058C /* InputPwdController.m */; };
+		38672942261318F300939917 /* UILabel+size.m in Sources */ = {isa = PBXBuildFile; fileRef = 38672941261318F300939917 /* UILabel+size.m */; };
 		38BD6301260C27F70053F16F /* UIView+Guide.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BD62FF260C27F70053F16F /* UIView+Guide.m */; };
 		38E7B43A255E90F900FB0DC6 /* NOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B439255E90F900FB0DC6 /* NOViewController.m */; };
 		38E7B443255E910700FB0DC6 /* NOView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B442255E910700FB0DC6 /* NOView.m */; };
@@ -175,6 +176,8 @@
 		385B1218250542B80060B2BB /* InputBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputBoxView.m; sourceTree = "<group>"; };
 		38643191250CADA8005E058C /* InputPwdController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputPwdController.h; sourceTree = "<group>"; };
 		38643192250CADA8005E058C /* InputPwdController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputPwdController.m; sourceTree = "<group>"; };
+		38672940261318F300939917 /* UILabel+size.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+size.h"; sourceTree = "<group>"; };
+		38672941261318F300939917 /* UILabel+size.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+size.m"; sourceTree = "<group>"; };
 		38BD62FF260C27F70053F16F /* UIView+Guide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Guide.m"; sourceTree = "<group>"; };
 		38BD6300260C27F70053F16F /* UIView+Guide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Guide.h"; sourceTree = "<group>"; };
 		38E7B438255E90F900FB0DC6 /* NOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NOViewController.h; sourceTree = "<group>"; };
@@ -1085,6 +1088,8 @@
 				C2F832B722388E0000D8AF90 /* UIViewController+YMAdd.m */,
 				C2F8329D22388E0000D8AF90 /* UIWindow+YMWindow.h */,
 				C2F832B022388E0000D8AF90 /* UIWindow+YMWindow.m */,
+				38672940261318F300939917 /* UILabel+size.h */,
+				38672941261318F300939917 /* UILabel+size.m */,
 			);
 			path = YMCategory;
 			sourceTree = "<group>";
@@ -1373,6 +1378,7 @@
 				385B1219250542B80060B2BB /* InputBoxView.m in Sources */,
 				3851B58E256E51B900CE39BF /* KeyboardViewController.m in Sources */,
 				C28804A7223107D200B79D23 /* YMBaseTableViewController.m in Sources */,
+				38672942261318F300939917 /* UILabel+size.m in Sources */,
 				C2CF3836230EA84A007EE86A /* PriceViewController.m in Sources */,
 				C2E36F9C221BB3E6001CA758 /* TopNewView.m in Sources */,
 				C28A22C31FA9A7F70035B5DF /* LoactionViewController.m in Sources */,
