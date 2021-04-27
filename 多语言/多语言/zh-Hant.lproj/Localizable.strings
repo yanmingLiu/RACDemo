@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  多语言
+
+  Created by lym on 2021/4/26.
+  
+*/
+
+"previewCamera" = "拍照";
+"previewCameraRecord" = "拍攝";
+"previewAlbum" = "相冊";
+"previewCancel" = "取消";
