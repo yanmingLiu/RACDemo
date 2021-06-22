@@ -38,6 +38,9 @@
                    @{@"text" : @"监听键盘高度", @"vc" : @"KeyboardViewController"},
                    @{@"text" : @"礼物选择", @"vc" : @"GiftPopViewController"},
                    @{@"text" : @"头像重叠", @"vc" : @"AvatarsViewController"},
+                   @{@"text" : @"渐变色圆形进度条", @"vc" : @"CircleProgressViewController"},
+                   @{@"text" : @"Lottie", @"vc" : @"LottieViewController"},
+                   
                    
                    ];
 

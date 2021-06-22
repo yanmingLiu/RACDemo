@@ -16,6 +16,9 @@
 #import <Masonry.h>
 #import "ReactiveObjC.h"
 
+
+#import <Masonry.h>
+
 #import "MJDIYHeader.h"
 #import "MJDIYAutoFooter.h"
 #import "MJDIYBackFooter.h"

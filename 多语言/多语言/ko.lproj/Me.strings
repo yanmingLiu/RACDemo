@@ -4,3 +4,6 @@
   Created by lym on 2021/4/26. */
 "me" = "나의 것";
 
+"me.btn.title" = "의 나의";
+
+"str+" = "문자열 접합: %ld 일";

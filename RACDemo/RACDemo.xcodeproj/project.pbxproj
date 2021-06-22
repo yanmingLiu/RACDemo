@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		31B752FE692F08A60EB6F1A2 /* Pods_RACDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6FC46EB993C5AF3997640B5 /* Pods_RACDemoTests.framework */; };
 		38195542255EAC91007E1200 /* NOViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38195541255EAC91007E1200 /* NOViewModel.m */; };
 		38200495257A2E4500194497 /* GiftListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38200494257A2E4500194497 /* GiftListViewController.m */; };
 		3820049E257A2E5500194497 /* GiftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3820049D257A2E5500194497 /* GiftViewController.m */; };
 		382004A4257A2E6400194497 /* GiftPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 382004A3257A2E6400194497 /* GiftPopViewController.m */; };
 		382004AA257A2EB500194497 /* Gift.m in Sources */ = {isa = PBXBuildFile; fileRef = 382004A9257A2EB500194497 /* Gift.m */; };
+		3834618E26539A2600085D1D /* CircleProgressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3834618D26539A2600085D1D /* CircleProgressViewController.m */; };
+		3834619726539D2F00085D1D /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3834619626539D2F00085D1D /* CircleProgressView.m */; };
+		383461B72653C05C00085D1D /* LottieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383461B62653C05C00085D1D /* LottieViewController.m */; };
 		383A8B712536BCEB0011D928 /* CustomSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A8B702536BCEB0011D928 /* CustomSlider.m */; };
 		383A8B772536BD190011D928 /* CustomSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 383A8B762536BD190011D928 /* CustomSliderViewController.m */; };
 		3851B58E256E51B900CE39BF /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3851B58D256E51B900CE39BF /* KeyboardViewController.m */; };
@@ -31,7 +33,6 @@
 		B59CDFEC253F327900503D67 /* ScrollTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B59CDFEB253F327900503D67 /* ScrollTextViewController.m */; };
 		B5A29BC724FE9CD500933437 /* RippleAnimatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A29BC624FE9CD500933437 /* RippleAnimatViewController.m */; };
 		B5A29BCA24FEA11700933437 /* RippleAnimatView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A29BC924FEA11700933437 /* RippleAnimatView.m */; };
-		B87ED787B972497E3A2BD358 /* Pods_RACDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0FAD0F557F9F997798C3C77 /* Pods_RACDemoUITests.framework */; };
 		C2036FA7202C7CFB00187160 /* YMScrollViewUpDown.m in Sources */ = {isa = PBXBuildFile; fileRef = C2036FA2202C7CFA00187160 /* YMScrollViewUpDown.m */; };
 		C2036FA8202C7CFB00187160 /* NSTimer+forYMScrollerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2036FA3202C7CFA00187160 /* NSTimer+forYMScrollerView.m */; };
 		C2036FA9202C7CFB00187160 /* UIView+forYMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2036FA4202C7CFA00187160 /* UIView+forYMScrollView.m */; };
@@ -155,7 +156,6 @@
 /* Begin PBXFileReference section */
 		01816198F46A0327060007C5 /* Pods-RACDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemo/Pods-RACDemo.release.xcconfig"; sourceTree = "<group>"; };
 		2C5BCF6198C82C33066F310A /* Pods-RACDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemo/Pods-RACDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		350573A3A5F2F375E62F26D3 /* Pods-RACDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoTests/Pods-RACDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		38195540255EAC91007E1200 /* NOViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NOViewModel.h; sourceTree = "<group>"; };
 		38195541255EAC91007E1200 /* NOViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NOViewModel.m; sourceTree = "<group>"; };
 		38200493257A2E4500194497 /* GiftListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GiftListViewController.h; sourceTree = "<group>"; };
@@ -166,6 +166,12 @@
 		382004A3257A2E6400194497 /* GiftPopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiftPopViewController.m; sourceTree = "<group>"; };
 		382004A8257A2EB500194497 /* Gift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Gift.h; sourceTree = "<group>"; };
 		382004A9257A2EB500194497 /* Gift.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Gift.m; sourceTree = "<group>"; };
+		3834618C26539A2600085D1D /* CircleProgressViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleProgressViewController.h; sourceTree = "<group>"; };
+		3834618D26539A2600085D1D /* CircleProgressViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleProgressViewController.m; sourceTree = "<group>"; };
+		3834619526539D2F00085D1D /* CircleProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CircleProgressView.h; sourceTree = "<group>"; };
+		3834619626539D2F00085D1D /* CircleProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CircleProgressView.m; sourceTree = "<group>"; };
+		383461B52653C05C00085D1D /* LottieViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LottieViewController.h; sourceTree = "<group>"; };
+		383461B62653C05C00085D1D /* LottieViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LottieViewController.m; sourceTree = "<group>"; };
 		383A8B6F2536BCEB0011D928 /* CustomSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSlider.h; sourceTree = "<group>"; };
 		383A8B702536BCEB0011D928 /* CustomSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSlider.m; sourceTree = "<group>"; };
 		383A8B752536BD190011D928 /* CustomSliderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSliderViewController.h; sourceTree = "<group>"; };
@@ -188,10 +194,6 @@
 		38FD4C0C2590A0DF00291BEE /* AvatarsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AvatarsViewController.m; sourceTree = "<group>"; };
 		38FD4C142590A81F00291BEE /* AvatarsOverlapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AvatarsOverlapView.h; sourceTree = "<group>"; };
 		38FD4C152590A81F00291BEE /* AvatarsOverlapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AvatarsOverlapView.m; sourceTree = "<group>"; };
-		4FB2C8991F4A39CBC22E01E8 /* Pods-RACDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoTests/Pods-RACDemoTests.release.xcconfig"; sourceTree = "<group>"; };
-		50C57BFC8857C536E0274D54 /* Pods-RACDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoUITests/Pods-RACDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		5521038BDB566A569065065C /* Pods-RACDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RACDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RACDemoUITests/Pods-RACDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		A6FC46EB993C5AF3997640B5 /* Pods_RACDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B59CDFC5253F22A600503D67 /* GradientLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradientLabelViewController.h; sourceTree = "<group>"; };
 		B59CDFC6253F22A600503D67 /* GradientLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradientLabelViewController.m; sourceTree = "<group>"; };
 		B59CDFCF253F290000503D67 /* ASGradientLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASGradientLabel.m; sourceTree = "<group>"; };
@@ -388,7 +390,6 @@
 		C2F832B922388E0000D8AF90 /* NSObject+YMAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YMAdd.h"; sourceTree = "<group>"; };
 		C2F832BA22388E0000D8AF90 /* UIView+Radius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Radius.m"; sourceTree = "<group>"; };
 		C2F832BB22388E0000D8AF90 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
-		D0FAD0F557F9F997798C3C77 /* Pods_RACDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAF07DDA3E5186A0F647406F /* Pods_RACDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RACDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -406,7 +407,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31B752FE692F08A60EB6F1A2 /* Pods_RACDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +414,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B87ED787B972497E3A2BD358 /* Pods_RACDemoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +433,26 @@
 				382004A9257A2EB500194497 /* Gift.m */,
 			);
 			path = "礼物选择";
+			sourceTree = "<group>";
+		};
+		3834618B2653999A00085D1D /* 渐变圆形进度条 */ = {
+			isa = PBXGroup;
+			children = (
+				3834618C26539A2600085D1D /* CircleProgressViewController.h */,
+				3834618D26539A2600085D1D /* CircleProgressViewController.m */,
+				3834619526539D2F00085D1D /* CircleProgressView.h */,
+				3834619626539D2F00085D1D /* CircleProgressView.m */,
+			);
+			path = "渐变圆形进度条";
+			sourceTree = "<group>";
+		};
+		383461B42653C03900085D1D /* lottie */ = {
+			isa = PBXGroup;
+			children = (
+				383461B52653C05C00085D1D /* LottieViewController.h */,
+				383461B62653C05C00085D1D /* LottieViewController.m */,
+			);
+			path = lottie;
 			sourceTree = "<group>";
 		};
 		383A8B6B2536BCB50011D928 /* UISlider */ = {
@@ -496,10 +515,6 @@
 			children = (
 				2C5BCF6198C82C33066F310A /* Pods-RACDemo.debug.xcconfig */,
 				01816198F46A0327060007C5 /* Pods-RACDemo.release.xcconfig */,
-				350573A3A5F2F375E62F26D3 /* Pods-RACDemoTests.debug.xcconfig */,
-				4FB2C8991F4A39CBC22E01E8 /* Pods-RACDemoTests.release.xcconfig */,
-				5521038BDB566A569065065C /* Pods-RACDemoUITests.debug.xcconfig */,
-				50C57BFC8857C536E0274D54 /* Pods-RACDemoUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -509,8 +524,6 @@
 			children = (
 				C2BB75211F1DA8B200723BB0 /* libsqlite3.0.tbd */,
 				EAF07DDA3E5186A0F647406F /* Pods_RACDemo.framework */,
-				A6FC46EB993C5AF3997640B5 /* Pods_RACDemoTests.framework */,
-				D0FAD0F557F9F997798C3C77 /* Pods_RACDemoUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -946,6 +959,8 @@
 		C2E36F8A221BAB09001CA758 /* Tabbar1 */ = {
 			isa = PBXGroup;
 			children = (
+				383461B42653C03900085D1D /* lottie */,
+				3834618B2653999A00085D1D /* 渐变圆形进度条 */,
 				38FD4C0A2590A0C400291BEE /* 头像重叠 */,
 				38200492257A2E2C00194497 /* 礼物选择 */,
 				3851B58B256E51A700CE39BF /* 监听键盘高度 */,
@@ -1120,7 +1135,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C29341561EC43D89003FB9A0 /* Build configuration list for PBXNativeTarget "RACDemoTests" */;
 			buildPhases = (
-				11ED0A977DA5270101DEA166 /* [CP] Check Pods Manifest.lock */,
 				C293413B1EC43D89003FB9A0 /* Sources */,
 				C293413C1EC43D89003FB9A0 /* Frameworks */,
 				C293413D1EC43D89003FB9A0 /* Resources */,
@@ -1139,7 +1153,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C29341591EC43D89003FB9A0 /* Build configuration list for PBXNativeTarget "RACDemoUITests" */;
 			buildPhases = (
-				640257EE5BF3A6B7180ADD7A /* [CP] Check Pods Manifest.lock */,
 				C29341461EC43D89003FB9A0 /* Sources */,
 				C29341471EC43D89003FB9A0 /* Frameworks */,
 				C29341481EC43D89003FB9A0 /* Resources */,
@@ -1252,24 +1265,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		11ED0A977DA5270101DEA166 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RACDemoTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2B462E4101E9FE037BE5E776 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1282,12 +1277,10 @@
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/FDFullscreenPopGesture/FDFullscreenPopGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
-				"${BUILT_PRODUCTS_DIR}/HappyDNS/HappyDNS.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/Qiniu/Qiniu.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/TZScrollViewPopGesture/TZScrollViewPopGesture.framework",
@@ -1295,6 +1288,7 @@
 				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 				"${BUILT_PRODUCTS_DIR}/ZFDragableModalTransition/ZFDragableModalTransition.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1303,12 +1297,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FDFullscreenPopGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HappyDNS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Qiniu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZScrollViewPopGesture.framework",
@@ -1316,28 +1308,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZFDragableModalTransition.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RACDemo/Pods-RACDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		640257EE5BF3A6B7180ADD7A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RACDemoUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B0C573DD8A4CEC8DCAA595C8 /* [CP] Check Pods Manifest.lock */ = {
@@ -1367,9 +1342,11 @@
 			files = (
 				C2F832BC22388E0000D8AF90 /* UIAlertController+Blocks.m in Sources */,
 				C2F832CC22388E0000D8AF90 /* UIImage+YMImg.m in Sources */,
+				383461B72653C05C00085D1D /* LottieViewController.m in Sources */,
 				C2F832C122388E0000D8AF90 /* UIButton+SGImagePosition.m in Sources */,
 				C2F832CA22388E0000D8AF90 /* NSDate+YMDate.m in Sources */,
 				C2E36FAE221BD62F001CA758 /* Tabbar1ViewController.m in Sources */,
+				3834619726539D2F00085D1D /* CircleProgressView.m in Sources */,
 				C2BA7DF7201F967500B523E2 /* CViewModel.m in Sources */,
 				38643193250CADA8005E058C /* InputPwdController.m in Sources */,
 				C2DE22FF225C8EB800556B2C /* YMBaseWebViewController.m in Sources */,
@@ -1441,6 +1418,7 @@
 				C28804A8223107D200B79D23 /* YMBlankPageStyleHelper.m in Sources */,
 				C2F832C522388E0000D8AF90 /* UIButton+Badge.m in Sources */,
 				C2F832CF22388E0000D8AF90 /* NSString+YMAdd.m in Sources */,
+				3834618E26539A2600085D1D /* CircleProgressViewController.m in Sources */,
 				C2F662E222E16591004039B3 /* UIImage+Group.m in Sources */,
 				C2F832CD22388E0000D8AF90 /* NSDictionary+YMDictionary.m in Sources */,
 				382004AA257A2EB500194497 /* Gift.m in Sources */,
@@ -1658,7 +1636,6 @@
 		};
 		C29341571EC43D89003FB9A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 350573A3A5F2F375E62F26D3 /* Pods-RACDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RACDemoTests/Info.plist;
@@ -1671,7 +1648,6 @@
 		};
 		C29341581EC43D89003FB9A0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FB2C8991F4A39CBC22E01E8 /* Pods-RACDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RACDemoTests/Info.plist;
@@ -1684,7 +1660,6 @@
 		};
 		C293415A1EC43D89003FB9A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5521038BDB566A569065065C /* Pods-RACDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = RACDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1696,7 +1671,6 @@
 		};
 		C293415B1EC43D89003FB9A0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50C57BFC8857C536E0274D54 /* Pods-RACDemoUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = RACDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

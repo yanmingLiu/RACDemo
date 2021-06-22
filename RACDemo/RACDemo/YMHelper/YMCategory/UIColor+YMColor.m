@@ -26,6 +26,10 @@
     return gradientLayer;
 }
 
++ (UIColor *)colorWithHexString:(NSString *)hexString {
+    return [self colorWithHexString:hexString alpha:1];
+}
+
 //如果hexString是8位则参数alpha失效,使用hexString包含的alpha
 + (UIColor *)colorWithHexString:(NSString *)hexString alpha:(CGFloat)alpha {
     //去除空格

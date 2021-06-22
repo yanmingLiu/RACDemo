@@ -6,3 +6,7 @@
   
 */
 "me" = "profile";
+
+"me.btn.title" = "button";
+
+"str+" = "string +: %ld days";

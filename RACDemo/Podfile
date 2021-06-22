@@ -47,5 +47,5 @@ target 'RACDemo' do
     # 交互式转场
     pod "ZFDragableModalTransition"
     
-    
+    pod 'lottie-ios'
 end

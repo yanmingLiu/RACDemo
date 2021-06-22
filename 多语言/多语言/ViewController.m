@@ -32,7 +32,7 @@
     _titles = @[@"公用的多语言字符串",@"不同模块的多语言，多人开发避免冲突", @"App内切换语言"];
 
     _datas = @[@[@"previewCamera", @"previewCameraRecord", @"previewAlbum", @"previewCancel"],
-               @[@"me"],
+               @[@"me", @"me.btn.title", @"str+"],
                @[@"中文简体", @"中文繁体", @"英语", @"韩语", @"日语", @"阿拉伯语"]
     ];
 }
@@ -48,9 +48,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     
-    NSString *key = _datas[indexPath.section][indexPath.row];
+    NSArray *arr = _datas[indexPath.section];
+    NSString *key = arr[indexPath.row];
     if (indexPath.section == 1) {
         cell.textLabel.text = kLocalizedStr(key, KAppLanguageTableMe);
+        if (indexPath.row == arr.count - 1) {
+            cell.textLabel.text = [NSString localizedStringWithFormat:kLocalizedStr(key, KAppLanguageTableMe), 5];
+        }
     } else {
         cell.textLabel.text = kLocalizedStr(key, KAppLanguageTableCommon);
     }

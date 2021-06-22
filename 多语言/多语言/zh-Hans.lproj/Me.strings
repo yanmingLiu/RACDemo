@@ -4,3 +4,6 @@
   Created by lym on 2021/4/26. */
 "me" = "我的";
 
+"me.btn.title" = "按钮";
+
+"str+" = "字符串拼接: %ld 天";
