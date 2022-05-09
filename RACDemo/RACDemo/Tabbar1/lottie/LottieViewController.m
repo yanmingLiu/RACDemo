@@ -7,8 +7,6 @@
 
 #import "LottieViewController.h"
 
-#import <Lottie/Lottie-Swift.h>
-
 
 @interface LottieViewController ()
 
@@ -20,32 +18,32 @@
     [super viewDidLoad];
 
 
-    AnimationView *backImageView = ({
-        AnimationView *view = [[AnimationView alloc] init];
-        
-        view.contentMode = UIViewContentModeScaleAspectFill;
-        view.backgroundColor = UIColor.whiteColor;
-        [self.view addSubview:view];
-        [view mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.leading.trailing.equalTo(self.view);
-            make.top.mas_offset(24);
-            make.height.mas_equalTo(400);
-        }];
-        
-        
-        view;
-    });
-    
-    AnimationView *scoreImageView = ({
-        AnimationView *view = [[AnimationView alloc] init];
-        view.contentMode = UIViewContentModeScaleAspectFill;
-        [self.view addSubview:view];
-        [view mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.center.equalTo(backImageView);
-            make.size.mas_equalTo(CGSizeMake(200, 200));
-        }];
-        view;
-    });
+//    AnimationView *backImageView = ({
+//        AnimationView *view = [[AnimationView alloc] init];
+//        
+//        view.contentMode = UIViewContentModeScaleAspectFill;
+//        view.backgroundColor = UIColor.whiteColor;
+//        [self.view addSubview:view];
+//        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.leading.trailing.equalTo(self.view);
+//            make.top.mas_offset(24);
+//            make.height.mas_equalTo(400);
+//        }];
+//        
+//        
+//        view;
+//    });
+//    
+//    AnimationView *scoreImageView = ({
+//        AnimationView *view = [[AnimationView alloc] init];
+//        view.contentMode = UIViewContentModeScaleAspectFill;
+//        [self.view addSubview:view];
+//        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.center.equalTo(backImageView);
+//            make.size.mas_equalTo(CGSizeMake(200, 200));
+//        }];
+//        view;
+//    });
 }
 
 /*

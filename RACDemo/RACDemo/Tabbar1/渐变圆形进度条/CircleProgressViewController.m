@@ -22,17 +22,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIView *countView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-    countView.backgroundColor = [UIColor grayColor];
-    countView.cornerRadius = 100;
-    [self.view addSubview:countView];
-    countView.center = self.view.center;
-    
+//    UIView *countView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+//    countView.backgroundColor = [UIColor lightGrayColor];
+//    countView.cornerRadius = 100;
+//    [self.view addSubview:countView];
+//    countView.center = self.view.center;
+//
     CircleProgressView *v = [[CircleProgressView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
     [self.view addSubview:v];
     v.center = self.view.center;
-    
-    v.colors = @[[UIColor colorWithHexString:@"#7041E6"], [UIColor colorWithHexString:@"#DB42E6"]];
+    // 7041E6  DB42E6
+    v.colors = @[[UIColor colorWithHexString:@"#DB42E6"], [UIColor colorWithHexString:@"#7041E6"]];
     _progressView = v;
 }
 
