@@ -31,7 +31,7 @@
     RippleAnimatView *rv = [[RippleAnimatView alloc] initWithFrame:CGRectMake(0, 0, 80, 80)];
     rv.minRadius = 40;
     rv.maxRadius = 60;
-    rv.rippleCount = 3;
+    rv.rippleCount = 5;
     rv.rippleDuration = 1.0;
     rv.rippleColor = [UIColor clearColor];
     rv.borderWidth = 1;

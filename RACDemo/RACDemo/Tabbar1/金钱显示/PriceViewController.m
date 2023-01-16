@@ -9,6 +9,8 @@
 #import "NSString+YMAdd.h"
 
 @interface PriceViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *vaule1;
+
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 @property (weak, nonatomic) IBOutlet UILabel *label2;
 @property (weak, nonatomic) IBOutlet UILabel *labe3;
@@ -22,7 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    _label1.text = [@"3.9999999" ym_decimalNumber];
+    NSString *str1 = @"19.989999900000017";
+    _vaule1.text = str1;
+    _label1.text = [str1 ym_decimalNumber];
     _label1.textColor = [UIColor redColor];
 
     _label2.text = [NSString ym_formatDecimalNumber:@"10000.00"];

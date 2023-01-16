@@ -37,11 +37,6 @@
 
     
     CustomSlider *slider = [[CustomSlider alloc] initWithFrame:CGRectMake(40, 120, self.view.bounds.size.width-80, 30)];
-    [slider setThumbImage:[UIImage imageNamed:@"cr_slider_thumb"] forState:UIControlStateNormal];
-    slider.minimumValue = 0;
-    slider.maximumValue = 100;
-    slider.minimumTrackTintColor = [UIColor orangeColor];
-    slider.maximumTrackTintColor = [UIColor lightGrayColor];
     [slider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
     [slider addTarget:self action:@selector(sliderTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
     

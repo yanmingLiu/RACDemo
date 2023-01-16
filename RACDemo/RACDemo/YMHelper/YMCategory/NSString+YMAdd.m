@@ -434,9 +434,14 @@ firstCannotBeDigtal:(BOOL)firstCannotBeDigtal;
 
 /// 处理json float double 精度丢失问题
 - (NSString *)ym_decimalNumber {
-    NSString *doubleString  = [NSString stringWithFormat:@"%f", self.doubleValue];
-    NSDecimalNumber *decNumber = [NSDecimalNumber decimalNumberWithString:doubleString];
-    return [decNumber stringValue];
+    NSDecimalNumber *decNumber = [NSDecimalNumber decimalNumberWithString:self];
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.numberStyle = NSNumberFormatterDecimalStyle;
+    [formatter setPositiveFormat:@"###,##0.00"];
+    formatter.roundingMode = NSNumberFormatterRoundDown;
+    formatter.roundingIncrement = @0.000;
+    formatter.minimumFractionDigits = 2;
+    return [formatter stringFromNumber:decNumber];
 }
 
 /// 金钱显示 100,000.00
@@ -447,7 +452,7 @@ firstCannotBeDigtal:(BOOL)firstCannotBeDigtal;
 
     NSNumber *number = @([string doubleValue]);
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-    formatter.numberStyle = kCFNumberFormatterDecimalStyle;
+    formatter.numberStyle = NSNumberFormatterDecimalStyle;
     formatter.positiveFormat = @"###,##0.00";
 
     NSString *amountString = [formatter stringFromNumber:number];
